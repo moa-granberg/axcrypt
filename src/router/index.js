@@ -1,36 +1,7 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import HomeView from '../views/HomeView';
-import DownloadView from '../views/DownloadView';
-import BusinessView from '../views/BusinessView';
-import PricingView from '../views/PricingView';
-import InformationView from '../views/InformationView';
-import SupportView from '../views/SupportView';
-import AboutView from '../views/AboutView';
-import SignInView from '../views/SignInView';
-
-import GetStartedPage from '../pages/information/GetStartedPage';
-import FeaturesPage from '../pages/information/FeaturesPage';
-import RequirementsPage from '../pages/information/RequirementsPage';
-import ResellerPage from '../pages/information/ResellerPage';
-import UsageTipsPage from '../pages/information/UsageTipsPage';
-import SecurityPage from '../pages/information/SecurityPage';
-import TechnicalDetailsPage from '../pages/information/TechnicalDetailsPage';
-import ReleaseNotesPage from '../pages/information/ReleaseNotesPage';
-import PrivacyPolicyPage from '../pages/information/PrivacyPolicyPage';
-import TermsOfUsePage from '../pages/information/TermsOfUsePage';
-
-import FaqPage from '../pages/support/FaqPage';
-import AxcryptBusinessPage from '../pages/support/AxcryptBusinessPage';
-import RegulatoryCompliancePage from '../pages/support/RegulatoryCompliancePage';
-import PasswordGeneratorPage from '../pages/support/PasswordGeneratorPage';
-import ServiceStatusPage from '../pages/support/ServiceStatusPage';
-
-import JobsPage from '../pages/about/JobsPage';
-import JobPositionPage from '../pages/about/JobPositionPage';
-import PressPage from '../pages/about/PressPage';
-
-import JobApplicationPage from '../pages/JobApplicationPage';
+import * as Views from '../views';
+import * as Pages from '../pages';
 
 Vue.use(VueRouter);
 
@@ -38,143 +9,144 @@ const routes = [
   {
     path: '/',
     name: 'HomeView',
-    component: HomeView,
+    component: Views.HomeView,
   },
   {
     path: '/download',
     name: 'DownloadView',
-    component: DownloadView,
+    component: Views.DownloadView,
   },
   {
     path: '/business',
     name: 'BusinessView',
-    component: BusinessView,
+    component: Views.BusinessView,
+    // Awaiting finished architecture
   },
   {
     path: '/pricing',
     name: 'PricingView',
-    component: PricingView,
+    component: Views.PricingView,
   },
   {
     path: '/information',
     name: 'InformationView',
-    component: InformationView,
+    component: Views.InformationView,
     children: [
       {
         path: 'get-started/:platform',
         name: 'GetStartedPage',
-        component: GetStartedPage,
+        component: Pages.GetStartedPage,
       },
       {
         path: 'features',
         name: 'FeaturesPage',
-        component: FeaturesPage,
+        component: Pages.FeaturesPage,
       },
       {
         path: 'requirements',
         name: 'RequirementsPage',
-        component: RequirementsPage,
+        component: Pages.RequirementsPage,
       },
       {
         path: 'reseller',
         name: 'ResellerPage',
-        component: ResellerPage,
+        component: Pages.ResellerPage,
       },
       {
         path: 'usage-tips',
         name: 'UsageTipsPage',
-        component: UsageTipsPage,
+        component: Pages.UsageTipsPage,
       },
       {
         path: 'security',
         name: 'SecurityPage',
-        component: SecurityPage,
+        component: Pages.SecurityPage,
       },
       {
         path: 'technical-details',
         name: 'TechnicalDetailsPage',
-        component: TechnicalDetailsPage,
+        component: Pages.TechnicalDetailsPage,
       },
       {
         path: 'release-notes',
         name: 'ReleaseNotesPage',
-        component: ReleaseNotesPage,
+        component: Pages.ReleaseNotesPage,
       },
       {
         path: 'privacy-policy',
         name: 'PrivacyPolicyPage',
-        component: PrivacyPolicyPage,
+        component: Pages.PrivacyPolicyPage,
       },
       {
         path: 'terms-of-use',
         name: 'TermsOfUsePage',
-        component: TermsOfUsePage,
+        component: Pages.TermsOfUsePage,
       },
     ],
   },
   {
     path: '/support',
     name: 'SupportView',
-    component: SupportView,
+    component: Views.SupportView,
     children: [
       {
         path: 'faq',
         name: 'FaqPage',
-        component: FaqPage,
+        component: Pages.FaqPage,
       },
       {
         path: 'axcrypt-business',
         name: 'AxcryptBusinessPage',
-        component: AxcryptBusinessPage,
+        component: Pages.AxcryptBusinessPage,
       },
       {
         path: 'regulatory-compliance',
         name: 'RegulatoryCompliancePage',
-        component: RegulatoryCompliancePage,
+        component: Pages.RegulatoryCompliancePage,
       },
       {
         path: 'password-generator',
         name: 'PasswordGeneratorPage',
-        component: PasswordGeneratorPage,
+        component: Pages.PasswordGeneratorPage,
       },
       {
         path: 'service-status',
         name: 'ServiceStatusPage',
-        component: ServiceStatusPage,
+        component: Pages.ServiceStatusPage,
       },
     ],
   },
   {
     path: '/about',
     name: 'AboutView',
-    component: AboutView,
+    component: Views.AboutView,
     children: [
       {
         path: 'jobs',
         name: 'JobsPage',
-        component: JobsPage,
+        component: Pages.JobsPage,
       },
       {
         path: 'jobs/:id',
         name: 'JobPositionPage',
-        component: JobPositionPage,
+        component: Pages.JobPositionPage,
       },
       {
         path: 'press',
         name: 'PressPage',
-        component: PressPage,
+        component: Pages.PressPage,
       },
     ],
   },
   {
     path: '/sign-in',
     name: 'SignInView',
-    component: SignInView,
+    component: Views.SignInView,
   },
   {
     path: '/application/:id',
     name: 'JobApplicationPage',
-    component: JobApplicationPage,
+    component: Pages.JobApplicationPage,
   },
 ];
 
