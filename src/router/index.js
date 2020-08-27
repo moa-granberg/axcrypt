@@ -21,7 +21,10 @@ import PrivacyPolicyPage from '../pages/information/PrivacyPolicyPage';
 import TermsOfUsePage from '../pages/information/TermsOfUsePage';
 
 import FaqPage from '../pages/support/FaqPage';
+import AxcryptBusinessPage from '../pages/support/AxcryptBusinessPage';
+import RegulatoryCompliancePage from '../pages/support/RegulatoryCompliancePage';
 import PasswordGeneratorPage from '../pages/support/PasswordGeneratorPage';
+import ServiceStatusPage from '../pages/support/ServiceStatusPage';
 
 import PressPage from '../pages/about/PressPage';
 
@@ -116,9 +119,24 @@ const routes = [
         component: FaqPage,
       },
       {
+        path: 'axcrypt-business',
+        name: 'AxcryptBusinessPage',
+        component: AxcryptBusinessPage,
+      },
+      {
+        path: 'regulatory-compliance',
+        name: 'RegulatoryCompliancePage',
+        component: RegulatoryCompliancePage,
+      },
+      {
         path: 'password-generator',
         name: 'PasswordGeneratorPage',
         component: PasswordGeneratorPage,
+      },
+      {
+        path: 'service-status',
+        name: 'ServiceStatusPage',
+        component: ServiceStatusPage,
       },
     ],
   },
