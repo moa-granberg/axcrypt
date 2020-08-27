@@ -1,5 +1,6 @@
 <template>
-    <main>This is About
-        <router-view />
-    </main>
+  <main>
+    This is About
+    <router-view />
+  </main>
 </template>

@@ -6,10 +6,12 @@
     "serve": "vue-cli-service serve",
     "serve-server": "nodemon server/index.js",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "prettier": "prettier --write \"**/*.{.js,vue}\""
   },
   "dependencies": {
     "core-js": "^3.6.5",
+    "prettier": "^2.1.1",
     "vue": "^2.6.11",
     "vue-router": "^3.4.3"
   },

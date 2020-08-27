@@ -1,3 +1,3 @@
 <template>
-    <main>This is Reseller</main>
+  <main>This is Reseller</main>
 </template>

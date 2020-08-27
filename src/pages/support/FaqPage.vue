@@ -1,5 +1,3 @@
 <template>
-    <main>
-        This is FAQ
-    </main>
+  <main>This is FAQ</main>
 </template>

@@ -1,5 +1,3 @@
 <template>
-    <main>
-        This is Download
-    </main>
+  <main>This is Download</main>
 </template>

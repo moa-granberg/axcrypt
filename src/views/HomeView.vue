@@ -1,5 +1,3 @@
 <template>
-    <main>
-        This is the Home view.
-    </main>
+  <main>This is the Home view.</main>
 </template>
