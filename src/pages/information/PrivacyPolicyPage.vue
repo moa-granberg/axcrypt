@@ -1,5 +1,3 @@
 <template>
-    <main>
-        This is Privacy Policy
-    </main>
+  <main>This is Privacy Policy</main>
 </template>

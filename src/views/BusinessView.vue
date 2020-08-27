@@ -1,3 +1,3 @@
 <template>
-    <main>This is Business</main>
+  <main>This is Business</main>
 </template>

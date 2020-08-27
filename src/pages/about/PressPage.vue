@@ -1,3 +1,3 @@
 <template>
-    <main>This is Press</main>
+  <main>This is Press</main>
 </template>
