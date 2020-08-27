@@ -26,7 +26,11 @@ import RegulatoryCompliancePage from '../pages/support/RegulatoryCompliancePage'
 import PasswordGeneratorPage from '../pages/support/PasswordGeneratorPage';
 import ServiceStatusPage from '../pages/support/ServiceStatusPage';
 
+import JobsPage from '../pages/about/JobsPage';
+import JobPositionPage from '../pages/about/JobPositionPage';
 import PressPage from '../pages/about/PressPage';
+
+import JobApplicationPage from '../pages/JobApplicationPage';
 
 Vue.use(VueRouter);
 
@@ -146,6 +150,16 @@ const routes = [
     component: AboutView,
     children: [
       {
+        path: 'jobs',
+        name: 'JobsPage',
+        component: JobsPage,
+      },
+      {
+        path: 'jobs/:id',
+        name: 'JobPositionPage',
+        component: JobPositionPage,
+      },
+      {
         path: 'press',
         name: 'PressPage',
         component: PressPage,
@@ -156,6 +170,11 @@ const routes = [
     path: '/sign-in',
     name: 'SignInView',
     component: SignInView,
+  },
+  {
+    path: '/application/:id',
+    name: 'JobApplicationPage',
+    component: JobApplicationPage,
   },
 ];
 
