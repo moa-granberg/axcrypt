@@ -14,7 +14,8 @@ const routes = [
   {
     path: '/download',
     name: 'DownloadView',
-    component: Views.DownloadView,
+    component: Views.DownloadView
+    // Eventually add another key for phraseKey-mapping
   },
   {
     path: '/business',
