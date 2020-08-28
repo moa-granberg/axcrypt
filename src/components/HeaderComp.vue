@@ -5,9 +5,11 @@
         <router-link to="/">
           <img class="logo" src="../assets/logos/axcrypt_text.png" alt="Logo" />
         </router-link>
-        <hamburger-menu />
+        <hamburger-menu v-on:toggle="toggleDropDownMenu" />
       </div>
-      <div class="drop-down-menu-mobile">
+      <div
+        :class="show ? 'show drop-down-menu-mobile' : 'drop-down-menu-mobile'"
+      >
         <ul class="nav-mobile-links">
           <li v-for="link in navLinks" :key="link.path">
             <router-link :to="link.path">
@@ -34,6 +36,13 @@ export default {
     HamburgerMenu,
     LanguageBar,
   },
+
+  data() {
+    return {
+      show: false,
+    };
+  },
+
   computed: {
     navLinks() {
       return this.$router.options.routes
@@ -45,6 +54,12 @@ export default {
           path: obj.path,
         }))
         .filter(item => !item.text.includes('Page') && item.text !== 'Home');
+    },
+  },
+
+  methods: {
+    toggleDropDownMenu() {
+      this.show = !this.show;
     },
   },
 };
@@ -69,6 +84,13 @@ export default {
 
 .drop-down-menu-mobile {
   margin-bottom: 10px;
+  transition: all 0.4s ease-in-out;
+  overflow: hidden;
+  max-height: 0;
+
+  &.show {
+    max-height: 600px;
+  }
 }
 
 .nav-mobile-links {
