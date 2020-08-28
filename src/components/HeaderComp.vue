@@ -7,13 +7,16 @@
         </router-link>
         <hamburger-menu />
       </div>
-      <ul class="nav-mobile-links">
-        <li v-for="link in navLinks" :key="link.path">
-          <router-link :to="link.path">
-            {{ link.text }}
-          </router-link>
-        </li>
-      </ul>
+      <div class="drop-down-menu-mobile">
+        <ul class="nav-mobile-links">
+          <li v-for="link in navLinks" :key="link.path">
+            <router-link :to="link.path">
+              {{ link.text }}
+            </router-link>
+          </li>
+        </ul>
+        <language-bar />
+      </div>
     </mq-layout>
 
     <!-- <mq-layout mq="desktop">
@@ -24,9 +27,12 @@
 
 <script>
 import HamburgerMenu from './HamburgerMenu';
+import LanguageBar from './LanguageBar';
+
 export default {
   components: {
     HamburgerMenu,
+    LanguageBar,
   },
   computed: {
     navLinks() {
@@ -46,6 +52,7 @@ export default {
 
 <style lang="scss" scoped>
 @import '../scss/variables.scss';
+
 .logo {
   width: 145px;
 }
@@ -60,10 +67,13 @@ export default {
   border-bottom: 1px $light-gray solid;
 }
 
+.drop-down-menu-mobile {
+  margin-bottom: 10px;
+}
+
 .nav-mobile-links {
   list-style: none;
   margin: 0;
-  margin-bottom: 20px;
   padding: 0;
   li {
     padding: 15px 25px;
