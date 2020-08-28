@@ -6,6 +6,7 @@
           src="../assets/logos/axcrypt_text.png"
           alt="Logo"
       /></router-link>
+      <hamburger-menu/>
     </mq-layout>
 
     <!-- <mq-layout mq="desktop">
@@ -15,7 +16,12 @@
 </template>
 
 <script>
-export default {};
+import HamburgerMenu from './HamburgerMenu';
+export default {
+  components: {
+    HamburgerMenu
+  }
+};
 </script>
 
 <style></style>

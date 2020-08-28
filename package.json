@@ -12,6 +12,8 @@
   "dependencies": {
     "core-js": "^3.6.5",
     "prettier": "^2.1.1",
+    "sass": "^1.26.10",
+    "sass-loader": "^10.0.1",
     "vue": "^2.6.11",
     "vue-mq": "^1.0.1",
     "vue-router": "^3.4.3"
