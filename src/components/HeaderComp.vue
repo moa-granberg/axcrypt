@@ -2,9 +2,9 @@
   <header>
     <mq-layout mq="mobile">
       <div class="nav-mobile">
-        <router-link to="/"
-          ><img class="logo" src="../assets/logos/axcrypt_text.png" alt="Logo"
-        /></router-link>
+        <router-link to="/">
+          <img class="logo" src="../assets/logos/axcrypt_text.png" alt="Logo" />
+        </router-link>
         <hamburger-menu />
       </div>
       <ul class="nav-mobile-links">
@@ -28,25 +28,17 @@ export default {
   components: {
     HamburgerMenu,
   },
-  mounted() {
-    console.log(this.$router.options.routes);
-  },
   computed: {
     navLinks() {
-      const routes = this.$router.options.routes;
-      const returnValue = routes.map(obj => {
-        // return obj.name.split('View')[0].replace(/([A-Z])/g, ' $1').trim();
-        return {
+      return this.$router.options.routes
+        .map(obj => ({
           text: obj.name
             .split('View')[0]
             .replace(/([A-Z])/g, ' $1')
             .trim(),
           path: obj.path,
-        };
-      });
-      return returnValue.filter(
-        item => !item.text.includes('Page') && item.text !== 'Home'
-      );
+        }))
+        .filter(item => !item.text.includes('Page') && item.text !== 'Home');
     },
   },
 };
