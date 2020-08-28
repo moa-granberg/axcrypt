@@ -2,11 +2,9 @@
   <header>
     <mq-layout mq="mobile" class="nav-mobile">
       <router-link to="/"
-        ><img
-          src="../assets/logos/axcrypt_text.png"
-          alt="Logo"
+        ><img class="logo" src="../assets/logos/axcrypt_text.png" alt="Logo"
       /></router-link>
-      <hamburger-menu/>
+      <hamburger-menu />
     </mq-layout>
 
     <!-- <mq-layout mq="desktop">
@@ -19,9 +17,22 @@
 import HamburgerMenu from './HamburgerMenu';
 export default {
   components: {
-    HamburgerMenu
-  }
+    HamburgerMenu,
+  },
 };
 </script>
 
-<style></style>
+<style lang="scss" scoped>
+.logo {
+  width: 145px;
+  margin: 30px 0;
+}
+
+.nav-mobile {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+  max-width: 767px;
+  margin: auto;
+}
+</style>

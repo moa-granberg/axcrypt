@@ -21,7 +21,7 @@ export default {};
 
 <style scoped lang="scss">
 svg {
-  width: 32px;
+  width: 27px;
   path {
     fill: #86b96e;
   }
