@@ -9,7 +9,7 @@
         v-on:toggle="toggleDropDownMenu"
       />
     </div>
-    <div :class="show ? 'show drop-down-menu-mobile' : 'drop-down-menu-mobile'">
+    <div :class="navClass">
       <ul class="nav-mobile-links">
         <li v-for="link in navLinks" :key="link.path">
           <router-link :to="link.path">
@@ -38,7 +38,7 @@ export default {
 
   data() {
     return {
-      show: false,
+      showMobileMenu: false,
     };
   },
 
@@ -54,11 +54,19 @@ export default {
         }))
         .filter(item => !item.text.includes('Page') && item.text !== 'Home');
     },
+
+    navClass() {
+      return this.$mq === 'desktop'
+        ? 'desktop-menu'
+        : this.showMobileMenu
+        ? 'show drop-down-menu-mobile'
+        : 'drop-down-menu-mobile';
+    },
   },
 
   methods: {
     toggleDropDownMenu() {
-      this.show = !this.show;
+      this.showMobileMenu = !this.showMobileMenu;
     },
   },
 };
