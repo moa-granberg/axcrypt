@@ -11,15 +11,17 @@
     </div>
     <div :class="navClass">
       <ul class="nav-links">
-        <!-- <li v-for="link in navLinks" :key="link.path">
-          <router-link :to="link.path">
-            {{ link.text }}
-          </router-link>
-        </li> -->
         <li v-for="link of headerLinks" :key="link.path">
           <router-link :to="link.path">
             {{ $t(link.phraseKey) }}
           </router-link>
+          <div v-if="link.children" :class="nav-link-submenu">
+            <li v-for="child of link.children" :key="child.path">
+              <router-link :to="child.path">
+                {{ $t(child.phraseKey)}}
+              </router-link>
+            </li>
+          </div>
         </li>
         <language-bar />
       </ul>
@@ -46,8 +48,18 @@ export default {
           phraseKey: 'DownloadLinkLabel',
         },
         {
-          path: '/product',
+          path: '',
           phraseKey: 'OurProductLinkLabel',
+          children: [
+            {
+              path: '/business',
+              phraseKey: 'BusinessLinkLabel',
+            },
+            {
+              path: '/premium',
+              phraseKey: 'PremiumLinkLabel',
+            }
+          ]
         },
         {
           path: '/pricing',
@@ -124,12 +136,14 @@ export default {
   margin: 0;
   padding: 0;
   li {
-    padding: 15px 25px;
+  padding: 15px 0;
     border-bottom: 1px $light-gray solid;
+    position: relative;
     &:last-of-type > a {
       font-weight: 400;
     }
     a {
+      padding: 0 25px;
       font-size: 13px;
       font-weight: 300;
       color: $light-green;
@@ -167,8 +181,29 @@ export default {
       }
     }
   }
+  .nav-link-submenu {
+    position: absolute;
+    background-color: rgba(0,0,0,0.5);
+    width: 200px;
+    top: 69px;
+    max-height: 0;
+    transition: max-height 0.4s;
+    &.show {
+      max-height: unset;
+    }
+    li {
+      border-bottom: 1px solid rgba(255,255,255,0.25);
+      padding: 7px 15px;
+      a {
+        color: $white;
+        font-weight: 300;
+        font-size: 0.7em;
+      }
+    }
+  }
   .language-bar-wrapper {
     border: none;
   }
 }
+
 </style>
