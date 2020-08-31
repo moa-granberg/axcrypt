@@ -3,7 +3,7 @@
     <img
       v-if="this.$mq === 'desktop'"
       @click="toggleLanguageSelector"
-      src="../assets/us.png"
+      :src="require(`@/assets/flags/${this.$i18n.locale}.png`)"
       alt="flag"
     />
     <div
@@ -11,16 +11,13 @@
         showLanguageSelector ? 'show language-selector' : 'language-selector'
       "
     >
-      <img src="../assets/us.png" alt="flag" />
-      <img src="../assets/de.png" alt="flag" />
-      <img src="../assets/us.png" alt="flag" />
-      <img src="../assets/de.png" alt="flag" />
-      <img src="../assets/us.png" alt="flag" />
-      <img src="../assets/de.png" alt="flag" />
-      <img src="../assets/us.png" alt="flag" />
-      <img src="../assets/de.png" alt="flag" />
-      <img src="../assets/us.png" alt="flag" />
-      <img src="../assets/de.png" alt="flag" />
+      <a
+        v-for="lang of this.$i18n.availableLocales"
+        :key="lang"
+        @click="setCurrentLocale(lang)"
+      >
+        <img :src="require(`@/assets/flags/${lang}.png`)" :alt="lang" />
+      </a>
     </div>
   </div>
 </template>
@@ -37,6 +34,9 @@ export default {
       if (this.$mq === 'desktop') {
         this.showLanguageSelector = !this.showLanguageSelector;
       }
+    },
+    setCurrentLocale(locale) {
+      this.$i18n.locale = locale;
     },
   },
 };
@@ -63,7 +63,7 @@ export default {
     display: none;
     position: absolute;
     top: 69px;
-    margin-right: 207px;
+    margin-right: 3em;
     padding: 10px;
     border: 1px solid #efefef;
     background-color: rgba(255, 255, 255, 0.95);
