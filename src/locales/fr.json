@@ -1,3 +1,9 @@
 {
-  "welcome": "fr"
+  "DownloadLinkLabel": "Télécharger",
+  "OurProductLinkLabel": "Notre produit",
+  "PricingLinkLabel": "Prix",
+  "InformationLinkLabel": "Information",
+  "SupportLinkLabel": "Aide",
+  "AboutUsLinkLabel": "A propos",
+  "SignInLinkLabel": "Se connecter"
 }
