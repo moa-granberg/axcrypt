@@ -1,5 +1,5 @@
 <template>
-  <header>
+  <header :class="this.$mq === 'desktop' ? 'desktop-header' : ''">
     <div class="nav">
       <router-link to="/">
         <img class="logo" src="../assets/logos/axcrypt_text.png" alt="Logo" />
@@ -10,7 +10,7 @@
       />
     </div>
     <div :class="navClass">
-      <ul class="nav-mobile-links">
+      <ul class="nav-links">
         <li v-for="link in navLinks" :key="link.path">
           <router-link :to="link.path">
             {{ link.text }}
@@ -19,10 +19,6 @@
       </ul>
       <language-bar />
     </div>
-
-    <!-- <mq-layout mq="desktop">
-      <h1>desktop</h1>
-    </mq-layout> -->
   </header>
 </template>
 
@@ -100,7 +96,7 @@ export default {
   }
 }
 
-.nav-mobile-links {
+.nav-links {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -116,6 +112,40 @@ export default {
       color: $light-green;
       text-decoration: none;
     }
+  }
+}
+
+.desktop-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  max-width: 1150px;
+
+  .nav {
+    border: none;
+    margin: 0;
+  }
+}
+
+.desktop-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .nav-links {
+    display: flex;
+    li {
+      padding: 15px;
+      border: none;
+      a {
+        text-transform: uppercase;
+        color: $gray;
+      }
+    }
+  }
+  .language-bar-wrapper {
+    border: none;
   }
 }
 </style>
