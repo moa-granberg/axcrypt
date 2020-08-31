@@ -8,12 +8,12 @@ import AboutView from './AboutView';
 import SignInView from './SignInView';
 
 export {
-    HomeView,
-    DownloadView,
-    BusinessView,
-    PricingView,
-    InformationView,
-    SupportView,
-    AboutView,
-    SignInView,
-}
+  HomeView,
+  DownloadView,
+  BusinessView,
+  PricingView,
+  InformationView,
+  SupportView,
+  AboutView,
+  SignInView,
+};
