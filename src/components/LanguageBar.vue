@@ -1,7 +1,12 @@
 <template>
   <div class="language-bar-wrapper">
-    <img src="../assets/de.png" alt="flag" />
-    <img src="../assets/de.png" alt="flag" />
+    <mq-layout mq="mobile">
+      <img src="../assets/us.png" alt="flag" />
+      <img src="../assets/de.png" alt="flag" />
+    </mq-layout>
+    <mq-layout mq="desktop">
+      <img src="../assets/us.png" alt="flag" />
+    </mq-layout>
   </div>
 </template>
 
@@ -18,9 +23,16 @@ export default {};
   justify-content: center;
   align-items: center;
   padding: 15px 25px;
+  flex-wrap: wrap;
+
+  > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
   img {
-    margin: 0 2.5px;
+    margin: 2.5px;
   }
 }
 </style>
