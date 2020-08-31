@@ -16,8 +16,8 @@
             {{ link.text }}
           </router-link>
         </li>
+        <language-bar />
       </ul>
-      <language-bar />
     </div>
   </header>
 </template>
