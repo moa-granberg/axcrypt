@@ -1,3 +1,9 @@
 {
-  "welcome": "tysk"
+  "DownloadLinkLabel": "Download",
+  "OurProductLinkLabel": "Unsere Produkt",
+  "PricingLinkLabel": "Preise",
+  "InformationLinkLabel": "Information",
+  "SupportLinkLabel": "Hilfe",
+  "AboutUsLinkLabel": "Über Uns",
+  "SignInLinkLabel": "Anmeldung"
 }

@@ -11,9 +11,14 @@
     </div>
     <div :class="navClass">
       <ul class="nav-links">
-        <li v-for="link in navLinks" :key="link.path">
+        <!-- <li v-for="link in navLinks" :key="link.path">
           <router-link :to="link.path">
             {{ link.text }}
+          </router-link>
+        </li> -->
+        <li v-for="link of headerLinks" :key="link.path">
+          <router-link :to="link.path">
+            {{ $t(link.phraseKey) }}
           </router-link>
         </li>
         <language-bar />
@@ -35,22 +40,40 @@ export default {
   data() {
     return {
       showMobileMenu: false,
+      headerLinks: [
+        {
+          path: '/download',
+          phraseKey: 'DownloadLinkLabel',
+        },
+        {
+          path: '/product',
+          phraseKey: 'OurProductLinkLabel',
+        },
+        {
+          path: '/pricing',
+          phraseKey: 'PricingLinkLabel',
+        },
+        {
+          path: '/information',
+          phraseKey: 'InformationLinkLabel',
+        },
+        {
+          path: '/support',
+          phraseKey: 'SupportLinkLabel',
+        },
+        {
+          path: '/about',
+          phraseKey: 'AboutUsLinkLabel',
+        },
+        {
+          path: '/sign-in',
+          phraseKey: 'SignInLinkLabel',
+        },
+      ],
     };
   },
 
   computed: {
-    navLinks() {
-      return this.$router.options.routes
-        .map(obj => ({
-          text: obj.name
-            .split('View')[0]
-            .replace(/([A-Z])/g, ' $1')
-            .trim(),
-          path: obj.path,
-        }))
-        .filter(item => !item.text.includes('Page') && item.text !== 'Home');
-    },
-
     navClass() {
       return this.$mq === 'desktop'
         ? 'desktop-menu'
