@@ -1,25 +1,24 @@
 <template>
   <header>
-    <mq-layout mq="mobile">
-      <div class="nav-mobile">
-        <router-link to="/">
-          <img class="logo" src="../assets/logos/axcrypt_text.png" alt="Logo" />
-        </router-link>
-        <hamburger-menu v-on:toggle="toggleDropDownMenu" />
-      </div>
-      <div
-        :class="show ? 'show drop-down-menu-mobile' : 'drop-down-menu-mobile'"
-      >
-        <ul class="nav-mobile-links">
-          <li v-for="link in navLinks" :key="link.path">
-            <router-link :to="link.path">
-              {{ link.text }}
-            </router-link>
-          </li>
-        </ul>
-        <language-bar />
-      </div>
-    </mq-layout>
+    <div class="nav">
+      <router-link to="/">
+        <img class="logo" src="../assets/logos/axcrypt_text.png" alt="Logo" />
+      </router-link>
+      <hamburger-menu
+        v-if="$mq === 'mobile'"
+        v-on:toggle="toggleDropDownMenu"
+      />
+    </div>
+    <div :class="show ? 'show drop-down-menu-mobile' : 'drop-down-menu-mobile'">
+      <ul class="nav-mobile-links">
+        <li v-for="link in navLinks" :key="link.path">
+          <router-link :to="link.path">
+            {{ link.text }}
+          </router-link>
+        </li>
+      </ul>
+      <language-bar />
+    </div>
 
     <!-- <mq-layout mq="desktop">
       <h1>desktop</h1>
@@ -72,7 +71,7 @@ export default {
   width: 145px;
 }
 
-.nav-mobile {
+.nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
