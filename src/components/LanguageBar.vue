@@ -11,7 +11,11 @@
         showLanguageSelector ? 'show language-selector' : 'language-selector'
       "
     >
-      <a v-for="lang of this.$i18n.availableLocales" :key="lang">
+      <a
+        v-for="lang of this.$i18n.availableLocales"
+        :key="lang"
+        @click="setCurrentLocale(lang)"
+      >
         <img :src="require(`@/assets/flags/${lang}.png`)" :alt="lang" />
       </a>
     </div>
@@ -30,6 +34,9 @@ export default {
       if (this.$mq === 'desktop') {
         this.showLanguageSelector = !this.showLanguageSelector;
       }
+    },
+    setCurrentLocale(locale) {
+      this.$i18n.locale = locale;
     },
   },
 };
