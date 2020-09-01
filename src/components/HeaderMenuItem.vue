@@ -1,6 +1,6 @@
 <template>
   <div :class="'header-menu-item-wrapper ' + $mq">
-    <div :class="'header-menu-item ' + $mq">
+    <div :class="'header-menu-item ' + $mq" @mouseover="showSubmenuDesktop = true">
       <router-link :to="link.path" :class="'header-menu-item-link ' + $mq">
         {{ $t(link.phraseKey) }}
       </router-link>
@@ -17,7 +17,12 @@
       </div>
     </div>
 
-    <header-submenu :show="showSubmenu" :children="link.children" />
+    <header-submenu
+      :show="showSubmenu"
+      :showDesktop="showSubmenuDesktop"
+      :children="link.children"
+      v-on:hideSubmenuDesktop="hideSubmenuDesktop"
+    />
   </div>
 </template>
 
@@ -37,11 +42,16 @@ export default {
   data() {
     return {
       showSubmenu: false,
+      showSubmenuDesktop: false,
     };
   },
   methods: {
     toggleSubmenu() {
       this.showSubmenu = !this.showSubmenu;
+    },
+
+    hideSubmenuDesktop() {
+      this.showSubmenuDesktop = false;
     },
   },
 };
@@ -85,6 +95,7 @@ export default {
     color: $gray;
     text-transform: uppercase;
     transition: color 0.3s;
+
     &:hover {
       color: $light-green;
     }
@@ -99,12 +110,14 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
+
   > img {
     padding: 0 25px;
     width: 1.3em;
     opacity: 0.8;
     transform: rotate(0);
     transition: transform 0.4s;
+
     &.rotated {
       transform: rotate(180deg);
     }

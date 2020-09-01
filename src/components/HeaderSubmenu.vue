@@ -1,27 +1,37 @@
 <template>
-  <!-- <div v-if="children" :class="'header-submenu-wrapper ' + $mq"> -->
-  <div
-    v-if="children"
-    class="header-submenu-wrapper"
-    :class="[{ show: show }, $mq]"
-  >
-    <li
-      v-for="child of children"
-      :key="child.path"
-      :class="'header-submenu-item ' + $mq"
+  <div :class="'submenu-mouseover-div ' + $mq" @mouseleave="hideSubmenuDesktop">
+    <div
+      v-if="children"
+      class="header-submenu-wrapper"
+      :class="[{ show: show, 'show-desktop': showDesktop }, $mq]"
     >
-      <router-link :to="child.path" :class="'header-submenu-item-link ' + $mq">
-        {{ $t(child.phraseKey) }}
-      </router-link>
-    </li>
+      <li
+        v-for="child of children"
+        :key="child.path"
+        :class="'header-submenu-item ' + $mq"
+      >
+        <router-link
+          :to="child.path"
+          :class="'header-submenu-item-link ' + $mq"
+        >
+          {{ $t(child.phraseKey) }}
+        </router-link>
+      </li>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
   props: {
-    children: Array,
+    children: Array, //{ path: string, phraseKey: string }
     show: Boolean,
+    showDesktop: Boolean,
+  },
+  methods: {
+    hideSubmenuDesktop() {
+      this.$emit('hideSubmenuDesktop');
+    },
   },
 };
 </script>
@@ -29,11 +39,21 @@ export default {
 <style lang="scss" scoped>
 @import '../scss/variables.scss';
 
+.submenu-mouseover-div {
+  &.desktop {
+    position: absolute;
+    padding-top: 69px;
+    top: 0;
+    pointer-events: none;
+  }
+}
+
 .header-submenu-wrapper {
   &.mobile {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.4s;
+
     &.show {
       border-top: 1px solid $light-gray;
       max-height: 110px;
@@ -41,15 +61,14 @@ export default {
   }
 
   &.desktop {
-    position: absolute;
-    background-color: rgba(0, 0, 0, 0.5);
     width: 200px;
-    top: 69px;
-    // max-height: 0;
-    // transition: max-height 0.4s;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s;
+    pointer-events: auto;
 
-    &.show {
-      max-height: unset;
+    &.show-desktop {
+      max-height: 100px;
     }
   }
 }
@@ -59,6 +78,10 @@ export default {
 }
 
 .header-submenu-item {
+  display: flex;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+
   &.mobile {
     padding: 15px 45px;
     border-bottom: 1px solid $light-gray;
@@ -66,7 +89,7 @@ export default {
 
   &.desktop {
     border-bottom: 1px solid rgba(255, 255, 255, 0.25);
-    padding: 7px 15px;
+    padding: 10px 15px;
   }
 }
 
@@ -85,8 +108,4 @@ export default {
     text-transform: uppercase;
   }
 }
-
-// .header-submenu-wrapper > li:last-of-type > a {
-// font-weight: 300;
-// }
 </style>
