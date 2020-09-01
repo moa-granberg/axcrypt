@@ -39,7 +39,6 @@ export default {
   position: relative;
 
   &.mobile {
-    padding: 15px 0;
     border-bottom: 1px $light-gray solid;
   }
 }
@@ -49,6 +48,7 @@ export default {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 15px 0;
   }
 
   &.desktop {

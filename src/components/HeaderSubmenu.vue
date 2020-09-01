@@ -24,6 +24,8 @@ export default {
 @import '../scss/variables.scss';
 
 .header-submenu-wrapper {
+  border-top: 1px solid $light-gray;
+
   &.desktop {
     position: absolute;
     background-color: rgba(0, 0, 0, 0.5);
@@ -38,9 +40,14 @@ export default {
   }
 }
 
+.header-submenu-wrapper > li:last-of-type {
+  border-bottom: none;
+}
+
 .header-submenu-item {
   &.mobile {
     padding: 15px 45px;
+    border-bottom: 1px solid $light-gray;
   }
 
   &.desktop {
