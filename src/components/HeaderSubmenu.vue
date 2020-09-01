@@ -1,5 +1,10 @@
 <template>
-  <div v-if="children" :class="'header-submenu-wrapper ' + $mq">
+  <!-- <div v-if="children" :class="'header-submenu-wrapper ' + $mq"> -->
+  <div
+    v-if="children"
+    class="header-submenu-wrapper"
+    :class="[{ show: show }, $mq]"
+  >
     <li
       v-for="child of children"
       :key="child.path"
@@ -16,6 +21,7 @@
 export default {
   props: {
     children: Array,
+    show: Boolean,
   },
 };
 </script>
@@ -24,7 +30,15 @@ export default {
 @import '../scss/variables.scss';
 
 .header-submenu-wrapper {
-  border-top: 1px solid $light-gray;
+  &.mobile {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s;
+    &.show {
+      border-top: 1px solid $light-gray;
+      max-height: 110px;
+    }
+  }
 
   &.desktop {
     position: absolute;

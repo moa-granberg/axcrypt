@@ -7,12 +7,17 @@
       <div
         class="header-submenu-drop-down-btn"
         v-if="$mq === 'mobile' && link.children"
+        @click="toggleSubmenu"
       >
-        <img src="../assets/icons/keyboard_arrow_down.svg" alt="arrow" />
+        <img
+          src="../assets/icons/keyboard_arrow_down.svg"
+          alt="arrow"
+          :class="{ rotated: showSubmenu }"
+        />
       </div>
     </div>
 
-    <header-submenu :children="link.children" />
+    <header-submenu :show="showSubmenu" :children="link.children" />
   </div>
 </template>
 
@@ -27,6 +32,16 @@ export default {
     link: {
       path: String,
       phraseKey: String,
+    },
+  },
+  data() {
+    return {
+      showSubmenu: false,
+    };
+  },
+  methods: {
+    toggleSubmenu() {
+      this.showSubmenu = !this.showSubmenu;
     },
   },
 };
@@ -88,6 +103,11 @@ export default {
     padding: 0 25px;
     width: 1.3em;
     opacity: 0.8;
+    transform: rotate(0);
+    transition: transform 0.4s;
+    &.rotated {
+      transform: rotate(180deg);
+    }
   }
 }
 </style>
