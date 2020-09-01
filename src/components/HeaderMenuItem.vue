@@ -69,7 +69,15 @@ export default {
   &.desktop {
     color: $gray;
     text-transform: uppercase;
+    transition: color 0.3s;
+    &:hover {
+      color: $light-green;
+    }
   }
+}
+
+.header-menu-wrapper > div:last-of-type .header-menu-item-link {
+  font-weight: 400;
 }
 
 .header-submenu-drop-down-btn {

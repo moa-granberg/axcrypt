@@ -1,5 +1,5 @@
 <template>
-  <div :class="'language-bar-wrapper ' + $mq">
+  <article :class="'language-bar-wrapper ' + $mq">
     <img
       v-if="this.$mq === 'desktop'"
       @click="toggleLanguageSelector"
@@ -19,7 +19,7 @@
         <img :src="require(`@/assets/flags/${lang}.png`)" :alt="lang" />
       </a>
     </div>
-  </div>
+  </article>
 </template>
 
 <script>
