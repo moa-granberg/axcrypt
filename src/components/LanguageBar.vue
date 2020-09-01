@@ -1,5 +1,5 @@
 <template>
-  <div class="language-bar-wrapper">
+  <div :class="'language-bar-wrapper ' + $mq">
     <img
       v-if="this.$mq === 'desktop'"
       @click="toggleLanguageSelector"
@@ -7,11 +7,11 @@
       alt="flag"
     />
     <div
-      :class="
-        showLanguageSelector ? 'show language-selector' : 'language-selector'
-      "
+      class="language-selector"
+      :class="[{ show: showLanguageSelector }, $mq]"
     >
       <a
+        :class="'language-selector-flag ' + $mq"
         v-for="lang of this.$i18n.availableLocales"
         :key="lang"
         @click="setCurrentLocale(lang)"
@@ -29,6 +29,7 @@ export default {
       showLanguageSelector: false,
     };
   },
+
   methods: {
     toggleLanguageSelector() {
       if (this.$mq === 'desktop') {
@@ -46,30 +47,56 @@ export default {
 @import '../scss/variables.scss';
 
 .language-bar-wrapper {
-  border-bottom: 1px $light-gray solid;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 15px 25px;
-  flex-wrap: wrap;
-  position: relative;
+
+  &.mobile {
+    border-bottom: 1px $light-gray solid;
+    flex-wrap: wrap;
+  }
+
+  &.desktop {
+    position: relative;
+  }
 
   img {
     margin: 2.5px;
   }
 }
-@media (min-width: 950px) {
-  .language-selector {
+
+.language-selector {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &.mobile {
+    flex-direction: row;
+  }
+
+  &.desktop {
     display: none;
     position: absolute;
-    top: 69px;
+    top: 67px;
     margin-right: 3em;
     padding: 10px;
     border: 1px solid #efefef;
     background-color: rgba(255, 255, 255, 0.95);
+
+    &.show {
+      display: flex;
+    }
   }
-  .show {
-    display: flex;
+}
+
+.language-selector-flag {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &.mobile {
+    flex-direction: row;
   }
 }
 </style>
