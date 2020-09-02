@@ -1,6 +1,8 @@
 <template>
   <section :class="'footer-sitemap ' + $mq">
-    <h3 :class="'footer-sitemap-title ' + $mq">Sitemap</h3>
+    <h3 :class="'footer-sitemap-title ' + $mq">
+      {{ $t('SitemapHeading') }}
+    </h3>
     <ul :class="'footer-sitemap-links-wrapper ' + $mq">
       <li
         v-for="link of footerLinks"
