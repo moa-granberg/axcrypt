@@ -63,7 +63,7 @@ export default {
 
 .header-submenu-wrapper {
   padding: 0;
-  
+
   &.mobile {
     max-height: 0;
     overflow: hidden;

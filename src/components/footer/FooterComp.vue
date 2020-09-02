@@ -20,15 +20,15 @@ export default {
     FooterContact,
     FooterSocial,
     FooterTryBtn,
-  }
-}
+  },
+};
 </script>
 
 <style lang="scss" scoped>
-  @import '@/scss/variables.scss';
+@import '@/scss/variables.scss';
 
-  .footer {
-    background-color: $green;
-    color: $white;
-  }
+.footer {
+  background-color: $green;
+  color: $white;
+}
 </style>
