@@ -7,5 +7,15 @@
   "InformationLinkLabel": "Information",
   "SupportLinkLabel": "Support",
   "AboutUsLinkLabel": "About us",
-  "SignInLinkLabel": "Sign in"
+  "SignInLinkLabel": "Sign in",
+
+  "HomeLinkLabel": "Home",
+  "GetStartedLinkLabel": "Get started",
+  "ResellerLinkLabel": "Reseller",
+  "FaqLinkLabel": "FAQ",
+  "BlogLinkLabel": "Blog",
+  "PressLinkLabel": "Press and media",
+  "PrivacyPolicyLinkLabel": "Privacy policy",
+  "PasswordGeneratorLinkLabel": "Password generator",
+  "MyAxCryptIDLinkLabel": "My AxCrypt ID"
 }

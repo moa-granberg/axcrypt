@@ -2,14 +2,20 @@
   <div id="app">
     <header-comp />
     <router-view />
+    <footer-comp />
   </div>
 </template>
 
 <script>
 import HeaderComp from './components/header/HeaderComp';
+import FooterComp from './components/footer/FooterComp';
+
 export default {
   name: 'App',
-  components: { HeaderComp },
+  components: {
+    HeaderComp,
+    FooterComp,
+  },
 };
 </script>
 
