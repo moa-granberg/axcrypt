@@ -1,5 +1,5 @@
 <template>
-  <div :class="'header-menu-item-wrapper ' + $mq">
+  <li :class="'header-menu-item-wrapper ' + $mq">
     <div
       :class="'header-menu-item ' + $mq"
       @mouseover="handleShowSubmenuDesktop"
@@ -33,7 +33,7 @@
       v-on:showSubmenuDesktop="handleShowSubmenuDesktop"
       v-on:hideMenuMobile="handleHideMenuMobile"
     />
-  </div>
+  </li>
 </template>
 
 <script>
@@ -132,10 +132,6 @@ export default {
       color: $light-green;
     }
   }
-}
-
-.header-menu-wrapper > div:last-of-type .header-menu-item-link {
-  font-weight: 400;
 }
 
 .header-submenu-drop-down-btn {
