@@ -2,7 +2,7 @@
   <header :class="'header-wrapper ' + this.$mq">
     <div :class="'nav ' + this.$mq">
       <router-link to="/">
-        <img class="logo" src="../assets/logos/axcrypt_text.png" alt="Logo" />
+        <img class="logo" src="@/assets/logos/axcrypt_text.png" alt="Logo" />
       </router-link>
       <hamburger-menu
         v-if="$mq === 'mobile'"
@@ -41,7 +41,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '../scss/variables.scss';
+@import '@/scss/variables.scss';
 
 .logo {
   width: 145px;
