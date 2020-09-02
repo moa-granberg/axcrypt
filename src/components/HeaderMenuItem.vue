@@ -7,18 +7,18 @@
       <div
         class="header-submenu-drop-down-btn"
         v-if="$mq === 'mobile' && link.children"
-        @click="toggleSubmenu"
+        @click="toggleSubmenuMobile"
       >
         <img
           src="../assets/icons/keyboard_arrow_down.svg"
           alt="arrow"
-          :class="{ rotated: showSubmenu }"
+          :class="{ rotated: showSubmenuMobile }"
         />
       </div>
     </div>
 
     <header-submenu
-      :show="showSubmenu"
+      :showMobile="showSubmenuMobile"
       :showDesktop="showSubmenuDesktop"
       :children="link.children"
       v-on:hideSubmenuDesktop="hideSubmenuDesktop"
@@ -33,21 +33,24 @@ export default {
   components: {
     HeaderSubmenu,
   },
+
   props: {
     link: {
       path: String,
       phraseKey: String,
     },
   },
+
   data() {
     return {
-      showSubmenu: false,
+      showSubmenuMobile: false,
       showSubmenuDesktop: false,
     };
   },
+
   methods: {
-    toggleSubmenu() {
-      this.showSubmenu = !this.showSubmenu;
+    toggleSubmenuMobile() {
+      this.showSubmenuMobile = !this.showSubmenuMobile;
     },
 
     hideSubmenuDesktop() {

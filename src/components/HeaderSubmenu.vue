@@ -3,7 +3,7 @@
     <div
       v-if="children"
       class="header-submenu-wrapper"
-      :class="[{ show: show, 'show-desktop': showDesktop }, $mq]"
+      :class="[{ 'show-mobile': showMobile, 'show-desktop': showDesktop }, $mq]"
     >
       <li
         v-for="child of children"
@@ -25,7 +25,7 @@
 export default {
   props: {
     children: Array, //{ path: string, phraseKey: string }
-    show: Boolean,
+    showMobile: Boolean,
     showDesktop: Boolean,
   },
   methods: {
@@ -54,7 +54,7 @@ export default {
     overflow: hidden;
     transition: max-height 0.4s;
 
-    &.show {
+    &.show-mobile {
       border-top: 1px solid $light-gray;
       max-height: 110px;
     }
@@ -80,7 +80,6 @@ export default {
 .header-submenu-item {
   display: flex;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.5);
 
   &.mobile {
     padding: 15px 45px;
@@ -88,6 +87,7 @@ export default {
   }
 
   &.desktop {
+    background-color: rgba(0, 0, 0, 0.5);
     border-bottom: 1px solid rgba(255, 255, 255, 0.25);
     padding: 10px 15px;
   }
