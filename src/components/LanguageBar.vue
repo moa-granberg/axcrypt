@@ -59,6 +59,8 @@ export default {
 
   &.desktop {
     position: relative;
+    height: $header-height;
+    box-sizing: border-box;
   }
 
   img {
@@ -78,7 +80,7 @@ export default {
   &.desktop {
     display: none;
     position: absolute;
-    top: 67px;
+    top: $header-height;
     margin-right: 3em;
     padding: 10px;
     border: 1px solid #efefef;
