@@ -15,6 +15,7 @@
         :class="'header-submenu-item ' + $mq"
       >
         <router-link
+          @click.native="handleHideMenuMobile"
           :to="child.path"
           :class="'header-submenu-item-link ' + $mq"
         >
@@ -40,6 +41,10 @@ export default {
 
     handleShowSubmenuDesktop() {
       this.$emit('showSubmenuDesktop');
+    },
+
+    handleHideMenuMobile() {
+      this.$emit('hideMenuMobile');
     },
   },
 };
@@ -93,7 +98,7 @@ export default {
   align-items: center;
 
   &.mobile {
-    padding: 15px 45px;
+    padding: 15px 0;
     border-bottom: 1px solid $light-gray;
   }
 
@@ -111,6 +116,8 @@ export default {
   &.mobile {
     font-size: 13px;
     color: $light-green;
+    padding: 0 45px;
+    width: 100vw;
   }
 
   &.desktop {

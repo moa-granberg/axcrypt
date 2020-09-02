@@ -4,6 +4,7 @@
       v-for="link of headerLinks"
       :key="link.path"
       :link="link"
+      v-on:hideMobileMenu="handleHideMobileMenu"
     ></header-menu-item>
     <language-bar />
   </ul>
@@ -66,6 +67,12 @@ export default {
         },
       ],
     };
+  },
+
+  methods: {
+    handleHideMobileMenu() {
+      this.$emit('hideMobileMenu');
+    },
   },
 };
 </script>

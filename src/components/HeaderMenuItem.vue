@@ -5,7 +5,11 @@
       @mouseover="handleShowSubmenuDesktop"
       @mouseleave="handleHideSubmenuDesktop"
     >
-      <router-link :to="link.path" :class="'header-menu-item-link ' + $mq">
+      <router-link
+        @click.native="handleHideMenuMobile(link.children)"
+        :to="link.path"
+        :class="'header-menu-item-link ' + $mq"
+      >
         {{ $t(link.phraseKey) }}
       </router-link>
       <div
@@ -27,6 +31,7 @@
       :children="link.children"
       v-on:hideSubmenuDesktop="handleHideSubmenuDesktop"
       v-on:showSubmenuDesktop="handleShowSubmenuDesktop"
+      v-on:hideMenuMobile="handleHideMenuMobile"
     />
   </div>
 </template>
@@ -64,6 +69,14 @@ export default {
 
     handleShowSubmenuDesktop() {
       this.showSubmenuDesktop = true;
+    },
+
+    handleHideMenuMobile(children) {
+      if (!children) {
+        this.$emit('hideMobileMenu');
+      } else {
+        this.toggleSubmenuMobile();
+      }
     },
   },
 };
@@ -103,6 +116,7 @@ export default {
   &.mobile {
     color: $light-green;
     padding: 0 25px;
+    width: 100vw;
   }
 
   &.desktop {

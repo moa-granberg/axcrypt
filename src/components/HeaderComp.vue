@@ -9,7 +9,10 @@
         v-on:toggle="toggleDropDownMenu"
       />
     </div>
-    <header-menu :showMobileMenu="showMobileMenu" />
+    <header-menu
+      :showMobileMenu="showMobileMenu"
+      v-on:hideMobileMenu="toggleDropDownMenu"
+    />
   </header>
 </template>
 
