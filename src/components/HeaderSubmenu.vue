@@ -1,5 +1,9 @@
 <template>
-  <div :class="'submenu-mouseover-div ' + $mq" @mouseleave="hideSubmenuDesktop">
+  <div
+    :class="'submenu-mouseover-div ' + $mq"
+    @mouseover="handleShowSubmenuDesktop"
+    @mouseleave="handleHideSubmenuDesktop"
+  >
     <div
       v-if="children"
       class="header-submenu-wrapper"
@@ -28,9 +32,14 @@ export default {
     showMobile: Boolean,
     showDesktop: Boolean,
   },
+
   methods: {
-    hideSubmenuDesktop() {
+    handleHideSubmenuDesktop() {
       this.$emit('hideSubmenuDesktop');
+    },
+
+    handleShowSubmenuDesktop() {
+      this.$emit('showSubmenuDesktop');
     },
   },
 };
@@ -42,8 +51,7 @@ export default {
 .submenu-mouseover-div {
   &.desktop {
     position: absolute;
-    padding-top: 69px;
-    top: 0;
+    top: $header-height;
     pointer-events: none;
   }
 }
@@ -64,11 +72,14 @@ export default {
     width: 200px;
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.4s;
     pointer-events: auto;
+    opacity: 0;
+    transition: max-height 0.1s, opacity 0.1s;
 
     &.show-desktop {
       max-height: 100px;
+      opacity: 1;
+      transition: max-height 0.3s, opacity 0.3s;
     }
   }
 }

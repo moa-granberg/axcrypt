@@ -1,6 +1,10 @@
 <template>
   <div :class="'header-menu-item-wrapper ' + $mq">
-    <div :class="'header-menu-item ' + $mq" @mouseover="showSubmenuDesktop = true">
+    <div
+      :class="'header-menu-item ' + $mq"
+      @mouseover="handleShowSubmenuDesktop"
+      @mouseleave="handleHideSubmenuDesktop"
+    >
       <router-link :to="link.path" :class="'header-menu-item-link ' + $mq">
         {{ $t(link.phraseKey) }}
       </router-link>
@@ -21,7 +25,8 @@
       :showMobile="showSubmenuMobile"
       :showDesktop="showSubmenuDesktop"
       :children="link.children"
-      v-on:hideSubmenuDesktop="hideSubmenuDesktop"
+      v-on:hideSubmenuDesktop="handleHideSubmenuDesktop"
+      v-on:showSubmenuDesktop="handleShowSubmenuDesktop"
     />
   </div>
 </template>
@@ -53,8 +58,12 @@ export default {
       this.showSubmenuMobile = !this.showSubmenuMobile;
     },
 
-    hideSubmenuDesktop() {
+    handleHideSubmenuDesktop() {
       this.showSubmenuDesktop = false;
+    },
+
+    handleShowSubmenuDesktop() {
+      this.showSubmenuDesktop = true;
     },
   },
 };
@@ -72,15 +81,17 @@ export default {
 }
 
 .header-menu-item {
+  display: flex;
+  align-items: center;
+
   &.mobile {
-    display: flex;
-    align-items: center;
     justify-content: space-between;
     padding: 15px 0;
   }
 
   &.desktop {
-    padding: 15px;
+    padding: 0 15px;
+    height: $header-height;
   }
 }
 

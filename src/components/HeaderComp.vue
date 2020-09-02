@@ -51,6 +51,7 @@ export default {
     align-items: center;
     margin: auto;
     max-width: 1150px;
+    height: $header-height;
   }
 }
 
