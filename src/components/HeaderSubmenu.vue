@@ -4,7 +4,7 @@
     @mouseover="handleShowSubmenuDesktop"
     @mouseleave="handleHideSubmenuDesktop"
   >
-    <div
+    <ul
       v-if="children"
       class="header-submenu-wrapper"
       :class="[{ 'show-mobile': showMobile, 'show-desktop': showDesktop }, $mq]"
@@ -22,7 +22,7 @@
           {{ $t(child.phraseKey) }}
         </router-link>
       </li>
-    </div>
+    </ul>
   </div>
 </template>
 
@@ -62,6 +62,8 @@ export default {
 }
 
 .header-submenu-wrapper {
+  padding: 0;
+  
   &.mobile {
     max-height: 0;
     overflow: hidden;
