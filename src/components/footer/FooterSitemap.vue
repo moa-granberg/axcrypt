@@ -9,9 +9,9 @@
         :key="link.path"
         :class="'footer-sitemap-item ' + $mq"
       >
-        <router-link :to="link.path" :class="'footer-sitemap-item-link'">{{
-          $t(link.phraseKey)
-        }}</router-link>
+        <router-link :to="link.path" :class="'footer-sitemap-item-link'">
+          {{ $t(link.phraseKey) }}
+        </router-link>
       </li>
     </ul>
   </section>
