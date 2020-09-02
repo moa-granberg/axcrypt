@@ -106,8 +106,12 @@ export default {
   }
 
   &.desktop {
-    color: $gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: $header-height;
     text-transform: uppercase;
+    color: $gray;
     transition: color 0.3s;
 
     &:hover {
