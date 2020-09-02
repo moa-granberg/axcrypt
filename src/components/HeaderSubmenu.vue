@@ -112,12 +112,12 @@ export default {
 .header-submenu-item-link {
   font-weight: 300;
   text-decoration: none;
+  width: 100%;
 
   &.mobile {
     font-size: 13px;
     color: $light-green;
     padding: 0 45px;
-    width: 100vw;
   }
 
   &.desktop {
