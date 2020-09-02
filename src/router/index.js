@@ -21,7 +21,11 @@ const routes = [
     path: '/business',
     name: 'BusinessView',
     component: Views.BusinessView,
-    // Awaiting finished architecture
+  },
+  {
+    path: '/premium',
+    name: 'PremiumView',
+    component: Views.PremiumView,
   },
   {
     path: '/pricing',

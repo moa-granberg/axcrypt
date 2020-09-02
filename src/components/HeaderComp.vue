@@ -1,6 +1,6 @@
 <template>
-  <header :class="this.$mq === 'desktop' ? 'desktop-header' : ''">
-    <div class="nav">
+  <header :class="'header-wrapper ' + this.$mq">
+    <div :class="'nav ' + this.$mq">
       <router-link to="/">
         <img class="logo" src="../assets/logos/axcrypt_text.png" alt="Logo" />
       </router-link>
@@ -9,78 +9,27 @@
         v-on:toggle="toggleDropDownMenu"
       />
     </div>
-    <div :class="navClass">
-      <ul class="nav-links">
-        <!-- <li v-for="link in navLinks" :key="link.path">
-          <router-link :to="link.path">
-            {{ link.text }}
-          </router-link>
-        </li> -->
-        <li v-for="link of headerLinks" :key="link.path">
-          <router-link :to="link.path">
-            {{ $t(link.phraseKey) }}
-          </router-link>
-        </li>
-        <language-bar />
-      </ul>
-    </div>
+    <header-menu
+      :showMobileMenu="showMobileMenu"
+      v-on:hideMobileMenu="toggleDropDownMenu"
+    />
   </header>
 </template>
 
 <script>
 import HamburgerMenu from './HamburgerMenu';
-import LanguageBar from './LanguageBar';
+import HeaderMenu from './HeaderMenu';
 
 export default {
   components: {
     HamburgerMenu,
-    LanguageBar,
+    HeaderMenu,
   },
 
   data() {
     return {
       showMobileMenu: false,
-      headerLinks: [
-        {
-          path: '/download',
-          phraseKey: 'DownloadLinkLabel',
-        },
-        {
-          path: '/product',
-          phraseKey: 'OurProductLinkLabel',
-        },
-        {
-          path: '/pricing',
-          phraseKey: 'PricingLinkLabel',
-        },
-        {
-          path: '/information',
-          phraseKey: 'InformationLinkLabel',
-        },
-        {
-          path: '/support',
-          phraseKey: 'SupportLinkLabel',
-        },
-        {
-          path: '/about',
-          phraseKey: 'AboutUsLinkLabel',
-        },
-        {
-          path: '/sign-in',
-          phraseKey: 'SignInLinkLabel',
-        },
-      ],
     };
-  },
-
-  computed: {
-    navClass() {
-      return this.$mq === 'desktop'
-        ? 'desktop-menu'
-        : this.showMobileMenu
-        ? 'show drop-down-menu-mobile'
-        : 'drop-down-menu-mobile';
-    },
   },
 
   methods: {
@@ -98,6 +47,17 @@ export default {
   width: 145px;
 }
 
+.header-wrapper {
+  &.desktop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    max-width: 1150px;
+    height: $header-height;
+  }
+}
+
 .nav {
   display: flex;
   justify-content: space-between;
@@ -106,69 +66,10 @@ export default {
   max-width: 767px;
   margin: auto;
   border-bottom: 1px $light-gray solid;
-}
 
-.drop-down-menu-mobile {
-  margin-bottom: 10px;
-  transition: all 0.4s ease-in-out;
-  overflow: hidden;
-  max-height: 0;
-
-  &.show {
-    max-height: 600px;
-  }
-}
-
-.nav-links {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  li {
-    padding: 15px 25px;
-    border-bottom: 1px $light-gray solid;
-    &:last-of-type > a {
-      font-weight: 400;
-    }
-    a {
-      font-size: 13px;
-      font-weight: 300;
-      color: $light-green;
-      text-decoration: none;
-    }
-  }
-}
-
-.desktop-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: auto;
-  max-width: 1150px;
-
-  .nav {
+  &.desktop {
     border: none;
     margin: 0;
-  }
-}
-
-.desktop-menu {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  .nav-links {
-    display: flex;
-    li {
-      padding: 15px;
-      border: none;
-      a {
-        text-transform: uppercase;
-        color: $gray;
-      }
-    }
-  }
-  .language-bar-wrapper {
-    border: none;
   }
 }
 </style>
