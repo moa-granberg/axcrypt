@@ -1,5 +1,5 @@
 <template>
-  <section :class="'footer-sitemap ' + $mq">
+  <section :class="'footer-sitemap-wrapper ' + $mq">
     <h3 :class="'footer-sitemap-title ' + $mq">
       {{ $t('SitemapHeading') }}
     </h3>
@@ -79,7 +79,7 @@ export default {
 <style lang="scss" scoped>
 @import '@/scss/variables.scss';
 
-.footer-sitemap {
+.footer-sitemap-wrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;

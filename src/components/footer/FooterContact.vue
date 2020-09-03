@@ -1,5 +1,5 @@
 <template>
-  <section :class="'footer-contact ' + $mq">
+  <section :class="'footer-contact-wrapper ' + $mq">
     <h3 :class="'footer-contact-heading ' + $mq">{{ $t('ContactUsHeading') }}</h3>
     <p 
       :class="'footer-contact-paragraph ' + $mq" 
@@ -18,7 +18,7 @@
 <style lang="scss">
 @import '@/scss/variables.scss';
 
-.footer-contact {
+.footer-contact-wrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;
