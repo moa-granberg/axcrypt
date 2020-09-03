@@ -9,7 +9,7 @@
         :key="link.path"
         :class="'footer-sitemap-item ' + $mq"
       >
-        <router-link :to="link.path" :class="'footer-sitemap-item-link'">
+        <router-link :to="link.path" :class="'footer-sitemap-item-link ' + $mq">
           {{ $t(link.phraseKey) }}
         </router-link>
       </li>
@@ -83,35 +83,70 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  margin: 28px 0 0 0;
+
+  &.mobile {
+    margin: 28px 0 0 0;
+    align-items: center;
+    background-color: $dark-green;
+    box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.1);
+  }
 }
+
 .footer-sitemap-title {
-  font-size: 14px;
   line-height: 1rem;
-  margin: 0 0 24px 0;
+
+  &.mobile {
+    margin: 16px 0;
+    font-weight: 400;
+  }
+
+  &.desktop {
+    font-size: 14px;
+    margin: 0 0 15px 0;
+  }
 }
+
 .footer-sitemap-links-wrapper {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
   list-style: none;
-  padding: 0 0 34px 0;
   margin: 0;
-  max-height: 135px;
 
   &.mobile {
-    min-width: 300px;
-    max-width: 500px;
-    border-bottom: 1px solid $white;
+    padding: 0 0 16px 0;
+    min-width: 320px;
+    max-height: 185px;
+  }
+
+  &.desktop {
+    padding: 0 0 34px 0;
+    max-height: 135px;
+  }
+}
+
+.footer-sitemap-item {
+  &.mobile {
+    padding: 0 20px;
+  }
+
+  &.desktop {
+    padding: 0 90px 0 0;
   }
 }
 
 .footer-sitemap-item-link {
   text-decoration: none;
   color: $white;
-  font-size: 0.75rem;
+
+  &.mobile {
+    font-weight: 300;
+    line-height: 1.7rem;
+  }
+
+  &.desktop {
+    font-size: 0.75rem;
+  }
 }
 </style>
