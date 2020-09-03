@@ -143,10 +143,10 @@ export default {
 .footer-sitemap-item-link {
   text-decoration: none;
   color: $white;
-
   &.mobile {
     font-weight: 300;
     line-height: 1.7rem;
+
   }
 
   &.desktop {

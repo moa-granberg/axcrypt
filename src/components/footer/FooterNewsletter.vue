@@ -1,10 +1,10 @@
 <template>
   <section :class="'footer-newsletter-wrapper ' + $mq">
-    <label for="user-email">
-      <h6 :class="'footer-newsletter-heading ' + $mq">
-        {{ $t('FooterNewsletterSignUpHeading') }}     
-      </h6>
-    </label>
+    <h6 :class="'footer-newsletter-heading ' + $mq">
+      <label for="user-email">
+        {{ $t('FooterNewsletterSignUpHeading') }}
+      </label>
+    </h6>
     <div :class="'footer-newsletter-form ' + $mq">
       <input
         type="text"
@@ -89,8 +89,6 @@ export default {
     font-style: italic;
     opacity: 0.5;
   }
-
-
 }
 
 .footer-newsletter-button {
