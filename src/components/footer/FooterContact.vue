@@ -14,12 +14,7 @@
     />
 
     <mq-layout mq="mobile" class="footer-contact-socialmedia-wrapper">
-      <a href="https://facebook.com/axcrypt">
-        <img src="@/assets/icons/facebook_icon.png" alt="Facebook" />
-      </a>
-      <a href="https://twitter.com/axcrypt">
-        <img src="@/assets/icons/twitter_icon.svg" alt="Twitter" />
-      </a>
+      <footer-social-media />
     </mq-layout>
 
     <mq-layout mq="mobile">
@@ -31,6 +26,16 @@
     </mq-layout>
   </section>
 </template>
+
+<script>
+import FooterSocialMedia from './FooterSocialMedia';
+
+export default {
+  components: {
+    FooterSocialMedia,
+  },
+};
+</script>
 
 <style lang="scss">
 @import '@/scss/variables.scss';
@@ -80,26 +85,6 @@
   color: $white;
   font-weight: 600;
   text-decoration: none;
-}
-
-.footer-contact-socialmedia-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  bottom: 28px;
-  left: 28px;
-
-  a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  img {
-    width: 32px;
-    margin: 0 8px 0 0;
-  }
 }
 
 .footer-logo {
