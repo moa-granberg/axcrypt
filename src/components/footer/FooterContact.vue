@@ -52,7 +52,7 @@ export default {
   }
 
   &.desktop {
-    margin: 0 auto 0 10px;
+    margin: 0 auto 0 30px;
   }
 }
 
@@ -89,6 +89,9 @@ export default {
   color: $white;
   font-weight: 600;
   text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 .footer-logo {

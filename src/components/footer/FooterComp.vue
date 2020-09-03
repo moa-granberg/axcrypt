@@ -54,6 +54,7 @@ export default {
     padding: 37px 20px;
     max-width: 1130px;
     margin: auto;
+    height: 177px;
   }
 }
 
@@ -67,6 +68,8 @@ export default {
   &.desktop {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
   }
 }
 </style>

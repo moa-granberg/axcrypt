@@ -45,14 +45,14 @@ export default {
 .footer-newsletter-heading {
   &.mobile {
     margin: 0 0 14px 0;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 400;
     text-align: center;
   }
 
   &.desktop {
-    margin: 0 0 3px 0;
-    font-size: 12px;
+    margin: 0 0 15px 0;
+    font-size: 0.875rem;
   }
 }
 
@@ -87,9 +87,7 @@ export default {
     opacity: 0.5;
   }
 
-  &.desktop {
-    font-size: 10px;
-  }
+
 }
 
 .footer-newsletter-button {

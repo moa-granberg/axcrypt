@@ -15,6 +15,17 @@ export default {};
 
 <style lang="scss" scoped>
 .footer-social-socialmedia-wrapper {
+  img {
+    width: 32px;
+    margin: 0 8px 0 0;
+    filter: drop-shadow(0 4px 4px rgba(0,0,0,0.1));
+    opacity: 1;
+    transition: opacity 0.3s;
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+
   &.mobile {
     display: flex;
     align-items: center;
@@ -28,11 +39,6 @@ export default {};
       align-items: center;
       justify-content: center;
     }
-
-    img {
-      width: 32px;
-      margin: 0 8px 0 0;
-    }
   }
 
   &.desktop {
@@ -40,11 +46,6 @@ export default {};
     display: flex;
     align-items: center;
     margin: 0 0 4px 0;
-
-    img {
-      width: 32px;
-      margin: 0 8px 0 0;
-    }
   }
 }
 </style>
