@@ -5,12 +5,7 @@
     </h3>
     <p
       :class="'footer-contact-paragraph ' + $mq"
-      v-html="$t('FooterContactUsParagraph1')"
-    />
-
-    <p
-      :class="'footer-contact-paragraph ' + $mq"
-      v-html="$t('FooterContactUsParagraph2')"
+      v-html="$t('FooterContactUsParagraph')"
     />
 
     <mq-layout mq="mobile" class="footer-contact-socialmedia-wrapper">

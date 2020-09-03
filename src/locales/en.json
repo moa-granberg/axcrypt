@@ -22,8 +22,6 @@
   "MyAxCryptIDLinkLabel": "My AxCrypt ID",
 
   "ContactUsHeading": "Contact us",
-  "FooterContactUsParagraph1": "Talk to us! <br> Please use our <a href='/#/about'>Community Forums</a> for general questions, feedback and technical support. You can also email directly to <a href='mailto:support@axcrypt.net'>support@axcrypt.net</a>",
-  "FooterContactUsParagraph2": "We prioritize our <strong>Premium Support</strong>, available to subscribers.",
-
+  "FooterContactUsParagraph": "Talk to us! <br> Please use our <a href='/#/about'>Community Forums</a> for general questions, feedback and technical support. You can also email directly to <a href='mailto:support@axcrypt.net'>support@axcrypt.net</a>",
   "FooterNewsletterSignUpHeading": "Sign up for our newsletter"
 }
