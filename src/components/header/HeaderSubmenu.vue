@@ -118,7 +118,7 @@ export default {
 
   &.mobile {
     font-size: 13px;
-    color: $light-green;
+    color: $dark-green;
     padding: 0 45px;
   }
 

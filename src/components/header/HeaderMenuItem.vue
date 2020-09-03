@@ -114,7 +114,7 @@ export default {
   text-decoration: none;
 
   &.mobile {
-    color: $light-green;
+    color: $dark-green;
     padding: 0 25px;
     width: 100vw;
   }
