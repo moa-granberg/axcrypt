@@ -89,6 +89,11 @@ export default {
     background-color: $dark-green;
     box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.1);
   }
+
+  &.desktop {
+    min-width: 230px;
+    margin: 0 20px;
+  }
 }
 
 .footer-sitemap-title {
@@ -131,7 +136,7 @@ export default {
   }
 
   &.desktop {
-    padding: 0 90px 0 0;
+    padding: 0 50px 0 0;
   }
 }
 

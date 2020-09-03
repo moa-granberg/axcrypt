@@ -34,10 +34,11 @@ export default {
   &.mobile {
     padding: 18px;
   }
+
   &.desktop {
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: flex-end;
   }
 }
 
@@ -58,20 +59,20 @@ export default {
 .footer-newsletter-form {
   display: flex;
   align-items: center;
+  position: relative;
+  max-width: 400px;
 
   &.mobile {
     margin: auto;
-    position: relative;
-    max-width: 400px;
   }
 
   &.desktop {
     margin: 0 0 8px 0;
+    min-width: 220px;
   }
 }
 
 .footer-newsletter-input {
-  width: 160px;
   height: 31px;
   padding: 0 0 0 8px;
   border: none;
@@ -79,13 +80,11 @@ export default {
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
   color: $gray;
 
+  width: 100%;
+
   &::placeholder {
     font-style: italic;
     opacity: 0.5;
-  }
-
-  &.mobile {
-    width: 100%;
   }
 
   &.desktop {
@@ -105,10 +104,8 @@ export default {
   align-items: center;
   background-color: $dark-green;
 
-  &.mobile {
-    position: absolute;
-    right: 1px;
-  }
+  position: absolute;
+  right: 1px;
 
   img {
     height: 16px;

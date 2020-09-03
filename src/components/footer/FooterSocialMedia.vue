@@ -36,6 +36,7 @@ export default {};
   }
 
   &.desktop {
+    align-self: flex-end;
     display: flex;
     align-items: center;
     margin: 0 0 4px 0;

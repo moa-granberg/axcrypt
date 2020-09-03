@@ -50,6 +50,10 @@ export default {
     align-items: center;
     padding: 0 0 60px 0;
   }
+
+  &.desktop {
+    margin: 0 auto 0 10px;
+  }
 }
 
 .footer-contact-heading {
