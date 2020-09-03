@@ -1,10 +1,10 @@
 <template>
   <section :class="'footer-newsletter-wrapper ' + $mq">
-    <h6 :class="'footer-newsletter-heading ' + $mq">
+    <h3 :class="'footer-newsletter-heading ' + $mq">
       <label for="user-email">
         {{ $t('FooterNewsletterSignUpHeading') }}
       </label>
-    </h6>
+    </h3>
     <div :class="'footer-newsletter-form ' + $mq">
       <input
         type="text"
