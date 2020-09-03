@@ -85,7 +85,6 @@ export default {
   justify-content: center;
 
   &.mobile {
-    margin: 28px 0 0 0;
     align-items: center;
     background-color: $dark-green;
     box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.1);

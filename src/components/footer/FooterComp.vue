@@ -3,20 +3,19 @@
     logo
     <footer-sitemap />
     <footer-contact />
-    <footer-social />
   </footer>
 </template>
 
 <script>
 import FooterSitemap from './FooterSitemap';
 import FooterContact from './FooterContact';
-import FooterSocial from './FooterSocial';
+import FooterNewsletter from './FooterNewsletter';
 
 export default {
   components: {
     FooterSitemap,
     FooterContact,
-    FooterSocial,
+    FooterNewsletter,
   },
 };
 </script>
