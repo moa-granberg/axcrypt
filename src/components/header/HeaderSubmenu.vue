@@ -51,7 +51,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '../scss/variables.scss';
+@import '@/scss/variables.scss';
 
 .submenu-mouseover-div {
   &.desktop {
@@ -63,7 +63,7 @@ export default {
 
 .header-submenu-wrapper {
   padding: 0;
-  
+
   &.mobile {
     max-height: 0;
     overflow: hidden;

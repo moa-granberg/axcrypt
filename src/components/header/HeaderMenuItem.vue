@@ -18,7 +18,7 @@
         @click="toggleSubmenuMobile"
       >
         <img
-          src="../assets/icons/keyboard_arrow_down.svg"
+          src="@/assets/icons/keyboard_arrow_down.svg"
           alt="arrow"
           :class="{ rotated: showSubmenuMobile }"
         />
@@ -83,7 +83,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '../scss/variables.scss';
+@import '@/scss/variables.scss';
 
 .header-menu-item-wrapper {
   position: relative;

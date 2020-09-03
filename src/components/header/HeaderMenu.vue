@@ -78,7 +78,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '../scss/variables.scss';
+@import '@/scss/variables.scss';
 
 .header-menu-wrapper {
   margin-bottom: 10px;
