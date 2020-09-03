@@ -1,13 +1,16 @@
 <template>
   <section :class="'footer-newsletter-wrapper ' + $mq">
-    <h6 :class="'footer-newsletter-heading ' + $mq">
-      {{ $t('FooterNewsletterSignUpHeading') }}
-    </h6>
+    <label for="user-email">
+      <h6 :class="'footer-newsletter-heading ' + $mq">
+        {{ $t('FooterNewsletterSignUpHeading') }}     
+      </h6>
+    </label>
     <div :class="'footer-newsletter-form ' + $mq">
       <input
         type="text"
         placeholder="email@example.com"
         v-model="userEmail"
+        id="user-email"
         :class="'footer-newsletter-input ' + $mq"
       />
       <button :class="'footer-newsletter-button ' + $mq">
