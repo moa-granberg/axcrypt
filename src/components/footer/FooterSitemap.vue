@@ -132,7 +132,7 @@ export default {
 
 .footer-sitemap-item {
   &.mobile {
-    padding: 0 15px;
+    padding: 0 12px;
   }
 
   &.desktop {
