@@ -32,7 +32,7 @@ export default {
           phraseKey: 'DownloadLinkLabel',
         },
         {
-          path: '',
+          path: '/product',
           phraseKey: 'OurProductLinkLabel',
           children: [
             {

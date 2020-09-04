@@ -8,7 +8,12 @@
       <router-link
         @click.native="handleHideMenuMobile(link.children)"
         :to="link.path"
-        :class="'header-menu-item-link ' + $mq"
+        class="header-menu-item-link"
+        :class="[
+          { 'router-link-active': subIsActive(link.children) },
+          { 'router-link-disabled': link.children },
+          $mq,
+        ]"
       >
         {{ $t(link.phraseKey) }}
       </router-link>
@@ -78,6 +83,12 @@ export default {
         this.toggleSubmenuMobile();
       }
     },
+
+    subIsActive(input) {
+      return input
+        ? input.map(child => child.path).includes(this.$route.path)
+        : false;
+    },
   },
 };
 </script>
@@ -112,6 +123,10 @@ export default {
   font-size: 13px;
   font-weight: 300;
   text-decoration: none;
+
+  &.router-link-disabled {
+    pointer-events: none;
+  }
 
   &.mobile {
     color: $dark-green;
