@@ -25,5 +25,9 @@
   "FooterContactUsParagraph": "Talk to us! <br> Please use our <a href='/#/about'>Community Forums</a> for general questions, feedback and technical support. You can also email directly to <a href='mailto:support@axcrypt.net'>support@axcrypt.net</a>",
   "FooterNewsletterSignUpHeading": "Sign up for our newsletter",
 
-  "TryForFreeButtonLabel": "Try for free"
+  "TryForFreeButtonLabel": "Try for free",
+  "ProductHeroSubheading": "Made for individuals",
+  "ProductTryItForFreeHeading": "Try it for free",
+  "ProductTryItForFreeSubheading": "30-day trial",
+  "ProductTryItForFreeButtonLabel": "Start free trial now"
 }
