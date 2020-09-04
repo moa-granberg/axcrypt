@@ -43,7 +43,7 @@ export default {
 
   &.mobile {
     align-items: center;
-    padding: 0 0 60px 0;
+    padding: 0 0 70px 0;
   }
 
   &.desktop {
