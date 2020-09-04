@@ -14,7 +14,7 @@ export default {};
 .try-for-free-button {
   position: fixed;
   right: 41px;
-  background-color: $light-green;
+  background-color: $dark-green;
   color: $white;
   font-family: $standard-font;
   font-weight: 600;
