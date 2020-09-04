@@ -132,7 +132,7 @@ export default {
 
 .footer-sitemap-item {
   &.mobile {
-    padding: 0 20px;
+    padding: 0 15px;
   }
 
   &.desktop {
@@ -143,10 +143,10 @@ export default {
 .footer-sitemap-item-link {
   text-decoration: none;
   color: $white;
-
   &.mobile {
     font-weight: 300;
     line-height: 1.7rem;
+    padding: 13px 10px;
   }
 
   &.desktop {
