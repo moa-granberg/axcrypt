@@ -3,16 +3,19 @@
     <header-comp />
     <router-view />
     <footer-comp />
+    <try-for-free-button-comp />
   </div>
 </template>
 
 <script>
 import HeaderComp from './components/header/HeaderComp';
 import FooterComp from './components/footer/FooterComp';
+import TryForFreeButtonComp from './components/TryForFreeButtonComp';
 
 export default {
   name: 'App',
   components: {
+    TryForFreeButtonComp,
     HeaderComp,
     FooterComp,
   },
@@ -24,7 +27,7 @@ export default {
 @import './scss/variables.scss';
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: $standard-font;
   margin: 0;
   color: $gray;
 }
