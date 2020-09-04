@@ -1,18 +1,20 @@
 <template>
-  <header :class="'header-wrapper ' + this.$mq">
-    <div :class="'nav ' + this.$mq">
-      <router-link to="/">
-        <img class="logo" src="@/assets/logos/axcrypt_text.png" alt="Logo" />
-      </router-link>
-      <hamburger-menu
-        v-if="$mq === 'mobile'"
-        v-on:toggle="toggleDropDownMenu"
+  <header :class="'header ' + this.$mq">
+    <section :class="'header-wrapper ' + this.$mq">
+      <div :class="'nav ' + this.$mq">
+        <router-link to="/">
+          <img class="logo" src="@/assets/logos/axcrypt_text.png" alt="Logo" />
+        </router-link>
+        <hamburger-menu
+          v-if="$mq === 'mobile'"
+          v-on:toggle="toggleDropDownMenu"
+        />
+      </div>
+      <header-menu
+        :showMobileMenu="showMobileMenu"
+        v-on:hideMobileMenu="toggleDropDownMenu"
       />
-    </div>
-    <header-menu
-      :showMobileMenu="showMobileMenu"
-      v-on:hideMobileMenu="toggleDropDownMenu"
-    />
+    </section>
   </header>
 </template>
 
@@ -47,6 +49,12 @@ export default {
   width: 145px;
 }
 
+.header {
+  &.desktop {
+    border-bottom: 1px solid $light-gray;
+  }
+}
+
 .header-wrapper {
   &.desktop {
     display: flex;
@@ -63,8 +71,6 @@ export default {
   justify-content: space-between;
   align-items: center;
   padding: 20px 20px 25px 20px;
-  max-width: 767px;
-  margin: auto;
   border-bottom: 1px $light-gray solid;
 
   &.desktop {
