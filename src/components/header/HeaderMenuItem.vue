@@ -114,7 +114,6 @@ export default {
   }
 
   &.desktop {
-    padding: 0 15px;
     height: $header-height;
   }
 }
@@ -142,9 +141,16 @@ export default {
     text-transform: uppercase;
     color: $gray;
     transition: color 0.3s;
+    padding: 0 15px;
 
     &:hover {
       color: $light-green;
+    }
+
+    &.router-link-active {
+      background-color: rgba(134, 185, 110, 0.2);
+      border-bottom: 1px solid $light-green;
+      color: $dark-green;
     }
   }
 }
