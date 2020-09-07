@@ -69,4 +69,56 @@ export default {
 };
 </script>
 
-<style></style>
+<style lang="scss" scoped>
+@import '@/scss/variables.scss';
+
+.product-try-it-for-free-wrapper {
+  color: $white;
+  background: linear-gradient(
+    to bottom,
+    rgba(73, 119, 44, 0.7) 0%,
+    rgba(73, 119, 44, 0.8) 70%,
+    rgba(33, 80, 6, 0.9) 100%
+  );
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-try-it-for-free-heading {
+  font-size: 1.125rem;
+}
+
+.product-try-it-for-free-items-wrapper {
+  display: grid;
+  grid: 1fr 1fr 1fr/ 1fr 1fr;
+  align-items: flex-start;
+  gap: 50px 10px;
+}
+
+.product-try-it-for-free-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    width: 134px;
+  }
+
+  p {
+    max-width: 130px;
+    margin: 0;
+    font-size: 0.875rem;
+    text-align: center;
+  }
+}
+
+.product-try-it-for-free-and-much-more {
+  max-width: 130px;
+  margin: auto;
+  font-size: 1.125rem;
+  text-align: center;
+}
+</style>
