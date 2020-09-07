@@ -2,8 +2,12 @@
   <section :class="'product-hero-wrapper ' + $mq">
     <div :class="'product-hero-headings-wrapper ' + $mq">
       <h2 :class="'product-hero-preheading ' + $mq">AxCrypt</h2>
-      <h1 :class="'product-hero-heading ' + $mq"> {{$t('PremiumLinkLabel')}} </h1>
-      <h3 :class="'product-hero-subheading ' + $mq"> {{$t('ProductHeroSubheading')}} </h3>
+      <h1 :class="'product-hero-heading ' + $mq">
+        {{ $t('PremiumLinkLabel') }}
+      </h1>
+      <h3 :class="'product-hero-subheading ' + $mq">
+        {{ $t('ProductHeroSubheading') }}
+      </h3>
     </div>
     <product-try-it-for-free-cta-comp />
   </section>
@@ -14,22 +18,21 @@ import ProductTryItForFreeCtaComp from './ProductTryItForFreeCtaComp';
 
 export default {
   components: {
-    ProductTryItForFreeCtaComp
-  }
-}
+    ProductTryItForFreeCtaComp,
+  },
+};
 </script>
 
 <style lang="scss" scoped>
 @import '@/scss/variables.scss';
-
 
 .product-hero-wrapper {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  background-color: rgba(0,0,0,0.5);
   background-image: url('~@/assets/view/premium/premium-mobile-hero.png');
+  background-color: rgba(0, 0, 0, 0.5);
   background-blend-mode: overlay;
   background-size: cover;
   height: 470px;
@@ -54,7 +57,7 @@ export default {
   font-size: 2.5rem;
   color: $light-green;
   text-transform: uppercase;
-  text-shadow: 0px 4px 4px rgba(0,0,0,0.25);
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .product-hero-subheading {
   margin: 0;

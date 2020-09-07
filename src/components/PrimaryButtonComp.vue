@@ -17,8 +17,6 @@ export default {
 @import '@/scss/variables.scss';
 
 .primary-btn {
-  /* width: 218px;
-  height: 56px; */
   background-color: $light-green;
   color: $white;
   font-size: 0.875rem;
@@ -27,7 +25,6 @@ export default {
   border: none;
   border-radius: 5px;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
-  /* margin: 28px; */
 
   &.small {
     padding: 10px 23px;

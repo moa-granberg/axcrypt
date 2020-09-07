@@ -3,10 +3,7 @@
     <h1 :class="'product-body-header ' + $mq">
       {{ $t(headerPhraseKey) }}
     </h1>
-    <div
-      :class="'product-body-text ' + $mq"
-      v-html="$t(bodyPhraseKey)"
-    ></div>
+    <div :class="'product-body-text ' + $mq" v-html="$t(bodyPhraseKey)"></div>
   </section>
 </template>
 
@@ -14,8 +11,8 @@
 export default {
   props: {
     headerPhraseKey: String,
-    bodyPhraseKey: String
-  }
+    bodyPhraseKey: String,
+  },
 };
 </script>
 

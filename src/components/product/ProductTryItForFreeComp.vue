@@ -44,7 +44,10 @@
       <h3 :class="'product-try-it-for-free-per-month ' + $mq">
         {{ $t('ProductTryItForFreePerMonth') }}
       </h3>
-      <primary-button-comp phraseKey="ProductTryItForFreeStartButtonLabel" size="large" />
+      <primary-button-comp
+        phraseKey="ProductTryItForFreeStartButtonLabel"
+        size="large"
+      />
     </article>
   </section>
 </template>
@@ -53,9 +56,8 @@
 import PrimaryButtonComp from '@/components/PrimaryButtonComp';
 
 export default {
-
   components: {
-    PrimaryButtonComp
+    PrimaryButtonComp,
   },
 
   data() {

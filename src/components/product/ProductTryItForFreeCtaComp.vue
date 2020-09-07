@@ -1,8 +1,15 @@
 <template>
   <article :class="'product-try-it-for-free-cta-wrapper ' + $mq">
-    <h1 :class="'product-try-it-for-free-cta-heading ' + $mq">{{ $t('ProductTryItForFreeHeading') }}</h1>
-    <h2 :class="'product-try-it-for-free-cta-subheading ' + $mq">{{ $t('ProductTryItForFreeSubheading') }}</h2>
-    <primary-button-comp phraseKey="ProductTryItForFreeButtonLabel" size="large" />
+    <h1 :class="'product-try-it-for-free-cta-heading ' + $mq">
+      {{ $t('ProductTryItForFreeHeading') }}
+    </h1>
+    <h2 :class="'product-try-it-for-free-cta-subheading ' + $mq">
+      {{ $t('ProductTryItForFreeSubheading') }}
+    </h2>
+    <primary-button-comp
+      phraseKey="ProductTryItForFreeButtonLabel"
+      size="large"
+    />
   </article>
 </template>
 
@@ -11,8 +18,8 @@ import PrimaryButtonComp from '@/components/PrimaryButtonComp';
 
 export default {
   components: {
-    PrimaryButtonComp
-  }
+    PrimaryButtonComp,
+  },
 };
 </script>
 
@@ -49,5 +56,4 @@ export default {
   font-size: 1.125rem;
   font-weight: 300;
 }
-
 </style>

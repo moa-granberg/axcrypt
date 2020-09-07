@@ -1,7 +1,12 @@
 <template>
   <section :class="'premium-business-cta-wrapper ' + $mq">
-    <h2 :class="'premium-business-cta-preheading ' + $mq"> {{$t('PremiumBusinessCtaPreHeading')}} </h2>
-    <h1 :class="'premium-business-cta-heading ' + $mq"  v-html="$t('PremiumBusinessCtaHeading')"></h1>
+    <h2 :class="'premium-business-cta-preheading ' + $mq">
+      {{ $t('PremiumBusinessCtaPreHeading') }}
+    </h2>
+    <h1
+      :class="'premium-business-cta-heading ' + $mq"
+      v-html="$t('PremiumBusinessCtaHeading')"
+    ></h1>
     <primary-button-comp phraseKey="ReadMoreButtonLabel" size="small" />
   </section>
 </template>
@@ -11,16 +16,16 @@ import PrimaryButtonComp from '@/components/PrimaryButtonComp';
 
 export default {
   components: {
-    PrimaryButtonComp
-  }
-}
+    PrimaryButtonComp,
+  },
+};
 </script>
 
 <style lang="scss" scoped>
 @import '@/scss/variables.scss';
 
 .premium-business-cta-wrapper {
-  background-color: rgba(0,0,0,0.7);
+  background-color: rgba(0, 0, 0, 0.7);
   color: $white;
   text-align: center;
   padding: 28px 0 23px 0;
