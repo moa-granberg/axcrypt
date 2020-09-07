@@ -24,13 +24,26 @@ export default {
 }
 
 .product-body-header {
-  font-size: 1.125rem;
   color: $green;
   font-weight: 400;
+
+  &.mobile {
+    font-size: 1.125rem;
+  }
+
+  &.desktop {
+    font-size: 1.5rem;
+  }
 }
 
 .product-body-text {
-  font-size: 0.875rem;
+  &.mobile {
+    font-size: 0.875rem;
+  }
+
+  &.desktop {
+    font-size: 1.125rem;
+  }
 }
 
 .product-body-text > p > a {
