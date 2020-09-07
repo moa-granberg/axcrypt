@@ -146,6 +146,7 @@ export default {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding: 0 0 28px 0;
 }
 
 .product-try-it-for-free-subheading {
@@ -195,6 +196,6 @@ export default {
   font-size: 2.25rem * 0.4;
   text-transform: uppercase;
   font-weight: 400;
-  margin: 0;
+  margin: 0 0 13px 0;
 }
 </style>

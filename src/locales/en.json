@@ -50,6 +50,8 @@
 
   "PremiumBusinessCtaPreHeading": "Are you a company?",
   "PremiumBusinessCtaHeading": "Try <strong>AxCrypt Business</strong> for free instead!",
-  "ReadMoreButtonLabel": "Read more"
+  "ReadMoreButtonLabel": "Read more",
 
+  "PremiumThirdBodyHeading": "More information",
+  "PremiumThirdBodyText": "<p>Read more on our <a href='#'>feature page</a></p>"
 }

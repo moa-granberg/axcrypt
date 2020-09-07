@@ -23,7 +23,7 @@ export default {
   background-color: rgba(0,0,0,0.7);
   color: $white;
   text-align: center;
-  padding: 28px 0 0 0;
+  padding: 28px 0 23px 0;
 }
 
 .premium-business-cta-preheading {
@@ -35,6 +35,6 @@ export default {
 .premium-business-cta-heading {
   font-size: 1.125rem;
   font-weight: 400;
-  margin: 7px 0 0 0;
+  margin: 7px 0 13px 0;
 }
 </style>

@@ -5,7 +5,7 @@
     <product-try-it-for-free-comp />
     <product-body-comp headerPhraseKey="PremiumSecondBodyHeading" bodyPhraseKey="PremiumSecondBodyText" />
     <product-premium-business-cta-comp />
-    <product-more-information-comp />
+    <product-body-comp headerPhraseKey="PremiumThirdBodyHeading" bodyPhraseKey="PremiumThirdBodyText" />
   </main>
 </template>
 
@@ -14,7 +14,6 @@ import ProductHeroComp from '@/components/product/ProductHeroComp';
 import ProductBodyComp from '@/components/product/ProductBodyComp';
 import ProductTryItForFreeComp from '@/components/product/ProductTryItForFreeComp';
 import ProductPremiumBusinessCtaComp from '@/components/product/ProductPremiumBusinessCtaComp';
-import ProductMoreInformationComp from '@/components/product/ProductMoreInformationComp';
 
 export default {
   components: {
@@ -22,7 +21,6 @@ export default {
     ProductBodyComp,
     ProductTryItForFreeComp,
     ProductPremiumBusinessCtaComp,
-    ProductMoreInformationComp
   }
 }
 </script>
