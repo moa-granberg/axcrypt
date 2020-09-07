@@ -29,5 +29,7 @@
   "ProductHeroSubheading": "Made for individuals",
   "ProductTryItForFreeHeading": "Try it for free",
   "ProductTryItForFreeSubheading": "30-day trial",
-  "ProductTryItForFreeButtonLabel": "Start free trial now"
+  "ProductTryItForFreeButtonLabel": "Start free trial now",
+
+  "PremiumBodyText": "<p>Interested in getting a subscription, but not sure if it fits your needs? <a href='#'>You can enjoy 30 days of AxCrypt Premium for free.</a></p><p>With AxCrypt Premium, you have access to extended functionality and exciting features! Encrypt your files with AES-256 – the strongest of the AES algorithm. It is used globally to protect sensitive and classified information of all levels. Securing folders has never been easier, only taking a single click to automatically secure new files.</p><p>If you also need to share secured files with others, you will have key sharing to take care of that for you, even with access to cloud storage awareness in Dropbox, Google Drive, etc. In case you are often on the fly, you can use our mobile app to access your encrypted files.</p><p>Want to save password in a safe and easy way? Use our password management and generator to keep all your passwords safe in the cloud.</p><p>Try it out to discover all the features and benefits it offers!</p>"
 }
