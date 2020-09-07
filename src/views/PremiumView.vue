@@ -32,10 +32,24 @@
     </mq-layout>
 
     <product-premium-business-cta-comp />
-    <product-body-comp
-      headerPhraseKey="PremiumThirdBodyHeading"
-      bodyPhraseKey="PremiumThirdBodyText"
-    />
+
+    <mq-layout mq="mobile">
+      <product-body-comp
+        headerPhraseKey="PremiumThirdBodyHeading"
+        bodyPhraseKey="PremiumThirdBodyText"
+      />
+    </mq-layout>
+
+    <mq-layout mq="desktop" class="premium-third-body-wrapper">
+      <product-body-comp
+        headerPhraseKey="PremiumThirdBodyHeading"
+        bodyPhraseKey="PremiumThirdBodyText"
+      />
+      <img
+        src="@/assets/view/premium/more-information.png"
+        alt="more information"
+      />
+    </mq-layout>
   </main>
 </template>
 
@@ -93,5 +107,14 @@ export default {
     rgba(73, 119, 44, 0.8) 70%,
     rgba(73, 119, 44, 0.7) 100%
   );
+}
+
+.premium-third-body-wrapper {
+  display: flex;
+  justify-content: space-around;
+
+  img {
+    margin: 0 0 20px 0;
+  }
 }
 </style>
