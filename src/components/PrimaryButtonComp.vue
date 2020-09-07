@@ -19,8 +19,7 @@ export default {
 .primary-btn {
   background-color: $light-green;
   color: $white;
-  font-size: 0.875rem;
-  font-weight: 600;
+  font-weight: 400;
   font-family: $standard-font;
   border: none;
   border-radius: 5px;
@@ -28,9 +27,26 @@ export default {
 
   &.small {
     padding: 10px 23px;
+
+    &.mobile {
+      font-size: 0.875rem;
+    }
+
+    &.desktop {
+      font-size: 1.125rem;
+    }
   }
+
   &.large {
     padding: 20px 50px;
+
+    &.mobile {
+      font-size: 1.125rem;
+    }
+
+    &.desktop {
+      font-size: 1.5rem;
+    }
   }
 }
 </style>
