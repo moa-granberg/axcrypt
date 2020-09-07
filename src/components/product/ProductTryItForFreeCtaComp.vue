@@ -34,6 +34,7 @@ export default {
   align-items: center;
   padding: 29px 0;
   color: $white;
+
   &.mobile {
     background: linear-gradient(
       to bottom,
@@ -47,13 +48,27 @@ export default {
 
 .product-try-it-for-free-cta-heading {
   margin: 0;
-  font-size: 1.5rem;
   font-weight: 300;
+
+  &.mobile {
+    font-size: 1.5rem;
+  }
+
+  &.desktop {
+    font-size: 2rem;
+  }
 }
 
 .product-try-it-for-free-cta-subheading {
   margin: 10px;
-  font-size: 1.125rem;
   font-weight: 300;
+
+  &.mobile {
+    font-size: 1.125rem;
+  }
+
+  &.desktop {
+    font-size: 1.5rem;
+  }
 }
 </style>
