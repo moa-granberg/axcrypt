@@ -44,15 +44,20 @@
       <h3 :class="'product-try-it-for-free-per-month ' + $mq">
         {{ $t('ProductTryItForFreePerMonth') }}
       </h3>
-      <button :class="'product-try-it-for-free-start-btn ' + $mq">
-        {{ $t('ProductTryItForFreeStartButtonLabel') }}
-      </button>
+      <primary-button-comp phraseKey="ProductTryItForFreeStartButtonLabel" size="large" />
     </article>
   </section>
 </template>
 
 <script>
+import PrimaryButtonComp from '@/components/PrimaryButtonComp';
+
 export default {
+
+  components: {
+    PrimaryButtonComp
+  },
+
   data() {
     return {
       premiumSellingPointItems: [
@@ -191,19 +196,5 @@ export default {
   text-transform: uppercase;
   font-weight: 400;
   margin: 0;
-}
-
-.product-try-it-for-free-start-btn {
-  width: 218px;
-  height: 56px;
-  background-color: $light-green;
-  color: $white;
-  font-size: 0.875rem;
-  font-weight: 600;
-  font-family: $standard-font;
-  border: none;
-  border-radius: 5px;
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
-  margin: 28px;
 }
 </style>

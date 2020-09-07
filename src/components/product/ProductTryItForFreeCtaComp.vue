@@ -2,12 +2,18 @@
   <article :class="'product-try-it-for-free-cta-wrapper ' + $mq">
     <h1 :class="'product-try-it-for-free-cta-heading ' + $mq">{{ $t('ProductTryItForFreeHeading') }}</h1>
     <h2 :class="'product-try-it-for-free-cta-subheading ' + $mq">{{ $t('ProductTryItForFreeSubheading') }}</h2>
-    <button :class="'product-try-it-for-free-cta-button ' + $mq">{{ $t('ProductTryItForFreeButtonLabel') }}</button>
+    <primary-button-comp phraseKey="ProductTryItForFreeButtonLabel" size="large" />
   </article>
 </template>
 
 <script>
-export default {};
+import PrimaryButtonComp from '@/components/PrimaryButtonComp';
+
+export default {
+  components: {
+    PrimaryButtonComp
+  }
+};
 </script>
 
 <style lang="scss" scoped>
@@ -44,14 +50,4 @@ export default {};
   font-weight: 300;
 }
 
-.product-try-it-for-free-cta-button {
-  font-size: 1.125rem;
-  font-family: $standard-font;
-  color: $white;
-  background-color: $light-green;
-  border: 0;
-  border-radius: 5px;
-  box-shadow: 0px 4px 4px rgba(0,0,0,0.25);
-  padding: 18px 50px;
-}
 </style>
