@@ -36,6 +36,7 @@
       <primary-button-comp
         phraseKey="ProductTryItForFreeStartButtonLabel"
         size="large"
+        color="dark"
       />
     </article>
   </section>
@@ -88,14 +89,28 @@ export default {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 0 0 28px 0;
+
+  &.mobile {
+    padding: 0 0 28px 0;
+  }
+
+  &.desktop {
+    padding: 0 0 40px 0;
+  }
 }
 
 .product-try-it-for-free-subheading {
   font-size: 1.125rem;
-  padding: 10px 0;
   margin: 0;
   border-top: 2px solid $white;
+
+  &.mobile {
+    padding: 10px 0;
+  }
+
+  &.desktop {
+    padding: 20px 0;
+  }
 }
 
 .product-try-it-for-free-pricing-btn-wrapper {
@@ -124,20 +139,41 @@ export default {
 }
 
 .product-try-it-for-free-pricing {
-  font-size: 2.25rem;
-  margin: 10px 0 0 0;
   &.annual {
     color: #ad3f38;
   }
-  span {
-    font-size: 2.25rem * 0.75;
+
+  &.mobile {
+    margin: 10px 0 0 0;
+    font-size: 2.25rem;
+
+    span {
+      font-size: 2.25rem * 0.75;
+    }
+  }
+
+  &.desktop {
+    margin: 30px 0 0 0;
+    font-size: 2.5rem;
+
+    span {
+      font-size: 2.5rem * 0.75;
+    }
   }
 }
 
 .product-try-it-for-free-per-month {
-  font-size: 2.25rem * 0.4;
   text-transform: uppercase;
   font-weight: 400;
-  margin: 0 0 13px 0;
+
+  &.mobile {
+    margin: 0 0 13px 0;
+    font-size: 2.25rem * 0.4;
+  }
+
+  &.desktop {
+    font-size: 2.5rem * 0.4;
+    margin: 0 0 20px 0;
+  }
 }
 </style>

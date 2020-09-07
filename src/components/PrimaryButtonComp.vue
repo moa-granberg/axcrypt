@@ -1,5 +1,5 @@
 <template>
-  <button :class="`primary-btn ${size} ${$mq}`">
+  <button :class="`primary-btn ${size} ${$mq} ${color}`">
     {{ $t(phraseKey) }}
   </button>
 </template>
@@ -9,6 +9,7 @@ export default {
   props: {
     phraseKey: String,
     size: String,
+    color: String,
   },
 };
 </script>
@@ -47,6 +48,10 @@ export default {
     &.desktop {
       font-size: 1.5rem;
     }
+  }
+
+  &.dark {
+    background-color: $dark-green;
   }
 }
 </style>
