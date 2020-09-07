@@ -84,8 +84,8 @@ export default {
 .product-try-it-for-free-desktop-wrapper {
   grid-area: aside;
   position: relative;
-  top: -200px;
-  margin: 0 0 -175px 0;
+  top: -225px;
+  margin: 0 0 -200px 0;
   width: 450px;
   background: linear-gradient(
     to bottom,
