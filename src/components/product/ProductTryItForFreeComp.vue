@@ -21,13 +21,17 @@
       <h2 :class="'product-try-it-for-free-subheading ' + $mq">
         {{ $t('ProductTryItForFreeCostAfterTrial') }}
       </h2>
-      <button :class="'product-try-it-for-free-annual-btn ' + $mq">
-        {{ $t('ProductTryItForFreeAnnualButtonLabel') }}
-      </button>
-      <button :class="'product-try-it-for-free-monthly-btn ' + $mq">
-        {{ $t('ProductTryItForFreeMonthlyButtonLabel') }}
-      </button>
-      <h1 :class="'product-try-it-for-free-pricing ' + $mq">41.25 SEK</h1>
+      <div :class="'product-try-it-for-free-pricing-btn-wrapper ' + $mq">
+        <button :class="'' + $mq">
+          {{ $t('ProductTryItForFreeAnnualButtonLabel') }}
+        </button>
+        <button :class="'active ' + $mq">
+          {{ $t('ProductTryItForFreeMonthlyButtonLabel') }}
+        </button>
+      </div>
+      <h1 :class="'product-try-it-for-free-pricing ' + $mq">
+        41.25 <span>SEK</span>
+      </h1>
       <h3 :class="'product-try-it-for-free-per-month ' + $mq">
         {{ $t('ProductTryItForFreePerMonth') }}
       </h3>
@@ -120,5 +124,74 @@ export default {
   margin: auto;
   font-size: 1.125rem;
   text-align: center;
+}
+
+.product-try-it-for-free-billing-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-try-it-for-free-subheading {
+  font-size: 1.125rem;
+  padding: 10px 0;
+  margin: 0;
+  border-top: 2px solid $white;
+}
+
+.product-try-it-for-free-pricing-btn-wrapper {
+  button {
+    width: 146px;
+    height: 35px;
+    text-transform: uppercase;
+    font-weight: 600;
+    border: 2px solid $dark-green;
+
+    color: $dark-green;
+
+    &.active {
+      background-color: $dark-green;
+      color: $white;
+    }
+
+    &:first-of-type {
+      border-radius: 2px 0 0 2px;
+    }
+
+    &:last-of-type {
+      border-radius: 0 2px 2px 0;
+    }
+  }
+}
+
+.product-try-it-for-free-pricing {
+  font-size: 2.25rem;
+  margin: 10px 0 0 0;
+
+  span {
+    font-size: 2.25rem * 0.75;
+  }
+}
+
+.product-try-it-for-free-per-month {
+  font-size: 2.25rem * 0.4;
+  text-transform: uppercase;
+  font-weight: 400;
+  margin: 0;
+}
+
+.product-try-it-for-free-start-btn {
+  width: 218px;
+  height: 56px;
+  background-color: $light-green;
+  color: $white;
+  font-size: 0.875rem;
+  font-weight: 600;
+  font-family: $standard-font;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+  margin: 28px;
 }
 </style>
