@@ -17,19 +17,20 @@
       </h2>
     </article>
 
+
     <article :class="'product-try-it-for-free-billing-wrapper ' + $mq">
       <h2 :class="'product-try-it-for-free-subheading ' + $mq">
         {{ $t('ProductTryItForFreeCostAfterTrial') }}
       </h2>
       <div :class="'product-try-it-for-free-pricing-btn-wrapper ' + $mq">
-        <button :class="'' + $mq">
+        <button :class="[{'active':annualActive} ,$mq]" @click="annualActive = true">
           {{ $t('ProductTryItForFreeAnnualButtonLabel') }}
         </button>
-        <button :class="'active ' + $mq">
+        <button :class="[{'active':!annualActive} ,$mq]" @click="annualActive = false">
           {{ $t('ProductTryItForFreeMonthlyButtonLabel') }}
         </button>
       </div>
-      <h1 :class="'product-try-it-for-free-pricing ' + $mq">
+      <h1 class="product-try-it-for-free-pricing" :class="[{'annual':annualActive} ,$mq]">
         41.25 <span>SEK</span>
       </h1>
       <h3 :class="'product-try-it-for-free-per-month ' + $mq">
@@ -39,6 +40,8 @@
         {{ $t('ProductTryItForFreeStartButtonLabel') }}
       </button>
     </article>
+
+
   </section>
 </template>
 
@@ -68,6 +71,7 @@ export default {
           phraseKey: 'PremiumTryItForFreeSellingPointSecureFiles',
         },
       ],
+      annualActive: false
     };
   },
 };
@@ -168,7 +172,9 @@ export default {
 .product-try-it-for-free-pricing {
   font-size: 2.25rem;
   margin: 10px 0 0 0;
-
+  &.annual {
+    color: #ad3f38;
+  }
   span {
     font-size: 2.25rem * 0.75;
   }
