@@ -35,6 +35,7 @@ export default {
 
     &.desktop {
       font-size: 1.125rem;
+      padding: 20px 50px;
     }
   }
 

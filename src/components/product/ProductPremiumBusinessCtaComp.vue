@@ -28,18 +28,40 @@ export default {
   background-color: rgba(0, 0, 0, 0.7);
   color: $white;
   text-align: center;
-  padding: 28px 0 23px 0;
+
+  &.mobile {
+    padding: 28px 0 23px 0;
+  }
+
+  &.desktop {
+    padding: 54px 0;
+  }
 }
 
 .premium-business-cta-preheading {
-  font-size: 0.875rem;
   font-weight: 400;
   margin: 0;
+
+  &.mobile {
+    font-size: 0.875rem;
+  }
+
+  &.desktop {
+    font-size: 1.5rem;
+  }
 }
 
 .premium-business-cta-heading {
-  font-size: 1.125rem;
   font-weight: 400;
-  margin: 7px 0 13px 0;
+
+  &.mobile {
+    margin: 7px 0 13px 0;
+    font-size: 1.125rem;
+  }
+
+  &.desktop {
+    margin: 20px 0;
+    font-size: 1.875rem;
+  }
 }
 </style>
