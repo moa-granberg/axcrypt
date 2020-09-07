@@ -1,17 +1,22 @@
 <template>
   <section :class="'product-body-wrapper ' + $mq">
     <h1 :class="'product-body-header ' + $mq">
-      AxCrypt {{ $t('PremiumLinkLabel') }}
+      {{ $t(headerPhraseKey) }}
     </h1>
     <div
       :class="'product-body-text ' + $mq"
-      v-html="$t('PremiumBodyText')"
+      v-html="$t(bodyPhraseKey)"
     ></div>
   </section>
 </template>
 
 <script>
-export default {};
+export default {
+  props: {
+    headerPhraseKey: String,
+    bodyPhraseKey: String
+  }
+};
 </script>
 
 <style lang="scss">
