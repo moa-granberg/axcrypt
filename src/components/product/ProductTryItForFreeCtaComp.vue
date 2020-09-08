@@ -1,5 +1,5 @@
 <template>
-  <article :class="'product-try-it-for-free-cta-wrapper ' + $mq">
+  <article :class="`product-try-it-for-free-cta-wrapper ${$mq} ${product}`">
     <h1 :class="'product-try-it-for-free-cta-heading ' + $mq">
       {{ $t('ProductTryItForFreeHeading') }}
     </h1>
@@ -17,6 +17,10 @@
 import PrimaryButtonComp from '@/components/PrimaryButtonComp';
 
 export default {
+  props: {
+    product: String,
+  },
+
   components: {
     PrimaryButtonComp,
   },
@@ -36,13 +40,24 @@ export default {
   color: $white;
 
   &.mobile {
-    background: linear-gradient(
-      to bottom,
-      rgba(73, 119, 44, 0.7) 0%,
-      rgba(116, 144, 98, 0.9) 45%,
-      rgba(116, 144, 98, 0.9) 55%,
-      rgba(72, 119, 44, 0.7) 100%
-    );
+    &.premium {
+      background: linear-gradient(
+        to bottom,
+        rgba(73, 119, 44, 0.7) 0%,
+        rgba(116, 144, 98, 0.9) 45%,
+        rgba(116, 144, 98, 0.9) 55%,
+        rgba(72, 119, 44, 0.7) 100%
+      );
+    }
+    &.business {
+      background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.8) 0%,
+        rgba(0, 0, 0, 0.7) 45%,
+        rgba(0, 0, 0, 0.8) 65%,
+        rgba(0, 0, 0, 1) 100%
+      );
+    }
   }
 }
 

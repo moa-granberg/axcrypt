@@ -1,16 +1,16 @@
 <template>
-  <section :class="'product-hero-wrapper ' + $mq">
+  <section :class="`product-hero-wrapper ${$mq} ${product}`">
     <div :class="'product-hero-headings-wrapper ' + $mq">
       <h2 :class="'product-hero-preheading ' + $mq">AxCrypt</h2>
-      <h1 :class="'product-hero-heading ' + $mq">
-        {{ $t('PremiumLinkLabel') }}
+      <h1 :class="`product-hero-heading ${$mq} ${product}`">
+        {{ $t(headingPhraseKey) }}
       </h1>
       <h3 :class="'product-hero-subheading ' + $mq">
-        {{ $t('ProductHeroSubheading') }}
+        {{ $t(subheadingPhraseKey) }}
       </h3>
     </div>
 
-    <product-try-it-for-free-cta-comp v-if="$mq === 'mobile'" />
+    <product-try-it-for-free-cta-comp :product="product" v-if="$mq === 'mobile'" />
     <div v-else></div>
   </section>
 </template>
@@ -19,9 +19,22 @@
 import ProductTryItForFreeCtaComp from './ProductTryItForFreeCtaComp';
 
 export default {
+  props: {
+    product: String,
+  },
+
   components: {
     ProductTryItForFreeCtaComp,
   },
+
+  computed: {
+    headingPhraseKey(){
+      return this.product === 'premium' ? 'PremiumLinkLabel' : 'BusinessLinkLabel';
+    },
+    subheadingPhraseKey(){ 
+      return this.product === 'premium' ? 'PremiumHeroSubheading' : 'BusinessHeroSubheading';
+    }
+  }
 };
 </script>
 
@@ -29,24 +42,42 @@ export default {
 @import '@/scss/variables.scss';
 
 .product-hero-wrapper {
-  background-color: rgba(0, 0, 0, 0.5);
   background-blend-mode: overlay;
   background-size: cover;
   height: 470px;
+
+  &.premium{
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  &.business {
+    background-color: rgba(72,119,44,0.5);
+  }
 
   &.mobile {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    background-image: url('~@/assets/view/premium/premium-mobile-hero.png');
+
+    &.premium {
+      background-image: url('~@/assets/view/product/premium-mobile-hero.png');
+    }
+    &.business {
+      background-image: url('~@/assets/view/product/business-mobile-hero.png');
+    }
   }
 
   &.desktop {
     display: grid;
     grid: 1fr / 1fr 1fr;
     justify-items: flex-end;
-    background-image: url('~@/assets/view/premium/premium-desktop-hero.png');
+
+    &.premium {
+      background-image: url('~@/assets/view/product/premium-desktop-hero.png');
+    }
+    &.business {
+      background-image: url('~@/assets/view/product/business-desktop-hero.png');
+    }
   }
 }
 
@@ -74,9 +105,15 @@ export default {
 
 .product-hero-heading {
   margin: 6px 0 14px 0;
-  color: $light-green;
   text-transform: uppercase;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+  &.premium {
+    color: $light-green;
+  }
+  &.business {
+    color: $black;
+  }
 
   &.mobile {
     font-size: 2.5rem;

@@ -1,6 +1,6 @@
 <template>
   <main>
-    <product-hero-comp />
+    <product-hero-comp product="premium" />
 
     <mq-layout mq="desktop" class="product-grid-wrapper">
       <product-body-comp
@@ -46,7 +46,7 @@
         bodyPhraseKey="PremiumThirdBodyText"
       />
       <img
-        src="@/assets/view/premium/more-information.png"
+        src="@/assets/view/product/more-information.png"
         alt="more information"
       />
     </mq-layout>

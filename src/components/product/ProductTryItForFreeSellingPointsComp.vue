@@ -7,7 +7,7 @@
     >
       <img
         :class="'product-selling-points-item-img ' + $mq"
-        :src="require(`@/assets/view/premium/${item.src}`)"
+        :src="require(`@/assets/view/product/${item.src}`)"
         alt=""
       />
       <p :class="'product-selling-points-item-paragraph ' + $mq">
