@@ -3,19 +3,19 @@
     <header-comp />
     <router-view />
     <footer-comp />
-    <try-for-free-button-comp />
+    <fixed-side-button-comp />
   </div>
 </template>
 
 <script>
 import HeaderComp from './components/header/HeaderComp';
 import FooterComp from './components/footer/FooterComp';
-import TryForFreeButtonComp from './components/TryForFreeButtonComp';
+import FixedSideButtonComp from './components/FixedSideButtonComp';
 
 export default {
   name: 'App',
   components: {
-    TryForFreeButtonComp,
+    FixedSideButtonComp,
     HeaderComp,
     FooterComp,
   },

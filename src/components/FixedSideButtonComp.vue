@@ -1,5 +1,5 @@
 <template>
-  <router-link to="/premium" :class="'try-for-free-button ' + $mq">
+  <router-link to="/premium" :class="'fixed-side-try-for-free-button ' + $mq">
     {{ $t('TryForFreeButtonLabel') }}
   </router-link>
 </template>
@@ -11,7 +11,7 @@ export default {};
 <style lang="scss" scoped>
 @import '@/scss/variables.scss';
 
-.try-for-free-button {
+.fixed-side-try-for-free-button {
   position: fixed;
   right: 41px;
   background-color: $dark-green;

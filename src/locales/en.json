@@ -25,5 +25,33 @@
   "FooterContactUsParagraph": "Talk to us! <br> Please use our <a href='/#/about'>Community Forums</a> for general questions, feedback and technical support. You can also email directly to <a href='mailto:support@axcrypt.net'>support@axcrypt.net</a>",
   "FooterNewsletterSignUpHeading": "Sign up for our newsletter",
 
-  "TryForFreeButtonLabel": "Try for free"
+  "TryForFreeButtonLabel": "Try for free",
+  "ProductHeroSubheading": "Made for individuals",
+  "ProductTryItForFreeHeading": "Try it for free",
+  "ProductTryItForFreeSubheading": "30-day trial",
+  "ProductTryItForFreeButtonLabel": "Start free trial now",
+  "PremiumFirstBodyHeading": "AxCrypt Premium",
+  "PremiumFirstBodyText": "<p>Interested in getting a subscription, but not sure if it fits your needs? <a href='#'>You can enjoy 30 days of AxCrypt Premium for free.</a></p><p>With AxCrypt Premium, you have access to extended functionality and exciting features! Encrypt your files with AES-256 – the strongest of the AES algorithm. It is used globally to protect sensitive and classified information of all levels. Securing folders has never been easier, only taking a single click to automatically secure new files.</p><p>If you also need to share secured files with others, you will have key sharing to take care of that for you, even with access to cloud storage awareness in Dropbox, Google Drive, etc. In case you are often on the fly, you can use our mobile app to access your encrypted files.</p><p>Want to save password in a safe and easy way? Use our password management and generator to keep all your passwords safe in the cloud.</p><p>Try it out to discover all the features and benefits it offers!</p>",
+  "ProductTryItForFreeYouGet": "You get:",
+  "PremiumTryItForFreeSellingPointAutomaticallyEncrypt": "Automatically encrypt new files in secure folders",
+  "PremiumTryItForFreeSellingPointStrongerEncryption": "Stronger encryption with AES-256",
+  "PremiumTryItForFreeSellingPointShareYour": "Share your secure files with key sharing",
+  "PremiumTryItForFreeSellingPointViewYour": "View your encrypted files on the fly with the mobile app",
+  "PremiumTryItForFreeSellingPointSecureFiles": "Secure files online with cloud storage awareness",
+  "ProductTryItForFreeAndMuch": "And much more...",
+  "ProductTryItForFreeCostAfterTrial": "Cost after trial:",
+  "ProductTryItForFreeAnnualButtonLabel": "Annual 20% off",
+  "ProductTryItForFreeMonthlyButtonLabel": "Monthly",
+  "ProductTryItForFreePerMonth": "Per month",
+  "ProductTryItForFreeStartButtonLabel": "Start free trial now",
+
+  "PremiumSecondBodyHeading": "What happens after the trial?",
+  "PremiumSecondBodyText": "<p>After 30 days, the trial turns into the subscription you signed up for, whether that’s monthly or yearly.</p><p>You can cancel your subscription at any time. If you do this before the trial ends, you won’t be charged anything. After that, your account will fall back to the Free version.</p>",
+
+  "PremiumBusinessCtaPreHeading": "Are you a company?",
+  "PremiumBusinessCtaHeading": "Try <strong>AxCrypt Business</strong> for free instead!",
+  "ReadMoreButtonLabel": "Read more",
+
+  "PremiumThirdBodyHeading": "More information",
+  "PremiumThirdBodyText": "<p>Read more on our <a href='#'>feature page</a></p>"
 }
