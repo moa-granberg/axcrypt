@@ -6,7 +6,7 @@
       :key="item.src"
     >
       <img
-        :class="'product-selling-points-item ' + $mq"
+        :class="'product-selling-points-item-img ' + $mq"
         :src="require(`@/assets/view/premium/${item.src}`)"
         alt=""
       />
