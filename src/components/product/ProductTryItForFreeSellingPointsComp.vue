@@ -2,7 +2,9 @@
   <article :class="'product-selling-points-items-wrapper ' + $mq">
     <div
       :class="'product-selling-points-item ' + $mq"
-      v-for="item of premiumSellingPointItems"
+      v-for="item of product === 'premium'
+        ? premiumSellingPointItems
+        : businessSellingPointItems"
       :key="item.src"
     >
       <img
@@ -14,7 +16,7 @@
         {{ $t(item.phraseKey) }}
       </p>
     </div>
-    <h2 :class="'product-selling-points-and-much-more ' + $mq">
+    <h2 :class="`product-selling-points-and-much-more ${$mq} ${product}`">
       {{ $t('ProductTryItForFreeAndMuch') }}
     </h2>
   </article>
@@ -22,28 +24,58 @@
 
 <script>
 export default {
+  props: {
+    product: String,
+  },
+
   data() {
     return {
       premiumSellingPointItems: [
         {
           src: 'automatically-encrypt.png',
-          phraseKey: 'PremiumTryItForFreeSellingPointAutomaticallyEncrypt',
+          phraseKey: 'ProductTryItForFreeSellingPointAutomaticallyEncrypt',
         },
         {
           src: 'stronger-encryption.png',
-          phraseKey: 'PremiumTryItForFreeSellingPointStrongerEncryption',
+          phraseKey: 'ProductTryItForFreeSellingPointStrongerEncryption',
         },
         {
           src: 'share-your.png',
-          phraseKey: 'PremiumTryItForFreeSellingPointShareYour',
+          phraseKey: 'ProductTryItForFreeSellingPointShareYour',
         },
         {
           src: 'view-your.png',
-          phraseKey: 'PremiumTryItForFreeSellingPointViewYour',
+          phraseKey: 'ProductTryItForFreeSellingPointViewYour',
         },
         {
           src: 'secure-files.png',
-          phraseKey: 'PremiumTryItForFreeSellingPointSecureFiles',
+          phraseKey: 'ProductTryItForFreeSellingPointSecureFiles',
+        },
+      ],
+      businessSellingPointItems: [
+        {
+          src: 'automatically-encrypt.png',
+          phraseKey: 'ProductTryItForFreeSellingPointAutomaticallyEncrypt',
+        },
+        {
+          src: 'stronger-encryption.png',
+          phraseKey: 'ProductTryItForFreeSellingPointStrongerEncryption',
+        },
+        {
+          src: 'share-your.png',
+          phraseKey: 'ProductTryItForFreeSellingPointShareYour',
+        },
+        {
+          src: 'view-your.png',
+          phraseKey: 'ProductTryItForFreeSellingPointViewYour',
+        },
+        {
+          src: 'secure-files.png',
+          phraseKey: 'ProductTryItForFreeSellingPointSecureFiles',
+        },
+        {
+          src: 'great-business.png',
+          phraseKey: 'BusinessTryItForFreeSellingPointsGreatBusiness',
         },
       ],
     };
@@ -57,7 +89,7 @@ export default {
 .product-selling-points-items-wrapper {
   &.mobile {
     display: grid;
-    grid: 1fr 1fr 1fr/ 1fr 1fr;
+    grid: auto / 1fr 1fr;
     align-items: flex-start;
     gap: 50px 10px;
   }
@@ -114,7 +146,14 @@ export default {
   text-align: center;
 
   &.mobile {
-    max-width: 130px;
+    &.premium {
+      max-width: 130px;
+    }
+    &.business {
+      grid-column-start: 1;
+      grid-column-end: 3;
+      padding: 0 0 6px 0;
+    }
   }
 
   &.desktop {

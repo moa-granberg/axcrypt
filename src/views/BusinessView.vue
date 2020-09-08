@@ -7,7 +7,7 @@
         headerPhraseKey="BusinessFirstBodyHeading"
         bodyPhraseKey="BusinessFirstBodyText"
       />
-      <!-- <product-try-it-for-free-comp /> -->
+      <product-try-it-for-free-comp product="business" />
       <!-- Why AxCrypt Business Comp -->
     </mq-layout>
   </main>
@@ -16,13 +16,13 @@
 <script>
 import ProductHeroComp from '@/components/product/ProductHeroComp';
 import ProductBodyComp from '@/components/product/ProductBodyComp';
-// import ProductTryItForFreeComp from '@/components/product/ProductTryItForFreeComp';
+import ProductTryItForFreeComp from '@/components/product/ProductTryItForFreeComp';
 
 export default {
   components: {
     ProductHeroComp,
     ProductBodyComp,
-    // ProductTryItForFreeComp,
+    ProductTryItForFreeComp,
   }
 }
 </script>

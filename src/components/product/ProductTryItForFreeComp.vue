@@ -1,10 +1,10 @@
 <template>
-  <section :class="'product-try-it-for-free-wrapper ' + $mq">
+  <section :class="`product-try-it-for-free-wrapper ${$mq} ${product}`">
     <h1 :class="'product-try-it-for-free-heading ' + $mq">
       {{ $t('ProductTryItForFreeYouGet') }}
     </h1>
 
-    <product-try-it-for-free-selling-points-comp />
+    <product-try-it-for-free-selling-points-comp :product="product" />
 
     <article :class="'product-try-it-for-free-billing-wrapper ' + $mq">
       <h2 :class="'product-try-it-for-free-subheading ' + $mq">
@@ -47,6 +47,10 @@ import PrimaryButtonComp from '@/components/PrimaryButtonComp';
 import ProductTryItForFreeSellingPointsComp from '@/components/product/ProductTryItForFreeSellingPointsComp';
 
 export default {
+  props: {
+    product: String,
+  },
+
   components: {
     PrimaryButtonComp,
     ProductTryItForFreeSellingPointsComp,
@@ -115,12 +119,22 @@ export default {
   justify-content: center;
 
   &.mobile {
-    background: linear-gradient(
-      to bottom,
-      rgba(73, 119, 44, 0.7) 0%,
-      rgba(73, 119, 44, 0.8) 70%,
-      rgba(33, 80, 6, 0.9) 100%
-    );
+    &.premium {
+      background: linear-gradient(
+        to bottom,
+        rgba(73, 119, 44, 0.7) 0%,
+        rgba(73, 119, 44, 0.8) 70%,
+        rgba(33, 80, 6, 0.9) 100%
+      );
+    }
+    &.business {
+      background: linear-gradient(
+        to bottom,
+        rgba(0,0,0, 0.7) 0%,
+        rgba(0,0,0, 0.8) 70%,
+        rgba(0,0,0, 1) 100%
+      );
+    }
   }
 }
 
