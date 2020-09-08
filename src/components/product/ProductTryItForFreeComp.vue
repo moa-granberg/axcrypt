@@ -68,11 +68,19 @@ export default {
 
   methods: {
     async getCurrencies() {
-      const monthlyResponse = await import('@/utils/pricing/monthly.json');
-      this.monthly = monthlyResponse.default.pricinglist;
+      if (this.product === 'premium') {
+        const monthlyResponse = await import('@/utils/pricing/premium-monthly.json');
+        this.monthly = monthlyResponse.default.pricinglist;
 
-      const yearlyResponse = await import('@/utils/pricing/yearly.json');
-      this.yearly = yearlyResponse.default.pricinglist;
+        const yearlyResponse = await import('@/utils/pricing/premium-yearly.json');
+        this.yearly = yearlyResponse.default.pricinglist;
+      } else {
+        const monthlyResponse = await import('@/utils/pricing/business-monthly.json');
+        this.monthly = monthlyResponse.default.pricinglist;
+
+        const yearlyResponse = await import('@/utils/pricing/business-yearly.json');
+        this.yearly = yearlyResponse.default.pricinglist;
+      }
     },
 
     getPrice(currency, period) {
@@ -130,9 +138,9 @@ export default {
     &.business {
       background: linear-gradient(
         to bottom,
-        rgba(0,0,0, 0.7) 0%,
-        rgba(0,0,0, 0.8) 70%,
-        rgba(0,0,0, 1) 100%
+        rgba(0, 0, 0, 0.7) 0%,
+        rgba(0, 0, 0, 0.8) 70%,
+        rgba(0, 0, 0, 1) 100%
       );
     }
   }
