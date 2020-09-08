@@ -54,5 +54,8 @@
   "ReadMoreButtonLabel": "Read more",
 
   "PremiumThirdBodyHeading": "More information",
-  "PremiumThirdBodyText": "<p>Read more on our <a href='#'>feature page</a></p>"
+  "PremiumThirdBodyText": "<p>Read more on our <a href='#'>feature page</a></p>",
+
+  "BusinessFirstBodyHeading": "Simple, Reliable and Strong Encryption",
+  "BusinessFirstBodyText": "<p>AxCrypt now offers file security for companies and organisations – with 256-bit AES encryption. Sharing files with the rest of the team is award winning easy with our cloud storage awareness and key sharing feature for on-premise files. This allows you to comply with data protection regulations while protecting your files from costly data breaches.</p><p>With AxCrypt Business, you also have access to our Password Management – where you can store and manage passwords and codes securely. AxCrypt is multilingual; supporting English, Dutch, French, German, Italian, Korean, Polish, Portuguese, Russian, Spanish, Swedish, Turkish and more to follow. We also offer Mobile Apps for you to open your encrypted files when away.</p><p>For more information, visit our <a href='#'>feature page</a> and don’t forget to read <a href='#'>Terms of use</a>.</p><p>More exclusive Business Features coming soon. Don’t miss out!</p>"
 }
