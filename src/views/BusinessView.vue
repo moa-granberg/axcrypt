@@ -12,6 +12,7 @@
         headingPhraseKey="WhyAxCryptBusiness"
         :list="businessFeatureList"
       />
+      <product-business-big-team-cta-comp />
     </mq-layout>
   </main>
 </template>
@@ -21,6 +22,7 @@ import ProductHeroComp from '@/components/product/ProductHeroComp';
 import ProductBodyComp from '@/components/product/ProductBodyComp';
 import ProductTryItForFreeComp from '@/components/product/ProductTryItForFreeComp';
 import FeatureListComp from '@/components/FeatureListComp.vue';
+import ProductBusinessBigTeamCtaComp from '@/components/product/ProductBusinessBigTeamCtaComp.vue';
 
 export default {
   components: {
@@ -28,6 +30,7 @@ export default {
     ProductBodyComp,
     ProductTryItForFreeComp,
     FeatureListComp,
+    ProductBusinessBigTeamCtaComp,
   },
 
   data() {
