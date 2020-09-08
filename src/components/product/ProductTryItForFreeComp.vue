@@ -13,13 +13,13 @@
       <div :class="'product-try-it-for-free-pricing-btn-wrapper ' + $mq">
         <button
           :class="[{ active: annualActive }, $mq]"
-          @click="annualActive = true"
+          @click="handleClickYearly"
         >
           {{ $t('ProductTryItForFreeAnnualButtonLabel') }}
         </button>
         <button
           :class="[{ active: !annualActive }, $mq]"
-          @click="annualActive = false"
+          @click="handleClickMonthly"
         >
           {{ $t('ProductTryItForFreeMonthlyButtonLabel') }}
         </button>
@@ -28,7 +28,7 @@
         class="product-try-it-for-free-pricing"
         :class="[{ annual: annualActive }, $mq]"
       >
-        41.25 <span>SEK</span>
+        {{ price }} <span>{{ currency }}</span>
       </h1>
       <h3 :class="'product-try-it-for-free-per-month ' + $mq">
         {{ $t('ProductTryItForFreePerMonth') }}
@@ -55,7 +55,51 @@ export default {
   data() {
     return {
       annualActive: false,
+      monthly: [],
+      yearly: [],
+      price: 0,
+      currency: 'SEK',
     };
+  },
+
+  methods: {
+    async getCurrencies() {
+      const monthlyResponse = await import('@/utils/pricing/monthly.json');
+      this.monthly = monthlyResponse.default.pricinglist;
+
+      const yearlyResponse = await import('@/utils/pricing/yearly.json');
+      this.yearly = yearlyResponse.default.pricinglist;
+    },
+
+    getPrice(currency, period) {
+      const priceItem = period.filter(item => item.currency === currency);
+      let newPrice = 0;
+
+      if (!priceItem) {
+        const defaultItem = period.filter(item => item.is_default);
+        newPrice = defaultItem[0].rounded_amount;
+      } else {
+        newPrice = priceItem[0].rounded_amount;
+      }
+
+      this.price =
+        period === this.yearly ? Math.round(newPrice / 12) : newPrice;
+    },
+
+    handleClickMonthly() {
+      this.annualActive = false;
+      this.getPrice(this.currency, this.monthly);
+    },
+
+    handleClickYearly() {
+      this.annualActive = true;
+      this.getPrice(this.currency, this.yearly);
+    },
+  },
+
+  async created() {
+    await this.getCurrencies();
+    this.getPrice(this.currency, this.monthly);
   },
 };
 </script>
