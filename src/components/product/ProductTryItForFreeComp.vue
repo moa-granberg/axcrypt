@@ -69,16 +69,24 @@ export default {
   methods: {
     async getCurrencies() {
       if (this.product === 'premium') {
-        const monthlyResponse = await import('@/utils/pricing/premium-monthly.json');
+        const monthlyResponse = await import(
+          '@/utils/pricing/premium-monthly.json'
+        );
         this.monthly = monthlyResponse.default.pricinglist;
 
-        const yearlyResponse = await import('@/utils/pricing/premium-yearly.json');
+        const yearlyResponse = await import(
+          '@/utils/pricing/premium-yearly.json'
+        );
         this.yearly = yearlyResponse.default.pricinglist;
       } else {
-        const monthlyResponse = await import('@/utils/pricing/business-monthly.json');
+        const monthlyResponse = await import(
+          '@/utils/pricing/business-monthly.json'
+        );
         this.monthly = monthlyResponse.default.pricinglist;
 
-        const yearlyResponse = await import('@/utils/pricing/business-yearly.json');
+        const yearlyResponse = await import(
+          '@/utils/pricing/business-yearly.json'
+        );
         this.yearly = yearlyResponse.default.pricinglist;
       }
     },
@@ -89,13 +97,14 @@ export default {
 
       if (!priceItem) {
         const defaultItem = period.filter(item => item.is_default);
-        newPrice = defaultItem[0].rounded_amount;
+        newPrice = Number(defaultItem[0].rounded_amount);
       } else {
-        newPrice = priceItem[0].rounded_amount;
+        newPrice = Number(priceItem[0].rounded_amount);
       }
-
       this.price =
-        period === this.yearly ? Math.round(newPrice / 12) : newPrice;
+        period === this.yearly
+          ? (newPrice / 12).toFixed(2)
+          : newPrice.toFixed(2);
     },
 
     handleClickMonthly() {
