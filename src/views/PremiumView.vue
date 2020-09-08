@@ -9,8 +9,8 @@
         bodyPhraseKey="PremiumFirstBodyText"
       />
       <div class="product-try-it-for-free-desktop-wrapper">
-        <product-try-it-for-free-cta-comp />
-        <product-try-it-for-free-comp />
+        <product-try-it-for-free-cta-comp product="premium" />
+        <product-try-it-for-free-comp product="premium"/>
       </div>
       <product-body-comp
         class="grid-body2"
@@ -24,7 +24,7 @@
         headerPhraseKey="PremiumFirstBodyHeading"
         bodyPhraseKey="PremiumFirstBodyText"
       />
-      <product-try-it-for-free-comp />
+      <product-try-it-for-free-comp product="premium"/>
       <product-body-comp
         headerPhraseKey="PremiumSecondBodyHeading"
         bodyPhraseKey="PremiumSecondBodyText"
