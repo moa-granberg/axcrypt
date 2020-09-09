@@ -26,18 +26,20 @@
     <mq-layout mq="desktop">
       <product-hero-comp product="premium" />
 
-      <section class="product-grid-wrapper">
+      <section class="product-main-grid-wrapper">
         <product-body-comp
-          class="grid-body1"
+          class="main-grid-body1"
           headerPhraseKey="PremiumFirstBodyHeading"
           bodyPhraseKey="PremiumFirstBodyText"
         />
-        <div class="product-try-it-for-free-desktop-wrapper">
+
+        <div class="product-try-it-for-free-desktop-wrapper premium">
           <product-try-it-for-free-cta-comp product="premium" />
           <product-try-it-for-free-comp product="premium" />
         </div>
+
         <product-body-comp
-          class="grid-body2"
+          class="main-grid-body2"
           headerPhraseKey="PremiumSecondBodyHeading"
           bodyPhraseKey="PremiumSecondBodyText"
         />
@@ -79,41 +81,7 @@ export default {
 
 <style lang="scss" scoped>
 @import '@/scss/variables.scss';
-
-.product-grid-wrapper {
-  display: grid;
-  grid-template-columns: repeat(1fr, 4);
-  grid-template-areas:
-    ' . body1 aside .'
-    ' . body2 aside .';
-  justify-items: center;
-  align-items: center;
-}
-
-.grid-body1 {
-  grid-area: body1;
-  max-width: 600px;
-}
-
-.grid-body2 {
-  grid-area: body2;
-  max-width: 600px;
-  align-self: flex-start;
-}
-
-.product-try-it-for-free-desktop-wrapper {
-  grid-area: aside;
-  position: relative;
-  top: -225px;
-  margin: 0 0 -200px 0;
-  width: 450px;
-  background: linear-gradient(
-    to bottom,
-    rgba(33, 80, 6, 0.9) 0%,
-    rgba(73, 119, 44, 0.8) 70%,
-    rgba(73, 119, 44, 0.7) 100%
-  );
-}
+@import '@/scss/productView.scss';
 
 .premium-third-body-wrapper {
   display: flex;
