@@ -1,54 +1,60 @@
 <template>
   <main>
-    <product-hero-comp product="premium" />
-
-    <mq-layout mq="desktop" class="product-grid-wrapper">
-      <product-body-comp
-        class="grid-body1"
-        headerPhraseKey="PremiumFirstBodyHeading"
-        bodyPhraseKey="PremiumFirstBodyText"
-      />
-      <div class="product-try-it-for-free-desktop-wrapper">
-        <product-try-it-for-free-cta-comp product="premium" />
-        <product-try-it-for-free-comp product="premium"/>
-      </div>
-      <product-body-comp
-        class="grid-body2"
-        headerPhraseKey="PremiumSecondBodyHeading"
-        bodyPhraseKey="PremiumSecondBodyText"
-      />
-    </mq-layout>
-
     <mq-layout mq="mobile">
+      <product-hero-comp product="premium" />
+
       <product-body-comp
         headerPhraseKey="PremiumFirstBodyHeading"
         bodyPhraseKey="PremiumFirstBodyText"
       />
-      <product-try-it-for-free-comp product="premium"/>
+
+      <product-try-it-for-free-comp product="premium" />
+
       <product-body-comp
         headerPhraseKey="PremiumSecondBodyHeading"
         bodyPhraseKey="PremiumSecondBodyText"
       />
-    </mq-layout>
 
-    <product-premium-business-cta-comp />
+      <product-premium-business-cta-comp />
 
-    <mq-layout mq="mobile">
       <product-body-comp
         headerPhraseKey="PremiumThirdBodyHeading"
         bodyPhraseKey="PremiumThirdBodyText"
       />
     </mq-layout>
 
-    <mq-layout mq="desktop" class="premium-third-body-wrapper">
-      <product-body-comp
-        headerPhraseKey="PremiumThirdBodyHeading"
-        bodyPhraseKey="PremiumThirdBodyText"
-      />
-      <img
-        src="@/assets/view/product/more-information.png"
-        alt="more information"
-      />
+    <mq-layout mq="desktop">
+      <product-hero-comp product="premium" />
+
+      <section class="product-grid-wrapper">
+        <product-body-comp
+          class="grid-body1"
+          headerPhraseKey="PremiumFirstBodyHeading"
+          bodyPhraseKey="PremiumFirstBodyText"
+        />
+        <div class="product-try-it-for-free-desktop-wrapper">
+          <product-try-it-for-free-cta-comp product="premium" />
+          <product-try-it-for-free-comp product="premium" />
+        </div>
+        <product-body-comp
+          class="grid-body2"
+          headerPhraseKey="PremiumSecondBodyHeading"
+          bodyPhraseKey="PremiumSecondBodyText"
+        />
+      </section>
+
+      <product-premium-business-cta-comp />
+
+      <section class="premium-third-body-wrapper">
+        <product-body-comp
+          headerPhraseKey="PremiumThirdBodyHeading"
+          bodyPhraseKey="PremiumThirdBodyText"
+        />
+        <img
+          src="@/assets/view/product/more-information.png"
+          alt="more information"
+        />
+      </section>
     </mq-layout>
   </main>
 </template>
