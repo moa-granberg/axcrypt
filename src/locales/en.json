@@ -74,6 +74,22 @@
   "HomeHeroTryPremiumPreHeading": "For private users",
   "HomeHeroTryPremiumHeading": "Try Premium",
   "HomeHeroTryBusinessPreHeading": "For business users",
-  "HomeHeroTryBusinessHeading": "Try Business"
+  "HomeHeroTryBusinessHeading": "Try Business",
+
+  "WhyChooseAxcrypt": "Why choose AxCrypt?",
+
+  "HomeSellingPointStrongEncryptionHeading": "Strong encryption",
+  "HomeSellingPointCloudStorageAwarenessHeading":"Cloud storage awareness",
+  "HomeSellingPointMultilingualHeading":"Multilingual",
+  "HomeSellingPointCollaborationHeading":"Collaboration",
+  "HomeSellingPointPasswordManagementHeading":"Password management",
+  "HomeSellingPointAxcryptMobileHeading":"AxCrypt Mobile",
+
+  "HomeSellingPointStrongEncryptionBody": "",
+  "HomeSellingPointCloudStorageAwarenessBody": "",
+  "HomeSellingPointMultilingualBody": "",
+  "HomeSellingPointCollaborationBody": "",
+  "HomeSellingPointPasswordManagementBody": "",
+  "HomeSellingPointAxcryptMobileBody": ""
 
 }
