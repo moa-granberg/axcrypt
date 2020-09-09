@@ -37,17 +37,30 @@ export default {
 @import '@/scss/variables.scss';
 
 .feature-list-wrapper {
-  max-width: 350px;
-  margin: auto;
-  padding: 32px 0;
+  &.mobile {
+    max-width: 350px;
+    padding: 32px 0;
+    margin: auto;
+  }
+
+  &.desktop {
+    margin: 32px;
+  }
 }
 
 .feature-list-header {
   color: $green;
-  font-size: 1.125rem;
   font-weight: 400;
-  margin: 0;
-  margin: 0 32px;
+
+  &.mobile {
+    margin: 0 32px;
+    font-size: 1.125rem;
+  }
+
+  &.desktop {
+    margin: 0;
+    font-size: 1.5rem;
+  }
 }
 
 .feature-list-items-wrapper {
@@ -60,13 +73,20 @@ export default {
 }
 
 .feature-list-item {
-  font-size: 0.75rem;
   list-style: none;
   display: flex;
   align-items: center;
-  justify-content: space-between;
   border-bottom: 0.5px solid $light-gray;
   padding: 5px 0;
+
+  &.mobile {
+    justify-content: space-between;
+    font-size: 0.75rem;
+  }
+
+  &.desktop {
+    font-size: 1rem;
+  }
 }
 
 .feature-list-item-img-wrapper {
@@ -77,6 +97,12 @@ export default {
 }
 
 .feature-list-item-paragraph {
-  width: 250px;
+  &.mobile {
+    width: 250px;
+  }
+
+  &.desktop {
+    margin: 1rem 0 1rem 2rem;
+  }
 }
 </style>
