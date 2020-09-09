@@ -26,14 +26,29 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 28px 0;
+
+  &.mobile {
+    padding: 28px 0;
+  }
+
+  &.desktop {
+    padding: 4rem 0;
+  }
 }
 
 .product-business-big-team-cta-heading {
   color: $white;
-  font-size: 1.125rem;
   text-align: center;
-  margin: 0 0 18px 0;
-}
 
+  &.mobile {
+    margin: 0 0 18px 0;
+    font-size: 1.125rem;
+  }
+
+  &.desktop {
+    margin: 0 0 38px 0;
+    font-size: 1.875rem;
+    font-weight: 400;
+  }
+}
 </style>
