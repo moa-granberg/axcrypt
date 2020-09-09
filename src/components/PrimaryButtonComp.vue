@@ -1,7 +1,7 @@
 <template>
-  <button :class="`primary-btn ${size} ${$mq} ${color}`">
+  <router-link :class="`primary-btn ${size} ${$mq} ${color}`" :to="path">
     {{ $t(phraseKey) }}
-  </button>
+  </router-link>
 </template>
 
 <script>
@@ -10,6 +10,7 @@ export default {
     phraseKey: String,
     size: String,
     color: String,
+    path: String,
   },
 };
 </script>
@@ -25,6 +26,7 @@ export default {
   border: none;
   border-radius: 5px;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
 
   &.small {
     padding: 10px 23px;

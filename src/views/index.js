@@ -7,6 +7,8 @@ import InformationView from './InformationView';
 import SupportView from './SupportView';
 import AboutView from './AboutView';
 import SignInView from './SignInView';
+import PremiumTrialView from './PremiumTrialView';
+import BusinessTrialView from './BusinessTrialView';
 
 export {
   HomeView,
@@ -18,4 +20,6 @@ export {
   SupportView,
   AboutView,
   SignInView,
+  PremiumTrialView,
+  BusinessTrialView,
 };

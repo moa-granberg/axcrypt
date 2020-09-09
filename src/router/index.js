@@ -236,6 +236,22 @@ const routes = [
       title: 'Application Form | ',
     },
   },
+  {
+    path: '/business-trial',
+    name: 'BusinessTrialView',
+    component: Views.BusinessTrialView,
+    meta: {
+      title: 'Business Trial | ',
+    },
+  },
+  {
+    path: '/premium-trial',
+    name: 'PremiumTrialView',
+    component: Views.PremiumTrialView,
+    meta: {
+      title: 'Premium Trial | ',
+    },
+  },
 ];
 
 export default new VueRouter({ routes });
