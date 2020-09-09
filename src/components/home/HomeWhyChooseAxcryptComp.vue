@@ -71,4 +71,53 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+@import '@/scss/variables.scss';
+
+.home-why-choose-axcrypt-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(6, 9, 3, 0.9);
+  padding: 30px 0;
+}
+
+.home-why-choose-axcrypt-heading {
+  font-size: 1.125rem;
+  color: $white;
+  font-weight: 400;
+}
+
+.home-why-choose-axcrypt-selling-points-items-wrapper {
+  display: grid;
+  grid: 1fr 1fr 1fr / 1fr 1fr;
+}
+
+.home-why-choose-axcrypt-selling-points-item {
+  /* text-align: center; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+
+.home-why-choose-axcrypt-selling-points-item-img {
+  height: 50px;
+}
+
+.home-why-choose-axcrypt-selling-points-item-heading {
+  font-size: 0.75rem;
+  color: $light-green;
+  margin: 0;
+  text-align: center;
+}
+
+.home-why-choose-axcrypt-selling-points-item-paragraph {
+  font-size: 0.5rem;
+  color: $white;
+  margin: 0;
+  max-width: 8rem;
+  text-align: center;
+}
+</style>
