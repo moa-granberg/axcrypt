@@ -13,6 +13,11 @@
         :list="businessFeatureList"
       />
       <product-business-big-team-cta-comp />
+
+      <product-body-comp
+        headerPhraseKey="BusinessAfterTrialHeading"
+        bodyPhraseKey="BusinessAfterTrialBodyText"
+      />
     </mq-layout>
   </main>
 </template>
