@@ -31,7 +31,10 @@ export default {
 .premium-business-cta-wrapper {
   background-color: rgba(0, 0, 0, 0.7);
   color: $white;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
   &.mobile {
     padding: 28px 0 23px 0;
