@@ -1,9 +1,19 @@
 <template>
-  <main>This is the Home view.</main>
+  <main>
+    <home-hero-comp />
+  </main>
 </template>
 
-<style lang="scss" scoped>
-main {
-  background-color: #eeeeee;
+<script>
+import HomeHeroComp from '@/components/home/HomeHeroComp';
+
+export default {
+  components: {
+    HomeHeroComp
+  }  
 }
+</script>
+
+<style lang="scss" scoped>
+
 </style>
