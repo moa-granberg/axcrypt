@@ -38,9 +38,10 @@ export default {
 .home-hero-wrapper {
   display: grid;
   grid: 2fr 1fr / 1fr;
-  height: 400px;
+  height: 450px;
   background-image: url('~@/assets/view/home/home-hero-mobile.png');
   background-position: bottom;
+  background-size: cover;
   color: $white;
   text-align: center;
 }
@@ -49,12 +50,14 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  align-items: center;
 }
 
 .home-hero-heading {
   font-size: 1.5rem;
   font-weight: 300;
   margin: 0 0 10px 0;
+  max-width: 20rem;
 }
 
 .home-hero-subheading {
