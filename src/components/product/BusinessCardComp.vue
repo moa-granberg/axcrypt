@@ -40,12 +40,12 @@ export default {
 }
 
 .business-card-text-wrapper {
-  margin: 0 0 0 20px;
+  margin: 0 0 0 10px;
 }
 
 .business-card-heading,
 .business-card-paragraph {
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   margin: 0;
 }
 </style>
