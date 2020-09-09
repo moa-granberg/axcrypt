@@ -18,6 +18,13 @@
         headerPhraseKey="BusinessAfterTrialHeading"
         bodyPhraseKey="BusinessAfterTrialBodyText"
       />
+
+      <product-body-comp
+        headerPhraseKey="ContactHeading"
+        bodyPhraseKey="BusinessContactBodyText"
+      />
+
+      <business-card-comp :person="contactPerson" />
     </mq-layout>
   </main>
 </template>
@@ -28,6 +35,7 @@ import ProductBodyComp from '@/components/product/ProductBodyComp';
 import ProductTryItForFreeComp from '@/components/product/ProductTryItForFreeComp';
 import FeatureListComp from '@/components/FeatureListComp.vue';
 import ProductBusinessBigTeamCtaComp from '@/components/product/ProductBusinessBigTeamCtaComp.vue';
+import BusinessCardComp from '@/components/product/BusinessCardComp.vue';
 
 export default {
   components: {
@@ -36,6 +44,7 @@ export default {
     ProductTryItForFreeComp,
     FeatureListComp,
     ProductBusinessBigTeamCtaComp,
+    BusinessCardComp,
   },
 
   data() {
@@ -78,6 +87,13 @@ export default {
           src: '/icons/playlist_add.svg',
         },
       ],
+
+      contactPerson: {
+        src: '/view/product/angelique.png',
+        name: 'Angélique Huige',
+        jobTitle: 'Business Manager',
+        email: 'angelique.huige@axcrypt.net',
+      }
     };
   },
 };

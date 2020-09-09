@@ -74,5 +74,7 @@
   "BusinessBigTeamCtaHeading": "Are you a team with over 50 people?",
   
   "BusinessAfterTrialHeading": "What happens after the trial?",
-  "BusinessAfterTrialBodyText": "<p>After 30 days, the trial turns into the subscription you signed up for, whether that’s monthly or yearly.</p><p>You can cancel your subscription at any time. If you do this before the trial ends, you won’t be charged anything. After that, your account will fall back to the Free version.</p>"
+  "BusinessAfterTrialBodyText": "<p>After 30 days, the trial turns into the subscription you signed up for, whether that’s monthly or yearly.</p><p>You can cancel your subscription at any time. If you do this before the trial ends, you won’t be charged anything. After that, your account will fall back to the Free version.</p>",
+  "ContactHeading": "Contact",
+  "BusinessContactBodyText": "Do you have any questions or need any help?"
 }
