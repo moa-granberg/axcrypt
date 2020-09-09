@@ -13,12 +13,14 @@
     </div>
     <div :class="`home-hero-try-links-wrapper ${$mq}`">
       <router-link to="/premium-trial" :class="`home-hero-try-premium-wrapper home-hero-try-wrapper ${$mq}`">
-        <h1 :class="`home-hero-try-preheading ${$mq}`">For private users</h1>
-        <h2 :class="`home-hero-try-heading ${$mq}`">Try Premium</h2>
+        <h1 :class="`home-hero-try-preheading ${$mq}`">
+          {{$t('HomeHeroTryPremiumPreHeading')}}
+        </h1>
+        <h2 :class="`home-hero-try-heading ${$mq}`">{{$t('HomeHeroTryPremiumHeading')}}</h2>
       </router-link>
       <router-link to="/business-trial" :class="`home-hero-try-business-wrapper home-hero-try-wrapper ${$mq}`">
-        <h1 :class="`home-hero-try-preheading ${$mq}`">For business users</h1>
-        <h2 :class="`home-hero-try-heading ${$mq}`">Try Business</h2>
+        <h1 :class="`home-hero-try-preheading ${$mq}`">{{$t('HomeHeroTryBusinessPreHeading')}}</h1>
+        <h2 :class="`home-hero-try-heading ${$mq}`">{{$t('HomeHeroTryBusinessHeading')}}</h2>
       </router-link>
     </div>
   </section>
