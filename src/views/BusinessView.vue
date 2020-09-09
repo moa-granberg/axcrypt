@@ -151,4 +151,18 @@ export default {
 <style lang="scss" scoped>
 @import '@/scss/variables.scss';
 @import '@/scss/productView.scss';
+
+.business-after-trial-wrapper {
+  display: grid;
+  grid: 1fr 1fr / 1fr 1fr;
+  margin: 2rem 0;
+  align-items: center;
+  justify-items: center;
+  max-width: 1300px;
+  margin: auto;
+
+  img {
+    width: 400px;
+  }
+}
 </style>
