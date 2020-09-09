@@ -1,10 +1,10 @@
 <template>
-  <section :class="'product-try-it-for-free-wrapper ' + $mq">
+  <section :class="`product-try-it-for-free-wrapper ${$mq} ${product}`">
     <h1 :class="'product-try-it-for-free-heading ' + $mq">
       {{ $t('ProductTryItForFreeYouGet') }}
     </h1>
 
-    <product-try-it-for-free-selling-points-comp />
+    <product-try-it-for-free-selling-points-comp :product="product" />
 
     <article :class="'product-try-it-for-free-billing-wrapper ' + $mq">
       <h2 :class="'product-try-it-for-free-subheading ' + $mq">
@@ -47,6 +47,10 @@ import PrimaryButtonComp from '@/components/PrimaryButtonComp';
 import ProductTryItForFreeSellingPointsComp from '@/components/product/ProductTryItForFreeSellingPointsComp';
 
 export default {
+  props: {
+    product: String,
+  },
+
   components: {
     PrimaryButtonComp,
     ProductTryItForFreeSellingPointsComp,
@@ -64,11 +68,27 @@ export default {
 
   methods: {
     async getCurrencies() {
-      const monthlyResponse = await import('@/utils/pricing/monthly.json');
-      this.monthly = monthlyResponse.default.pricinglist;
+      if (this.product === 'premium') {
+        const monthlyResponse = await import(
+          '@/utils/pricing/premium-monthly.json'
+        );
+        this.monthly = monthlyResponse.default.pricinglist;
 
-      const yearlyResponse = await import('@/utils/pricing/yearly.json');
-      this.yearly = yearlyResponse.default.pricinglist;
+        const yearlyResponse = await import(
+          '@/utils/pricing/premium-yearly.json'
+        );
+        this.yearly = yearlyResponse.default.pricinglist;
+      } else {
+        const monthlyResponse = await import(
+          '@/utils/pricing/business-monthly.json'
+        );
+        this.monthly = monthlyResponse.default.pricinglist;
+
+        const yearlyResponse = await import(
+          '@/utils/pricing/business-yearly.json'
+        );
+        this.yearly = yearlyResponse.default.pricinglist;
+      }
     },
 
     getPrice(currency, period) {
@@ -77,13 +97,14 @@ export default {
 
       if (!priceItem) {
         const defaultItem = period.filter(item => item.is_default);
-        newPrice = defaultItem[0].rounded_amount;
+        newPrice = Number(defaultItem[0].rounded_amount);
       } else {
-        newPrice = priceItem[0].rounded_amount;
+        newPrice = Number(priceItem[0].rounded_amount);
       }
-
       this.price =
-        period === this.yearly ? Math.round(newPrice / 12) : newPrice;
+        period === this.yearly
+          ? (newPrice / 12).toFixed(2)
+          : newPrice.toFixed(2);
     },
 
     handleClickMonthly() {
@@ -115,12 +136,22 @@ export default {
   justify-content: center;
 
   &.mobile {
-    background: linear-gradient(
-      to bottom,
-      rgba(73, 119, 44, 0.7) 0%,
-      rgba(73, 119, 44, 0.8) 70%,
-      rgba(33, 80, 6, 0.9) 100%
-    );
+    &.premium {
+      background: linear-gradient(
+        to bottom,
+        rgba(73, 119, 44, 0.7) 0%,
+        rgba(73, 119, 44, 0.8) 70%,
+        rgba(33, 80, 6, 0.9) 100%
+      );
+    }
+    &.business {
+      background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.7) 0%,
+        rgba(0, 0, 0, 0.8) 70%,
+        rgba(0, 0, 0, 1) 100%
+      );
+    }
   }
 }
 

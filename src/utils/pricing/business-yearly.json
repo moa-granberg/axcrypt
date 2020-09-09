@@ -1,0 +1,132 @@
+{
+  "count": 1,
+  "default_currency": "SEK",
+  "pricinglist": [
+    {
+      "currency": "EUR",
+      "is_default": false,
+      "rounded_amount": "96",
+      "vat_rate": "0"
+    },
+    {
+      "currency": "USD",
+      "is_default": false,
+      "rounded_amount": "119",
+      "vat_rate": "0"
+    },
+    {
+      "currency": "AUD",
+      "is_default": false,
+      "rounded_amount": "174",
+      "vat_rate": "0"
+    },
+    {
+      "currency": "BRL",
+      "is_default": false,
+      "rounded_amount": "599",
+      "vat_rate": "0"
+    },
+    {
+      "currency": "CAD",
+      "is_default": false,
+      "rounded_amount": "162",
+      "vat_rate": "0"
+    },
+    {
+      "currency": "CHF",
+      "is_default": false,
+      "rounded_amount": "113",
+      "vat_rate": "0"
+    },
+    {
+      "currency": "CZK",
+      "is_default": false,
+      "rounded_amount": "2823",
+      "vat_rate": "0"
+    },
+    {
+      "currency": "GBP",
+      "is_default": false,
+      "rounded_amount": "96",
+      "vat_rate": "0"
+    },
+    {
+      "currency": "HKD",
+      "is_default": false,
+      "rounded_amount": "922",
+      "vat_rate": "0"
+    },
+    {
+      "currency": "HUF",
+      "is_default": false,
+      "rounded_amount": "36600",
+      "vat_rate": "0"
+    },
+    {
+      "currency": "ILS",
+      "is_default": false,
+      "rounded_amount": "413",
+      "vat_rate": "0"
+    },
+    {
+      "currency": "JPY",
+      "is_default": false,
+      "rounded_amount": "12774",
+      "vat_rate": "0"
+    },
+    {
+      "currency": "MXN",
+      "is_default": false,
+      "rounded_amount": "2657",
+      "vat_rate": "0"
+    },
+    {
+      "currency": "NOK",
+      "is_default": false,
+      "rounded_amount": "1146",
+      "vat_rate": "0"
+    },
+    {
+      "currency": "NZD",
+      "is_default": false,
+      "rounded_amount": "185",
+      "vat_rate": "0"
+    },
+    {
+      "currency": "PHP",
+      "is_default": false,
+      "rounded_amount": "5031",
+      "vat_rate": "0"
+    },
+    {
+      "currency": "PLN",
+      "is_default": false,
+      "rounded_amount": "470",
+      "vat_rate": "0"
+    },
+    {
+      "currency": "RUB",
+      "is_default": false,
+      "rounded_amount": "8273",
+      "vat_rate": "0"
+    },
+    {
+      "currency": "SEK",
+      "is_default": true,
+      "rounded_amount": "1111",
+      "vat_rate": "0"
+    },
+    {
+      "currency": "SGD",
+      "is_default": false,
+      "rounded_amount": "166",
+      "vat_rate": "0"
+    },
+    {
+      "currency": "THB",
+      "is_default": false,
+      "rounded_amount": "3684",
+      "vat_rate": "0"
+    }
+  ]
+}
