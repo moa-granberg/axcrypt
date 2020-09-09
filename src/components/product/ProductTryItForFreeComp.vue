@@ -37,6 +37,7 @@
         phraseKey="ProductTryItForFreeStartButtonLabel"
         size="large"
         color="dark"
+        :path="product === 'premium' ? '/premium-trial' : '/business-trial'"
       />
     </article>
   </section>

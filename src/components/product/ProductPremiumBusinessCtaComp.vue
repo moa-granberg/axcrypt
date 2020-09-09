@@ -7,7 +7,11 @@
       :class="'premium-business-cta-heading ' + $mq"
       v-html="$t('PremiumBusinessCtaHeading')"
     ></h1>
-    <primary-button-comp phraseKey="ReadMoreButtonLabel" size="small" />
+    <primary-button-comp
+      phraseKey="ReadMoreButtonLabel"
+      size="small"
+      path="/business"
+    />
   </section>
 </template>
 

@@ -3,7 +3,7 @@
     <h1 :class="`product-business-big-team-cta-heading ${$mq}`">
       {{ $t('BusinessBigTeamCtaHeading') }}
     </h1>
-    <primary-button-comp phraseKey="ContactUsHeading" size="small" />
+    <primary-button-comp phraseKey="ContactUsHeading" size="small" path="/about"/>
   </section>
 </template>
 

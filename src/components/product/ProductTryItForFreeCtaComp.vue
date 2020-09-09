@@ -9,6 +9,7 @@
     <primary-button-comp
       phraseKey="ProductTryItForFreeButtonLabel"
       size="large"
+      :path="product === 'premium' ? '/premium-trial' : '/business-trial'"
     />
   </article>
 </template>
