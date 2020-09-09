@@ -45,7 +45,14 @@ export default {
 
 .business-card-heading,
 .business-card-paragraph {
-  font-size: 0.7rem;
   margin: 0;
+
+  &.mobile {
+    font-size: 0.7rem;
+  }
+
+  &.desktop {
+    font-size: 1rem;
+  }
 }
 </style>
