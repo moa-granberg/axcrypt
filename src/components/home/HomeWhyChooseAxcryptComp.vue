@@ -1,8 +1,32 @@
 <template>
   <section :class="`home-why-choose-axcrypt-wrapper ${$mq}`">
     <h1 :class="`home-why-choose-axcrypt-heading ${$mq}`">
-      {{$t('WhyChooseAxcrypt')}}
+      {{ $t('WhyChooseAxcrypt') }}
     </h1>
+    <article
+      :class="`home-why-choose-axcrypt-selling-points-items-wrapper ${$mq}`"
+    >
+      <div
+        :class="`home-why-choose-axcrypt-selling-points-item ${$mq}`"
+        v-for="item of homeSellingPointItems"
+        :key="item.src"
+      >
+        <img
+          :class="`home-why-choose-axcrypt-selling-points-item-img ${$mq}`"
+          :src="require(`@/assets/view/home/${item.src}`)"
+        />
+
+        <h1 :class="`home-why-choose-axcrypt-selling-points-item-heading`">
+          {{ $t(item.headingPhraseKey) }}
+        </h1>
+
+        <p
+          :class="`home-why-choose-axcrypt-selling-points-item-paragraph ${$mq}`"
+        >
+          {{ $t(item.paragraphPhraseKey) }}
+        </p>
+      </div>
+    </article>
   </section>
 </template>
 
@@ -41,12 +65,10 @@ export default {
           headingPhraseKey: 'HomeSellingPointAxcryptMobileHeading',
           paragraphPhraseKey: 'HomeSellingPointAxcryptMobileBody',
         },
-      ]
-    }
-  }
-}
+      ],
+    };
+  },
+};
 </script>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>

@@ -85,11 +85,11 @@
   "HomeSellingPointPasswordManagementHeading":"Password management",
   "HomeSellingPointAxcryptMobileHeading":"AxCrypt Mobile",
 
-  "HomeSellingPointStrongEncryptionBody": "",
-  "HomeSellingPointCloudStorageAwarenessBody": "",
-  "HomeSellingPointMultilingualBody": "",
-  "HomeSellingPointCollaborationBody": "",
-  "HomeSellingPointPasswordManagementBody": "",
-  "HomeSellingPointAxcryptMobileBody": ""
+  "HomeSellingPointStrongEncryptionBody": "File security with 128-bit or 256-bit encryption.",
+  "HomeSellingPointCloudStorageAwarenessBody": "Automatically secure your files in Dropbox, Google Drive etc.",
+  "HomeSellingPointMultilingualBody": "AxCrypt speaks English, Dutch, French, German, Italian, Korean, Portuguese, Spanish, Swedish, Turkish, Russian, Polish and more to come.",
+  "HomeSellingPointCollaborationBody": "File security with 128-bit or 256-bit AES encryption.",
+  "HomeSellingPointPasswordManagementBody": "File security with 128-bit or 256-bit AES encryption.",
+  "HomeSellingPointAxcryptMobileBody": "File security with 128-bit or 256-bit AES encryption."
 
 }
