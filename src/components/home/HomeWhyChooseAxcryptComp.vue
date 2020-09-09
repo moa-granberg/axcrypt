@@ -99,7 +99,8 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 10px;
+  margin: 18px 0;
+  padding: 0 10px;
 }
 
 .home-why-choose-axcrypt-selling-points-item-img {
