@@ -38,11 +38,25 @@ export default {
 
 .dash-list-item-dash {
   margin: 0 10px 0 0;
-  font-size: 0.75rem;
+
+  &.mobile {
+    font-size: 0.75rem;
+  }
+
+  &.desktop {
+    font-size: 0.875rem;
+  }
 }
 
 .dash-list-item-paragraph {
   margin: 0;
-  font-size: 0.75rem;
+
+  &.mobile {
+    font-size: 0.75rem;
+  }
+
+  &.desktop {
+    font-size: 0.875rem;
+  }
 }
 </style>
