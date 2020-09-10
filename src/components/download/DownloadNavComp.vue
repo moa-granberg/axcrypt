@@ -75,7 +75,14 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 15px 0 0 0;
+
+  &.mobile {
+    padding: 15px 0 0 0;
+  }
+
+  &.desktop {
+    padding: 20px 0 0 0;
+  }
 }
 
 .download-nav-heading {
@@ -88,7 +95,14 @@ export default {
   align-items: center;
   justify-content: space-evenly;
   padding: 0;
-  margin: 15px;
+
+  &.mobile {
+    margin: 15px;
+  }
+
+  &.desktop {
+    margin: 15px 0 20px 0;
+  }
 }
 
 .download-nav-item {
@@ -96,9 +110,15 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 5px;
-    min-width: 80px;
+  min-width: 80px;
 
+  &.mobile {
+    margin: 0 5px;
+  }
+
+  &.desktop {
+    margin: 0 30px;
+  }
 }
 
 .download-nav-item-svg {
@@ -111,8 +131,15 @@ export default {
 }
 
 .download-nav-item-paragraph {
-  font-size: 0.75rem;
-  margin: 0 6px;
+  &.mobile {
+    margin: 0 6px;
+    font-size: 0.75rem;
+  }
+
+  &.desktop {
+    margin: 0 12px;
+    font-size: 0.857rem;
+  }
 
   &.active {
     font-weight: 600;
