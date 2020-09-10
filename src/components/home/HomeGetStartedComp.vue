@@ -3,7 +3,7 @@
     <h1 :class="`home-get-started-heading ${$mq}`">
       {{ $t('HomeGetStartedHeading') }}
     </h1>
-    <ul :class="`home-get-started-list ${mq}`">
+    <ul :class="`home-get-started-list ${$mq}`">
       <li :class="`home-get-started-list-item ${$mq}`">
         <img
           :class="`home-get-started-list-item-icon ${$mq}`"
@@ -12,10 +12,10 @@
         />
         <div :class="`home-get-started-list-item-text-wrapper ${$mq}`">
           <h2 :class="`home-get-started-list-item-text-heading ${$mq}`">
-            1. Download
+            1. {{$t('HomeGetStartedListDownloadHeading')}}
           </h2>
-          <p :class="`home-get-started-list-item-text-paragraph ${mq}`">
-            Get the latest version of AxCrypt
+          <p :class="`home-get-started-list-item-text-paragraph ${$mq}`">
+            {{$t('HomeGetStartedListDownloadParagraph')}}
           </p>
         </div>
       </li>
@@ -30,10 +30,10 @@
         />
         <div :class="`home-get-started-list-item-text-wrapper ${$mq}`">
           <h2 :class="`home-get-started-list-item-text-heading ${$mq}`">
-            2. Encypt
+            2. {{$t('HomeGetStartedListEncryptHeading')}}
           </h2>
-          <p :class="`home-get-started-list-item-text-paragraph ${mq}`">
-            Select which files to secure with just a few clicks
+          <p :class="`home-get-started-list-item-text-paragraph ${$mq}`">
+            {{$t('HomeGetStartedListEncryptParagraph')}}
           </p>
         </div>
       </li>
@@ -48,10 +48,10 @@
         />
         <div :class="`home-get-started-list-item-text-wrapper ${$mq}`">
           <h2 :class="`home-get-started-list-item-text-heading ${$mq}`">
-            3. Share
+            3. {{$t('HomeGetStartedListShareHeading')}}
           </h2>
-          <p :class="`home-get-started-list-item-text-paragraph ${mq}`">
-            Share your secured files with a single click
+          <p :class="`home-get-started-list-item-text-paragraph ${$mq}`">
+            {{$t('HomeGetStartedListShareParagraph')}}
           </p>
         </div>
       </li>
@@ -88,6 +88,12 @@ export default {};
   align-items: center;
 }
 
+.home-get-started-list-divider {
+  height: 35px;
+  border-left: 1px solid $gray;
+  margin: 5px 0 5px 22px;
+}
+
 .home-get-started-list-item-icon {
   height: 24px;
   padding: 10px;
@@ -106,11 +112,5 @@ export default {};
 .home-get-started-list-item-text-paragraph {
   font-size: 0.6rem;
   margin: 0;
-}
-
-.home-get-started-list-divider {
-  height: 35px;
-  border-left: 1px solid $gray;
-  margin: 5px 0 5px 22px;
 }
 </style>
