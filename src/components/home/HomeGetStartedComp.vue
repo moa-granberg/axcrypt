@@ -37,6 +37,7 @@
       </li>
     </ul>
     <iframe
+      :class="`home-get-started-video`"
       src="https://www.youtube.com/embed/jyixJ03qmkg"
       frameborder="0"
       allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
@@ -45,7 +46,13 @@
     <i :class="`home-get-started-video-description ${$mq}`">{{
       $t('HomeGetStartedYoutubeDescription')
     }}</i>
-    <primary-button-comp phraseKey="GetStartedLinkLabel" size="large" color="dark" path="/get-started" />
+    <primary-button-comp
+      :class="`home-get-started-button ${$mq}`"
+      phraseKey="GetStartedLinkLabel"
+      size="large"
+      color="dark"
+      path="/get-started"
+    />
   </section>
 </template>
 
@@ -54,7 +61,7 @@ import PrimaryButtonComp from '@/components/PrimaryButtonComp';
 
 export default {
   components: {
-    PrimaryButtonComp
+    PrimaryButtonComp,
   },
   data() {
     return {
@@ -94,18 +101,20 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 30px 0;
+  padding: 2rem 0;
 }
 
 .home-get-started-heading {
   color: $green;
   font-weight: 400;
   font-size: 1.125rem;
+  margin:0 0 2rem 0;
 }
 
 .home-get-started-list {
   list-style: none;
   padding: 0;
+  margin: 0 0 2rem 0;
 }
 
 .home-get-started-list-item-wrapper {
@@ -121,14 +130,14 @@ export default {
 
 .home-get-started-list-divider {
   height: 35px;
-  border-left: 1px solid $gray;
+  border-left: 1px solid #aaa;
   margin: 5px 0 5px 22px;
 }
 
 .home-get-started-list-item-icon {
   height: 24px;
   padding: 10px;
-  border: 1px solid $gray;
+  border: 1px solid #aaa;
   border-radius: 50%;
 }
 
@@ -148,7 +157,13 @@ export default {
   margin: 0;
 }
 
+.home-get-started-video {
+  margin: 0 0 0.25rem 0;
+}
+
 .home-get-started-video-description {
-  font-size: 0.7rem;
+  font-size: 0.6rem;
+  font-weight: 600;
+  margin: 0 0 2rem 0;
 }
 </style>
