@@ -38,10 +38,22 @@ export default {};
 
 .try-buttons-wrapper {
   a:first-of-type > button {
-    border-radius: 3px 0 0 3px;
+    &.mobile {
+      border-radius: 3px 0 0 3px;
+    }
+
+    &.desktop {
+      border-radius: 5px 0 0 5px;
+    }
   }
   a:last-of-type > button {
-    border-radius: 0 3px 3px 0;
+    &.mobile {
+      border-radius: 0 3px 3px 0;
+    }
+
+    &.desktop {
+      border-radius: 0 5px 5px 0;
+    }
   }
 }
 
@@ -51,7 +63,6 @@ export default {};
   font-family: $standard-font;
   text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
-  padding: 20px 28px;
 
   &.premium {
     background-color: $green;
@@ -59,19 +70,41 @@ export default {};
   &.business {
     background-color: $gray;
   }
+
+  &.mobile {
+    padding: 20px 28px;
+  }
+
+  &.desktop {
+    padding: 40px 140px;
+  }
 }
 
 .try-button-heading {
-  font-size: 0.875rem;
   text-transform: uppercase;
   margin: 0;
+
+  &.mobile {
+    font-size: 0.875rem;
+  }
+
+  &.desktop {
+    font-size: 2.25rem;
+  }
 }
 
 .try-button-preheading,
 .try-button-subheading {
-  font-size: 0.75rem;
   font-weight: 400;
   margin: 0;
+
+  &.mobile {
+    font-size: 0.75rem;
+  }
+
+  &.desktop {
+    font-size: 1.125rem;
+  }
 }
 
 .try-button-subheading {
