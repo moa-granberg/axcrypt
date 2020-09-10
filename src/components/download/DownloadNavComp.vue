@@ -36,6 +36,10 @@ import AppleIconComp from './AppleIconComp';
 import WindowsIconComp from './WindowsIconComp';
 
 export default {
+  props: {
+    activePlatform: String,
+  },
+
   components: {
     AppleIconComp,
     WindowsIconComp,
@@ -47,14 +51,12 @@ export default {
         { name: 'Windows', src: 'windows_logo.svg' },
         { name: 'macOS', src: 'apple_logo.svg' },
       ],
-      activePlatform: 'macOS', //generate from user
     };
   },
 
   methods: {
     handleClick(platform) {
       if (this.activePlatform !== platform) {
-        this.activePlatform = platform;
         this.$emit('switchPlatform', platform);
       }
     },
@@ -95,6 +97,8 @@ export default {
   justify-content: center;
   align-items: center;
   margin: 0 5px;
+    min-width: 80px;
+
 }
 
 .download-nav-item-svg {

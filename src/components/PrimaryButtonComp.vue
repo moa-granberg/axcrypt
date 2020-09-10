@@ -56,5 +56,9 @@ export default {
   &.dark {
     background-color: $dark-green;
   }
+
+  &.black {
+    background-color: rgba(0, 0, 0, 0.9);
+  }
 }
 </style>
