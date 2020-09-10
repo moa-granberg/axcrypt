@@ -90,6 +90,8 @@
   "HomeSellingPointMultilingualBody": "AxCrypt speaks English, Dutch, French, German, Italian, Korean, Portuguese, Spanish, Swedish, Turkish, Russian, Polish and more to come.",
   "HomeSellingPointCollaborationBody": "Allow secured files to be opened by other AxCrypt users with their own password.",
   "HomeSellingPointPasswordManagementBody": "Manage and access your passwords seamlessly wherever you are.",
-  "HomeSellingPointAxcryptMobileBody": "Open your encrypted files on your phone."
+  "HomeSellingPointAxcryptMobileBody": "Open your encrypted files on your phone.",
+
+  "HomeGetStartedHeading": "How to get started"
 
 }
