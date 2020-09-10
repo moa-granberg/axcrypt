@@ -45,32 +45,63 @@ export default {};
 
 .download-hero-mobile-wrapper {
   color: $white;
-  margin: 24px 24px 0 24px;
+
+  &.mobile {
+    margin: 24px 24px 0 24px;
+  }
+
+  &.desktop {
+    flex-grow: 1;
+    margin: 80px 0 0 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
 }
 
 .download-hero-mobile-text-wrapper {
   max-width: 600px;
-  margin: auto;
+
+  &.mobile {
+    margin: auto;
+  }
+
+  &.desktop {
+    margin: 0 80px 0 0;
+  }
 }
 
 .download-hero-mobile-images-wrapper {
   max-width: 600px;
   display: flex;
-  margin: auto;
   justify-content: space-between;
+
+  &.mobile {
+    margin: auto;
+  }
 }
 
 .download-hero-mobile-badge-wrapper {
   align-self: flex-start;
 
   display: flex;
-  flex-direction: column;
   align-items: flex-start;
+
+  &.mobile {
+    flex-direction: column;
+  }
 }
 
 .download-hero-mobile-badge {
   height: 30px;
-  margin: 6px 0;
+
+  &.mobile {
+    margin: 6px 0;
+  }
+
+  &.desktop {
+    margin: 0 6px 0 0;
+  }
 }
 
 .download-hero-mobile-img-wrapper {

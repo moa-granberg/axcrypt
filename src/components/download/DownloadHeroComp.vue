@@ -5,16 +5,18 @@
       v-on:switchPlatform="switchPlatform"
     />
 
-    <download-hero-platform-comp
-      :headingPhraseKey="
-        activePlatform === 'Windows'
-          ? 'DownloadHeroHeadingWindows'
-          : 'DownloadHeroHeadingMac'
-      "
-      :sellingPoints="sellingPoints"
-    />
+    <div :class="`download-desktop-hero-subwrapper ${$mq}`">
+      <download-hero-platform-comp
+        :headingPhraseKey="
+          activePlatform === 'Windows'
+            ? 'DownloadHeroHeadingWindows'
+            : 'DownloadHeroHeadingMac'
+        "
+        :sellingPoints="sellingPoints"
+      />
 
-    <download-hero-mobile-comp />
+      <download-hero-mobile-comp />
+    </div>
   </section>
 </template>
 
@@ -64,7 +66,20 @@ export default {
 
 <style lang="scss">
 .download-hero-wrapper {
-  background-image: url('~@/assets/view/download/download_hero_mobile.png');
   background-size: cover;
+
+  &.mobile {
+    background-image: url('~@/assets/view/download/download_hero_mobile.png');
+  }
+
+  &.desktop {
+    background-image: url('~@/assets/view/download/download_hero_desktop.png');
+  }
+}
+
+.download-desktop-hero-subwrapper {
+  &.desktop {
+    display: flex;
+  }
 }
 </style>

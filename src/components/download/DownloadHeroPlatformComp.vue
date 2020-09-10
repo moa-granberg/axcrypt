@@ -38,16 +38,29 @@ export default {
 @import '@/scss/downloadView.scss';
 
 .download-hero-platform-wrapper {
+  flex-grow: 1;
   background-color: rgba($color: $light-green, $alpha: 0.7);
-  padding: 24px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  color: #000000;
+
+  &.mobile {
+    padding: 24px;
+  }
+
+  &.desktop {
+    padding: 80px;
+  }
 }
 
 .download-hero-platform-download-button {
   text-transform: uppercase;
   align-self: center;
+
+  &.desktop {
+    margin: 20px 0 0 0;
+  }
 }
 </style>
