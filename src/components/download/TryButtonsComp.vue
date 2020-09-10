@@ -76,7 +76,7 @@ export default {};
   }
 
   &.desktop {
-    padding: 40px 140px;
+    padding: 40px 110px;
   }
 }
 
