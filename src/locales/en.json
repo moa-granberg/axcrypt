@@ -80,5 +80,10 @@
   "DownloadHeroListRightClick": "Right-click integration with Windows Explorer makes AxCrypt the easiest way to secure individual files in Windows.",
   "DownloadHeroListShareKeys": "Share keys with others and allow secured files to be opened by other AxCrypt users with their own password.",
   "DownloadHeroListSecuredFolders": "Secured folders will automatically secure files as required on demand.",
-  "DownloadHeroListMultilingualSupport": "Multilingual support for English, Dutch, French, German, Italian, Korean, Portuguese, Russian, Spanish, Swedish and Turkish. More to come."
+  "DownloadHeroListMultilingualSupport": "Multilingual support for English, Dutch, French, German, Italian, Korean, Portuguese, Russian, Spanish, Swedish and Turkish. More to come.",
+  "DownloadTryCtaHeading": "Try our subscriptions for one month <span>for free...</span>",
+  "TryButtonPreheadingPremium": "For privat users",
+  "TryButtonPreheadingBusiness": "For business users",
+  "TryButtonHeadingPremium": "Try premium",
+  "TryButtonHeadingBusiness": "Try business"
 }
