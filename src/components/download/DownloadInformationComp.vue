@@ -13,22 +13,20 @@
       <dash-list-comp :list="informationList" />
     </article>
 
-    <article :class="`download-information-bottom-wrapper ${$mq}`">
-      <primary-button-comp
-        phraseKey="DownloadInformationButtonLabel"
-        path="/information/release-notes"
-        size="small"
-        color="dark"
-      />
+    <primary-button-comp
+      phraseKey="DownloadInformationButtonLabel"
+      path="/information/release-notes"
+      size="small"
+      color="dark"
+    />
 
-      <div :class="`download-information-img-wrapper ${$mq}`">
-        <img
-          :class="`download-information-img ${$mq}`"
-          src="@/assets/view/download/online_information.svg"
-          alt=""
-        />
-      </div>
-    </article>
+    <div :class="`download-information-img-wrapper ${$mq}`">
+      <img
+        :class="`download-information-img ${$mq}`"
+        src="@/assets/view/download/online_information.svg"
+        alt=""
+      />
+    </div>
   </section>
 </template>
 
@@ -59,45 +57,71 @@ export default {
 
 .download-information-wrapper {
   background-color: #ececec;
+
+  display: grid;
+  align-items: flex-start;
+
+  &.mobile {
+    grid: 70% 30% / 1fr 1fr;
+    grid-template-areas: 'text text' 'btn img';
+    justify-items: center;
+    padding: 24px 24px 0 24px;
+  }
+
+  &.desktop {
+    grid: 1fr 120px / 1fr 1fr;
+    grid-template-areas: 'text img' 'btn img';
+    justify-items: flex-start;
+    padding: 72px 80px 0 80px;
+
+    a {
+      margin: 10px 0 0 0;
+    }
+  }
 }
 
 .download-information-text-wrapper {
-  padding: 24px;
+  grid-area: text;
   max-width: 600px;
-  margin: auto;
 }
 
 .download-information-heading {
-  font-size: 0.875rem;
   font-weight: 400;
   margin: 0;
+
+  &.mobile {
+    font-size: 0.875rem;
+  }
+
+  &.desktop {
+    font-size: 1.5rem;
+  }
 }
 
 .download-information-subheading {
-  font-size: 0.75rem;
+  &.mobile {
+    font-size: 0.75rem;
+  }
+
+  &.desktop {
+    font-size: 0.875rem;
+  }
 
   a {
     color: $green;
   }
 }
 
-.download-information-bottom-wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin: auto;
-  max-width: 600px;
-
-  a {
-    min-width: 166px;
-    margin: 0 0 0 24px;
-  }
-}
-
 .download-information-img-wrapper {
+  grid-area: img;
+  align-self: flex-end;
   display: flex;
   justify-content: center;
   align-items: center;
+
+  &.desktop {
+    justify-self: flex-end;
+  }
 }
 
 .download-information-img {
