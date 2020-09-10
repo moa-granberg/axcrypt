@@ -93,11 +93,13 @@
   "HomeSellingPointAxcryptMobileBody": "Open your encrypted files on your phone.",
 
   "HomeGetStartedHeading": "How to get started",
-  "HomeGetStartedListDownloadHeading": "Download",
+  "HomeGetStartedListDownloadHeading": "1. Download",
   "HomeGetStartedListDownloadParagraph": "Get the latest version of AxCrypt",
-  "HomeGetStartedListEncryptHeading": "Encrypt",
+  "HomeGetStartedListEncryptHeading": "2. Encrypt",
   "HomeGetStartedListEncryptParagraph": "Select which files to secure with just a few clicks",
-  "HomeGetStartedListShareHeading": "Share",
-  "HomeGetStartedListShareParagraph": "Share your secured files with a single click"
+  "HomeGetStartedListShareHeading": "3. Share",
+  "HomeGetStartedListShareParagraph": "Share your secured files with a single click",
+
+  "HomeGetStartedYoutubeDescription": "This is a video tutorial on how to get started with AxCrypt"
 
 }

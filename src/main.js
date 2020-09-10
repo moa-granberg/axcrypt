@@ -4,6 +4,8 @@ import VueGtag from 'vue-gtag';
 import router from './router/index';
 import mq from 'vue-mq';
 import i18n from './i18n';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 Vue.config.productionTip = false;
 
@@ -45,5 +47,8 @@ router.beforeEach((to, from, next) => {
 new Vue({
   router,
   i18n,
+  created () {
+    AOS.init();
+  },
   render: h => h(App),
 }).$mount('#app');

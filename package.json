@@ -10,6 +10,7 @@
     "prettier": "prettier --write \"**/*.{js,vue}\""
   },
   "dependencies": {
+    "aos": "^2.3.4",
     "core-js": "^3.6.5",
     "prettier": "^2.1.1",
     "sass": "^1.26.10",
