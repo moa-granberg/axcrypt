@@ -5,13 +5,13 @@
     </h1>
     <carousel
       :class="`home-what-others-say-carousel ${$mq}`"
-      :per-page=1
+      :per-page="1"
       paginationActiveColor="#86b96e"
       paginationColor="#a9a9a9"
-      :paginationSize=8
-      :paginationPadding=6
-      :autoplay=true
-      :autoplayTimeout=15000
+      :paginationSize="8"
+      :paginationPadding="6"
+      :autoplay="true"
+      :autoplayTimeout="15000"
     >
       <slide
         v-for="item of whatOthersSayCarouselItems"
@@ -36,6 +36,22 @@
         </p>
       </slide>
     </carousel>
+    <div :class="`home-what-others-say-awards-wrapper ${$mq}`">
+      <div :class="`home-what-others-say-awards-logos-wrapper ${$mq}`">
+        <img
+          :class="`home-what-others-say-awards-logo pc-mag ${$mq}`"
+          src="@/assets/view/home/pc-mag.png"
+          alt="PC Mag Logo"
+        />
+        <img
+          :class="`home-what-others-say-awards-logo softpedia ${$mq}`"
+          src="@/assets/view/home/award-softpedia.png"
+          alt="Softpedia Award Logo"
+        />
+      </div>
+      <div :class="`home-what-others-say-awards-testimonials-text ${$mq}`" v-html="$t('HomeWhatOtherSayTestimonialsText')">
+      </div>
+    </div>
   </section>
 </template>
 
@@ -124,12 +140,12 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import '@/scss/variables.scss';
 
 .home-what-others-say-wrapper {
   background-color: $light-gray;
-  padding: 2rem 1rem;
+  padding: 1rem;
 }
 
 .home-what-others-say-heading {
@@ -174,6 +190,36 @@ export default {
   align-self: flex-end;
   font-size: 0.7rem;
   font-weight: 600;
-  /* margin: 0 10px 0 0; */
+}
+
+.home-what-others-say-awards-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem 0;
+}
+.home-what-others-say-awards-logos-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.home-what-others-say-awards-logo {
+  margin: 0 0.25rem;
+  &.pc-mag {
+    height: 2.5rem;
+  }
+  &.softpedia {
+    height: 4rem;
+  }
+}
+
+.home-what-others-say-awards-testimonials-text > p {
+  margin: 1rem 0 0 0;
+  font-size: 0.6rem;
+  text-align: center;
+}
+
+.home-what-others-say-awards-testimonials-text > p > a {
+  text-decoration: none;
+  color: $dark-green;
 }
 </style>
