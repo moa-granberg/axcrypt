@@ -1,0 +1,19 @@
+@import './variables.scss';
+
+.download-hero-heading {
+  font-size: 0.875rem;
+  font-weight: 400;
+  margin: 0;
+  max-width: 600px;
+  width: 100%;
+}
+
+.download-hero-paragraph {
+  margin: 0;
+  font-size: 0.75rem;
+
+  > p > a {
+    color: $light-green;
+    font-weight: 600;
+  }
+}
