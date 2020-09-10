@@ -85,5 +85,10 @@
   "TryButtonPreheadingPremium": "For privat users",
   "TryButtonPreheadingBusiness": "For business users",
   "TryButtonHeadingPremium": "Try premium",
-  "TryButtonHeadingBusiness": "Try business"
+  "TryButtonHeadingBusiness": "Try business",
+  "DownloadInformationSubheading": "Please read the <a href='#/information/release-notes'>release notes</a> to see what version is current.",
+  "DownloadInformationListNoBackdoors": "AxCrypt is encryption with no backdoors. Without the password your files are lost. Do not forget your password! Always keep proper backups of important files, encrypted or not.",
+  "DownloadInformationListOfficialDownload": "This is the only official download site for AxCrypt. Lookup SHA256 hash.",
+  "DownloadInformationListKeepInMind": "Keep in mind that if you install AxCrypt 2 and open old files, these files will no longer be possible to open with AxCrypt 1.",
+  "DownloadInformationButtonLabel": "Read about release notes"
 }
