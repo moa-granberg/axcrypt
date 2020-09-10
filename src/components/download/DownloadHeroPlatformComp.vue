@@ -3,20 +3,9 @@
     <h1 :class="`download-hero-heading ${$mq}`">
       {{ $t(headingPhraseKey) }}
     </h1>
-    <ul :class="`download-hero-platform-selling-points-wrapper ${$mq}`">
-      <li
-        v-for="phraseKey of sellingPoints"
-        :key="phraseKey"
-        :class="`download-hero-platform-selling-point-item ${$mq}`"
-      >
-        <p :class="`download-hero-platform-selling-point-item-dash ${$mq}`">
-          -
-        </p>
-        <p :class="`download-hero-paragraph ${$mq}`">
-          {{ $t(phraseKey) }}
-        </p>
-      </li>
-    </ul>
+
+    <dash-list-comp :list="sellingPoints" />
+
     <primary-button-comp
       :class="`download-hero-platform-download-button ${$mq}`"
       phraseKey="DownloadLinkLabel"
@@ -29,6 +18,7 @@
 
 <script>
 import PrimaryButtonComp from '../PrimaryButtonComp';
+import DashListComp from '../DashListComp';
 
 export default {
   props: {
@@ -38,6 +28,7 @@ export default {
 
   components: {
     PrimaryButtonComp,
+    DashListComp,
   },
 };
 </script>
@@ -53,23 +44,6 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-.download-hero-platform-selling-points-wrapper {
-  margin: 0 0 20px 0;
-  padding: 0;
-  max-width: 600px;
-}
-
-.download-hero-platform-selling-point-item {
-  list-style: none;
-  display: flex;
-  margin: 8px 0;
-}
-
-.download-hero-platform-selling-point-item-dash {
-  margin: 0 10px 0 0;
-  font-size: 0.75rem;
 }
 
 .download-hero-platform-download-button {
