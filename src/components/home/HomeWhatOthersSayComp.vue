@@ -158,9 +158,11 @@ export default {
   font-weight: 400;
   color: $black;
   text-align: center;
+
   &.mobile {
     font-size: 1.125rem;
   }
+
   &.desktop {
     font-size: 1.5rem;
   }
@@ -179,6 +181,7 @@ export default {
     max-width: 20rem;
     margin: auto;
   }
+
   &.desktop {
     max-width: 25rem;
     margin: 0 clamp(10rem, 25vw, 20rem) 2rem 0;
@@ -197,6 +200,7 @@ export default {
     margin: 0 0 1rem 0;
     max-height: 40px;
   }
+
   &.desktop {
     margin: 0 0 1rem 0;
     max-height: 3rem;
@@ -208,9 +212,11 @@ export default {
   font-style: italic;
   font-weight: 400;
   margin: 0;
+
   &.mobile {
     font-size: 2rem;
   }
+
   &.desktop {
     font-size: 3rem;
   }
@@ -218,10 +224,12 @@ export default {
 
 .home-what-others-say-carousel-slide-quote {
   font-weight: 600;
+
   &.mobile {
     margin: 0 1rem 1rem 1rem;
     font-size: 0.75rem;
   }
+
   &.desktop {
     font-size: 0.875rem;
   }
@@ -245,14 +253,18 @@ export default {
 }
 .home-what-others-say-awards-logo {
   margin: 0 0.25rem;
+
   &.pc-mag {
     height: 2.5rem;
+
     &.desktop {
       height: 3.5rem;
     }
   }
+
   &.softpedia {
     height: 4rem;
+
     &.desktop {
       height: 5rem;
     }
@@ -261,10 +273,12 @@ export default {
 
 .home-what-others-say-awards-testimonials-text {
   text-align: center;
+
   &.mobile {
     margin: 1rem 0 2rem 0;
     font-size: 0.6rem;
   }
+
   &.desktop {
     margin: 0 0 2rem 0;
     font-size: 0.875rem;

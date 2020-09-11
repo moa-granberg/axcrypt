@@ -37,6 +37,7 @@
           ></div>
         </li>
       </ul>
+
       <div :class="`home-get-started-video-wrapper ${$mq}`">
         <iframe
           :class="`home-get-started-video ${$mq}`"
@@ -46,6 +47,7 @@
           allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen
         ></iframe>
+
         <i :class="`home-get-started-video-description ${$mq}`">{{
           $t('HomeGetStartedYoutubeDescription')
         }}</i>
@@ -113,10 +115,12 @@ export default {
 .home-get-started-heading {
   color: $green;
   font-weight: 400;
+
   &.mobile {
     font-size: 1.125rem;
     margin: 0 0 2rem 0;
   }
+
   &.desktop {
     font-size: 1.5rem;
     margin: 0 0 2rem 0;
@@ -134,6 +138,7 @@ export default {
 .home-get-started-list {
   list-style: none;
   padding: 0;
+
   &.mobile {
     margin: 0 0 2rem 0;
   }
@@ -152,10 +157,12 @@ export default {
 
 .home-get-started-list-divider {
   border-left: 1px solid #aaa;
+
   &.mobile {
     height: 2rem;
     margin: 5px 0 5px 22px;
   }
+
   &.desktop {
     height: 3rem;
     margin: 0.5rem 0 0.5rem 2.15rem;
@@ -165,10 +172,12 @@ export default {
 .home-get-started-list-item-icon {
   border: 1px solid #aaa;
   border-radius: 50%;
+
   &.mobile {
     padding: 10px;
     height: 1.5rem;
   }
+
   &.desktop {
     padding: 1rem;
     height: 2.25rem;
@@ -177,9 +186,10 @@ export default {
 
 .home-get-started-list-item-text-wrapper {
   &.mobile {
-  max-width: 14rem;
-  margin: 0 0 0 1rem;
+    max-width: 14rem;
+    margin: 0 0 0 1rem;
   }
+
   &.desktop {
     margin: 0 clamp(1rem, 10vw, 15rem) 0 2rem;
   }
@@ -188,10 +198,11 @@ export default {
 .home-get-started-list-item-text-heading {
   color: $green;
   margin: 0;
+
   &.mobile {
-    
     font-size: 0.875rem;
   }
+
   &.desktop {
     font-size: 1.125rem;
   }
@@ -199,10 +210,11 @@ export default {
 
 .home-get-started-list-item-text-paragraph {
   margin: 0;
-  &.mobile {
-  font-size: 0.6rem;
 
+  &.mobile {
+    font-size: 0.6rem;
   }
+
   &.desktop {
     font-size: 0.75rem;
   }
@@ -218,18 +230,21 @@ export default {
   &.mobile {
     margin: 0 0 0.25rem 0;
   }
+
   &.desktop {
-    width: calc(16rem*2);
-    height: calc(9rem*2);
+    width: calc(16rem * 2);
+    height: calc(9rem * 2);
   }
 }
 
 .home-get-started-video-description {
   font-weight: 600;
+
   &.mobile {
     font-size: 0.6rem;
     margin: 0 0 2rem 0;
   }
+
   &.desktop {
     font-size: 0.75rem;
   }

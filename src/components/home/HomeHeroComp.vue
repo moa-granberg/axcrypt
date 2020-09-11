@@ -4,13 +4,16 @@
       <h1 :class="`home-hero-heading ${$mq}`">
         {{ $t('HomeHeroHeading') }}
       </h1>
+
       <h2 :class="`home-hero-subheading ${$mq}`">
         {{ $t('HomeHeroSubheading') }}
       </h2>
+
       <h3 :class="`home-hero-under-subheading ${$mq}`">
         {{ $t('HomeHeroUnderSubheading') }}
       </h3>
     </div>
+
     <div :class="`home-hero-try-links-wrapper ${$mq}`">
       <router-link
         to="/premium-trial"
@@ -19,10 +22,12 @@
         <h1 :class="`home-hero-try-preheading ${$mq}`">
           {{ $t('HomeHeroTryPremiumPreHeading') }}
         </h1>
+
         <h2 :class="`home-hero-try-heading ${$mq}`">
           {{ $t('HomeHeroTryPremiumHeading') }}
         </h2>
       </router-link>
+
       <router-link
         to="/business-trial"
         :class="`home-hero-try-business-wrapper home-hero-try-wrapper ${$mq}`"
@@ -30,6 +35,7 @@
         <h1 :class="`home-hero-try-preheading ${$mq}`">
           {{ $t('HomeHeroTryBusinessPreHeading') }}
         </h1>
+
         <h2 :class="`home-hero-try-heading ${$mq}`">
           {{ $t('HomeHeroTryBusinessHeading') }}
         </h2>
@@ -52,12 +58,13 @@ export default {};
   color: $white;
   text-align: center;
   background-position: center;
+
   &.mobile {
     background-image: url('~@/assets/view/home/home-hero-mobile.png');
     height: 450px;
   }
+
   &.desktop {
-  /* background-position: top; */
     background-image: url('~@/assets/view/home/home-hero-desktop.png');
     min-height: 500px;
     max-height: 45vh;
@@ -79,6 +86,7 @@ export default {};
     max-width: 20rem;
     font-size: 1.5rem;
   }
+
   &.desktop {
     max-width: 40rem;
     font-size: 3rem;
@@ -87,10 +95,12 @@ export default {};
 
 .home-hero-subheading {
   font-weight: 300;
+
   &.mobile {
     font-size: 0.875rem;
     margin: 0 0 10px 0;
   }
+
   &.desktop {
     margin: 1rem 0 0.5rem 0;
     font-size: 1.5rem;
@@ -99,9 +109,11 @@ export default {};
 
 .home-hero-under-subheading {
   margin: 0 0 17px 0;
+
   &.mobile {
     font-size: 0.75rem;
   }
+
   &.desktop {
     font-size: 1.125rem;
   }
@@ -123,9 +135,11 @@ export default {};
   justify-content: center;
   text-decoration: none;
   color: $white;
+
   &.mobile {
     width: 50%;
   }
+
   &.desktop {
     position: relative;
     top: 30px;
@@ -146,9 +160,11 @@ export default {};
   font-weight: 300;
   margin: 0 0 10px 0;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
   &.mobile {
     font-size: 0.875rem;
   }
+
   &.desktop {
     font-size: 1.125rem;
   }
@@ -158,9 +174,11 @@ export default {};
   text-transform: uppercase;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   margin: 0;
+
   &.mobile {
     font-size: 1.125rem;
   }
+
   &.desktop {
     font-size: 1.875rem;
   }

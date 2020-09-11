@@ -93,9 +93,11 @@ export default {
   justify-content: center;
   align-items: center;
   background-color: rgba(6, 9, 3, 0.9);
+
   &.mobile {
     padding: 30px 0;
   }
+
   &.desktop {
     padding: 0 2rem;
     height: clamp(300px, 49vh, 650px);
@@ -105,11 +107,13 @@ export default {
 .home-why-choose-axcrypt-heading {
   color: $white;
   font-weight: 400;
+
   &.mobile {
     font-size: 1.125rem;
   }
+
   &.desktop {
-    font-size: clamp(1.5rem,2vw ,2.0rem);
+    font-size: clamp(1.5rem, 2vw, 2rem);
     margin: 0 0 2rem 0;
     padding: 0;
   }
@@ -117,9 +121,11 @@ export default {
 
 .home-why-choose-axcrypt-selling-points-items-wrapper {
   display: grid;
+
   &.mobile {
     grid: 1fr 1fr 1fr / 1fr 1fr;
   }
+
   &.desktop {
     grid: 1fr 1fr / 1fr 1fr 1fr;
     gap: min(3rem, 6rem) clamp(2rem, 6vw, 12rem);
@@ -128,6 +134,7 @@ export default {
 
 .home-why-choose-axcrypt-selling-points-item {
   display: flex;
+
   &.mobile {
     flex-direction: column;
     align-items: center;
@@ -143,9 +150,11 @@ export default {
 .home-why-choose-axcrypt-selling-points-item-text-wrapper {
   display: flex;
   flex-direction: column;
+
   &.mobile {
     align-items: center;
   }
+
   &.desktop {
     margin: 0 0 0 1rem;
   }
@@ -154,25 +163,29 @@ export default {
 .home-why-choose-axcrypt-selling-points-item-heading {
   color: $light-green;
   margin: 0;
+
   &.mobile {
     text-align: center;
     font-size: 0.75rem;
   }
+
   &.desktop {
-    font-size: clamp(0.875rem,calc(1vw+0.25rem), 1.25rem);
+    font-size: clamp(0.875rem, calc(1vw+0.25rem), 1.25rem);
   }
 }
 
 .home-why-choose-axcrypt-selling-points-item-paragraph {
   color: $white;
   margin: 0;
+
   &.mobile {
     text-align: center;
     font-size: 0.5rem;
     max-width: 8rem;
   }
+
   &.desktop {
-    font-size: clamp(0.75rem,1vw,0.875rem);
+    font-size: clamp(0.75rem, 1vw, 0.875rem);
     max-width: 16rem;
   }
 }
