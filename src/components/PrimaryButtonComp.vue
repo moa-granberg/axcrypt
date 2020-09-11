@@ -1,5 +1,9 @@
 <template>
-  <router-link :class="`standard-button ${size} ${$mq} ${color}`" :to="path">
+  <router-link
+    class="standard-button"
+    :class="[color ? `${size} ${$mq} ${color}` : `${size} ${$mq}`]"
+    :to="path"
+  >
     {{ $t(phraseKey) }}
   </router-link>
 </template>
