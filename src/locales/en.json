@@ -71,10 +71,10 @@
   "HomeHeroHeading": "\"Advanced encryption in a superbly simple setting\"",
   "HomeHeroSubheading": "PCMag Editors´ Choice 2020",
   "HomeHeroUnderSubheading": "and over 20 million downloads worldwide",
-  "HomeHeroTryPremiumPreHeading": "For private users",
-  "HomeHeroTryPremiumHeading": "Try Premium",
-  "HomeHeroTryBusinessPreHeading": "For business users",
-  "HomeHeroTryBusinessHeading": "Try Business",
+  "TryPremiumPreHeading": "For private users",
+  "TryPremiumHeading": "Try Premium",
+  "TryBusinessPreHeading": "For business users",
+  "TryBusinessHeading": "Try Business",
 
   "WhyChooseAxcrypt": "Why choose AxCrypt?",
 

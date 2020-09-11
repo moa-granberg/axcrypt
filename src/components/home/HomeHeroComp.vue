@@ -13,39 +13,19 @@
         {{ $t('HomeHeroUnderSubheading') }}
       </h3>
     </div>
-
     <div :class="`home-hero-try-links-wrapper ${$mq}`">
-      <router-link
-        to="/premium-trial"
-        :class="`home-hero-try-premium-wrapper home-hero-try-wrapper ${$mq}`"
-      >
-        <h1 :class="`home-hero-try-preheading ${$mq}`">
-          {{ $t('HomeHeroTryPremiumPreHeading') }}
-        </h1>
-
-        <h2 :class="`home-hero-try-heading ${$mq}`">
-          {{ $t('HomeHeroTryPremiumHeading') }}
-        </h2>
-      </router-link>
-
-      <router-link
-        to="/business-trial"
-        :class="`home-hero-try-business-wrapper home-hero-try-wrapper ${$mq}`"
-      >
-        <h1 :class="`home-hero-try-preheading ${$mq}`">
-          {{ $t('HomeHeroTryBusinessPreHeading') }}
-        </h1>
-
-        <h2 :class="`home-hero-try-heading ${$mq}`">
-          {{ $t('HomeHeroTryBusinessHeading') }}
-        </h2>
-      </router-link>
+      <try-links-comp />
     </div>
   </section>
 </template>
 
 <script>
-export default {};
+import TryLinksComp from '@/components/TryLinksComp';
+export default {
+  components: {
+    TryLinksComp,
+  },
+};
 </script>
 
 <style lang="scss" scoped>
@@ -120,67 +100,16 @@ export default {};
 }
 
 .home-hero-try-links-wrapper {
-  display: flex;
+  &.mobile {
+    height: 10rem;
+  }
 
   &.desktop {
-    max-width: 1000px;
-    justify-content: center;
     margin: auto;
-  }
-}
-
-.home-hero-try-wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-decoration: none;
-  color: $white;
-
-  &.mobile {
-    width: 50%;
-  }
-
-  &.desktop {
     position: relative;
-    top: 30px;
-    width: 29rem;
-    height: 14rem;
-  }
-}
-
-.home-hero-try-premium-wrapper {
-  background-color: rgba(72, 119, 44, 0.7);
-}
-
-.home-hero-try-business-wrapper {
-  background-color: rgba(0, 0, 0, 0.7);
-}
-
-.home-hero-try-preheading {
-  font-weight: 300;
-  margin: 0 0 10px 0;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
-  &.mobile {
-    font-size: 0.875rem;
-  }
-
-  &.desktop {
-    font-size: 1.125rem;
-  }
-}
-
-.home-hero-try-heading {
-  text-transform: uppercase;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  margin: 0;
-
-  &.mobile {
-    font-size: 1.125rem;
-  }
-
-  &.desktop {
-    font-size: 1.875rem;
+    top: 20px;
+    width: 58rem;
+    height: 12rem;
   }
 }
 </style>
