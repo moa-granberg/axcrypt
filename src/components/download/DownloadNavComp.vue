@@ -118,6 +118,7 @@ export default {
 
   &.desktop {
     margin: 0 30px;
+    cursor: pointer;
   }
 }
 

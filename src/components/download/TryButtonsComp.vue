@@ -77,6 +77,7 @@ export default {};
 
   &.desktop {
     padding: 40px 110px;
+    cursor: pointer;
   }
 }
 
