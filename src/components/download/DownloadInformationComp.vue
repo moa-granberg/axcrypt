@@ -1,32 +1,34 @@
 <template>
   <section :class="`download-information-wrapper ${$mq}`">
-    <article :class="`download-information-text-wrapper ${$mq}`">
-      <h1 :class="`download-information-heading ${$mq}`">
-        {{ $t('InformationLinkLabel') }}
-      </h1>
+    <section :class="`download-information-inner-wrapper ${$mq}`">
+      <article :class="`download-information-text-wrapper ${$mq}`">
+        <h1 :class="`download-information-heading ${$mq}`">
+          {{ $t('InformationLinkLabel') }}
+        </h1>
 
-      <h2
-        :class="`download-information-subheading ${$mq}`"
-        v-html="$t('DownloadInformationSubheading')"
-      ></h2>
+        <h2
+          :class="`download-information-subheading ${$mq}`"
+          v-html="$t('DownloadInformationSubheading')"
+        ></h2>
 
-      <dash-list-comp :list="informationList" />
-    </article>
+        <dash-list-comp :list="informationList" />
+      </article>
 
-    <primary-button-comp
-      phraseKey="DownloadInformationButtonLabel"
-      path="/information/release-notes"
-      size="small"
-      color="dark"
-    />
-
-    <div :class="`download-information-img-wrapper ${$mq}`">
-      <img
-        :class="`download-information-img ${$mq}`"
-        src="@/assets/view/download/online_information.svg"
-        alt=""
+      <primary-button-comp
+        phraseKey="DownloadInformationButtonLabel"
+        path="/information/release-notes"
+        size="small"
+        color="dark"
       />
-    </div>
+
+      <div :class="`download-information-img-wrapper ${$mq}`">
+        <img
+          :class="`download-information-img ${$mq}`"
+          src="@/assets/view/download/online_information.svg"
+          alt=""
+        />
+      </div>
+    </section>
   </section>
 </template>
 
@@ -57,9 +59,13 @@ export default {
 
 .download-information-wrapper {
   background-color: #ececec;
+}
 
+.download-information-inner-wrapper {
   display: grid;
   align-items: flex-start;
+  max-width: 1400px;
+  margin: auto;
 
   > a {
     text-transform: uppercase;

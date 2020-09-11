@@ -88,6 +88,7 @@ export default {
 <style lang="scss">
 .download-hero-wrapper {
   background-size: cover;
+  background-position: bottom;
 
   &.mobile {
     background-image: url('~@/assets/view/download/download_hero_mobile.png');
