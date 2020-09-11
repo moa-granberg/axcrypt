@@ -1,0 +1,48 @@
+@import '@/scss/variables.scss';
+
+.standard-button {
+  display: flex;
+  background-color: $light-green;
+  color: $white;
+  fill: $white;
+  font-weight: 600;
+  font-family: $standard-font;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  text-align: center;
+
+  &.small {
+    padding: 10px 23px;
+
+    &.mobile {
+      font-size: 0.875rem;
+    }
+
+    &.desktop {
+      font-size: 1.125rem;
+      padding: 20px 50px;
+    }
+  }
+
+  &.large {
+    padding: 20px 50px;
+
+    &.mobile {
+      font-size: 1.125rem;
+    }
+
+    &.desktop {
+      font-size: 1.5rem;
+    }
+  }
+
+  &.dark-green {
+    background-color: $dark-green;
+  }
+
+  &.black {
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+}

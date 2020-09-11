@@ -34,6 +34,7 @@ export default {
 <style lang="scss">
 @import '@/scss/variables.scss';
 @import '@/scss/downloadView.scss';
+@import '@/scss/standardButton.scss';
 
 .download-hero-platform-wrapper {
   flex-grow: 1;
