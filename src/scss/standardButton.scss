@@ -1,27 +1,11 @@
-<template>
-  <router-link :class="`primary-btn ${size} ${$mq} ${color}`" :to="path">
-    {{ $t(phraseKey) }}
-  </router-link>
-</template>
-
-<script>
-export default {
-  props: {
-    phraseKey: String,
-    size: String,
-    color: String,
-    path: String,
-  },
-};
-</script>
-
-<style lang="scss" scoped>
 @import '@/scss/variables.scss';
 
-.primary-btn {
+.standard-button {
+  display: flex;
   background-color: $light-green;
   color: $white;
-  font-weight: 400;
+  fill: $white;
+  font-weight: 600;
   font-family: $standard-font;
   border: none;
   border-radius: 5px;
@@ -54,7 +38,7 @@ export default {
     }
   }
 
-  &.dark {
+  &.dark-green {
     background-color: $dark-green;
   }
 
@@ -62,4 +46,3 @@ export default {
     background-color: rgba(0, 0, 0, 0.9);
   }
 }
-</style>
