@@ -3,55 +3,61 @@
     <h1 :class="`home-what-others-say-heading ${$mq}`">
       {{ $t('HomeWhatOthersSayHeading') }}
     </h1>
-    <carousel
-      :class="`home-what-others-say-carousel ${$mq}`"
-      :per-page="1"
-      paginationActiveColor="#86b96e"
-      paginationColor="#a9a9a9"
-      :paginationSize="8"
-      :paginationPadding="6"
-      :autoplay="true"
-      :autoplayTimeout="15000"
-    >
-      <slide
-        v-for="item of whatOthersSayCarouselItems"
-        :key="item.src"
-        :class="`home-what-others-say-carousel-slide ${$mq}`"
+    <div :class="`home-what-others-say-carousel-awards-wrapper ${$mq}`">
+      <carousel
+        :class="`home-what-others-say-carousel ${$mq}`"
+        :per-page="1"
+        paginationActiveColor="#86b96e"
+        paginationColor="#a9a9a9"
+        :paginationSize="8"
+        :paginationPadding="6"
+        :autoplay="true"
+        :autoplayTimeout="15000"
       >
-        <img
-          :class="`home-what-others-say-carousel-slide-img ${$mq}`"
-          :src="require(`@/assets/view/home/${item.src}`)"
-          :alt="item.alt"
-        />
-        <h1
-          :class="`home-what-others-say-carousel-slide-quotation-mark ${$mq}`"
+        <slide
+          v-for="item of whatOthersSayCarouselItems"
+          :key="item.src"
+          :class="`home-what-others-say-carousel-slide ${$mq}`"
         >
-          "
-        </h1>
-        <blockquote :class="`home-what-others-say-carousel-slide-quote ${$mq}`">
-          {{ item.quote }}
-        </blockquote>
-        <p :class="`home-what-others-say-carousel-slide-signature ${$mq}`">
-          {{ item.signature }}
-        </p>
-      </slide>
-    </carousel>
-    <div :class="`home-what-others-say-awards-wrapper ${$mq}`">
-      <div :class="`home-what-others-say-awards-logos-wrapper ${$mq}`">
-        <img
-          :class="`home-what-others-say-awards-logo pc-mag ${$mq}`"
-          src="@/assets/view/home/pc-mag.png"
-          alt="PC Mag Logo"
-        />
-        <img
-          :class="`home-what-others-say-awards-logo softpedia ${$mq}`"
-          src="@/assets/view/home/award-softpedia.png"
-          alt="Softpedia Award Logo"
-        />
-      </div>
-      <div :class="`home-what-others-say-awards-testimonials-text ${$mq}`" v-html="$t('HomeWhatOtherSayTestimonialsText')">
+          <img
+            :class="`home-what-others-say-carousel-slide-img ${$mq}`"
+            :src="require(`@/assets/view/home/${item.src}`)"
+            :alt="item.alt"
+          />
+          <h1
+            :class="`home-what-others-say-carousel-slide-quotation-mark ${$mq}`"
+          >
+            "
+          </h1>
+          <blockquote
+            :class="`home-what-others-say-carousel-slide-quote ${$mq}`"
+          >
+            {{ item.quote }}
+          </blockquote>
+          <p :class="`home-what-others-say-carousel-slide-signature ${$mq}`">
+            {{ item.signature }}
+          </p>
+        </slide>
+      </carousel>
+      <div :class="`home-what-others-say-awards-wrapper ${$mq}`">
+        <div :class="`home-what-others-say-awards-logos-wrapper ${$mq}`">
+          <img
+            :class="`home-what-others-say-awards-logo pc-mag ${$mq}`"
+            src="@/assets/view/home/pc-mag.png"
+            alt="PC Mag Logo"
+          />
+          <img
+            :class="`home-what-others-say-awards-logo softpedia ${$mq}`"
+            src="@/assets/view/home/award-softpedia.png"
+            alt="Softpedia Award Logo"
+          />
+        </div>
       </div>
     </div>
+    <div
+      :class="`home-what-others-say-awards-testimonials-text ${$mq}`"
+      v-html="$t('HomeWhatOtherSayTestimonialsText')"
+    ></div>
   </section>
 </template>
 
@@ -149,15 +155,34 @@ export default {
 }
 
 .home-what-others-say-heading {
-  font-size: 1.125rem;
   font-weight: 400;
   color: $black;
   text-align: center;
+  &.mobile {
+    font-size: 1.125rem;
+  }
+  &.desktop {
+    font-size: 1.5rem;
+  }
+}
+
+.home-what-others-say-carousel-awards-wrapper {
+  &.desktop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .home-what-others-say-carousel {
-  max-width: 20rem;
-  margin: auto;
+  &.mobile {
+    max-width: 20rem;
+    margin: auto;
+  }
+  &.desktop {
+    max-width: 25rem;
+    margin: 0 clamp(10rem, 25vw, 20rem) 2rem 0;
+  }
 }
 
 .home-what-others-say-carousel-slide {
@@ -168,22 +193,38 @@ export default {
 }
 
 .home-what-others-say-carousel-slide-img {
-  max-height: 40px;
-  margin: 0 0 1rem 0;
+  &.mobile {
+    margin: 0 0 1rem 0;
+    max-height: 40px;
+  }
+  &.desktop {
+    margin: 0 0 1rem 0;
+    max-height: 3rem;
+  }
 }
 
 .home-what-others-say-carousel-slide-quotation-mark {
   align-self: flex-start;
   font-style: italic;
-  font-size: 2rem;
   font-weight: 400;
   margin: 0;
+  &.mobile {
+    font-size: 2rem;
+  }
+  &.desktop {
+    font-size: 3rem;
+  }
 }
 
 .home-what-others-say-carousel-slide-quote {
-  font-size: 0.75rem;
   font-weight: 600;
-  margin: 0 1rem 1rem 1rem;
+  &.mobile {
+    margin: 0 1rem 1rem 1rem;
+    font-size: 0.75rem;
+  }
+  &.desktop {
+    font-size: 0.875rem;
+  }
 }
 
 .home-what-others-say-carousel-slide-signature {
@@ -206,16 +247,28 @@ export default {
   margin: 0 0.25rem;
   &.pc-mag {
     height: 2.5rem;
+    &.desktop {
+      height: 3.5rem;
+    }
   }
   &.softpedia {
     height: 4rem;
+    &.desktop {
+      height: 5rem;
+    }
   }
 }
 
-.home-what-others-say-awards-testimonials-text > p {
-  margin: 1rem 0 0 0;
-  font-size: 0.6rem;
+.home-what-others-say-awards-testimonials-text {
   text-align: center;
+  &.mobile {
+    margin: 1rem 0 2rem 0;
+    font-size: 0.6rem;
+  }
+  &.desktop {
+    margin: 0 0 2rem 0;
+    font-size: 0.875rem;
+  }
 }
 
 .home-what-others-say-awards-testimonials-text > p > a {
