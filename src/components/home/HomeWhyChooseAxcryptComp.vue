@@ -16,15 +16,21 @@
           :src="require(`@/assets/view/home/${item.src}`)"
         />
 
-        <h1 :class="`home-why-choose-axcrypt-selling-points-item-heading`">
-          {{ $t(item.headingPhraseKey) }}
-        </h1>
-
-        <p
-          :class="`home-why-choose-axcrypt-selling-points-item-paragraph ${$mq}`"
+        <div
+          :class="`home-why-choose-axcrypt-selling-points-item-text-wrapper ${$mq}`"
         >
-          {{ $t(item.paragraphPhraseKey) }}
-        </p>
+          <h1
+            :class="`home-why-choose-axcrypt-selling-points-item-heading ${$mq}`"
+          >
+            {{ $t(item.headingPhraseKey) }}
+          </h1>
+
+          <p
+            :class="`home-why-choose-axcrypt-selling-points-item-paragraph ${$mq}`"
+          >
+            {{ $t(item.paragraphPhraseKey) }}
+          </p>
+        </div>
       </div>
     </article>
   </section>
@@ -80,45 +86,87 @@ export default {
   justify-content: center;
   align-items: center;
   background-color: rgba(6, 9, 3, 0.9);
-  padding: 30px 0;
+  &.mobile {
+    padding: 30px 0;
+  }
+  &.desktop {
+    padding: 4rem 4rem;
+    height: clamp(300px, 38vh, 500px);
+  }
 }
 
 .home-why-choose-axcrypt-heading {
-  font-size: 1.125rem;
   color: $white;
   font-weight: 400;
+  &.mobile {
+    font-size: 1.125rem;
+  }
+  &.desktop {
+    font-size: 1.5rem;
+    margin: 0 0 2rem 0;
+    padding: 0;
+  }
 }
 
 .home-why-choose-axcrypt-selling-points-items-wrapper {
   display: grid;
-  grid: 1fr 1fr 1fr / 1fr 1fr;
+  &.mobile {
+    grid: 1fr 1fr 1fr / 1fr 1fr;
+  }
+  &.desktop {
+    grid: 1fr 1fr / 1fr 1fr 1fr;
+    gap: min(3rem, 6rem) clamp(2rem, 6vw, 12rem);
+  }
 }
 
 .home-why-choose-axcrypt-selling-points-item {
-  /* text-align: center; */
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 18px 0;
-  padding: 0 10px;
+  &.mobile {
+    flex-direction: column;
+    align-items: center;
+    margin: 18px 0;
+    padding: 0 10px;
+  }
 }
 
 .home-why-choose-axcrypt-selling-points-item-img {
   height: 50px;
 }
 
+.home-why-choose-axcrypt-selling-points-item-text-wrapper {
+  display: flex;
+  flex-direction: column;
+  &.mobile {
+    align-items: center;
+  }
+  &.desktop {
+    margin: 0 0 0 1rem;
+  }
+}
+
 .home-why-choose-axcrypt-selling-points-item-heading {
-  font-size: 0.75rem;
   color: $light-green;
   margin: 0;
-  text-align: center;
+  &.mobile {
+    text-align: center;
+    font-size: 0.75rem;
+  }
+  &.desktop {
+    font-size: clamp(0.875rem,calc(1vw+0.25rem), 1.25rem);
+  }
 }
 
 .home-why-choose-axcrypt-selling-points-item-paragraph {
-  font-size: 0.5rem;
   color: $white;
   margin: 0;
-  max-width: 8rem;
-  text-align: center;
+  &.mobile {
+    text-align: center;
+    font-size: 0.5rem;
+    max-width: 8rem;
+  }
+  &.desktop {
+    font-size: clamp(0.75rem,1vw,0.875rem);
+    max-width: 16rem;
+  }
 }
 </style>
