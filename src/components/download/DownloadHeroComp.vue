@@ -7,13 +7,12 @@
 
     <div :class="`download-desktop-hero-subwrapper ${$mq}`">
       <download-hero-platform-comp
-        :headingPhraseKey="
-          activePlatform === 'Windows'
-            ? 'DownloadHeroHeadingWindows'
-            : 'DownloadHeroHeadingMac'
-        "
+        :headingPhraseKey="platformHeadingPhraseKey"
         :sellingPoints="sellingPoints"
-      />
+        :downloadUrl="platformDownloadPath"
+      >
+        <component :is="childComponent" />
+      </download-hero-platform-comp>
 
       <download-hero-mobile-comp />
     </div>
@@ -24,12 +23,16 @@
 import DownloadNavComp from '@/components/download/DownloadNavComp.vue';
 import DownloadHeroPlatformComp from '@/components/download/DownloadHeroPlatformComp.vue';
 import DownloadHeroMobileComp from '@/components/download/DownloadHeroMobileComp.vue';
+import AppleIconComp from '@/components/download/AppleIconComp';
+import WindowsIconComp from '@/components/download/WindowsIconComp';
 
 export default {
   components: {
     DownloadNavComp,
     DownloadHeroPlatformComp,
     DownloadHeroMobileComp,
+    AppleIconComp,
+    WindowsIconComp,
   },
 
   data() {
@@ -53,6 +56,24 @@ export default {
       return this.activePlatform === 'Windows'
         ? fullList
         : fullList.filter(key => key !== 'DownloadHeroListRightClick');
+    },
+
+    childComponent() {
+      return this.activePlatform === 'Windows'
+        ? 'windows-icon-comp'
+        : 'apple-icon-comp';
+    },
+
+    platformHeadingPhraseKey() {
+      return this.activePlatform === 'Windows'
+        ? 'DownloadHeroHeadingWindows'
+        : 'DownloadHeroHeadingMac';
+    },
+
+    platformDownloadPath() {
+      return this.activePlatform === 'Windows'
+        ? 'https://www.axcrypt.net/downloads/4519/'
+        : 'https://www.axcrypt.net/downloads/7568/';
     },
   },
 

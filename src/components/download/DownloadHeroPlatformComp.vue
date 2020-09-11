@@ -6,28 +6,26 @@
 
     <dash-list-comp :list="sellingPoints" />
 
-    <primary-button-comp
-      :class="`download-hero-platform-download-button ${$mq}`"
-      phraseKey="DownloadLinkLabel"
-      size="small"
-      color="black"
-      path="#"
-    />
+    <a
+      :href="downloadUrl"
+      :class="`standard-button small black download-hero-platform-download-button ${$mq}`"
+    >
+      <slot />{{ $t('DownloadLinkLabel') }} AxCrypt
+    </a>
   </article>
 </template>
 
 <script>
-import PrimaryButtonComp from '../PrimaryButtonComp';
 import DashListComp from '../DashListComp';
 
 export default {
   props: {
     headingPhraseKey: String,
     sellingPoints: Array, //with phraseKeys
+    downloadUrl: String,
   },
 
   components: {
-    PrimaryButtonComp,
     DashListComp,
   },
 };
@@ -56,11 +54,21 @@ export default {
 }
 
 .download-hero-platform-download-button {
-  text-transform: uppercase;
   align-self: center;
+  text-transform: uppercase;
+
+  &.mobile {
+    > div {
+      margin: 0 8px 0 0;
+    }
+  }
 
   &.desktop {
     margin: 20px 0 0 0;
+
+    > div {
+      margin: 0 14px 0 0;
+    }
   }
 }
 </style>
