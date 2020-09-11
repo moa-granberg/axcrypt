@@ -9,6 +9,7 @@ import AboutView from './AboutView';
 import SignInView from './SignInView';
 import PremiumTrialView from './PremiumTrialView';
 import BusinessTrialView from './BusinessTrialView';
+import NotFoundView from './NotFoundView';
 
 export {
   HomeView,
@@ -22,4 +23,5 @@ export {
   SignInView,
   PremiumTrialView,
   BusinessTrialView,
+  NotFoundView,
 };
