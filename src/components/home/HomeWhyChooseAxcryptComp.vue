@@ -90,8 +90,8 @@ export default {
     padding: 30px 0;
   }
   &.desktop {
-    padding: 4rem 4rem;
-    height: clamp(300px, 38vh, 500px);
+    padding: 0 2rem;
+    height: clamp(300px, 49vh, 650px);
   }
 }
 
@@ -102,7 +102,7 @@ export default {
     font-size: 1.125rem;
   }
   &.desktop {
-    font-size: 1.5rem;
+    font-size: clamp(1.5rem,2vw ,2.0rem);
     margin: 0 0 2rem 0;
     padding: 0;
   }
