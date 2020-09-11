@@ -12,16 +12,22 @@
 
     <article :class="`download-hero-mobile-images-wrapper ${$mq}`">
       <div :class="`download-hero-mobile-badge-wrapper ${$mq}`">
-        <img
-          :class="`download-hero-mobile-badge ${$mq}`"
-          src="@/assets/view/download/google-play-badge.png"
-          alt="google play badge"
-        />
-        <img
-          :class="`download-hero-mobile-badge ${$mq}`"
-          src="@/assets/view/download/app_store_badge.svg"
-          alt="app store badge"
-        />
+        <a
+          href="https://play.google.com/store/apps/details?id=net.axcrypt.axcrypt2x"
+        >
+          <img
+            :class="`download-hero-mobile-badge ${$mq}`"
+            src="@/assets/view/download/google-play-badge.png"
+            alt="google play badge"
+          />
+        </a>
+        <a href="https://apps.apple.com/us/app/axcrypt/id1157695909">
+          <img
+            :class="`download-hero-mobile-badge ${$mq}`"
+            src="@/assets/view/download/app_store_badge.svg"
+            alt="app store badge"
+          />
+        </a>
       </div>
 
       <div :class="`download-hero-mobile-img-wrapper ${$mq}`">
