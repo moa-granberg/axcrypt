@@ -40,6 +40,7 @@
       <div :class="`home-get-started-video-wrapper ${$mq}`">
         <iframe
           :class="`home-get-started-video ${$mq}`"
+          title="How to use AxCrypt"
           src="https://www.youtube.com/embed/jyixJ03qmkg"
           frameborder="0"
           allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
