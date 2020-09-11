@@ -61,6 +61,10 @@ export default {
   display: grid;
   align-items: flex-start;
 
+  > a {
+    text-transform: uppercase;
+  }
+
   &.mobile {
     grid: 70% 30% / 1fr 1fr;
     grid-template-areas: 'text text' 'btn img';
