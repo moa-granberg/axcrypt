@@ -11,7 +11,7 @@
       @switchMonthly="handleClickMonthly"
       @switchYearly="handleClickYearly"
     />
-    <pricing-products-wrapper-comp />
+    <pricing-products-wrapper-comp :annualActive="annualActive"/>
   </main>
 </template>
 

@@ -1,8 +1,8 @@
 <template>
   <section>
     <pricing-product-comp :product="free" />
-    <!-- <pricing-product-comp />
-    <pricing-product-comp /> -->
+    <!-- <pricing-product-comp :product="premium" :annualActive="annualActive" />
+    <pricing-product-comp :product="business" :annualActive="annualActive" /> -->
   </section>
 </template>
 
@@ -10,120 +10,122 @@
 import PricingProductComp from './PricingProductComp';
 
 export default {
-  components: {
-    PricingProductComp
+  props: {
+    annualActive: Boolean,
   },
 
-  data(){
+  components: {
+    PricingProductComp,
+  },
+
+  data() {
     return {
       free: {
-        productClass: "free",
-        headingPhraseKey: "Free",
-        subheadingPhraseKey: "For everyone",
+        productClass: 'free',
+        headingPhraseKey: 'Free',
+        subheadingPhraseKey: 'For everyone',
         price: 0,
-        currency: "SEK",
-        buttonLabelPhraseKey: "Create account",
-        url: "https://account.axcrypt.net/en/Home/Register",
+        currency: 'SEK',
+        buttonLabelPhraseKey: 'Create account',
+        url: 'https://account.axcrypt.net/en/Home/Register',
         readMoreUrl: '#',
         readMorePhraseKey: 'Ta bort den här',
         featureList: [
           {
-            feature: "PricingFeatureListViewer",
+            feature: 'PricingFeatureListViewer',
             mac: true,
             pc: true,
           },
           {
-            feature: "PricingFeatureListAES128",
+            feature: 'PricingFeatureListAES128',
             mac: false,
             pc: true,
           },
           {
-            feature: "PricingFeatureListAccountKey",
+            feature: 'PricingFeatureListAccountKey',
             mac: false,
             pc: true,
           },
           {
-            feature: "PricingFeatureListOpenShared",
+            feature: 'PricingFeatureListOpenShared',
             mac: false,
             pc: true,
           },
           {
-            feature: "PricingFeatureListCommunitySupport",
+            feature: 'PricingFeatureListCommunitySupport',
             mac: false,
             pc: true,
           },
           {
-            feature: "PricingFeatureListAES256",
+            feature: 'PricingFeatureListAES256',
             mac: false,
             pc: false,
           },
           {
-            feature: "PricingFeatureListMobileApps",
+            feature: 'PricingFeatureListMobileApps',
             mac: false,
             pc: false,
           },
           {
-            feature: "PricingFeatureListSecuredFolders",
+            feature: 'PricingFeatureListSecuredFolders',
             mac: false,
             pc: false,
           },
           {
-            feature: "PricingFeatureListIncludeSubfolders",
+            feature: 'PricingFeatureListIncludeSubfolders',
             mac: false,
             pc: false,
           },
           {
-            feature: "PricingFeatureListKeySharing",
+            feature: 'PricingFeatureListKeySharing',
             mac: false,
             pc: false,
           },
           {
-            feature: "PricingFeatureListCloudStorage",
+            feature: 'PricingFeatureListCloudStorage',
             mac: false,
             pc: false,
           },
           {
-            feature: "PricingFeatureListPasswordManagement",
+            feature: 'PricingFeatureListPasswordManagement',
             mac: false,
             pc: false,
           },
           {
-            feature: "PricingFeatureListFileWipe",
+            feature: 'PricingFeatureListFileWipe',
             mac: false,
             pc: false,
           },
           {
-            feature: "PricingFeatureListAnonymousFile",
+            feature: 'PricingFeatureListAnonymousFile',
             mac: false,
             pc: false,
           },
           {
-            feature: "PasswordGeneratorLinkLabel",
+            feature: 'PasswordGeneratorLinkLabel',
             mac: false,
             pc: false,
           },
           {
-            feature: "PricingFeatureListDirectSupport",
+            feature: 'PricingFeatureListDirectSupport',
             mac: false,
             pc: false,
           },
           {
-            feature: "PricingFeatureListBusinessAdmin",
+            feature: 'PricingFeatureListBusinessAdmin',
             mac: false,
             pc: false,
           },
           {
-            feature: "PricingFeatureListMoreUpcoming",
+            feature: 'PricingFeatureListMoreUpcoming',
             mac: false,
             pc: false,
           },
-        ]
-      }
-    }
-  }
-}
+        ],
+      },
+    };
+  },
+};
 </script>
 
-<style>
-
-</style>
+<style></style>

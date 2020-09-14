@@ -1,6 +1,8 @@
 <template>
   <article :class="`pricing-product-wrapper ${$mq}`">
-    <div :class="`pricing-product-heading-wrapper ${product.productClass} ${$mq}`">
+    <div
+      :class="`pricing-product-heading-wrapper ${product.productClass} ${$mq}`"
+    >
       <h1 :class="`pricing-product-heading ${$mq}`">
         {{ $t(product.headingPhraseKey) }}
       </h1>
@@ -8,12 +10,24 @@
         {{ $t(product.subheadingPhraseKey) }}
       </h2>
     </div>
+
+    <h1 class="pricing-product-price" :class="[{ annual: annualActive }, $mq]">
+      {{ product.price }} <span>{{ product.currency }}</span>
+    </h1>
+
+    <a
+      :class="`standard-button small pricing-product-button ${product.productClass} ${$mq} `"
+      :href="product.buttonUrl"
+    >
+      {{ $t(product.buttonLabelPhraseKey) }}
+    </a>
   </article>
 </template>
 
 <script>
 export default {
   props: {
+    annualActive: Boolean,
     product: {
       productClass: String,
       headingPhraseKey: String,
@@ -34,6 +48,11 @@ export default {
 @import '@/scss/variables.scss';
 
 .pricing-product-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
   &.mobile {
     margin: 32px 0;
     width: 100vw;
@@ -72,6 +91,7 @@ export default {
     padding: 30px 0;
   }
 }
+
 .pricing-product-heading {
   margin: 0;
 
@@ -83,6 +103,7 @@ export default {
     font-size: 2.25rem;
   }
 }
+
 .pricing-product-subheading {
   margin: 0;
   font-weight: 400;
@@ -93,6 +114,42 @@ export default {
 
   &.desktop {
     font-size: 1.125rem;
+  }
+}
+
+.pricing-product-price {
+  &.annual {
+    color: #cb544c;
+  }
+
+  &.mobile {
+    font-size: 3rem;
+    margin: 24px 0;
+
+    span {
+      font-size: 2rem;
+    }
+  }
+
+  &.desktop {
+    font-size: 4rem;
+    margin: 30px 0;
+
+    span {
+      font-size: 3rem;
+    }
+  }
+}
+
+.pricing-product-button {
+  text-transform: uppercase;
+
+  &.premium {
+    background-color: $dark-green;
+  }
+
+  &.business {
+    background-color: $black;
   }
 }
 </style>
