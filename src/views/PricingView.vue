@@ -62,4 +62,46 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+@import '@/scss/variables.scss';
+
+.pricing-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+  &.mobile {
+    margin: 70px 0 0 0;
+  }
+  &.desktop {
+    margin: 156px 0 0 0;
+  }
+}
+
+.pricing-heading {
+  margin: 0;
+
+  &.mobile {
+    font-size: 1.5rem;
+  }
+
+  &.desktop {
+    font-size: 2.25rem;
+  }
+}
+
+.pricing-subheading {
+
+  &.mobile {
+    margin: 14px 0 18px 0;
+    font-size: 1.125rem;
+  }
+  &.desktop {
+    margin: 34px 0 14px 0;
+    font-size: 1.5rem;
+  }
+}
+
+
+</style>
