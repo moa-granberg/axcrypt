@@ -68,6 +68,43 @@
   "TryForFreeButtonLabel": "Try for free",
   "WhyAxCryptBusiness": "Why AxCrypt Business?",
 
+  "HomeHeroHeading": "\"Advanced encryption in a superbly simple setting\"",
+  "HomeHeroSubheading": "PCMag Editors´ Choice 2020",
+  "HomeHeroUnderSubheading": "over 20 million downloads worldwide",
+  "TryPremiumPreHeading": "For private users",
+  "TryPremiumHeading": "Try Premium",
+  "TryBusinessPreHeading": "For business users",
+  "TryBusinessHeading": "Try Business",
+
+  "WhyChooseAxcrypt": "Why choose AxCrypt?",
+
+  "HomeSellingPointStrongEncryptionHeading": "Strong encryption",
+  "HomeSellingPointCloudStorageAwarenessHeading":"Cloud storage awareness",
+  "HomeSellingPointMultilingualHeading":"Multilingual",
+  "HomeSellingPointCollaborationHeading":"Collaboration",
+  "HomeSellingPointPasswordManagementHeading":"Password management",
+  "HomeSellingPointAxcryptMobileHeading":"AxCrypt Mobile",
+
+  "HomeSellingPointStrongEncryptionBody": "File security with 128-bit or 256-bit encryption.",
+  "HomeSellingPointCloudStorageAwarenessBody": "Automatically secure your files in Dropbox, Google Drive etc.",
+  "HomeSellingPointMultilingualBody": "AxCrypt speaks English, Dutch, French, German, Italian, Korean, Portuguese, Spanish, Swedish, Turkish, Russian, Polish and more to come.",
+  "HomeSellingPointCollaborationBody": "Allow secured files to be opened by other AxCrypt users with their own password.",
+  "HomeSellingPointPasswordManagementBody": "Manage and access your passwords seamlessly wherever you are.",
+  "HomeSellingPointAxcryptMobileBody": "Open your encrypted files on your phone.",
+
+  "HomeGetStartedHeading": "How to get started",
+  "HomeGetStartedListDownloadHeading": "1. Download",
+  "HomeGetStartedListDownloadParagraph": "Get the latest version of AxCrypt",
+  "HomeGetStartedListEncryptHeading": "2. Encrypt",
+  "HomeGetStartedListEncryptParagraph": "Select which files to secure with just a few clicks",
+  "HomeGetStartedListShareHeading": "3. Share",
+  "HomeGetStartedListShareParagraph": "Share your secured files with a single click",
+
+  "HomeGetStartedYoutubeDescription": "This is a video tutorial on how to get started with AxCrypt",
+  "HomeWhatOthersSayHeading": "What others say",
+
+  "HomeWhatOtherSayTestimonialsText": "<p>For more testimonials, head over to <a href='#/about'>awards & reviews</a></p>",
+
 
   "DownloadNavHeading": "Other platforms",
   "DownloadHeroHeadingMac": "AxCrypt for macOS",
