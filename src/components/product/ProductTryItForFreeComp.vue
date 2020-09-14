@@ -36,7 +36,7 @@
       <primary-button-comp
         phraseKey="ProductTryItForFreeStartButtonLabel"
         size="large"
-        color="dark"
+        color="dark-green"
         :path="product === 'premium' ? '/premium-trial' : '/business-trial'"
       />
     </article>
