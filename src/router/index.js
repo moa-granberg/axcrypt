@@ -252,6 +252,15 @@ const routes = [
       title: 'Premium Trial | ',
     },
   },
+  {
+    path: '/404',
+    name: 'NotFound',
+    component: Views.NotFoundView,
+    meta: {
+      title: 'Page Not Found | ',
+    },
+  },
+  { path: '*', redirect: '/404' },
 ];
 
 export default new VueRouter({ routes });
