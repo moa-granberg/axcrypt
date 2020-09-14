@@ -46,6 +46,7 @@
 <script>
 import PrimaryButtonComp from '@/components/PrimaryButtonComp';
 import ProductTryItForFreeSellingPointsComp from '@/components/product/ProductTryItForFreeSellingPointsComp';
+import { getPricing } from '@/utils/pricing/getPricing';
 
 export default {
   props: {
@@ -60,68 +61,35 @@ export default {
   data() {
     return {
       annualActive: false,
-      monthly: [],
-      yearly: [],
       price: 0,
       currency: 'SEK',
     };
   },
 
   methods: {
-    async getCurrencies() {
-      if (this.product === 'premium') {
-        const monthlyResponse = await import(
-          '@/utils/pricing/premium-monthly.json'
-        );
-        this.monthly = monthlyResponse.default.pricinglist;
-
-        const yearlyResponse = await import(
-          '@/utils/pricing/premium-yearly.json'
-        );
-        this.yearly = yearlyResponse.default.pricinglist;
-      } else {
-        const monthlyResponse = await import(
-          '@/utils/pricing/business-monthly.json'
-        );
-        this.monthly = monthlyResponse.default.pricinglist;
-
-        const yearlyResponse = await import(
-          '@/utils/pricing/business-yearly.json'
-        );
-        this.yearly = yearlyResponse.default.pricinglist;
-      }
-    },
-
-    getPrice(currency, period) {
-      const priceItem = period.filter(item => item.currency === currency);
-      let newPrice = 0;
-
-      if (!priceItem) {
-        const defaultItem = period.filter(item => item.is_default);
-        newPrice = Number(defaultItem[0].rounded_amount);
-      } else {
-        newPrice = Number(priceItem[0].rounded_amount);
-      }
-      this.price =
-        period === this.yearly
-          ? (newPrice / 12).toFixed(2)
-          : newPrice.toFixed(2);
-    },
-
     handleClickMonthly() {
-      this.annualActive = false;
-      this.getPrice(this.currency, this.monthly);
+      if (this.annualActive) {
+        this.annualActive = false;
+        this.setPriceData('month');
+      }
     },
 
     handleClickYearly() {
-      this.annualActive = true;
-      this.getPrice(this.currency, this.yearly);
+      if (!this.annualActive) {
+        this.annualActive = true;
+        this.setPriceData('year');
+      }
+    },
+
+    async setPriceData(period) {
+      const priceData = await getPricing(this.product, period);
+      this.price = priceData.price;
+      this.currency = priceData.currency;
     },
   },
 
   async created() {
-    await this.getCurrencies();
-    this.getPrice(this.currency, this.monthly);
+    this.setPriceData('month');
   },
 };
 </script>
