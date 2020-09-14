@@ -36,7 +36,7 @@ export default {
 
   &.desktop {
     padding: 0 2rem;
-    height: clamp(300px, 49vh, 650px);
+    height: clamp(400px, 49vh, 650px);
   }
 }
 
