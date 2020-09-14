@@ -1,5 +1,5 @@
 <template>
-  <main>
+  <main :class="`pricing-wrapper ${$mq}`">
     <h1 :class="`pricing-heading ${$mq}`">
       {{ $t('PricingLinkLabel') }}
     </h1>
@@ -11,16 +11,19 @@
       @switchMonthly="handleClickMonthly"
       @switchYearly="handleClickYearly"
     />
+    <pricing-products-wrapper-comp />
   </main>
 </template>
 
 <script>
 import AnnualMonthlySwitcherComp from '@/components/AnnualMonthlySwitcherComp';
+import PricingProductsWrapperComp from '@/components/pricing/PricingProductsWrapperComp';
 import { getPricing } from '@/utils/pricing/getPricing';
 
 export default {
   components: {
     AnnualMonthlySwitcherComp,
+    PricingProductsWrapperComp,
   },
 
   data(){
