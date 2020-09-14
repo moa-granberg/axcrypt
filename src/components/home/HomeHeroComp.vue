@@ -14,7 +14,7 @@
       </h3>
     </div>
     <div :class="`home-hero-try-links-wrapper ${$mq}`">
-      <try-links-comp />
+      <try-links-comp :transparent="true" />
     </div>
   </section>
 </template>

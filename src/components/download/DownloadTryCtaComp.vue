@@ -4,16 +4,19 @@
       :class="`download-try-cta-heading ${$mq}`"
       v-html="$t('DownloadTryCtaHeading')"
     ></h1>
-    <try-buttons-comp />
+
+    <div :class="`download-try-cta-button-wrapper ${$mq}`">
+      <try-links-comp :subheading="true" />
+    </div>
   </section>
 </template>
 
 <script>
-import TryButtonsComp from './TryButtonsComp';
+import TryLinksComp from '@/components/TryLinksComp';
 
 export default {
   components: {
-    TryButtonsComp,
+    TryLinksComp,
   },
 };
 </script>
@@ -26,6 +29,7 @@ export default {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
   &.mobile {
     padding: 24px 0;
   }
@@ -54,6 +58,19 @@ export default {
   span {
     font-weight: 600;
     color: $green;
+  }
+}
+
+.download-try-cta-button-wrapper {
+  &.mobile {
+    width: 90%;
+    height: 100px;
+    margin: 0 2px;
+  }
+
+  &.desktop {
+    width: 1000px;
+    height: 200px;
   }
 }
 </style>
