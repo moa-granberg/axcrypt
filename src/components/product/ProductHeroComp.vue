@@ -10,7 +10,10 @@
       </h3>
     </div>
 
-    <product-try-it-for-free-cta-comp :product="product" v-if="$mq === 'mobile'" />
+    <product-try-it-for-free-cta-comp
+      :product="product"
+      v-if="$mq === 'mobile'"
+    />
     <div v-else></div>
   </section>
 </template>
@@ -28,13 +31,17 @@ export default {
   },
 
   computed: {
-    headingPhraseKey(){
-      return this.product === 'premium' ? 'PremiumLinkLabel' : 'BusinessLinkLabel';
+    headingPhraseKey() {
+      return this.product === 'premium'
+        ? 'PremiumLinkLabel'
+        : 'BusinessLinkLabel';
     },
-    subheadingPhraseKey(){ 
-      return this.product === 'premium' ? 'PremiumHeroSubheading' : 'BusinessHeroSubheading';
-    }
-  }
+    subheadingPhraseKey() {
+      return this.product === 'premium'
+        ? 'PremiumHeroSubheading'
+        : 'BusinessHeroSubheading';
+    },
+  },
 };
 </script>
 
@@ -46,11 +53,11 @@ export default {
   background-size: cover;
   height: 470px;
 
-  &.premium{
+  &.premium {
     background-color: rgba(0, 0, 0, 0.5);
   }
   &.business {
-    background-color: rgba(72,119,44,0.5);
+    background-color: rgba(72, 119, 44, 0.5);
   }
 
   &.mobile {

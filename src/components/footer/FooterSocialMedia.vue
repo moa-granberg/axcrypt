@@ -18,7 +18,7 @@ export default {};
   img {
     width: 32px;
     margin: 0 8px 0 0;
-    filter: drop-shadow(0 4px 4px rgba(0,0,0,0.1));
+    filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.1));
     opacity: 1;
     transition: opacity 0.3s;
     &:hover {

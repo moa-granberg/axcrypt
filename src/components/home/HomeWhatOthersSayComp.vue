@@ -5,7 +5,7 @@
     </h1>
     <div :class="`home-what-others-say-carousel-awards-wrapper ${$mq}`">
       <home-what-others-say-carousel-comp />
-      
+
       <div :class="`home-what-others-say-awards-wrapper ${$mq}`">
         <div :class="`home-what-others-say-awards-logos-wrapper ${$mq}`">
           <img
@@ -33,8 +33,8 @@ import HomeWhatOthersSayCarouselComp from '@/components/home/HomeWhatOthersSayCa
 
 export default {
   components: {
-    HomeWhatOthersSayCarouselComp
-  }
+    HomeWhatOthersSayCarouselComp,
+  },
 };
 </script>
 

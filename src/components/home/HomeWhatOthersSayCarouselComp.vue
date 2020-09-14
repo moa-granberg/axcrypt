@@ -9,13 +9,9 @@
     :autoplay="true"
     :autoplayTimeout="15000"
   >
-
-  <slide v-for="item of whatOthersSayCarouselItems" :key="item.src">     
-    <home-what-others-say-carousel-slide-comp
-      :item="item"
-    />
-  </slide>
-  
+    <slide v-for="item of whatOthersSayCarouselItems" :key="item.src">
+      <home-what-others-say-carousel-slide-comp :item="item" />
+    </slide>
   </carousel>
 </template>
 

@@ -79,11 +79,11 @@
   "WhyChooseAxcrypt": "Why choose AxCrypt?",
 
   "HomeSellingPointStrongEncryptionHeading": "Strong encryption",
-  "HomeSellingPointCloudStorageAwarenessHeading":"Cloud storage awareness",
-  "HomeSellingPointMultilingualHeading":"Multilingual",
-  "HomeSellingPointCollaborationHeading":"Collaboration",
-  "HomeSellingPointPasswordManagementHeading":"Password management",
-  "HomeSellingPointAxcryptMobileHeading":"AxCrypt Mobile",
+  "HomeSellingPointCloudStorageAwarenessHeading": "Cloud storage awareness",
+  "HomeSellingPointMultilingualHeading": "Multilingual",
+  "HomeSellingPointCollaborationHeading": "Collaboration",
+  "HomeSellingPointPasswordManagementHeading": "Password management",
+  "HomeSellingPointAxcryptMobileHeading": "AxCrypt Mobile",
 
   "HomeSellingPointStrongEncryptionBody": "File security with 128-bit or 256-bit encryption.",
   "HomeSellingPointCloudStorageAwarenessBody": "Automatically secure your files in Dropbox, Google Drive etc.",
@@ -105,10 +105,9 @@
 
   "HomeWhatOtherSayTestimonialsText": "<p>For more testimonials, head over to <a href='#/about'>awards & reviews</a></p>",
 
-
   "DownloadNavHeading": "Other platforms",
   "DownloadHeroHeadingMac": "AxCrypt for macOS",
-  "DownloadHeroHeadingWindows": "AxCrypt for Windows", 
+  "DownloadHeroHeadingWindows": "AxCrypt for Windows",
   "DownloadMobileHeading": "AxCrypt Mobile",
   "DownloadMobileBodyText": "<p>There are mobile apps available for Android and iOS devices. The mobile version is a viewer app that lets you open and read files and documents encrypted with the desktop application.</p><p>Read more <a href='#'>here</a></p>",
   "DownloadHeroListOpenSecured": "Open secured files on you mobile device. See information below.",
@@ -129,9 +128,7 @@
   "DownloadInformationListKeepInMind": "Keep in mind that if you install AxCrypt 2 and open old files, these files will no longer be possible to open with AxCrypt 1.",
   "DownloadInformationButtonLabel": "Read about release notes",
 
-
   "404Heading": "Page not found.",
   "404Text": "We could not find the page you were looking for. Either something went wrong or the page does not exist.",
   "BackToHomeButtonLabel": "Back to home"
-  
 }

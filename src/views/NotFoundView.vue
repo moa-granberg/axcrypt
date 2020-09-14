@@ -39,7 +39,7 @@ export default {
   }
 
   &.desktop {
-    margin: $footer-height-desktop/2 0 ;
+    margin: $footer-height-desktop/2 0;
     padding: 80px;
   }
 }

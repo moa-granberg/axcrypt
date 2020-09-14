@@ -1,12 +1,10 @@
 <template>
   <section :class="`home-why-choose-axcrypt-wrapper ${$mq}`">
-
     <h1 :class="`home-why-choose-axcrypt-heading ${$mq}`">
       {{ $t('WhyChooseAxcrypt') }}
     </h1>
 
     <home-why-choose-axcrypt-selling-points-comp />
-    
   </section>
 </template>
 
@@ -15,7 +13,7 @@ import HomeWhyChooseAxcryptSellingPointsComp from '@/components/home/HomeWhyChoo
 
 export default {
   components: {
-    HomeWhyChooseAxcryptSellingPointsComp
+    HomeWhyChooseAxcryptSellingPointsComp,
   },
 };
 </script>

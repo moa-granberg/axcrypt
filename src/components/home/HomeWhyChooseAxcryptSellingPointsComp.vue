@@ -82,7 +82,7 @@ export default {
 
 <style lang="scss" scoped>
 @import '@/scss/variables.scss';
-  
+
 .home-why-choose-axcrypt-selling-points-items-wrapper {
   display: grid;
 
