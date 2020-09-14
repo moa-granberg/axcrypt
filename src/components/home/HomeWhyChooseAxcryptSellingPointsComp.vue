@@ -5,6 +5,7 @@
     <div
       :class="`home-why-choose-axcrypt-selling-points-item ${$mq}`"
       data-aos="fade-up"
+      data-aos-anchor-placement="top-bottom"
       v-for="item of homeSellingPointItems"
       :key="item.src"
     >
