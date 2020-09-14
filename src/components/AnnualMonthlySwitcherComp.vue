@@ -3,10 +3,7 @@
     <button :class="[{ active }, $mq]" @click="handleClickYearly">
       {{ $t('AnnualMonthlySwitcherAnnualButtonLabel') }}
     </button>
-    <button
-      :class="[{ active: !active }, $mq]"
-      @click="handleClickMonthly"
-    >
+    <button :class="[{ active: !active }, $mq]" @click="handleClickMonthly">
       {{ $t('AnnualMonthlySwitcherMonthlyButtonLabel') }}
     </button>
   </div>
@@ -15,7 +12,7 @@
 <script>
 export default {
   props: {
-    active: Boolean
+    active: Boolean,
   },
 
   methods: {
@@ -25,13 +22,13 @@ export default {
 
     handleClickYearly() {
       this.$emit('switchYearly');
-    }
-  }
+    },
+  },
 };
 </script>
 
 <style lang="scss" scoped>
-@import "@/scss/variables.scss";
+@import '@/scss/variables.scss';
 
 .annual-monthly-switcher-wrapper {
   button {

@@ -11,7 +11,7 @@
       @switchMonthly="handleClickMonthly"
       @switchYearly="handleClickYearly"
     />
-    <pricing-products-wrapper-comp :annualActive="annualActive"/>
+    <pricing-products-wrapper-comp :annualActive="annualActive" />
   </main>
 </template>
 
@@ -26,13 +26,13 @@ export default {
     PricingProductsWrapperComp,
   },
 
-  data(){
+  data() {
     return {
       annualActive: false,
       premiumPrice: 0,
       businessPrice: 0,
       currency: 'SEK',
-    }
+    };
   },
 
   methods: {
@@ -62,7 +62,7 @@ export default {
   async created() {
     this.setPriceData('month');
   },
-}
+};
 </script>
 
 <style lang="scss" scoped>
@@ -73,7 +73,7 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  
+
   &.mobile {
     margin: 70px 0 0 0;
   }
@@ -95,7 +95,6 @@ export default {
 }
 
 .pricing-subheading {
-
   &.mobile {
     margin: 14px 0 18px 0;
     font-size: 1.125rem;
@@ -105,6 +104,4 @@ export default {
     font-size: 1.5rem;
   }
 }
-
-
 </style>

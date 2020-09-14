@@ -11,7 +11,11 @@
         {{ $t('ProductTryItForFreeCostAfterTrial') }}
       </h2>
 
-      <annual-monthly-switcher-comp :active="annualActive" @switchMonthly="handleClickMonthly" @switchYearly="handleClickYearly" />
+      <annual-monthly-switcher-comp
+        :active="annualActive"
+        @switchMonthly="handleClickMonthly"
+        @switchYearly="handleClickYearly"
+      />
 
       <h1
         class="product-try-it-for-free-pricing"
