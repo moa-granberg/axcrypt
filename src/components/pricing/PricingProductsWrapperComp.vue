@@ -1,8 +1,8 @@
 <template>
   <section>
     <pricing-product-comp :product="free" />
-    <pricing-product-comp />
-    <pricing-product-comp />
+    <!-- <pricing-product-comp />
+    <pricing-product-comp /> -->
   </section>
 </template>
 
@@ -13,10 +13,11 @@ export default {
   components: {
     PricingProductComp
   },
-  
+
   data(){
     return {
       free: {
+        productClass: "free",
         headingPhraseKey: "Free",
         subheadingPhraseKey: "For everyone",
         price: 0,
