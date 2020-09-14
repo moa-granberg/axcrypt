@@ -169,6 +169,24 @@ const routes = [
         },
       },
       {
+        path: 'forum',
+        name: 'ForumLink',
+        beforeEnter() {
+          {
+            location.href = 'http://www.axcrypt.net/forums/';
+          }
+        },
+      },
+      {
+        path: 'blog',
+        name: 'BlogLink',
+        beforeEnter() {
+          {
+            location.href = 'http://www.axcrypt.net/blog/';
+          }
+        },
+      },
+      {
         path: 'password-generator',
         name: 'PasswordGeneratorPage',
         component: Pages.PasswordGeneratorPage,
