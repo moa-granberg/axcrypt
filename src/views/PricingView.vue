@@ -12,9 +12,19 @@
       @switchYearly="handleClickYearly"
     />
     <section>
-      <pricing-product-comp :product="free" />
-      <!-- <pricing-product-comp :product="premium" :annualActive="annualActive" />
-      <pricing-product-comp :product="business" :annualActive="annualActive" /> -->
+      <pricing-product-comp :product="free" price="0" :currency="currency" />
+      <pricing-product-comp
+        :product="premium"
+        :annualActive="annualActive"
+        :price="premiumPrice"
+        :currency="currency"
+      />
+      <pricing-product-comp
+        :product="business"
+        :annualActive="annualActive"
+        :price="businessPrice"
+        :currency="currency"
+      />
     </section>
   </main>
 </template>
@@ -33,8 +43,8 @@ export default {
   data() {
     return {
       annualActive: false,
-      premiumPrice: 0,
-      businessPrice: 0,
+      premiumPrice: '0',
+      businessPrice: '0',
       currency: 'SEK',
       free: {},
       premium: {},

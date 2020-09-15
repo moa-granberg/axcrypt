@@ -16,7 +16,7 @@
         class="pricing-product-price"
         :class="[{ annual: annualActive }, $mq]"
       >
-        {{ product.price }} <span>{{ product.currency }}</span>
+        {{ price }} <span>{{ currency }}</span>
       </h1>
 
       <a
@@ -63,14 +63,15 @@ export default {
   components: {
     PricingProductFeatureList,
   },
+
   props: {
     annualActive: Boolean,
+    price: String,
+    currency: String,
     product: {
       productClass: String,
       headingPhraseKey: String,
       subheadingPhraseKey: String,
-      price: Number,
-      currency: String,
       buttonLabelPhraseKey: String,
       buttonUrl: String,
       readMoreUrl: String,
@@ -78,9 +79,10 @@ export default {
       featureList: Array,
     },
   },
+
   data() {
     return {
-      showFeatureList: true,
+      showFeatureList: false,
     };
   },
 };

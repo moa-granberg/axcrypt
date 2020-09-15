@@ -45,7 +45,7 @@ export default {
 
   &.show {
     height: auto;
-    
+
     &.mobile {
       padding: 0 14px 6px 14px;
     }
