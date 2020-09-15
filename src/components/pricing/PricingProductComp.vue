@@ -46,13 +46,19 @@
         />
       </div>
 
-      <ul :class="[{ show: showFeatureList }, $mq]"></ul>
+      <pricing-product-feature-list :show="showFeatureList" :featureList="product.featureList" />
+
     </div>
   </article>
 </template>
 
 <script>
+import PricingProductFeatureList from './PricingProductFeatureList';
+
 export default {
+  components: {
+    PricingProductFeatureList,
+  },
   props: {
     annualActive: Boolean,
     product: {

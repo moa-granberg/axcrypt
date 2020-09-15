@@ -134,5 +134,30 @@
   "PricingSubheading": "How do you want to pay?",
 
   "HideFeaturesLabel": "Hide features",
-  "WhatsIncludedLabel": "What's included?"
+  "WhatsIncludedLabel": "What's included?",
+  "FeatureLabel": "Feature",
+
+
+  "PricingFeatureListViewer": "Viewer",
+  "PricingFeatureListAES128": "AES-128 Encryption",
+  "PricingFeatureListAccountKey": "Account Key Backup",
+  "PricingFeatureListOpenShared": "Open Shared Keys",
+  "PricingFeatureListCommunitySupport": "Community Support",
+  "PricingFeatureListAES256": "AES-256 Encryption",
+  "PricingFeatureListMobileApps": "Mobile Apps",
+  "PricingFeatureListSecuredFolders": "Secured Folders",
+  "PricingFeatureListIncludeSubfolders": "Include Subfolders",
+  "PricingFeatureListKeySharing": "Key Sharing",
+  "PricingFeatureListCloudStorage": "Cloud Storage Awareness",
+  "PricingFeatureListPasswordManagement": "Password Management",
+  "PricingFeatureListFileWipe": "File Wipe",
+  "PricingFeatureListAnonymousFile": "Anonymous File Names",
+  "PricingFeatureListPasswordGenerator": "Password Generator",
+  "PricingFeatureListDirectSupport": "Direct Support",
+  "PricingFeatureListBusinessAdmin": "Business Admin",
+  "PricingFeatureListMoreUpcoming": "More Upcoming Exclusive Features",
+
+  "ForEveryoneLabel": "For everyone",
+  "FreeLabel": "Free",
+  "CreateAccountLabel": "Create account"
 }
