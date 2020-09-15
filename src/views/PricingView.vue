@@ -11,19 +11,23 @@
       @switchMonthly="handleClickMonthly"
       @switchYearly="handleClickYearly"
     />
-    <pricing-products-wrapper-comp :annualActive="annualActive" />
+    <section>
+      <pricing-product-comp :product="free" />
+      <pricing-product-comp :product="premium" :annualActive="annualActive" />
+      <pricing-product-comp :product="business" :annualActive="annualActive" />
+    </section>
   </main>
 </template>
 
 <script>
 import AnnualMonthlySwitcherComp from '@/components/AnnualMonthlySwitcherComp';
-import PricingProductsWrapperComp from '@/components/pricing/PricingProductsWrapperComp';
+import PricingProductComp from '@/components/pricing/PricingProductComp';
 import { getPricing } from '@/utils/pricing/getPricing';
 
 export default {
   components: {
     AnnualMonthlySwitcherComp,
-    PricingProductsWrapperComp,
+    PricingProductComp,
   },
 
   data() {
@@ -32,6 +36,9 @@ export default {
       premiumPrice: 0,
       businessPrice: 0,
       currency: 'SEK',
+      free: {},
+      premium: {},
+      business: {},
     };
   },
 
@@ -57,10 +64,17 @@ export default {
       this.businessPrice = businessPriceData.price;
       this.currency = premiumPriceData.currency;
     },
+
+    async getProductJson() {
+      this.free = await import('@/data/pricing/free.json');
+      this.premium = await import('@/data/pricing/premium.json');
+      this.business = await import('@/data/pricing/business.json');
+    },
   },
 
   async created() {
     this.setPriceData('month');
+    this.getProductJson();
   },
 };
 </script>
