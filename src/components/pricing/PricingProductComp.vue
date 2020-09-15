@@ -241,6 +241,7 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 
   p {
     font-size: 0.875rem;
