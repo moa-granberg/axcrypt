@@ -46,8 +46,10 @@
         />
       </div>
 
-      <pricing-product-feature-list :show="showFeatureList" :featureList="product.featureList" />
-
+      <pricing-product-feature-list
+        :show="showFeatureList"
+        :featureList="product.featureList"
+      />
     </div>
   </article>
 </template>

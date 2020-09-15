@@ -103,10 +103,8 @@ export default {
 }
 
 .pricing-product-feature-list-heading {
-  
   &.mobile {
-  font-size: 0.875rem;
-
+    font-size: 0.875rem;
   }
   &.desktop {
     font-size: 1.125rem;
