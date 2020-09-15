@@ -4,7 +4,7 @@
   "subheadingPhraseKey": "ForIndividualsLabel",
   "buttonLabelPhraseKey": "StartFreeMonthLabel",
   "buttonUrl": "https://account.axcrypt.net/en/Home/Purchase",
-  "readMoreUrl": "/premium",
+  "readMoreUrl": "#/premium",
   "readMorePhraseKey": "ReadMoreAboutPremiumPlanLabel",
   "featureList": [
     {

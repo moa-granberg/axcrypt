@@ -52,6 +52,15 @@
         :show="showFeatureList"
         :featureList="product.featureList"
       />
+
+      <div
+        :class="`pricing-product-read-more-wrapper ${product.productClass} ${$mq}`"
+        v-if="showFeatureList || $mq === 'desktop'"
+      >
+        <a v-if="product.readMoreUrl" :href="product.readMoreUrl">
+          {{ $t(product.readMorePhraseKey) }}
+        </a>
+      </div>
     </div>
   </article>
 </template>
@@ -178,7 +187,6 @@ export default {
   &.mobile {
     border-bottom: 0.5px solid $gray;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
-    padding: 0 0 24px 0;
   }
 
   &.desktop {
@@ -245,6 +253,41 @@ export default {
 
   &.up {
     transform: rotate(180deg);
+  }
+}
+
+.pricing-product-read-more-wrapper {
+  width: 100%;
+  display: grid;
+  place-items: center;
+
+  &.mobile {
+    height: 37px;
+    margin: 23px 0 0 0;
+    font-size: 0.875rem;
+  }
+
+  &.desktop {
+    height: 42px;
+  }
+
+  a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: $white;
+  }
+
+  &.free {
+    background-color: #545454;
+  }
+
+  &.premium {
+    background-color: $dark-green;
+  }
+
+  &.business {
+    background-color: $black;
   }
 }
 </style>

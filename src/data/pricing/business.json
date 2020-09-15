@@ -4,8 +4,8 @@
   "subheadingPhraseKey": "ForOrganisationsLabel",
   "buttonLabelPhraseKey": "StartFreeMonthLabel",
   "buttonUrl": "https://account.axcrypt.net/en/Home/Register",
-  "readMoreUrl": "/business",
-  "readMorePhraseKey": "ReadMoreAboutBusinessPlan",
+  "readMoreUrl": "#/business",
+  "readMorePhraseKey": "ReadMoreAboutBusinessPlanLabel",
   "featureList": [
     {
       "feature": "PricingFeatureListViewer",
