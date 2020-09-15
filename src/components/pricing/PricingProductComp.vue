@@ -134,6 +134,7 @@ export default {
   justify-content: center;
   align-items: center;
   width: 100%;
+  background-color: $light-gray;
 
   &.mobile {
     border-bottom: 0.5px solid $gray;
