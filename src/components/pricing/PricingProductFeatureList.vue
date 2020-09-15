@@ -58,14 +58,12 @@ export default {
   }
 
   &.desktop {
-    padding: 0 42px 24px 42px;
-    margin: 0 4px;
+    padding: 0 16px 24px 16px;
   }
 }
 
 .pricing-product-feature-list-item-wrapper {
   display: grid;
-  grid: auto / 8fr 1fr 1fr;
   align-items: center;
   list-style: none;
   justify-items: center;
@@ -79,6 +77,7 @@ export default {
   }
 
   &.mobile {
+    grid: auto / 8fr 1fr 1fr;
     gap: 10px;
 
     p {
@@ -91,14 +90,14 @@ export default {
   }
 
   &.desktop {
-    gap: 20px;
+    grid: auto / 6fr 1fr 1fr;
 
     p {
-      font-size: 1rem;
+      font-size: 0.875rem;
     }
 
     img {
-      height: 18px;
+      height: 16px;
     }
   }
 }

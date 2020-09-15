@@ -112,8 +112,7 @@ export default {
   }
 
   &.desktop {
-    margin: 82px 0;
-    width: 460px;
+    margin: 0 clamp(4px, 0.8vw, 24px);
   }
 }
 
@@ -196,26 +195,22 @@ export default {
 }
 
 .pricing-product-price {
+  font-size: 3rem;
+
+  span {
+    font-size: 2rem;
+  }
+
   &.annual {
     color: #cb544c;
   }
 
   &.mobile {
-    font-size: 3rem;
     margin: 24px 0;
-
-    span {
-      font-size: 2rem;
-    }
   }
 
   &.desktop {
-    font-size: 4rem;
     margin: 30px 0;
-
-    span {
-      font-size: 3rem;
-    }
   }
 }
 
@@ -261,11 +256,11 @@ export default {
   width: 100%;
   display: grid;
   place-items: center;
+  font-size: 0.875rem;
 
   &.mobile {
     height: 37px;
     margin: 23px 0 0 0;
-    font-size: 0.875rem;
   }
 
   &.desktop {

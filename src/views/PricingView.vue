@@ -3,22 +3,27 @@
     <h1 :class="`pricing-heading ${$mq}`">
       {{ $t('PricingLinkLabel') }}
     </h1>
+
     <p :class="`pricing-subheading ${$mq}`">
       {{ $t('PricingSubheading') }}
     </p>
+
     <annual-monthly-switcher-comp
       :active="annualActive"
       @switchMonthly="handleClickMonthly"
       @switchYearly="handleClickYearly"
     />
-    <section>
+
+    <section :class="`pricing-product-main-wrapper ${$mq}`">
       <pricing-product-comp :product="free" price="0" :currency="currency" />
+
       <pricing-product-comp
         :product="premium"
         :annualActive="annualActive"
         :price="premiumPrice"
         :currency="currency"
       />
+
       <pricing-product-comp
         :product="business"
         :annualActive="annualActive"
@@ -99,10 +104,11 @@ export default {
   align-items: center;
 
   &.mobile {
-    margin: 70px 0 0 0;
+    margin: 32px 0 0 0;
   }
+
   &.desktop {
-    margin: 156px 0 0 0;
+    margin: 70px 0;
   }
 }
 
@@ -126,6 +132,15 @@ export default {
   &.desktop {
     margin: 34px 0 14px 0;
     font-size: 1.5rem;
+  }
+}
+
+.pricing-product-main-wrapper {
+  &.desktop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 82px 0 0 0;
   }
 }
 </style>
