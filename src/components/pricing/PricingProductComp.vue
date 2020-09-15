@@ -49,7 +49,7 @@
       <div v-if="$mq === 'desktop'" class="pricing-product-body-divider"></div>
 
       <pricing-product-feature-list
-        :show="showFeatureList"
+        :show="showFeatureList || $mq === 'desktop'"
         :featureList="product.featureList"
       />
 
