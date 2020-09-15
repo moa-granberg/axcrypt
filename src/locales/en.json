@@ -131,5 +131,8 @@
   "404Heading": "Page not found.",
   "404Text": "We could not find the page you were looking for. Either something went wrong or the page does not exist.",
   "BackToHomeButtonLabel": "Back to home",
-  "PricingSubheading": "How do you want to pay?"
+  "PricingSubheading": "How do you want to pay?",
+
+  "HideFeaturesLabel": "Hide features",
+  "WhatsIncludedLabel": "What's included?"
 }

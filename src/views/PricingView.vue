@@ -13,8 +13,8 @@
     />
     <section>
       <pricing-product-comp :product="free" />
-      <pricing-product-comp :product="premium" :annualActive="annualActive" />
-      <pricing-product-comp :product="business" :annualActive="annualActive" />
+      <!-- <pricing-product-comp :product="premium" :annualActive="annualActive" />
+      <pricing-product-comp :product="business" :annualActive="annualActive" /> -->
     </section>
   </main>
 </template>

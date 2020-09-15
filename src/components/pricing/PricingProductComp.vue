@@ -25,6 +25,28 @@
       >
         {{ $t(product.buttonLabelPhraseKey) }}
       </a>
+
+      <div
+        v-if="$mq === 'mobile'"
+        :class="`pricing-product-body-feature-toggle ${$mq}`"
+        @click="showFeatureList = !showFeatureList"
+      >
+        <p v-if="showFeatureList">
+          {{ $t('HideFeaturesLabel') }}
+        </p>
+        <p v-else>
+          {{ $t('WhatsIncludedLabel') }}
+        </p>
+
+        <img
+          class="pricing-product-body-feature-toggle-icon"
+          :class="[{ up: showFeatureList }]"
+          src="@/assets/icons/keyboard_arrow_down.svg"
+          alt="drop_down"
+        />
+      </div>
+
+      <ul :class="[{ show: showFeatureList }, $mq]"></ul>
     </div>
   </article>
 </template>
@@ -45,6 +67,11 @@ export default {
       readMorePhraseKey: String,
       featureList: Array,
     },
+  },
+  data() {
+    return {
+      showFeatureList: true,
+    };
   },
 };
 </script>
@@ -181,6 +208,25 @@ export default {
 
   &.business {
     background-color: $black;
+  }
+}
+
+.pricing-product-body-feature-toggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  p {
+    font-size: 0.875rem;
+    font-style: italic;
+  }
+}
+
+.pricing-product-body-feature-toggle-icon {
+  margin: 0 0 0 4px;
+
+  &.up {
+    transform: rotate(180deg);
   }
 }
 </style>
