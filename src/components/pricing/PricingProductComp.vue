@@ -46,6 +46,8 @@
         />
       </div>
 
+      <div v-if="$mq === 'desktop'" class="pricing-product-body-divider"></div>
+
       <pricing-product-feature-list
         :show="showFeatureList"
         :featureList="product.featureList"
@@ -205,6 +207,12 @@ export default {
       font-size: 3rem;
     }
   }
+}
+
+.pricing-product-body-divider {
+  margin: 22px 0 0 0;
+  width: 70%;
+  border-bottom: 1px solid #999;
 }
 
 .pricing-product-button {
