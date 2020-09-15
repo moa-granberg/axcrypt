@@ -1,10 +1,10 @@
 {
   "productClass": "free",
-  "headingPhraseKey": "Free",
-  "subheadingPhraseKey": "For everyone",
+  "headingPhraseKey": "FreeLabel",
+  "subheadingPhraseKey": "ForEveryoneLabel",
   "price": 0,
   "currency": "SEK",
-  "buttonLabelPhraseKey": "Create account",
+  "buttonLabelPhraseKey": "CreateAccountLabel",
   "buttonUrl": "https://account.axcrypt.net/en/Home/Register",
   "readMoreUrl": "#",
   "readMorePhraseKey": "Ta bort den här",
