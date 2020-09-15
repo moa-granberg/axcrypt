@@ -6,8 +6,6 @@
   "currency": "SEK",
   "buttonLabelPhraseKey": "CreateAccountLabel",
   "buttonUrl": "https://account.axcrypt.net/en/Home/Register",
-  "readMoreUrl": "#",
-  "readMorePhraseKey": "Ta bort den här",
   "featureList": [
     {
       "feature": "PricingFeatureListViewer",
