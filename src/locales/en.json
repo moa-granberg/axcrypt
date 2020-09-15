@@ -158,5 +158,10 @@
 
   "ForEveryoneLabel": "For everyone",
   "FreeLabel": "Free",
-  "CreateAccountLabel": "Create account"
+  "CreateAccountLabel": "Create account",
+  "ForIndividualsLabel": "For individuals",
+  "StartFreeMonthLabel": "Start free month",
+  "ReadMoreAboutPremiumPlanLabel": "Read more about the premium plan",
+  "ForOrganisationsLabel": "For organisations",
+  "ReadMoreAboutBusinessPlanLabel": "Read more about the business plan"
 }

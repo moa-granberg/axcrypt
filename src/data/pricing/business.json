@@ -1,13 +1,11 @@
 {
-  "productClass": "free",
-  "headingPhraseKey": "Free",
-  "subheadingPhraseKey": "For everyone",
-  "price": 0,
-  "currency": "SEK",
-  "buttonLabelPhraseKey": "Create account",
+  "productClass": "business",
+  "headingPhraseKey": "BusinessLinkLabel",
+  "subheadingPhraseKey": "ForOrganisationsLabel",
+  "buttonLabelPhraseKey": "StartFreeMonthLabel",
   "buttonUrl": "https://account.axcrypt.net/en/Home/Register",
-  "readMoreUrl": "#",
-  "readMorePhraseKey": "Ta bort den här",
+  "readMoreUrl": "/business",
+  "readMorePhraseKey": "ReadMoreAboutBusinessPlan",
   "featureList": [
     {
       "feature": "PricingFeatureListViewer",
@@ -16,88 +14,88 @@
     },
     {
       "feature": "PricingFeatureListAES128",
-      "mac": false,
+      "mac": true,
       "pc": true
     },
     {
       "feature": "PricingFeatureListAccountKey",
-      "mac": false,
+      "mac": true,
       "pc": true
     },
     {
       "feature": "PricingFeatureListOpenShared",
-      "mac": false,
+      "mac": true,
       "pc": true
     },
     {
       "feature": "PricingFeatureListCommunitySupport",
-      "mac": false,
+      "mac": true,
       "pc": true
     },
     {
       "feature": "PricingFeatureListAES256",
-      "mac": false,
-      "pc": false
+      "mac": true,
+      "pc": true
     },
     {
       "feature": "PricingFeatureListMobileApps",
-      "mac": false,
-      "pc": false
+      "mac": true,
+      "pc": true
     },
     {
       "feature": "PricingFeatureListSecuredFolders",
-      "mac": false,
-      "pc": false
+      "mac": true,
+      "pc": true
     },
     {
       "feature": "PricingFeatureListIncludeSubfolders",
-      "mac": false,
-      "pc": false
+      "mac": true,
+      "pc": true
     },
     {
       "feature": "PricingFeatureListKeySharing",
-      "mac": false,
-      "pc": false
+      "mac": true,
+      "pc": true
     },
     {
       "feature": "PricingFeatureListCloudStorage",
-      "mac": false,
-      "pc": false
+      "mac": true,
+      "pc": true
     },
     {
       "feature": "PricingFeatureListPasswordManagement",
-      "mac": false,
-      "pc": false
+      "mac": true,
+      "pc": true
     },
     {
       "feature": "PricingFeatureListFileWipe",
-      "mac": false,
-      "pc": false
+      "mac": true,
+      "pc": true
     },
     {
       "feature": "PricingFeatureListAnonymousFile",
-      "mac": false,
-      "pc": false
+      "mac": true,
+      "pc": true
     },
     {
       "feature": "PasswordGeneratorLinkLabel",
-      "mac": false,
-      "pc": false
+      "mac": true,
+      "pc": true
     },
     {
       "feature": "PricingFeatureListDirectSupport",
-      "mac": false,
-      "pc": false
+      "mac": true,
+      "pc": true
     },
     {
       "feature": "PricingFeatureListBusinessAdmin",
-      "mac": false,
-      "pc": false
+      "mac": true,
+      "pc": true
     },
     {
       "feature": "PricingFeatureListMoreUpcoming",
-      "mac": false,
-      "pc": false
+      "mac": true,
+      "pc": true
     }
   ]
 }

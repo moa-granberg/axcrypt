@@ -2,8 +2,6 @@
   "productClass": "free",
   "headingPhraseKey": "FreeLabel",
   "subheadingPhraseKey": "ForEveryoneLabel",
-  "price": 0,
-  "currency": "SEK",
   "buttonLabelPhraseKey": "CreateAccountLabel",
   "buttonUrl": "https://account.axcrypt.net/en/Home/Register",
   "featureList": [
