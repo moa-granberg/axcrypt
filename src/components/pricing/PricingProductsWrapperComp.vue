@@ -27,7 +27,7 @@ export default {
         price: 0,
         currency: 'SEK',
         buttonLabelPhraseKey: 'Create account',
-        url: 'https://account.axcrypt.net/en/Home/Register',
+        buttonUrl: 'https://account.axcrypt.net/en/Home/Register',
         readMoreUrl: '#',
         readMorePhraseKey: 'Ta bort den här',
         featureList: [

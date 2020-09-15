@@ -37,12 +37,17 @@ export default {
     text-transform: uppercase;
     font-weight: 600;
     border: 2px solid $dark-green;
-
+    cursor: pointer;
     color: $dark-green;
+
+    &:focus {
+      outline: none;
+    }
 
     &.active {
       background-color: $dark-green;
       color: $white;
+      cursor: auto;
     }
 
     &:first-of-type {
