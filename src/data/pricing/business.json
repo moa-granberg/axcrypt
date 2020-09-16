@@ -1,0 +1,101 @@
+{
+  "productName": "business",
+  "headingPhraseKey": "BusinessLinkLabel",
+  "subheadingPhraseKey": "ForOrganisationsLabel",
+  "buttonLabelPhraseKey": "StartFreeMonthLabel",
+  "buttonUrl": "https://account.axcrypt.net/en/Home/Register",
+  "readMoreUrl": "#/business",
+  "readMorePhraseKey": "ReadMoreAboutBusinessPlanLabel",
+  "featureList": [
+    {
+      "feature": "PricingFeatureListViewer",
+      "mac": true,
+      "pc": true
+    },
+    {
+      "feature": "PricingFeatureListAES128",
+      "mac": true,
+      "pc": true
+    },
+    {
+      "feature": "PricingFeatureListAccountKey",
+      "mac": true,
+      "pc": true
+    },
+    {
+      "feature": "PricingFeatureListOpenShared",
+      "mac": true,
+      "pc": true
+    },
+    {
+      "feature": "PricingFeatureListCommunitySupport",
+      "mac": true,
+      "pc": true
+    },
+    {
+      "feature": "PricingFeatureListAES256",
+      "mac": true,
+      "pc": true
+    },
+    {
+      "feature": "PricingFeatureListMobileApps",
+      "mac": true,
+      "pc": true
+    },
+    {
+      "feature": "PricingFeatureListSecuredFolders",
+      "mac": true,
+      "pc": true
+    },
+    {
+      "feature": "PricingFeatureListIncludeSubfolders",
+      "mac": true,
+      "pc": true
+    },
+    {
+      "feature": "PricingFeatureListKeySharing",
+      "mac": true,
+      "pc": true
+    },
+    {
+      "feature": "PricingFeatureListCloudStorage",
+      "mac": true,
+      "pc": true
+    },
+    {
+      "feature": "PricingFeatureListPasswordManagement",
+      "mac": true,
+      "pc": true
+    },
+    {
+      "feature": "PricingFeatureListFileWipe",
+      "mac": true,
+      "pc": true
+    },
+    {
+      "feature": "PricingFeatureListAnonymousFile",
+      "mac": true,
+      "pc": true
+    },
+    {
+      "feature": "PasswordGeneratorLinkLabel",
+      "mac": true,
+      "pc": true
+    },
+    {
+      "feature": "PricingFeatureListDirectSupport",
+      "mac": true,
+      "pc": true
+    },
+    {
+      "feature": "PricingFeatureListBusinessAdmin",
+      "mac": true,
+      "pc": true
+    },
+    {
+      "feature": "PricingFeatureListMoreUpcoming",
+      "mac": true,
+      "pc": true
+    }
+  ]
+}

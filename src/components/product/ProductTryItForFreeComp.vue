@@ -10,29 +10,20 @@
       <h2 :class="'product-try-it-for-free-subheading ' + $mq">
         {{ $t('ProductTryItForFreeCostAfterTrial') }}
       </h2>
-      <div :class="'product-try-it-for-free-pricing-btn-wrapper ' + $mq">
-        <button
-          :class="[{ active: annualActive }, $mq]"
-          @click="handleClickYearly"
-        >
-          {{ $t('ProductTryItForFreeAnnualButtonLabel') }}
-        </button>
-        <button
-          :class="[{ active: !annualActive }, $mq]"
-          @click="handleClickMonthly"
-        >
-          {{ $t('ProductTryItForFreeMonthlyButtonLabel') }}
-        </button>
-      </div>
-      <h1
-        class="product-try-it-for-free-pricing"
-        :class="[{ annual: annualActive }, $mq]"
-      >
-        {{ price }} <span>{{ currency }}</span>
-      </h1>
-      <h3 :class="'product-try-it-for-free-per-month ' + $mq">
-        {{ $t('ProductTryItForFreePerMonth') }}
-      </h3>
+
+      <annual-monthly-switcher-comp
+        :active="annualActive"
+        @switchMonthly="handleClickMonthly"
+        @switchYearly="handleClickYearly"
+      />
+
+      <price-display
+        :annualActive="annualActive"
+        :price="price"
+        :currency="currency"
+        :perMonthPhraseKey="'PerMonthLabel'"
+      />
+
       <primary-button-comp
         phraseKey="ProductTryItForFreeStartButtonLabel"
         size="large"
@@ -46,6 +37,8 @@
 <script>
 import PrimaryButtonComp from '@/components/PrimaryButtonComp';
 import ProductTryItForFreeSellingPointsComp from '@/components/product/ProductTryItForFreeSellingPointsComp';
+import AnnualMonthlySwitcherComp from '@/components/AnnualMonthlySwitcherComp';
+import PriceDisplay from '@/components/PriceDisplay';
 import { getPricing } from '@/utils/pricing/getPricing';
 
 export default {
@@ -56,12 +49,14 @@ export default {
   components: {
     PrimaryButtonComp,
     ProductTryItForFreeSellingPointsComp,
+    AnnualMonthlySwitcherComp,
+    PriceDisplay,
   },
 
   data() {
     return {
       annualActive: false,
-      price: 0,
+      price: '0',
       currency: 'SEK',
     };
   },
@@ -154,70 +149,6 @@ export default {
 
   &.desktop {
     padding: 20px 0;
-  }
-}
-
-.product-try-it-for-free-pricing-btn-wrapper {
-  button {
-    width: 146px;
-    height: 35px;
-    text-transform: uppercase;
-    font-weight: 600;
-    border: 2px solid $dark-green;
-
-    color: $dark-green;
-
-    &.active {
-      background-color: $dark-green;
-      color: $white;
-    }
-
-    &:first-of-type {
-      border-radius: 2px 0 0 2px;
-    }
-
-    &:last-of-type {
-      border-radius: 0 2px 2px 0;
-    }
-  }
-}
-
-.product-try-it-for-free-pricing {
-  &.annual {
-    color: #ad3f38;
-  }
-
-  &.mobile {
-    margin: 10px 0 0 0;
-    font-size: 2.25rem;
-
-    span {
-      font-size: 2.25rem * 0.75;
-    }
-  }
-
-  &.desktop {
-    margin: 30px 0 0 0;
-    font-size: 2.5rem;
-
-    span {
-      font-size: 2.5rem * 0.75;
-    }
-  }
-}
-
-.product-try-it-for-free-per-month {
-  text-transform: uppercase;
-  font-weight: 400;
-
-  &.mobile {
-    margin: 0 0 13px 0;
-    font-size: 2.25rem * 0.4;
-  }
-
-  &.desktop {
-    font-size: 2.5rem * 0.4;
-    margin: 0 0 20px 0;
   }
 }
 </style>
