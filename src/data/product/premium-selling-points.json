@@ -1,0 +1,22 @@
+[
+  {
+    "src": "automatically-encrypt.png",
+    "phraseKey": "ProductTryItForFreeSellingPointAutomaticallyEncrypt"
+  },
+  {
+    "src": "stronger-encryption.png",
+    "phraseKey": "ProductTryItForFreeSellingPointStrongerEncryption"
+  },
+  {
+    "src": "share-your.png",
+    "phraseKey": "ProductTryItForFreeSellingPointShareYour"
+  },
+  {
+    "src": "view-your.png",
+    "phraseKey": "ProductTryItForFreeSellingPointViewYour"
+  },
+  {
+    "src": "secure-files.png",
+    "phraseKey": "ProductTryItForFreeSellingPointSecureFiles"
+  }
+]

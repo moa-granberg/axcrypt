@@ -30,55 +30,24 @@ export default {
 
   data() {
     return {
-      premiumSellingPointItems: [
-        {
-          src: 'automatically-encrypt.png',
-          phraseKey: 'ProductTryItForFreeSellingPointAutomaticallyEncrypt',
-        },
-        {
-          src: 'stronger-encryption.png',
-          phraseKey: 'ProductTryItForFreeSellingPointStrongerEncryption',
-        },
-        {
-          src: 'share-your.png',
-          phraseKey: 'ProductTryItForFreeSellingPointShareYour',
-        },
-        {
-          src: 'view-your.png',
-          phraseKey: 'ProductTryItForFreeSellingPointViewYour',
-        },
-        {
-          src: 'secure-files.png',
-          phraseKey: 'ProductTryItForFreeSellingPointSecureFiles',
-        },
-      ],
-      businessSellingPointItems: [
-        {
-          src: 'automatically-encrypt.png',
-          phraseKey: 'ProductTryItForFreeSellingPointAutomaticallyEncrypt',
-        },
-        {
-          src: 'stronger-encryption.png',
-          phraseKey: 'ProductTryItForFreeSellingPointStrongerEncryption',
-        },
-        {
-          src: 'share-your.png',
-          phraseKey: 'ProductTryItForFreeSellingPointShareYour',
-        },
-        {
-          src: 'view-your.png',
-          phraseKey: 'ProductTryItForFreeSellingPointViewYour',
-        },
-        {
-          src: 'secure-files.png',
-          phraseKey: 'ProductTryItForFreeSellingPointSecureFiles',
-        },
-        {
-          src: 'great-business.png',
-          phraseKey: 'BusinessTryItForFreeSellingPointsGreatBusiness',
-        },
-      ],
+      premiumSellingPointItems: [],
+      businessSellingPointItems: [],
     };
+  },
+
+  methods: {
+    async getSellingPoints() {
+      this.premiumSellingPointItems = await (
+        await import('@/data/product/premium-selling-points.json')
+      ).default;
+      this.businessSellingPointItems = await (
+        await import('@/data/product/business-selling-points.json')
+      ).default;
+    },
+  },
+
+  created() {
+    this.getSellingPoints();
   },
 };
 </script>
