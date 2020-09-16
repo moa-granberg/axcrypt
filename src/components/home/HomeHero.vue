@@ -1,7 +1,7 @@
 <template>
   <section :class="`home-hero-wrapper ${$mq}`">
     <div :class="`home-hero-review-wrapper`">
-      <h1 :class="`home-hero-heading ${$mq}`">
+      <h1 :class="`home-hero-heading heading-jumbo ${$mq}`">
         {{ $t('HomeHeroHeading') }}
       </h1>
 
@@ -65,12 +65,10 @@ export default {
 
   &.mobile {
     max-width: 20rem;
-    font-size: 1.5rem;
   }
 
   &.desktop {
-    max-width: 40rem;
-    font-size: 3rem;
+    max-width: 30rem;
   }
 }
 

@@ -31,3 +31,12 @@
 }
 
 //footer fonts
+
+.heading-jumbo {
+  &.mobile {
+    font-size: 1.5rem;
+  }
+  &.desktop {
+    font-size: 2.25rem;
+  }
+}

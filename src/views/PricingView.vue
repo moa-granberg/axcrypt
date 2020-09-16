@@ -1,6 +1,6 @@
 <template>
   <main :class="`pricing-wrapper ${$mq}`">
-    <h1 :class="`pricing-heading ${$mq}`">
+    <h1 :class="`pricing-heading heading-jumbo ${$mq}`">
       {{ $t('PricingLinkLabel') }}
     </h1>
 
@@ -115,14 +115,6 @@ export default {
 
 .pricing-heading {
   margin: 0;
-
-  &.mobile {
-    font-size: 1.5rem;
-  }
-
-  &.desktop {
-    font-size: 2.25rem;
-  }
 }
 
 .pricing-subheading {

@@ -1,7 +1,7 @@
 <template>
   <section :class="`product-hero-wrapper ${$mq} ${product}`">
     <div :class="'product-hero-headings-wrapper ' + $mq">
-      <h2 :class="'product-hero-preheading ' + $mq">AxCrypt</h2>
+      <h2 :class="'product-hero-preheading heading-jumbo ' + $mq">AxCrypt</h2>
       <h1 :class="`product-hero-heading ${$mq} ${product}`">
         {{ $t(headingPhraseKey) }}
       </h1>
@@ -98,14 +98,6 @@ export default {
   margin: 0;
   font-weight: 300;
   color: $white;
-
-  &.mobile {
-    font-size: 1.5rem;
-  }
-
-  &.desktop {
-    font-size: 3rem;
-  }
 }
 
 .product-hero-heading {
@@ -125,7 +117,7 @@ export default {
   }
 
   &.desktop {
-    font-size: 6.25rem;
+    font-size: 5.75rem;
     letter-spacing: -4px;
     line-height: 1;
   }

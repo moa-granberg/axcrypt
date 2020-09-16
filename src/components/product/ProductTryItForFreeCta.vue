@@ -1,6 +1,6 @@
 <template>
   <article :class="`product-try-it-for-free-cta-wrapper ${$mq} ${product}`">
-    <h1 :class="'product-try-it-for-free-cta-heading ' + $mq">
+    <h1 :class="'product-try-it-for-free-cta-heading heading-jumbo ' + $mq">
       {{ $t('ProductTryItForFreeHeading') }}
     </h1>
     <h2 :class="'product-try-it-for-free-cta-subheading heading-medium ' + $mq">
@@ -66,14 +66,6 @@ export default {
 .product-try-it-for-free-cta-heading {
   margin: 0;
   font-weight: 300;
-
-  &.mobile {
-    font-size: 1.5rem;
-  }
-
-  &.desktop {
-    font-size: 2rem;
-  }
 }
 
 .product-try-it-for-free-cta-subheading {

@@ -1,6 +1,6 @@
 <template>
   <div :class="`pricing-product-heading-wrapper ${product} ${$mq}`">
-    <h1 :class="`pricing-product-heading ${$mq}`">
+    <h1 :class="`pricing-product-heading heading-jumbo ${$mq}`">
       {{ $t(headingPhraseKey) }}
     </h1>
     <h2 :class="`pricing-product-subheading ${$mq}`">
@@ -58,14 +58,6 @@ export default {
 
 .pricing-product-heading {
   margin: 0;
-
-  &.mobile {
-    font-size: 1.5rem;
-  }
-
-  &.desktop {
-    font-size: 2.25rem;
-  }
 }
 
 .pricing-product-subheading {
