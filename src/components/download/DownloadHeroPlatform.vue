@@ -5,7 +5,7 @@
         {{ $t(headingPhraseKey) }}
       </h1>
 
-      <dash-list-comp :list="sellingPoints" />
+      <dash-list :list="sellingPoints" />
 
       <a
         :href="downloadUrl"
@@ -18,7 +18,7 @@
 </template>
 
 <script>
-import DashListComp from '../DashListComp';
+import DashList from '../DashList';
 
 export default {
   props: {
@@ -28,7 +28,7 @@ export default {
   },
 
   components: {
-    DashListComp,
+    DashList,
   },
 };
 </script>

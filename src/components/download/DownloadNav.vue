@@ -10,12 +10,12 @@
         :class="`download-nav-item ${$mq}`"
         @click="handleClick(item.name)"
       >
-        <apple-icon-comp
+        <apple-icon
           v-if="item.name === 'macOS'"
           class="download-nav-item-svg"
           :class="[{ active: activePlatform === item.name }, $mq]"
         />
-        <windows-icon-comp
+        <windows-icon
           v-if="item.name === 'Windows'"
           class="download-nav-item-svg"
           :class="[{ active: activePlatform === item.name }, $mq]"
@@ -32,8 +32,8 @@
 </template>
 
 <script>
-import AppleIconComp from './AppleIconComp';
-import WindowsIconComp from './WindowsIconComp';
+import AppleIcon from './AppleIcon';
+import WindowsIcon from './WindowsIcon';
 
 export default {
   props: {
@@ -41,8 +41,8 @@ export default {
   },
 
   components: {
-    AppleIconComp,
-    WindowsIconComp,
+    AppleIcon,
+    WindowsIcon,
   },
 
   data() {

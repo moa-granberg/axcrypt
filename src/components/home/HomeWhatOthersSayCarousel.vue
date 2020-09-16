@@ -10,21 +10,22 @@
     :autoplayTimeout="15000"
   >
     <slide v-for="item of whatOthersSayCarouselItems" :key="item.src">
-      <home-what-others-say-carousel-slide-comp :item="item" />
+      <home-what-others-say-carousel-slide :item="item" />
     </slide>
   </carousel>
 </template>
 
 <script>
 import { Carousel, Slide } from 'vue-carousel';
-import HomeWhatOthersSayCarouselSlideComp from '@/components/home/HomeWhatOthersSayCarouselSlideComp';
+import HomeWhatOthersSayCarouselSlide from '@/components/home/HomeWhatOthersSayCarouselSlide';
 
 export default {
   components: {
     Carousel,
     Slide,
-    HomeWhatOthersSayCarouselSlideComp,
+    HomeWhatOthersSayCarouselSlide,
   },
+
   data() {
     return {
       whatOthersSayCarouselItems: [

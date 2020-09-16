@@ -1,38 +1,38 @@
 <template>
   <section :class="`download-hero-wrapper ${$mq}`">
-    <download-nav-comp
+    <download-nav
       :activePlatform="activePlatform"
       v-on:switchPlatform="switchPlatform"
     />
 
     <div :class="`download-desktop-hero-subwrapper ${$mq}`">
-      <download-hero-platform-comp
+      <download-hero-platform
         :headingPhraseKey="platformHeadingPhraseKey"
         :sellingPoints="sellingPoints"
         :downloadUrl="platformDownloadPath"
       >
         <component :is="childComponent" />
-      </download-hero-platform-comp>
+      </download-hero-platform>
 
-      <download-hero-mobile-comp />
+      <download-hero-mobile />
     </div>
   </section>
 </template>
 
 <script>
-import DownloadNavComp from '@/components/download/DownloadNavComp.vue';
-import DownloadHeroPlatformComp from '@/components/download/DownloadHeroPlatformComp.vue';
-import DownloadHeroMobileComp from '@/components/download/DownloadHeroMobileComp.vue';
-import AppleIconComp from '@/components/download/AppleIconComp';
-import WindowsIconComp from '@/components/download/WindowsIconComp';
+import DownloadNav from '@/components/download/DownloadNav.vue';
+import DownloadHeroPlatform from '@/components/download/DownloadHeroPlatform.vue';
+import DownloadHeroMobile from '@/components/download/DownloadHeroMobile.vue';
+import AppleIcon from '@/components/download/AppleIcon';
+import WindowsIcon from '@/components/download/WindowsIcon';
 
 export default {
   components: {
-    DownloadNavComp,
-    DownloadHeroPlatformComp,
-    DownloadHeroMobileComp,
-    AppleIconComp,
-    WindowsIconComp,
+    DownloadNav,
+    DownloadHeroPlatform,
+    DownloadHeroMobile,
+    AppleIcon,
+    WindowsIcon,
   },
 
   data() {
@@ -59,9 +59,7 @@ export default {
     },
 
     childComponent() {
-      return this.activePlatform === 'Windows'
-        ? 'windows-icon-comp'
-        : 'apple-icon-comp';
+      return this.activePlatform === 'Windows' ? 'windows-icon' : 'apple-icon';
     },
 
     platformHeadingPhraseKey() {

@@ -5,7 +5,7 @@
     </h1>
 
     <div :class="`home-get-started-list-video-wrapper ${$mq}`">
-      <home-get-started-list-comp />
+      <home-get-started-list />
 
       <div :class="`home-get-started-video-wrapper ${$mq}`">
         <iframe
@@ -23,7 +23,7 @@
       </div>
     </div>
 
-    <primary-button-comp
+    <primary-button
       :class="`home-get-started-button ${$mq}`"
       phraseKey="GetStartedLinkLabel"
       size="large"
@@ -34,13 +34,13 @@
 </template>
 
 <script>
-import PrimaryButtonComp from '@/components/PrimaryButtonComp';
-import HomeGetStartedListComp from '@/components/home/HomeGetStartedListComp';
+import PrimaryButton from '@/components/PrimaryButton';
+import HomeGetStartedList from '@/components/home/HomeGetStartedList';
 
 export default {
   components: {
-    PrimaryButtonComp,
-    HomeGetStartedListComp,
+    PrimaryButton,
+    HomeGetStartedList,
   },
 };
 </script>

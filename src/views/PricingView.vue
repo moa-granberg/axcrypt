@@ -8,23 +8,23 @@
       {{ $t('PricingSubheading') }}
     </p>
 
-    <annual-monthly-switcher-comp
+    <annual-monthly-switcher
       :active="annualActive"
       @switchMonthly="handleClickMonthly"
       @switchYearly="handleClickYearly"
     />
 
     <section :class="`pricing-product-main-wrapper ${$mq}`">
-      <pricing-product-comp :product="free" price="0" :currency="currency" />
+      <pricing-product :product="free" price="0" :currency="currency" />
 
-      <pricing-product-comp
+      <pricing-product
         :product="premium"
         :annualActive="annualActive"
         :price="premiumPrice"
         :currency="currency"
       />
 
-      <pricing-product-comp
+      <pricing-product
         :product="business"
         :annualActive="annualActive"
         :price="businessPrice"
@@ -35,14 +35,14 @@
 </template>
 
 <script>
-import AnnualMonthlySwitcherComp from '@/components/AnnualMonthlySwitcherComp';
-import PricingProductComp from '@/components/pricing/PricingProductComp';
+import AnnualMonthlySwitcher from '@/components/AnnualMonthlySwitcher';
+import PricingProduct from '@/components/pricing/PricingProduct';
 import { getPricing } from '@/utils/pricing/getPricing';
 
 export default {
   components: {
-    AnnualMonthlySwitcherComp,
-    PricingProductComp,
+    AnnualMonthlySwitcher,
+    PricingProduct,
   },
 
   data() {

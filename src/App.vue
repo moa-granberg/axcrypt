@@ -3,19 +3,19 @@
     <header-comp />
     <router-view />
     <footer-comp />
-    <fixed-side-button-comp />
+    <fixed-side-button />
   </div>
 </template>
 
 <script>
 import HeaderComp from './components/header/HeaderComp';
 import FooterComp from './components/footer/FooterComp';
-import FixedSideButtonComp from './components/FixedSideButtonComp';
+import FixedSideButton from './components/FixedSideButton';
 
 export default {
   name: 'App',
   components: {
-    FixedSideButtonComp,
+    FixedSideButton,
     HeaderComp,
     FooterComp,
   },

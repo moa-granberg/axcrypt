@@ -6,7 +6,7 @@
     <h2 :class="'product-try-it-for-free-cta-subheading ' + $mq">
       {{ $t('ProductTryItForFreeSubheading') }}
     </h2>
-    <primary-button-comp
+    <primary-button
       phraseKey="ProductTryItForFreeButtonLabel"
       size="large"
       :path="product === 'premium' ? '/premium-trial' : '/business-trial'"
@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import PrimaryButtonComp from '@/components/PrimaryButtonComp';
+import PrimaryButton from '@/components/PrimaryButton';
 
 export default {
   props: {
@@ -23,7 +23,7 @@ export default {
   },
 
   components: {
-    PrimaryButtonComp,
+    PrimaryButton,
   },
 };
 </script>

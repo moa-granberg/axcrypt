@@ -4,16 +4,16 @@
       {{ $t('WhyChooseAxcrypt') }}
     </h1>
 
-    <home-why-choose-axcrypt-selling-points-comp />
+    <home-why-choose-axcrypt-selling-points />
   </section>
 </template>
 
 <script>
-import HomeWhyChooseAxcryptSellingPointsComp from '@/components/home/HomeWhyChooseAxcryptSellingPointsComp';
+import HomeWhyChooseAxcryptSellingPoints from '@/components/home/HomeWhyChooseAxcryptSellingPoints';
 
 export default {
   components: {
-    HomeWhyChooseAxcryptSellingPointsComp,
+    HomeWhyChooseAxcryptSellingPoints,
   },
 };
 </script>

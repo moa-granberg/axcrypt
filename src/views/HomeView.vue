@@ -1,26 +1,24 @@
 <template>
   <main>
-    <home-hero-comp />
-    <home-why-choose-axcrypt-comp />
-    <home-get-started-comp />
-    <home-what-others-say-comp />
+    <home-hero />
+    <home-why-choose-axcrypt />
+    <home-get-started />
+    <home-what-others-say />
   </main>
 </template>
 
 <script>
-import HomeHeroComp from '@/components/home/HomeHeroComp';
-import HomeWhyChooseAxcryptComp from '@/components/home/HomeWhyChooseAxcryptComp';
-import HomeGetStartedComp from '@/components/home/HomeGetStartedComp';
-import HomeWhatOthersSayComp from '@/components/home/HomeWhatOthersSayComp';
+import HomeHero from '@/components/home/HomeHero';
+import HomeWhyChooseAxcrypt from '@/components/home/HomeWhyChooseAxcrypt';
+import HomeGetStarted from '@/components/home/HomeGetStarted';
+import HomeWhatOthersSay from '@/components/home/HomeWhatOthersSay';
 
 export default {
   components: {
-    HomeHeroComp,
-    HomeWhyChooseAxcryptComp,
-    HomeGetStartedComp,
-    HomeWhatOthersSayComp,
+    HomeHero,
+    HomeWhyChooseAxcrypt,
+    HomeGetStarted,
+    HomeWhatOthersSay,
   },
 };
 </script>
-
-<style lang="scss" scoped></style>

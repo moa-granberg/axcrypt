@@ -1,61 +1,61 @@
 <template>
   <main>
     <mq-layout mq="mobile">
-      <product-hero-comp product="business" />
+      <product-hero product="business" />
 
-      <product-body-comp
+      <product-body
         headerPhraseKey="BusinessFirstBodyHeading"
         bodyPhraseKey="BusinessFirstBodyText"
       />
 
-      <product-try-it-for-free-comp product="business" />
+      <product-try-it-for-free product="business" />
 
-      <feature-list-comp
+      <feature-list
         headingPhraseKey="WhyAxCryptBusiness"
         :list="businessFeatureList"
       />
 
-      <product-business-big-team-cta-comp />
+      <product-business-big-team-cta />
 
-      <product-body-comp
+      <product-body
         headerPhraseKey="BusinessAfterTrialHeading"
         bodyPhraseKey="BusinessAfterTrialBodyText"
       />
 
-      <product-body-comp
+      <product-body
         headerPhraseKey="ContactHeading"
         bodyPhraseKey="BusinessContactBodyText"
       />
 
-      <business-card-comp :person="contactPerson" />
+      <business-card :person="contactPerson" />
     </mq-layout>
 
     <mq-layout mq="desktop">
-      <product-hero-comp product="business" />
+      <product-hero product="business" />
 
       <section class="product-main-grid-wrapper">
-        <product-body-comp
+        <product-body
           class="main-grid-body1"
           headerPhraseKey="BusinessFirstBodyHeading"
           bodyPhraseKey="BusinessFirstBodyText"
         />
 
-        <feature-list-comp
+        <feature-list
           class="main-grid-body2"
           headingPhraseKey="WhyAxCryptBusiness"
           :list="businessFeatureList"
         />
 
         <div class="product-try-it-for-free-desktop-wrapper business">
-          <product-try-it-for-free-cta-comp product="business" />
-          <product-try-it-for-free-comp product="business" />
+          <product-try-it-for-free-cta product="business" />
+          <product-try-it-for-free product="business" />
         </div>
       </section>
 
-      <product-business-big-team-cta-comp />
+      <product-business-big-team-cta />
 
       <section class="business-after-trial-wrapper">
-        <product-body-comp
+        <product-body
           class="grid-body2"
           headerPhraseKey="PremiumSecondBodyHeading"
           bodyPhraseKey="PremiumSecondBodyText"
@@ -64,12 +64,12 @@
         <img src="@/assets/view/product/what-happens-2.png" alt="" />
 
         <div class="business-contact-wrapper">
-          <product-body-comp
+          <product-body
             headerPhraseKey="ContactHeading"
             bodyPhraseKey="BusinessContactBodyText"
           />
 
-          <business-card-comp :person="contactPerson" />
+          <business-card :person="contactPerson" />
         </div>
       </section>
     </mq-layout>
@@ -77,23 +77,23 @@
 </template>
 
 <script>
-import ProductHeroComp from '@/components/product/ProductHeroComp';
-import ProductBodyComp from '@/components/product/ProductBodyComp';
-import ProductTryItForFreeComp from '@/components/product/ProductTryItForFreeComp';
-import ProductTryItForFreeCtaComp from '@/components/product/ProductTryItForFreeCtaComp';
-import FeatureListComp from '@/components/FeatureListComp.vue';
-import ProductBusinessBigTeamCtaComp from '@/components/product/ProductBusinessBigTeamCtaComp.vue';
-import BusinessCardComp from '@/components/product/BusinessCardComp.vue';
+import ProductHero from '@/components/product/ProductHero';
+import ProductBody from '@/components/product/ProductBody';
+import ProductTryItForFree from '@/components/product/ProductTryItForFree';
+import ProductTryItForFreeCta from '@/components/product/ProductTryItForFreeCta';
+import FeatureList from '@/components/FeatureList';
+import ProductBusinessBigTeamCta from '@/components/product/ProductBusinessBigTeamCta';
+import BusinessCard from '@/components/product/BusinessCard';
 
 export default {
   components: {
-    ProductHeroComp,
-    ProductBodyComp,
-    ProductTryItForFreeComp,
-    ProductTryItForFreeCtaComp,
-    FeatureListComp,
-    ProductBusinessBigTeamCtaComp,
-    BusinessCardComp,
+    ProductHero,
+    ProductBody,
+    ProductTryItForFree,
+    ProductTryItForFreeCta,
+    FeatureList,
+    ProductBusinessBigTeamCta,
+    BusinessCard,
   },
 
   data() {

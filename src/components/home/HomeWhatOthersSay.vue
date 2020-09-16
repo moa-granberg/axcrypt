@@ -4,7 +4,7 @@
       {{ $t('HomeWhatOthersSayHeading') }}
     </h1>
     <div :class="`home-what-others-say-carousel-awards-wrapper ${$mq}`">
-      <home-what-others-say-carousel-comp />
+      <home-what-others-say-carousel />
 
       <div :class="`home-what-others-say-awards-wrapper ${$mq}`">
         <div :class="`home-what-others-say-awards-logos-wrapper ${$mq}`">
@@ -29,11 +29,11 @@
 </template>
 
 <script>
-import HomeWhatOthersSayCarouselComp from '@/components/home/HomeWhatOthersSayCarouselComp';
+import HomeWhatOthersSayCarousel from '@/components/home/HomeWhatOthersSayCarousel';
 
 export default {
   components: {
-    HomeWhatOthersSayCarouselComp,
+    HomeWhatOthersSayCarousel,
   },
 };
 </script>

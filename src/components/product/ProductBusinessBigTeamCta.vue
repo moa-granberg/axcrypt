@@ -3,20 +3,16 @@
     <h1 :class="`product-business-big-team-cta-heading ${$mq}`">
       {{ $t('BusinessBigTeamCtaHeading') }}
     </h1>
-    <primary-button-comp
-      phraseKey="ContactUsHeading"
-      size="small"
-      path="/about"
-    />
+    <primary-button phraseKey="ContactUsHeading" size="small" path="/about" />
   </section>
 </template>
 
 <script>
-import PrimaryButtonComp from '@/components/PrimaryButtonComp.vue';
+import PrimaryButton from '@/components/PrimaryButton';
 
 export default {
   components: {
-    PrimaryButtonComp,
+    PrimaryButton,
   },
 };
 </script>

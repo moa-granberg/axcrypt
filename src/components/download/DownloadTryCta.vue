@@ -6,17 +6,17 @@
     ></h1>
 
     <div :class="`download-try-cta-button-wrapper ${$mq}`">
-      <try-links-comp :subheading="true" />
+      <try-links :subheading="true" />
     </div>
   </section>
 </template>
 
 <script>
-import TryLinksComp from '@/components/TryLinksComp';
+import TryLinks from '@/components/TryLinks';
 
 export default {
   components: {
-    TryLinksComp,
+    TryLinks,
   },
 };
 </script>

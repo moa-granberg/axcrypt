@@ -1,54 +1,54 @@
 <template>
   <main>
     <mq-layout mq="mobile">
-      <product-hero-comp product="premium" />
+      <product-hero product="premium" />
 
-      <product-body-comp
+      <product-body
         headerPhraseKey="PremiumFirstBodyHeading"
         bodyPhraseKey="PremiumFirstBodyText"
       />
 
-      <product-try-it-for-free-comp product="premium" />
+      <product-try-it-for-free product="premium" />
 
-      <product-body-comp
+      <product-body
         headerPhraseKey="PremiumSecondBodyHeading"
         bodyPhraseKey="PremiumSecondBodyText"
       />
 
-      <product-premium-business-cta-comp />
+      <product-premium-business-cta />
 
-      <product-body-comp
+      <product-body
         headerPhraseKey="PremiumThirdBodyHeading"
         bodyPhraseKey="PremiumThirdBodyText"
       />
     </mq-layout>
 
     <mq-layout mq="desktop">
-      <product-hero-comp product="premium" />
+      <product-hero product="premium" />
 
       <section class="product-main-grid-wrapper">
-        <product-body-comp
+        <product-body
           class="main-grid-body1"
           headerPhraseKey="PremiumFirstBodyHeading"
           bodyPhraseKey="PremiumFirstBodyText"
         />
 
         <div class="product-try-it-for-free-desktop-wrapper premium">
-          <product-try-it-for-free-cta-comp product="premium" />
-          <product-try-it-for-free-comp product="premium" />
+          <product-try-it-for-free-cta product="premium" />
+          <product-try-it-for-free product="premium" />
         </div>
 
-        <product-body-comp
+        <product-body
           class="main-grid-body2"
           headerPhraseKey="PremiumSecondBodyHeading"
           bodyPhraseKey="PremiumSecondBodyText"
         />
       </section>
 
-      <product-premium-business-cta-comp />
+      <product-premium-business-cta />
 
       <section class="premium-third-body-wrapper">
-        <product-body-comp
+        <product-body
           headerPhraseKey="PremiumThirdBodyHeading"
           bodyPhraseKey="PremiumThirdBodyText"
         />
@@ -62,19 +62,19 @@
 </template>
 
 <script>
-import ProductHeroComp from '@/components/product/ProductHeroComp';
-import ProductBodyComp from '@/components/product/ProductBodyComp';
-import ProductTryItForFreeComp from '@/components/product/ProductTryItForFreeComp';
-import ProductTryItForFreeCtaComp from '@/components/product/ProductTryItForFreeCtaComp';
-import ProductPremiumBusinessCtaComp from '@/components/product/ProductPremiumBusinessCtaComp';
+import ProductHero from '@/components/product/ProductHero';
+import ProductBody from '@/components/product/ProductBody';
+import ProductTryItForFree from '@/components/product/ProductTryItForFree';
+import ProductTryItForFreeCta from '@/components/product/ProductTryItForFreeCta';
+import ProductPremiumBusinessCta from '@/components/product/ProductPremiumBusinessCta';
 
 export default {
   components: {
-    ProductHeroComp,
-    ProductBodyComp,
-    ProductTryItForFreeComp,
-    ProductTryItForFreeCtaComp,
-    ProductPremiumBusinessCtaComp,
+    ProductHero,
+    ProductBody,
+    ProductTryItForFree,
+    ProductTryItForFreeCta,
+    ProductPremiumBusinessCta,
   },
 };
 </script>

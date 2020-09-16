@@ -4,14 +4,14 @@
       {{ $t('ProductTryItForFreeYouGet') }}
     </h1>
 
-    <product-try-it-for-free-selling-points-comp :product="product" />
+    <product-try-it-for-free-selling-points :product="product" />
 
     <article :class="'product-try-it-for-free-billing-wrapper ' + $mq">
       <h2 :class="'product-try-it-for-free-subheading ' + $mq">
         {{ $t('ProductTryItForFreeCostAfterTrial') }}
       </h2>
 
-      <annual-monthly-switcher-comp
+      <annual-monthly-switcher
         :active="annualActive"
         @switchMonthly="handleClickMonthly"
         @switchYearly="handleClickYearly"
@@ -24,7 +24,7 @@
         :perMonthPhraseKey="'PerMonthLabel'"
       />
 
-      <primary-button-comp
+      <primary-button
         phraseKey="ProductTryItForFreeStartButtonLabel"
         size="large"
         color="dark-green"
@@ -35,9 +35,9 @@
 </template>
 
 <script>
-import PrimaryButtonComp from '@/components/PrimaryButtonComp';
-import ProductTryItForFreeSellingPointsComp from '@/components/product/ProductTryItForFreeSellingPointsComp';
-import AnnualMonthlySwitcherComp from '@/components/AnnualMonthlySwitcherComp';
+import PrimaryButton from '@/components/PrimaryButton';
+import ProductTryItForFreeSellingPoints from '@/components/product/ProductTryItForFreeSellingPoints';
+import AnnualMonthlySwitcher from '@/components/AnnualMonthlySwitcher';
 import PriceDisplay from '@/components/PriceDisplay';
 import { getPricing } from '@/utils/pricing/getPricing';
 
@@ -47,9 +47,9 @@ export default {
   },
 
   components: {
-    PrimaryButtonComp,
-    ProductTryItForFreeSellingPointsComp,
-    AnnualMonthlySwitcherComp,
+    PrimaryButton,
+    ProductTryItForFreeSellingPoints,
+    AnnualMonthlySwitcher,
     PriceDisplay,
   },
 

@@ -14,16 +14,17 @@
       </h3>
     </div>
     <div :class="`home-hero-try-links-wrapper ${$mq}`">
-      <try-links-comp :transparent="true" />
+      <try-links :transparent="true" />
     </div>
   </section>
 </template>
 
 <script>
-import TryLinksComp from '@/components/TryLinksComp';
+import TryLinks from '@/components/TryLinks';
+
 export default {
   components: {
-    TryLinksComp,
+    TryLinks,
   },
 };
 </script>

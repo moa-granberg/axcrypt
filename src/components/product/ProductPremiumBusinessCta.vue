@@ -7,7 +7,7 @@
       :class="'premium-business-cta-heading ' + $mq"
       v-html="$t('PremiumBusinessCtaHeading')"
     ></h1>
-    <primary-button-comp
+    <primary-button
       phraseKey="ReadMoreButtonLabel"
       size="small"
       path="/business"
@@ -16,11 +16,11 @@
 </template>
 
 <script>
-import PrimaryButtonComp from '@/components/PrimaryButtonComp';
+import PrimaryButton from '@/components/PrimaryButton';
 
 export default {
   components: {
-    PrimaryButtonComp,
+    PrimaryButton,
   },
 };
 </script>

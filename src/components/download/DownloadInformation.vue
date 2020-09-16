@@ -11,10 +11,10 @@
           v-html="$t('DownloadInformationSubheading')"
         ></h2>
 
-        <dash-list-comp :list="informationList" />
+        <dash-list :list="informationList" />
       </article>
 
-      <primary-button-comp
+      <primary-button
         phraseKey="DownloadInformationButtonLabel"
         path="/information/release-notes"
         size="small"
@@ -33,13 +33,13 @@
 </template>
 
 <script>
-import PrimaryButtonComp from '../PrimaryButtonComp';
-import DashListComp from '../DashListComp';
+import PrimaryButton from '../PrimaryButton';
+import DashList from '../DashList';
 
 export default {
   components: {
-    DashListComp,
-    PrimaryButtonComp,
+    DashList,
+    PrimaryButton,
   },
 
   data() {
