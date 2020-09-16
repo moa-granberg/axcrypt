@@ -14,7 +14,9 @@
         />
 
         <div :class="`home-get-started-list-item-text-wrapper ${$mq}`">
-          <h2 :class="`home-get-started-list-item-text-heading ${$mq}`">
+          <h2
+            :class="`home-get-started-list-item-text-heading body-text-large ${$mq}`"
+          >
             {{ $t(item.headingPhraseKey) }}
           </h2>
 
@@ -134,14 +136,6 @@ export default {
 .home-get-started-list-item-text-heading {
   color: $green;
   margin: 0;
-
-  &.mobile {
-    font-size: 0.875rem;
-  }
-
-  &.desktop {
-    font-size: 1.125rem;
-  }
 }
 
 .home-get-started-list-item-text-paragraph {

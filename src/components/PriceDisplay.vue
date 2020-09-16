@@ -4,7 +4,7 @@
       {{ price }} <span>{{ currency }}</span>
     </h1>
 
-    <p :class="`price-display-per-month ${$mq}`">
+    <p :class="`price-display-per-month body-text-large ${$mq}`">
       {{ $t(perMonthPhraseKey) }}
     </p>
   </div>
@@ -53,12 +53,7 @@ export default {
   text-transform: uppercase;
   margin: 0 0 22px 0;
 
-  &.mobile {
-    font-size: 0.875rem;
-  }
-
   &.desktop {
-    font-size: 1.125rem;
     height: 22px;
   }
 }

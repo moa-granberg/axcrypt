@@ -9,7 +9,7 @@
         {{ $t('HomeHeroSubheading') }}
       </h2>
 
-      <h3 :class="`home-hero-under-subheading ${$mq}`">
+      <h3 :class="`home-hero-under-subheading body-text-large ${$mq}`">
         {{ $t('HomeHeroUnderSubheading') }}
       </h3>
     </div>
@@ -86,14 +86,6 @@ export default {
 
 .home-hero-under-subheading {
   margin: 0 0 17px 0;
-
-  &.mobile {
-    font-size: 0.75rem;
-  }
-
-  &.desktop {
-    font-size: 1.125rem;
-  }
 }
 
 .home-hero-try-links-wrapper {

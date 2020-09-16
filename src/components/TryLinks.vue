@@ -5,7 +5,7 @@
       class="try-wrapper premium"
       :class="[{ transparent }, $mq]"
     >
-      <h2 :class="`try-preheading ${$mq}`">
+      <h2 :class="`try-preheading body-text-large ${$mq}`">
         {{ $t('TryPremiumPreHeading') }}
       </h2>
 
@@ -13,7 +13,7 @@
         {{ $t('TryPremiumHeading') }}
       </h1>
 
-      <p v-if="subheading" :class="`try-subheading ${$mq}`">
+      <p v-if="subheading" :class="`try-subheading body-text-large ${$mq}`">
         {{ $t('ReadMoreButtonLabel') }}
       </p>
     </router-link>
@@ -23,7 +23,7 @@
       class="try-wrapper business"
       :class="[{ transparent }, $mq]"
     >
-      <h2 :class="`try-preheading ${$mq}`">
+      <h2 :class="`try-preheading body-text-large ${$mq}`">
         {{ $t('TryBusinessPreHeading') }}
       </h2>
 
@@ -31,7 +31,7 @@
         {{ $t('TryBusinessHeading') }}
       </h1>
 
-      <p v-if="subheading" :class="`try-subheading ${$mq}`">
+      <p v-if="subheading" :class="`try-subheading body-text-large ${$mq}`">
         {{ $t('ReadMoreButtonLabel') }}
       </p>
     </router-link>
@@ -108,14 +108,6 @@ export default {
 .try-subheading {
   font-weight: 300;
   margin: 0;
-
-  &.mobile {
-    font-size: 0.875rem;
-  }
-
-  &.desktop {
-    font-size: 1.125rem;
-  }
 }
 
 .try-subheading {

@@ -1,6 +1,6 @@
 <template>
   <section :class="'footer-contact-wrapper ' + $mq">
-    <h3 :class="'footer-contact-heading ' + $mq">
+    <h3 :class="'footer-contact-heading body-text-large ' + $mq">
       {{ $t('ContactUsHeading') }}
     </h3>
     <p
@@ -59,7 +59,6 @@ export default {
 
   &.desktop {
     margin: 0 0 15px 0;
-    font-size: 0.875rem;
   }
 }
 

@@ -3,7 +3,7 @@
     <h1 :class="`pricing-product-heading heading-jumbo ${$mq}`">
       {{ $t(headingPhraseKey) }}
     </h1>
-    <h2 :class="`pricing-product-subheading ${$mq}`">
+    <h2 :class="`pricing-product-subheading body-text-large ${$mq}`">
       {{ $t(subheadingPhraseKey) }}
     </h2>
   </div>
@@ -63,13 +63,5 @@ export default {
 .pricing-product-subheading {
   margin: 0;
   font-weight: 400;
-
-  &.mobile {
-    font-size: 0.875rem;
-  }
-
-  &.desktop {
-    font-size: 1.125rem;
-  }
 }
 </style>

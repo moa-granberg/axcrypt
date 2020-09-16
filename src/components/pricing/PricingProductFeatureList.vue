@@ -1,12 +1,12 @@
 <template>
   <ul class="pricing-product-feature-list-wrapper" :class="[{ show }, $mq]">
     <li :class="`pricing-product-feature-list-item-wrapper ${$mq}`">
-      <h1 :class="`pricing-product-feature-list-heading ${$mq}`">
+      <h1 :class="`body-text-large ${$mq}`">
         {{ $t('FeatureLabel') }}
       </h1>
 
-      <h1 :class="`pricing-product-feature-list-heading ${$mq}`">Mac</h1>
-      <h1 :class="`pricing-product-feature-list-heading ${$mq}`">PC</h1>
+      <h1 :class="`body-text-large ${$mq}`">Mac</h1>
+      <h1 :class="`body-text-large ${$mq}`">PC</h1>
     </li>
 
     <li
@@ -90,15 +90,6 @@ export default {
     img {
       height: 16px;
     }
-  }
-}
-
-.pricing-product-feature-list-heading {
-  &.mobile {
-    font-size: 0.875rem;
-  }
-  &.desktop {
-    font-size: 1.125rem;
   }
 }
 </style>

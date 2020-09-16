@@ -1,6 +1,6 @@
 <template>
   <section :class="'footer-sitemap-wrapper ' + $mq">
-    <h3 :class="'footer-sitemap-heading ' + $mq">
+    <h3 :class="'footer-sitemap-heading body-text-large ' + $mq">
       {{ $t('SitemapHeading') }}
     </h3>
     <ul :class="'footer-sitemap-links-wrapper ' + $mq">
@@ -68,7 +68,6 @@ export default {
   }
 
   &.desktop {
-    font-size: 0.875rem;
     margin: 0 0 15px 0;
   }
 }

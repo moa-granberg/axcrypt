@@ -19,7 +19,7 @@
         :class="`home-why-choose-axcrypt-selling-points-item-text-wrapper ${$mq}`"
       >
         <h1
-          :class="`home-why-choose-axcrypt-selling-points-item-heading ${$mq}`"
+          :class="`home-why-choose-axcrypt-selling-points-item-heading body-text-large ${$mq}`"
         >
           {{ $t(item.headingPhraseKey) }}
         </h1>
@@ -106,11 +106,6 @@ export default {
 
   &.mobile {
     text-align: center;
-    font-size: 0.75rem;
-  }
-
-  &.desktop {
-    font-size: clamp(0.875rem, calc(1vw+0.25rem), 1.25rem);
   }
 }
 

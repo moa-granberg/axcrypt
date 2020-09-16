@@ -1,6 +1,6 @@
 <template>
   <section :class="'footer-newsletter-wrapper ' + $mq">
-    <h3 :class="'footer-newsletter-heading ' + $mq">
+    <h3 :class="'footer-newsletter-heading body-text-large ' + $mq">
       <label for="user-email">
         {{ $t('FooterNewsletterSignUpHeading') }}
       </label>
@@ -48,14 +48,12 @@ export default {
 .footer-newsletter-heading {
   &.mobile {
     margin: 0 0 14px 0;
-    font-size: 1rem;
     font-weight: 400;
     text-align: center;
   }
 
   &.desktop {
     margin: 0 0 15px 0;
-    font-size: 0.875rem;
   }
 }
 
