@@ -5,7 +5,7 @@
         {{ $t('DownloadMobileHeading') }}
       </h1>
       <p
-        :class="`download-hero-paragraph ${$mq}`"
+        :class="`download-hero-paragraph body-text ${$mq}`"
         v-html="$t('DownloadMobileBodyText')"
       ></p>
     </div>
@@ -48,6 +48,7 @@ export default {};
 <style lang="scss" scoped>
 @import '@/scss/variables.scss';
 @import '@/scss/downloadView.scss';
+@import '@/scss/fonts.scss';
 
 .download-hero-mobile-wrapper {
   color: $white;

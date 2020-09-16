@@ -19,16 +19,7 @@
 .download-hero-paragraph {
   margin: 0;
 
-  &.mobile {
-    font-size: 0.75rem;
-  }
-
-  &.desktop {
-    font-size: 0.875rem;
-  }
-
   > p > a {
     color: $light-green;
-    font-weight: 600;
   }
 }
