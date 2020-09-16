@@ -139,7 +139,7 @@ export default {
   &.desktop {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
     padding: 82px 0 0 0;
   }
 }

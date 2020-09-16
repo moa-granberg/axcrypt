@@ -1,6 +1,13 @@
 <template>
   <article :class="`pricing-product-wrapper ${$mq}`">
     <div
+      v-if="product.productName !== 'free'"
+      :class="`pricing-free-month-tag ${$mq}`"
+    >
+      <p>{{ $t('OneFreeMonthLabel') }}</p>
+    </div>
+
+    <div
       :class="`pricing-product-heading-wrapper ${product.productName} ${$mq}`"
     >
       <h1 :class="`pricing-product-heading ${$mq}`">
@@ -162,6 +169,32 @@ export default {
   }
 }
 
+.pricing-free-month-tag {
+  align-self: flex-end;
+
+  background-color: $light-green;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border: 1px solid $gray;
+  border-bottom: none;
+  padding: 6px 18px;
+
+  p {
+    text-transform: uppercase;
+    color: $white;
+    font-weight: 600;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin: 0;
+  }
+
+  &.mobile {
+    margin: 0 4px 0 0;
+  }
+
+  &.desktop {
+    margin: 0 10px 0 0;
+  }
+}
+
 .pricing-product-heading {
   margin: 0;
 
@@ -236,6 +269,7 @@ export default {
 
   &.desktop {
     font-size: 1rem;
+    height: 22px;
   }
 }
 
