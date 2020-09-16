@@ -14,7 +14,7 @@
     />
 
     <div :class="`pricing-product-body ${$mq}`">
-      <pricing-product-price
+      <price-display
         :annualActive="annualActive"
         :price="price"
         :currency="currency"
@@ -55,7 +55,7 @@ import PricingProductFeatureList from './PricingProductFeatureList';
 import PricingProductHeader from './PricingProductHeader';
 import PricingProductFeatureToggle from './PricingProductFeatureToggle';
 import PricingProductReadMore from './PricingProductReadMore';
-import PricingProductPrice from './PricingProductPrice';
+import PriceDisplay from '@/components/PriceDisplay';
 
 export default {
   components: {
@@ -63,7 +63,7 @@ export default {
     PricingProductHeader,
     PricingProductFeatureToggle,
     PricingProductReadMore,
-    PricingProductPrice,
+    PriceDisplay,
   },
 
   props: {

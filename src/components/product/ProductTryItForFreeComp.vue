@@ -17,15 +17,13 @@
         @switchYearly="handleClickYearly"
       />
 
-      <h1
-        class="product-try-it-for-free-pricing"
-        :class="[{ annual: annualActive }, $mq]"
-      >
-        {{ price }} <span>{{ currency }}</span>
-      </h1>
-      <h3 :class="'product-try-it-for-free-per-month ' + $mq">
-        {{ $t('PerMonthLabel') }}
-      </h3>
+      <price-display
+        :annualActive="annualActive"
+        :price="price"
+        :currency="currency"
+        :perMonthPhraseKey="'PerMonthLabel'"
+      />
+
       <primary-button-comp
         phraseKey="ProductTryItForFreeStartButtonLabel"
         size="large"
@@ -40,6 +38,7 @@
 import PrimaryButtonComp from '@/components/PrimaryButtonComp';
 import ProductTryItForFreeSellingPointsComp from '@/components/product/ProductTryItForFreeSellingPointsComp';
 import AnnualMonthlySwitcherComp from '@/components/AnnualMonthlySwitcherComp';
+import PriceDisplay from '@/components/PriceDisplay';
 import { getPricing } from '@/utils/pricing/getPricing';
 
 export default {
@@ -51,12 +50,13 @@ export default {
     PrimaryButtonComp,
     ProductTryItForFreeSellingPointsComp,
     AnnualMonthlySwitcherComp,
+    PriceDisplay,
   },
 
   data() {
     return {
       annualActive: false,
-      price: 0,
+      price: '0',
       currency: 'SEK',
     };
   },
@@ -149,45 +149,6 @@ export default {
 
   &.desktop {
     padding: 20px 0;
-  }
-}
-
-.product-try-it-for-free-pricing {
-  &.annual {
-    color: #ad3f38;
-  }
-
-  &.mobile {
-    margin: 10px 0 0 0;
-    font-size: 2.25rem;
-
-    span {
-      font-size: 2.25rem * 0.75;
-    }
-  }
-
-  &.desktop {
-    margin: 30px 0 0 0;
-    font-size: 2.5rem;
-
-    span {
-      font-size: 2.5rem * 0.75;
-    }
-  }
-}
-
-.product-try-it-for-free-per-month {
-  text-transform: uppercase;
-  font-weight: 400;
-
-  &.mobile {
-    margin: 0 0 13px 0;
-    font-size: 2.25rem * 0.4;
-  }
-
-  &.desktop {
-    font-size: 2.5rem * 0.4;
-    margin: 0 0 20px 0;
   }
 }
 </style>

@@ -1,10 +1,10 @@
 <template>
-  <div class="pricig-product-price-wrapper">
-    <h1 class="pricing-product-price" :class="[{ annual: annualActive }, $mq]">
+  <div class="price-display-price-wrapper">
+    <h1 class="price-display-price" :class="[{ annual: annualActive }, $mq]">
       {{ price }} <span>{{ currency }}</span>
     </h1>
 
-    <p :class="`pricing-product-per-month ${$mq}`">
+    <p :class="`price-display-per-month ${$mq}`">
       {{ $t(perMonthPhraseKey) }}
     </p>
   </div>
@@ -24,12 +24,12 @@ export default {
 <style lang="scss" scoped>
 @import '@/scss/variables.scss';
 
-.pricig-product-price-wrapper {
+.price-display-price-wrapper {
   display: grid;
   place-items: center;
 }
 
-.pricing-product-price {
+.price-display-price {
   font-size: 3rem;
 
   span {
@@ -49,7 +49,7 @@ export default {
   }
 }
 
-.pricing-product-per-month {
+.price-display-per-month {
   text-transform: uppercase;
   margin: 0 0 22px 0;
 
