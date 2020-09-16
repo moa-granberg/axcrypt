@@ -21,57 +21,20 @@
 export default {
   data() {
     return {
-      footerLinks: [
-        {
-          path: '/',
-          phraseKey: 'HomeLinkLabel',
-        },
-        {
-          path: '/pricing',
-          phraseKey: 'PricingLinkLabel',
-        },
-        {
-          path: '/information/get-started/:platform',
-          phraseKey: 'GetStartedLinkLabel',
-        },
-        {
-          path: '/information/reseller',
-          phraseKey: 'ResellerLinkLabel',
-        },
-        {
-          path: '/support/faq',
-          phraseKey: 'FaqLinkLabel',
-        },
-        {
-          path: '/support/forums',
-          phraseKey: 'ForumsLinkLabel',
-        },
-        {
-          path: '/support/blog',
-          phraseKey: 'BlogLinkLabel',
-        },
-        {
-          path: '/about',
-          phraseKey: 'AboutUsLinkLabel',
-        },
-        {
-          path: '/about/press',
-          phraseKey: 'PressLinkLabel',
-        },
-        {
-          path: '/information/privacy-policy',
-          phraseKey: 'PrivacyPolicyLinkLabel',
-        },
-        {
-          path: '/support/password-generator',
-          phraseKey: 'PasswordGeneratorLinkLabel',
-        },
-        {
-          path: '/sign-in',
-          phraseKey: 'MyAxCryptIDLinkLabel',
-        },
-      ],
+      footerLinks: [],
     };
+  },
+
+  methods: {
+    async getFooterLinks() {
+      this.footerLinks = await (
+        await import('@/data/footer/footer-sitemap-links.json')
+      ).default;
+    },
+  },
+
+  created() {
+    this.getFooterLinks();
   },
 };
 </script>
