@@ -38,45 +38,20 @@
 export default {
   data() {
     return {
-      homeSellingPointItems: [
-        {
-          src: 'shield_256.svg',
-          alt: 'shield_256',
-          headingPhraseKey: 'HomeSellingPointStrongEncryptionHeading',
-          paragraphPhraseKey: 'HomeSellingPointStrongEncryptionBody',
-        },
-        {
-          src: 'cloud.svg',
-          alt: 'cloud',
-          headingPhraseKey: 'HomeSellingPointCloudStorageAwarenessHeading',
-          paragraphPhraseKey: 'HomeSellingPointCloudStorageAwarenessBody',
-        },
-        {
-          src: 'globe.svg',
-          alt: 'globe',
-          headingPhraseKey: 'HomeSellingPointMultilingualHeading',
-          paragraphPhraseKey: 'HomeSellingPointMultilingualBody',
-        },
-        {
-          src: 'loop_key.svg',
-          alt: 'loop_key',
-          headingPhraseKey: 'HomeSellingPointCollaborationHeading',
-          paragraphPhraseKey: 'HomeSellingPointCollaborationBody',
-        },
-        {
-          src: 'key_folder.svg',
-          alt: 'key_folder',
-          headingPhraseKey: 'HomeSellingPointPasswordManagementHeading',
-          paragraphPhraseKey: 'HomeSellingPointPasswordManagementBody',
-        },
-        {
-          src: 'axcrypt_mobile.svg',
-          alt: 'axcrypt_mobile',
-          headingPhraseKey: 'HomeSellingPointAxcryptMobileHeading',
-          paragraphPhraseKey: 'HomeSellingPointAxcryptMobileBody',
-        },
-      ],
+      homeSellingPointItems: [],
     };
+  },
+
+  methods: {
+    async getSellingPoints() {
+      this.homeSellingPointItems = await (
+        await import('@/data/home/home-selling-points.json')
+      ).default;
+    },
+  },
+
+  created() {
+    this.getSellingPoints();
   },
 };
 </script>
