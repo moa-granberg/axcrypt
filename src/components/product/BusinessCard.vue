@@ -6,9 +6,15 @@
       :class="`business-card-img ${$mq}`"
     />
     <div :class="`business-card-text-wrapper ${$mq}`">
-      <h1 :class="`business-card-heading ${$mq}`">{{ person.name }}</h1>
-      <p :class="`business-card-paragraph ${$mq}`">{{ person.jobTitle }}</p>
-      <p :class="`business-card-paragraph ${$mq}`">{{ person.email }}</p>
+      <h1 :class="`business-card-heading body-text ${$mq}`">
+        {{ person.name }}
+      </h1>
+      <p :class="`business-card-paragraph body-text ${$mq}`">
+        {{ person.jobTitle }}
+      </p>
+      <p :class="`business-card-paragraph body-text ${$mq}`">
+        {{ person.email }}
+      </p>
     </div>
   </article>
 </template>
@@ -28,6 +34,7 @@ export default {
 
 <style lang="scss" scoped>
 @import '@/scss/variables.scss';
+@import '@/scss/fonts.scss';
 
 .business-card-wrapper {
   display: flex;
@@ -46,13 +53,5 @@ export default {
 .business-card-heading,
 .business-card-paragraph {
   margin: 0;
-
-  &.mobile {
-    font-size: 0.7rem;
-  }
-
-  &.desktop {
-    font-size: 1rem;
-  }
 }
 </style>

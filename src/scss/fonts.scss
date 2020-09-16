@@ -1,0 +1,23 @@
+@import './variables.scss';
+
+.body-text {
+  a {
+    color: $green;
+    font-weight: 600;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &.mobile {
+    font-size: 0.75rem;
+  }
+
+  &.desktop {
+    font-size: 0.875rem;
+  }
+}
+
+//footer fonts

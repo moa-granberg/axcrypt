@@ -7,7 +7,7 @@
         </h1>
 
         <h2
-          :class="`download-information-subheading ${$mq}`"
+          :class="`body-text ${$mq}`"
           v-html="$t('DownloadInformationSubheading')"
         ></h2>
 
@@ -56,6 +56,7 @@ export default {
 
 <style lang="scss">
 @import '@/scss/variables.scss';
+@import '@/scss/fonts.scss';
 
 .download-information-wrapper {
   background-color: #ececec;
@@ -105,20 +106,6 @@ export default {
 
   &.desktop {
     font-size: 1.5rem;
-  }
-}
-
-.download-information-subheading {
-  &.mobile {
-    font-size: 0.75rem;
-  }
-
-  &.desktop {
-    font-size: 0.875rem;
-  }
-
-  a {
-    color: $green;
   }
 }
 

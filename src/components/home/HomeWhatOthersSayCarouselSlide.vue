@@ -8,7 +8,9 @@
     <h1 :class="`home-what-others-say-carousel-slide-quotation-mark ${$mq}`">
       "
     </h1>
-    <blockquote :class="`home-what-others-say-carousel-slide-quote ${$mq}`">
+    <blockquote
+      :class="`home-what-others-say-carousel-slide-quote body-text ${$mq}`"
+    >
       {{ item.quote }}
     </blockquote>
     <p :class="`home-what-others-say-carousel-slide-signature ${$mq}`">
@@ -31,6 +33,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '@/scss/fonts.scss';
+
 .home-what-others-say-carousel-slide {
   display: flex;
   flex-direction: column;
@@ -70,11 +74,6 @@ export default {
 
   &.mobile {
     margin: 0 1rem 1rem 1rem;
-    font-size: 0.75rem;
-  }
-
-  &.desktop {
-    font-size: 0.875rem;
   }
 }
 

@@ -21,7 +21,7 @@
           :class="[{ active: activePlatform === item.name }, $mq]"
         />
         <p
-          class="download-nav-item-paragraph"
+          class="download-nav-item-paragraph body-text"
           :class="[{ active: activePlatform === item.name }, $mq]"
         >
           {{ item.name }}
@@ -66,6 +66,7 @@ export default {
 
 <style lang="scss" scoped>
 @import '@/scss/variables.scss';
+@import '@/scss/fonts.scss';
 
 .download-nav-wrapper {
   background-color: rgba(0, 0, 0, 0.7);
@@ -134,12 +135,10 @@ export default {
 .download-nav-item-paragraph {
   &.mobile {
     margin: 0 6px;
-    font-size: 0.75rem;
   }
 
   &.desktop {
     margin: 0 12px;
-    font-size: 0.857rem;
   }
 
   &.active {

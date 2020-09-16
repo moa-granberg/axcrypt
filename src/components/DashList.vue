@@ -5,8 +5,8 @@
       :key="phraseKey"
       :class="`dash-list-item ${$mq}`"
     >
-      <p :class="`dash-list-item-dash ${$mq}`">-</p>
-      <p :class="`dash-list-item-paragraph ${$mq}`">
+      <p :class="`dash-list-item-dash body-text ${$mq}`">-</p>
+      <p :class="`dash-list-item-paragraph body-text ${$mq}`">
         {{ $t(phraseKey) }}
       </p>
     </li>
@@ -23,6 +23,7 @@ export default {
 
 <style lang="scss">
 @import '@/scss/variables.scss';
+@import '@/scss/fonts.scss';
 
 .dash-list-wrapper {
   margin: 0 0 20px 0;
@@ -38,25 +39,9 @@ export default {
 
 .dash-list-item-dash {
   margin: 0 10px 0 0;
-
-  &.mobile {
-    font-size: 0.75rem;
-  }
-
-  &.desktop {
-    font-size: 0.875rem;
-  }
 }
 
 .dash-list-item-paragraph {
   margin: 0;
-
-  &.mobile {
-    font-size: 0.75rem;
-  }
-
-  &.desktop {
-    font-size: 0.875rem;
-  }
 }
 </style>

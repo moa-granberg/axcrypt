@@ -14,7 +14,7 @@
       v-for="item of featureList"
       :key="item.feature"
     >
-      <p>
+      <p :class="`body-text ${$mq}`">
         {{ $t(item.feature) }}
       </p>
 
@@ -38,6 +38,7 @@ export default {
 
 <style lang="scss" scoped>
 @import '@/scss/variables.scss';
+@import '@/scss/fonts.scss';
 
 .pricing-product-feature-list-wrapper {
   max-height: 0;
@@ -78,10 +79,6 @@ export default {
     grid: auto / 8fr 1fr 1fr;
     gap: 10px;
 
-    p {
-      font-size: 0.75rem;
-    }
-
     img {
       height: 14px;
     }
@@ -89,10 +86,6 @@ export default {
 
   &.desktop {
     grid: auto / 6fr 1fr 1fr;
-
-    p {
-      font-size: 0.875rem;
-    }
 
     img {
       height: 16px;

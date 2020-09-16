@@ -7,7 +7,7 @@
       <li
         v-for="item of list"
         :key="item.src"
-        :class="`feature-list-item ${$mq}`"
+        :class="`feature-list-item body-text ${$mq}`"
       >
         <div :class="`feature-list-item-img-wrapper ${$mq}`">
           <img
@@ -35,6 +35,7 @@ export default {
 
 <style lang="scss" scoped>
 @import '@/scss/variables.scss';
+@import '@/scss/fonts.scss';
 
 .feature-list-wrapper {
   &.mobile {
@@ -81,11 +82,6 @@ export default {
 
   &.mobile {
     justify-content: space-between;
-    font-size: 0.75rem;
-  }
-
-  &.desktop {
-    font-size: 1rem;
   }
 }
 

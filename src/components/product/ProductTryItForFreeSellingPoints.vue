@@ -12,7 +12,7 @@
         :src="require(`@/assets/view/product/${item.src}`)"
         alt=""
       />
-      <p :class="'product-selling-points-item-paragraph ' + $mq">
+      <p :class="'product-selling-points-item-paragraph body-text ' + $mq">
         {{ $t(item.phraseKey) }}
       </p>
     </div>
@@ -54,6 +54,7 @@ export default {
 
 <style lang="scss" scoped>
 @import '@/scss/variables.scss';
+@import '@/scss/fonts.scss';
 
 .product-selling-points-items-wrapper {
   &.mobile {
@@ -99,12 +100,10 @@ export default {
 
   &.mobile {
     max-width: 130px;
-    font-size: 0.875rem;
   }
 
   &.desktop {
     max-width: 185px;
-    font-size: 1.125rem;
     padding: 10px;
   }
 }

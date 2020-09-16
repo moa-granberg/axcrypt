@@ -3,7 +3,10 @@
     <h1 :class="'product-body-header ' + $mq">
       {{ $t(headerPhraseKey) }}
     </h1>
-    <div :class="'product-body-text ' + $mq" v-html="$t(bodyPhraseKey)"></div>
+    <div
+      :class="'product-body-text body-text ' + $mq"
+      v-html="$t(bodyPhraseKey)"
+    ></div>
   </section>
 </template>
 
@@ -18,6 +21,7 @@ export default {
 
 <style lang="scss">
 @import '@/scss/variables.scss';
+@import '@/scss/fonts.scss';
 
 .product-body-wrapper {
   margin: 32px;
@@ -33,16 +37,6 @@ export default {
 
   &.desktop {
     font-size: 1.5rem;
-  }
-}
-
-.product-body-text {
-  &.mobile {
-    font-size: 0.875rem;
-  }
-
-  &.desktop {
-    font-size: 1.125rem;
   }
 }
 
