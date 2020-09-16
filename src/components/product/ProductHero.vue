@@ -5,7 +5,7 @@
       <h1 :class="`product-hero-heading ${$mq} ${product}`">
         {{ $t(headingPhraseKey) }}
       </h1>
-      <h3 :class="'product-hero-subheading ' + $mq">
+      <h3 :class="'product-hero-subheading heading-medium ' + $mq">
         {{ $t(subheadingPhraseKey) }}
       </h3>
     </div>
@@ -44,6 +44,7 @@ export default {
 
 <style lang="scss" scoped>
 @import '@/scss/variables.scss';
+@import '@/scss/fonts.scss';
 
 .product-hero-wrapper {
   background-blend-mode: overlay;
@@ -135,13 +136,5 @@ export default {
   font-weight: 300;
   font-style: italic;
   color: $white;
-
-  &.mobile {
-    font-size: 1.125rem;
-  }
-
-  &.desktop {
-    font-size: 1.5rem;
-  }
 }
 </style>

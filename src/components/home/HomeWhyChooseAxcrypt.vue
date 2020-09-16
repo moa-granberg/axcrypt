@@ -1,6 +1,6 @@
 <template>
   <section :class="`home-why-choose-axcrypt-wrapper ${$mq}`">
-    <h1 :class="`home-why-choose-axcrypt-heading ${$mq}`">
+    <h1 :class="`home-why-choose-axcrypt-heading heading-medium ${$mq}`">
       {{ $t('WhyChooseAxcrypt') }}
     </h1>
 
@@ -20,6 +20,7 @@ export default {
 
 <style lang="scss" scoped>
 @import '@/scss/variables.scss';
+@import '@/scss/fonts.scss';
 
 .home-why-choose-axcrypt-wrapper {
   display: flex;
@@ -42,12 +43,7 @@ export default {
   color: $white;
   font-weight: 400;
 
-  &.mobile {
-    font-size: 1.125rem;
-  }
-
   &.desktop {
-    font-size: clamp(1.5rem, 2vw, 2rem);
     margin: 0 0 2rem 0;
     padding: 0;
   }

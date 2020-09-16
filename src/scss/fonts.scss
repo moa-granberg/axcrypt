@@ -20,4 +20,14 @@
   }
 }
 
+.heading-medium {
+  &.mobile {
+    font-size: 1.125rem;
+  }
+
+  &.desktop {
+    font-size: 1.5rem;
+  }
+}
+
 //footer fonts

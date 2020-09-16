@@ -1,6 +1,6 @@
 <template>
   <section :class="`product-try-it-for-free-wrapper ${$mq} ${product}`">
-    <h1 :class="'product-try-it-for-free-heading ' + $mq">
+    <h1 :class="'product-try-it-for-free-heading heading-medium ' + $mq">
       {{ $t('ProductTryItForFreeYouGet') }}
     </h1>
 
@@ -91,6 +91,7 @@ export default {
 
 <style lang="scss" scoped>
 @import '@/scss/variables.scss';
+@import '@/scss/fonts.scss';
 
 .product-try-it-for-free-wrapper {
   color: $white;

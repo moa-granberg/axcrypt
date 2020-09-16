@@ -60,6 +60,7 @@ export default {
 
 .premium-business-cta-heading {
   font-weight: 400;
+  text-align: center;
 
   &.mobile {
     margin: 7px 0 13px 0;

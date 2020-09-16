@@ -1,6 +1,6 @@
 <template>
   <section :class="`home-get-started-wrapper ${$mq}`">
-    <h1 :class="`home-get-started-heading ${$mq}`">
+    <h1 :class="`home-get-started-heading heading-medium ${$mq}`">
       {{ $t('HomeGetStartedHeading') }}
     </h1>
 
@@ -47,6 +47,7 @@ export default {
 
 <style lang="scss" scoped>
 @import '@/scss/variables.scss';
+@import '@/scss/fonts.scss';
 
 .home-get-started-wrapper {
   display: flex;
@@ -59,16 +60,7 @@ export default {
 .home-get-started-heading {
   color: $green;
   font-weight: 400;
-
-  &.mobile {
-    font-size: 1.125rem;
-    margin: 0 0 2rem 0;
-  }
-
-  &.desktop {
-    font-size: 1.5rem;
-    margin: 0 0 2rem 0;
-  }
+  margin: 0 0 2rem 0;
 }
 
 .home-get-started-list-video-wrapper {

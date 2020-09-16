@@ -1,7 +1,7 @@
 <template>
   <article :class="`download-hero-mobile-wrapper ${$mq}`">
     <div :class="`download-hero-mobile-text-wrapper ${$mq}`">
-      <h1 :class="`download-hero-heading ${$mq}`">
+      <h1 :class="`download-hero-heading heading-medium ${$mq}`">
         {{ $t('DownloadMobileHeading') }}
       </h1>
       <p

@@ -1,6 +1,6 @@
 <template>
   <section :class="'product-body-wrapper ' + $mq">
-    <h1 :class="'product-body-header ' + $mq">
+    <h1 :class="'product-body-header heading-medium ' + $mq">
       {{ $t(headerPhraseKey) }}
     </h1>
     <div
@@ -30,14 +30,6 @@ export default {
 .product-body-header {
   color: $green;
   font-weight: 400;
-
-  &.mobile {
-    font-size: 1.125rem;
-  }
-
-  &.desktop {
-    font-size: 1.5rem;
-  }
 }
 
 .product-body-text > p > a {

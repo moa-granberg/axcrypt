@@ -1,6 +1,6 @@
 <template>
   <section :class="`home-what-others-say-wrapper ${$mq}`">
-    <h1 :class="`home-what-others-say-heading ${$mq}`">
+    <h1 :class="`home-what-others-say-heading heading-medium ${$mq}`">
       {{ $t('HomeWhatOthersSayHeading') }}
     </h1>
     <div :class="`home-what-others-say-carousel-awards-wrapper ${$mq}`">
@@ -40,6 +40,7 @@ export default {
 
 <style lang="scss">
 @import '@/scss/variables.scss';
+@import '@/scss/fonts.scss';
 
 .home-what-others-say-wrapper {
   background-color: $light-gray;
@@ -52,12 +53,7 @@ export default {
   text-align: center;
 
   &.mobile {
-    font-size: 1.125rem;
     margin: 2rem 0 3rem 0;
-  }
-
-  &.desktop {
-    font-size: 1.5rem;
   }
 }
 

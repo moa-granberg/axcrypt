@@ -3,7 +3,7 @@
     <h1 :class="'product-try-it-for-free-cta-heading ' + $mq">
       {{ $t('ProductTryItForFreeHeading') }}
     </h1>
-    <h2 :class="'product-try-it-for-free-cta-subheading ' + $mq">
+    <h2 :class="'product-try-it-for-free-cta-subheading heading-medium ' + $mq">
       {{ $t('ProductTryItForFreeSubheading') }}
     </h2>
     <primary-button
@@ -30,6 +30,7 @@ export default {
 
 <style lang="scss" scoped>
 @import '@/scss/variables.scss';
+@import '@/scss/fonts.scss';
 
 .product-try-it-for-free-cta-wrapper {
   width: 100%;
@@ -78,13 +79,5 @@ export default {
 .product-try-it-for-free-cta-subheading {
   margin: 10px;
   font-weight: 300;
-
-  &.mobile {
-    font-size: 1.125rem;
-  }
-
-  &.desktop {
-    font-size: 1.5rem;
-  }
 }
 </style>

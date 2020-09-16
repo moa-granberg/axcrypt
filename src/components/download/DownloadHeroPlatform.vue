@@ -1,7 +1,7 @@
 <template>
   <article :class="`download-hero-platform-wrapper ${$mq}`">
     <div :class="`download-hero-platform-inner-wrapper ${$mq}`">
-      <h1 :class="`download-hero-heading ${$mq}`">
+      <h1 :class="`download-hero-heading heading-medium ${$mq}`">
         {{ $t(headingPhraseKey) }}
       </h1>
 
@@ -37,6 +37,7 @@ export default {
 @import '@/scss/variables.scss';
 @import '@/scss/downloadView.scss';
 @import '@/scss/standardButton.scss';
+@import '@/scss/fonts.scss';
 
 .download-hero-platform-wrapper {
   flex-grow: 1;

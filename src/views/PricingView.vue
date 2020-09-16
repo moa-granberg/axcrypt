@@ -4,7 +4,7 @@
       {{ $t('PricingLinkLabel') }}
     </h1>
 
-    <p :class="`pricing-subheading ${$mq}`">
+    <p :class="`pricing-subheading heading-medium ${$mq}`">
       {{ $t('PricingSubheading') }}
     </p>
 
@@ -96,6 +96,7 @@ export default {
 
 <style lang="scss" scoped>
 @import '@/scss/variables.scss';
+@import '@/scss/fonts.scss';
 
 .pricing-wrapper {
   display: flex;
@@ -127,11 +128,9 @@ export default {
 .pricing-subheading {
   &.mobile {
     margin: 14px 0 18px 0;
-    font-size: 1.125rem;
   }
   &.desktop {
     margin: 34px 0 14px 0;
-    font-size: 1.5rem;
   }
 }
 

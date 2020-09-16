@@ -1,7 +1,7 @@
 <template>
   <section :class="`download-try-cta-wrapper ${$mq}`">
     <h1
-      :class="`download-try-cta-heading ${$mq}`"
+      :class="`download-try-cta-heading heading-medium ${$mq}`"
       v-html="$t('DownloadTryCtaHeading')"
     ></h1>
 
@@ -23,6 +23,7 @@ export default {
 
 <style lang="scss">
 @import '@/scss/variables.scss';
+@import '@/scss/fonts.scss';
 
 .download-try-cta-wrapper {
   display: flex;
@@ -42,16 +43,13 @@ export default {
 .download-try-cta-heading {
   font-weight: 400;
   text-align: center;
+  max-width: 280px;
 
   &.mobile {
-    font-size: 0.875rem;
-    max-width: 170px;
     margin: 0 0 24px 0;
   }
 
   &.desktop {
-    font-size: 1.5rem;
-    max-width: 280px;
     margin: 0 0 44px 0;
   }
 
