@@ -80,7 +80,7 @@ export default {
   padding: 0 0 0 8px;
   border: none;
   border-radius: 5px;
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: $standard-box-shadow;
   color: $gray;
 
   width: 100%;
@@ -95,7 +95,7 @@ export default {
   height: 29px;
   width: 42px;
   border-radius: 5px;
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: $standard-box-shadow;
   border: none;
   margin: 0 0 0 8px;
   display: flex;

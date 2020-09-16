@@ -81,11 +81,11 @@ export default {
   align-items: center;
   height: 100%;
   width: 50%;
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: $standard-box-shadow;
 
   color: $white;
   text-decoration: none;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  text-shadow: $standard-text-shadow;
 
   &.premium {
     background-color: $dark-green;

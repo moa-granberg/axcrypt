@@ -110,7 +110,7 @@ export default {
 .product-hero-heading {
   margin: 6px 0 14px 0;
   text-transform: uppercase;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  text-shadow: $standard-text-shadow;
 
   &.premium {
     color: $light-green;

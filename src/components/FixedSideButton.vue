@@ -25,7 +25,7 @@ export default {};
   opacity: 0.95;
   transform-origin: right;
   transform: rotate(-90deg) translate(50%, 50%);
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: $standard-box-shadow;
 
   &.mobile {
     bottom: 90px;

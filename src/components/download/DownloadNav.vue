@@ -69,7 +69,7 @@ export default {
 
 .download-nav-wrapper {
   background-color: rgba(0, 0, 0, 0.7);
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: $standard-box-shadow;
   color: white;
   display: flex;
   flex-direction: column;
