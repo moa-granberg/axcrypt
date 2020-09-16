@@ -26,46 +26,7 @@ export default {
 
   data() {
     return {
-      headerLinks: [
-        {
-          path: '/download',
-          phraseKey: 'DownloadLinkLabel',
-        },
-        {
-          path: '/product',
-          phraseKey: 'OurProductLinkLabel',
-          children: [
-            {
-              path: '/business',
-              phraseKey: 'BusinessLinkLabel',
-            },
-            {
-              path: '/premium',
-              phraseKey: 'PremiumLinkLabel',
-            },
-          ],
-        },
-        {
-          path: '/pricing',
-          phraseKey: 'PricingLinkLabel',
-        },
-        {
-          path: '/information',
-          phraseKey: 'InformationLinkLabel',
-        },
-        {
-          path: '/support',
-          phraseKey: 'SupportLinkLabel',
-        },
-        {
-          path: '/about',
-          phraseKey: 'AboutUsLinkLabel',
-        },
-        {
-          path: '/sign-in',
-          phraseKey: 'SignInLinkLabel',
-        },
-      ],
+      headerLinks: [],
     };
   },
 
@@ -73,6 +34,16 @@ export default {
     handleHideMobileMenu() {
       this.$emit('hideMobileMenu');
     },
+
+    async getMenuLinks() {
+      this.headerLinks = await (
+        await import('@/data/header/header-menu-links.json')
+      ).default;
+    },
+  },
+
+  created() {
+    this.getMenuLinks();
   },
 };
 </script>
