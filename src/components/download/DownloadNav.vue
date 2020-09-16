@@ -66,7 +66,6 @@ export default {
 
 <style lang="scss" scoped>
 @import '@/scss/variables.scss';
-@import '@/scss/fonts.scss';
 
 .download-nav-wrapper {
   background-color: rgba(0, 0, 0, 0.7);

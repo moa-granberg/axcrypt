@@ -35,7 +35,6 @@ export default {
 
 <style lang="scss" scoped>
 @import '@/scss/variables.scss';
-@import '@/scss/fonts.scss';
 
 .feature-list-wrapper {
   &.mobile {

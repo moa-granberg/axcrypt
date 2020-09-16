@@ -23,7 +23,6 @@ export default {
 
 <style lang="scss">
 @import '@/scss/variables.scss';
-@import '@/scss/fonts.scss';
 
 .download-try-cta-wrapper {
   display: flex;

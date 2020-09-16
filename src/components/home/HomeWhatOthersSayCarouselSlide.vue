@@ -33,7 +33,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '@/scss/fonts.scss';
 
 .home-what-others-say-carousel-slide {
   display: flex;

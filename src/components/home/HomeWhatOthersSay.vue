@@ -40,7 +40,6 @@ export default {
 
 <style lang="scss">
 @import '@/scss/variables.scss';
-@import '@/scss/fonts.scss';
 
 .home-what-others-say-wrapper {
   background-color: $light-gray;

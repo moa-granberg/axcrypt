@@ -48,7 +48,6 @@ export default {};
 <style lang="scss" scoped>
 @import '@/scss/variables.scss';
 @import '@/scss/downloadView.scss';
-@import '@/scss/fonts.scss';
 
 .download-hero-mobile-wrapper {
   color: $white;

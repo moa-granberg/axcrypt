@@ -34,7 +34,6 @@ export default {
 
 <style lang="scss" scoped>
 @import '@/scss/variables.scss';
-@import '@/scss/fonts.scss';
 
 .business-card-wrapper {
   display: flex;

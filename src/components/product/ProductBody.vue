@@ -21,7 +21,6 @@ export default {
 
 <style lang="scss">
 @import '@/scss/variables.scss';
-@import '@/scss/fonts.scss';
 
 .product-body-wrapper {
   margin: 32px;

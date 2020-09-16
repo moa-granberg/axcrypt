@@ -91,7 +91,6 @@ export default {
 
 <style lang="scss" scoped>
 @import '@/scss/variables.scss';
-@import '@/scss/fonts.scss';
 
 .product-try-it-for-free-wrapper {
   color: $white;

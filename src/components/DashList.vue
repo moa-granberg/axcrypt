@@ -23,7 +23,6 @@ export default {
 
 <style lang="scss">
 @import '@/scss/variables.scss';
-@import '@/scss/fonts.scss';
 
 .dash-list-wrapper {
   margin: 0 0 20px 0;

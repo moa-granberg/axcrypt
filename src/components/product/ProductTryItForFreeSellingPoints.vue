@@ -54,7 +54,6 @@ export default {
 
 <style lang="scss" scoped>
 @import '@/scss/variables.scss';
-@import '@/scss/fonts.scss';
 
 .product-selling-points-items-wrapper {
   &.mobile {
