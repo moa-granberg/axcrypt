@@ -1,6 +1,6 @@
 <template>
   <section :class="`product-business-big-team-cta-wrapper ${$mq}`">
-    <h1 :class="`product-business-big-team-cta-heading ${$mq}`">
+    <h1 :class="`product-business-big-team-cta-heading heading-large ${$mq}`">
       {{ $t('BusinessBigTeamCtaHeading') }}
     </h1>
     <primary-button phraseKey="ContactUsHeading" size="small" path="/about" />
@@ -42,12 +42,10 @@ export default {
 
   &.mobile {
     margin: 0 0 18px 0;
-    font-size: 1.125rem;
   }
 
   &.desktop {
     margin: 0 0 38px 0;
-    font-size: 1.875rem;
     font-weight: 400;
   }
 }

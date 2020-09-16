@@ -41,7 +41,15 @@
   }
 }
 
-//footer fonts
+.heading-large {
+  &.mobile {
+    font-size: 1.125rem;
+  }
+
+  &.desktop {
+    font-size: 1.875rem;
+  }
+}
 
 .heading-jumbo {
   &.mobile {

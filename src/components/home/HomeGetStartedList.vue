@@ -18,7 +18,9 @@
             {{ $t(item.headingPhraseKey) }}
           </h2>
 
-          <p :class="`home-get-started-list-item-text-paragraph body-text ${$mq}`">
+          <p
+            :class="`home-get-started-list-item-text-paragraph body-text ${$mq}`"
+          >
             {{ $t(item.paragraphPhraseKey) }}
           </p>
         </div>

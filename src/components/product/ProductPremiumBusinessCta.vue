@@ -4,7 +4,7 @@
       {{ $t('PremiumBusinessCtaPreHeading') }}
     </h2>
     <h1
-      :class="'premium-business-cta-heading ' + $mq"
+      :class="'premium-business-cta-heading heading-large ' + $mq"
       v-html="$t('PremiumBusinessCtaHeading')"
     ></h1>
     <primary-button
@@ -56,12 +56,10 @@ export default {
 
   &.mobile {
     margin: 7px 0 13px 0;
-    font-size: 1.125rem;
   }
 
   &.desktop {
     margin: 20px 0;
-    font-size: 1.875rem;
   }
 }
 </style>

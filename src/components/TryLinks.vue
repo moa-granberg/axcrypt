@@ -9,7 +9,7 @@
         {{ $t('TryPremiumPreHeading') }}
       </h2>
 
-      <h1 :class="`try-heading ${$mq}`">
+      <h1 :class="`try-heading heading-large ${$mq}`">
         {{ $t('TryPremiumHeading') }}
       </h1>
 
@@ -27,7 +27,7 @@
         {{ $t('TryBusinessPreHeading') }}
       </h2>
 
-      <h1 :class="`try-heading ${$mq}`">
+      <h1 :class="`try-heading heading-large ${$mq}`">
         {{ $t('TryBusinessHeading') }}
       </h1>
 
@@ -125,13 +125,5 @@ export default {
 .try-heading {
   text-transform: uppercase;
   margin: 0;
-
-  &.mobile {
-    font-size: 1.125rem;
-  }
-
-  &.desktop {
-    font-size: 1.875rem;
-  }
 }
 </style>
