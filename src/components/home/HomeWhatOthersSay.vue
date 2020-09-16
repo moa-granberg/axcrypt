@@ -22,7 +22,7 @@
       </div>
     </div>
     <div
-      :class="`home-what-others-say-awards-testimonials-text ${$mq}`"
+      :class="`home-what-others-say-awards-testimonials-text body-text ${$mq}`"
       v-html="$t('HomeWhatOtherSayTestimonialsText')"
     ></div>
   </section>
@@ -100,12 +100,10 @@ export default {
 
   &.mobile {
     margin: 1rem 0 2rem 0;
-    font-size: 0.6rem;
   }
 
   &.desktop {
     margin: 0 0 2rem 0;
-    font-size: 0.875rem;
   }
 }
 

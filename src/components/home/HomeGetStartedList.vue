@@ -18,7 +18,7 @@
             {{ $t(item.headingPhraseKey) }}
           </h2>
 
-          <p :class="`home-get-started-list-item-text-paragraph ${$mq}`">
+          <p :class="`home-get-started-list-item-text-paragraph body-text ${$mq}`">
             {{ $t(item.paragraphPhraseKey) }}
           </p>
         </div>
@@ -67,6 +67,7 @@ export default {
 
 <style lang="scss" scoped>
 @import '@/scss/variables.scss';
+@import '@/scss/fonts.scss';
 
 .home-get-started-list {
   list-style: none;
@@ -143,13 +144,5 @@ export default {
 
 .home-get-started-list-item-text-paragraph {
   margin: 0;
-
-  &.mobile {
-    font-size: 0.6rem;
-  }
-
-  &.desktop {
-    font-size: 0.75rem;
-  }
 }
 </style>

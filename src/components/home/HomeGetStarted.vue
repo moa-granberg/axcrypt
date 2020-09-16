@@ -17,7 +17,7 @@
           allowfullscreen
         ></iframe>
 
-        <i :class="`home-get-started-video-description ${$mq}`">{{
+        <i :class="`home-get-started-video-description body-text ${$mq}`">{{
           $t('HomeGetStartedYoutubeDescription')
         }}</i>
       </div>
@@ -95,12 +95,8 @@ export default {
   font-weight: 600;
 
   &.mobile {
-    font-size: 0.6rem;
     margin: 0 0 2rem 0;
-  }
-
-  &.desktop {
-    font-size: 0.75rem;
+    text-align: center;
   }
 }
 </style>

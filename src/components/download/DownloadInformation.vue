@@ -2,7 +2,7 @@
   <section :class="`download-information-wrapper ${$mq}`">
     <section :class="`download-information-inner-wrapper ${$mq}`">
       <article :class="`download-information-text-wrapper ${$mq}`">
-        <h1 :class="`download-information-heading ${$mq}`">
+        <h1 :class="`download-information-heading heading-medium ${$mq}`">
           {{ $t('InformationLinkLabel') }}
         </h1>
 
@@ -99,14 +99,6 @@ export default {
 .download-information-heading {
   font-weight: 400;
   margin: 0;
-
-  &.mobile {
-    font-size: 0.875rem;
-  }
-
-  &.desktop {
-    font-size: 1.5rem;
-  }
 }
 
 .download-information-img-wrapper {
