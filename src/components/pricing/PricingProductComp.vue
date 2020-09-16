@@ -1,7 +1,7 @@
 <template>
   <article :class="`pricing-product-wrapper ${$mq}`">
     <div
-      :class="`pricing-product-heading-wrapper ${product.productClass} ${$mq}`"
+      :class="`pricing-product-heading-wrapper ${product.productName} ${$mq}`"
     >
       <h1 :class="`pricing-product-heading ${$mq}`">
         {{ $t(product.headingPhraseKey) }}
@@ -20,7 +20,7 @@
       </h1>
 
       <a
-        :class="`standard-button small pricing-product-button ${product.productClass} ${$mq} `"
+        :class="`standard-button small pricing-product-button ${product.productName} ${$mq} `"
         :href="product.buttonUrl"
       >
         {{ $t(product.buttonLabelPhraseKey) }}
@@ -54,7 +54,7 @@
       />
 
       <div
-        :class="`pricing-product-read-more-wrapper ${product.productClass} ${$mq}`"
+        :class="`pricing-product-read-more-wrapper ${product.productName} ${$mq}`"
         v-if="showFeatureList || $mq === 'desktop'"
       >
         <a v-if="product.readMoreUrl" :href="product.readMoreUrl">
@@ -78,7 +78,7 @@ export default {
     price: String,
     currency: String,
     product: {
-      productClass: String,
+      productName: String,
       headingPhraseKey: String,
       subheadingPhraseKey: String,
       buttonLabelPhraseKey: String,
@@ -94,6 +94,7 @@ export default {
       showFeatureList: false,
     };
   },
+
 };
 </script>
 
