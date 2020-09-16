@@ -40,18 +40,16 @@ export default {
 @import '@/scss/variables.scss';
 
 .pricing-product-feature-list-wrapper {
-  height: 0;
+  max-height: 0;
   overflow: hidden;
+  transition: max-height 0.3s;
 
   &.show {
-    height: auto;
-
-    &.mobile {
-      padding: 0 14px 6px 14px;
-    }
+    max-height: 700px;
   }
 
   &.mobile {
+    padding: 0 14px;
     margin: 0 18px;
     background-color: $white;
     border-radius: 5px;
