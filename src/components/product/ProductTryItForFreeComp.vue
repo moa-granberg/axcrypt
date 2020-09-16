@@ -24,7 +24,7 @@
         {{ price }} <span>{{ currency }}</span>
       </h1>
       <h3 :class="'product-try-it-for-free-per-month ' + $mq">
-        {{ $t('ProductTryItForFreePerMonth') }}
+        {{ $t('PerMonthLabel') }}
       </h3>
       <primary-button-comp
         phraseKey="ProductTryItForFreeStartButtonLabel"

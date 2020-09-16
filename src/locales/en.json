@@ -51,7 +51,7 @@
   "ProductTryItForFreeCostAfterTrial": "Cost after trial:",
   "ProductTryItForFreeHeading": "Try it for free",
   "AnnualMonthlySwitcherMonthlyButtonLabel": "Monthly",
-  "ProductTryItForFreePerMonth": "Per month",
+  "PerMonthLabel": "Per month",
   "ProductTryItForFreeSellingPointAutomaticallyEncrypt": "Automatically encrypt new files in secure folders",
   "ProductTryItForFreeSellingPointSecureFiles": "Secure files online with cloud storage awareness",
   "ProductTryItForFreeSellingPointShareYour": "Share your secure files with key sharing",
@@ -163,5 +163,7 @@
   "StartFreeMonthLabel": "Start free month",
   "ReadMoreAboutPremiumPlanLabel": "Read more about the premium plan",
   "ForOrganisationsLabel": "For organisations",
-  "ReadMoreAboutBusinessPlanLabel": "Read more about the business plan"
+  "ReadMoreAboutBusinessPlanLabel": "Read more about the business plan",
+
+  "PerMonthPerUserLabel": "Per month | Per user"
 }

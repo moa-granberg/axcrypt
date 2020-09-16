@@ -19,6 +19,8 @@
         {{ price }} <span>{{ currency }}</span>
       </h1>
 
+      <p :class="`pricing-product-per-month ${$mq}`">{{ $t(perMonth) }}</p>
+
       <a
         :class="`standard-button small pricing-product-button ${product.productName} ${$mq} `"
         :href="product.buttonUrl"
@@ -95,6 +97,15 @@ export default {
     };
   },
 
+  computed: {
+    perMonth() {
+      return this.product.productName === 'premium'
+        ? 'PerMonthLabel'
+        : this.product.productName === 'business'
+        ? 'PerMonthPerUserLabel'
+        : '';
+    },
+  },
 };
 </script>
 
@@ -207,11 +218,24 @@ export default {
   }
 
   &.mobile {
-    margin: 24px 0;
+    margin: 24px 0 0 0;
   }
 
   &.desktop {
-    margin: 30px 0;
+    margin: 30px 0 0 0;
+  }
+}
+
+.pricing-product-per-month {
+  text-transform: uppercase;
+  margin: 0 0 22px 0;
+
+  &.mobile {
+    font-size: 0.875rem;
+  }
+
+  &.desktop {
+    font-size: 1rem;
   }
 }
 
