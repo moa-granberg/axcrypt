@@ -98,44 +98,7 @@ export default {
 
   data() {
     return {
-      businessFeatureList: [
-        {
-          phraseKey: 'BusinessFeatureListBestEncryption',
-          src: '/icons/check.svg',
-        },
-        {
-          phraseKey: 'BusinessFeatureListMadeInSweden',
-          src: '/icons/outlined_flag.svg',
-        },
-        {
-          phraseKey: 'BusinessFeatureListFlexibleMonthly',
-          src: '/icons/payment.svg',
-        },
-        {
-          phraseKey: 'BusinessFeatureListAvailableFor',
-          src: '/icons/computer.svg',
-        },
-        {
-          phraseKey: 'BusinessFeatureListDataProtection',
-          src: '/icons/security.svg',
-        },
-        {
-          phraseKey: 'BusinessFeatureListTeamCollaboration',
-          src: '/icons/people.svg',
-        },
-        {
-          phraseKey: 'BusinessFeatureListNoEncryption',
-          src: '/icons/book.svg',
-        },
-        {
-          phraseKey: 'BusinessFeatureListPurchangeAnd',
-          src: '/icons/add_box.svg',
-        },
-        {
-          phraseKey: 'BusinessFeatureListAccessTo',
-          src: '/icons/playlist_add.svg',
-        },
-      ],
+      businessFeatureList: [],
 
       contactPerson: {
         src: '/view/product/angelique.png',
@@ -144,6 +107,18 @@ export default {
         email: 'angelique.huige@axcrypt.net',
       },
     };
+  },
+
+  methods: {
+    async getFeatureList() {
+      this.businessFeatureList = await (
+        await import('@/data/product/business-feature-list.json')
+      ).default;
+    },
+  },
+
+  created() {
+    this.getFeatureList();
   },
 };
 </script>
