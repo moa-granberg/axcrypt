@@ -5,7 +5,7 @@
         {{ $t('HomeHeroHeading') }}
       </h1>
 
-      <h2 :class="`home-hero-subheading ${$mq}`">
+      <h2 :class="`home-hero-subheading heading-small ${$mq}`">
         {{ $t('HomeHeroSubheading') }}
       </h2>
 
@@ -76,13 +76,11 @@ export default {
   font-weight: 300;
 
   &.mobile {
-    font-size: 0.875rem;
     margin: 0 0 10px 0;
   }
 
   &.desktop {
     margin: 1rem 0 0.5rem 0;
-    font-size: 1.5rem;
   }
 }
 

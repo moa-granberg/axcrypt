@@ -1,6 +1,6 @@
 <template>
   <section :class="'premium-business-cta-wrapper ' + $mq">
-    <h2 :class="'premium-business-cta-preheading ' + $mq">
+    <h2 :class="'premium-business-cta-preheading heading-small ' + $mq">
       {{ $t('PremiumBusinessCtaPreHeading') }}
     </h2>
     <h1
@@ -48,14 +48,6 @@ export default {
 .premium-business-cta-preheading {
   font-weight: 400;
   margin: 0;
-
-  &.mobile {
-    font-size: 0.875rem;
-  }
-
-  &.desktop {
-    font-size: 1.5rem;
-  }
 }
 
 .premium-business-cta-heading {
