@@ -109,7 +109,7 @@
   "DownloadHeroHeadingMac": "AxCrypt for macOS",
   "DownloadHeroHeadingWindows": "AxCrypt for Windows",
   "DownloadMobileHeading": "AxCrypt Mobile",
-  "DownloadMobileBodyText": "<p>There are mobile apps available for Android and iOS devices. The mobile version is a viewer app that lets you open and read files and documents encrypted with the desktop application.</p><p>Read more <a href='#'>here</a></p>",
+  "DownloadMobileBodyText": "<p>There are mobile apps available for Android and iOS devices. The mobile version is a viewer app that lets you open and read files and documents encrypted with the desktop application.</p><p>Read more <a href='#/information/get-started/mobile'>here</a></p>",
   "DownloadHeroListOpenSecured": "Open secured files on you mobile device. See information below.",
   "DownloadHeroListSecureAny": "Secure any number of files using strong encryption.",
   "DownloadHeroListDoubleClick": "Double-click integration makes it as easy to open, edit and save secured files as it is to work with files without security.",
