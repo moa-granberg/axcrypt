@@ -89,9 +89,7 @@ export default {};
 
 .download-hero-mobile-badge-wrapper {
   align-self: flex-start;
-
   display: flex;
-  align-items: flex-start;
 
   &.mobile {
     flex-direction: column;

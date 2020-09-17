@@ -110,7 +110,7 @@ export default {
 }
 
 .pricing-heading {
-  margin: 0;
+  @include no-margin-padding;
 }
 
 .pricing-subheading {

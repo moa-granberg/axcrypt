@@ -29,7 +29,7 @@ export default {
 
 body {
   font-family: $standard-font;
-  margin: 0;
   color: $gray;
+  @include no-margin-padding;
 }
 </style>

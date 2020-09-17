@@ -54,8 +54,7 @@ export default {
 .header-menu-wrapper {
   margin-bottom: 10px;
   list-style: none;
-  margin: 0;
-  padding: 0;
+  @include no-margin-padding;
 
   &.mobile {
     transition: all 0.4s ease-in-out;

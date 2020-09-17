@@ -60,7 +60,7 @@ export default {
 }
 
 .product-try-it-for-free-cta-heading {
-  margin: 0;
+  @include no-margin-padding;
   font-weight: 300;
 }
 

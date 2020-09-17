@@ -63,7 +63,7 @@ export default {
 .footer-contact-paragraph {
   font-size: 0.75rem;
   line-height: 1.2rem;
-  margin: 0;
+  @include no-margin-padding;
   padding: 0 0 16px 0;
 
   &.mobile {

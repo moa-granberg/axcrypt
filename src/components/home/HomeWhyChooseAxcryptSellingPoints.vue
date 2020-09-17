@@ -102,7 +102,7 @@ export default {
 
 .home-why-choose-axcrypt-selling-points-item-heading {
   color: $light-green;
-  margin: 0;
+  @include no-margin-padding;
 
   &.mobile {
     text-align: center;
@@ -111,7 +111,7 @@ export default {
 
 .home-why-choose-axcrypt-selling-points-item-paragraph {
   color: $white;
-  margin: 0;
+  @include no-margin-padding;
 
   &.mobile {
     text-align: center;

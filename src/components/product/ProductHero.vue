@@ -91,7 +91,7 @@ export default {
 }
 
 .product-hero-preheading {
-  margin: 0;
+  @include no-margin-padding;
   font-weight: 300;
   color: $white;
 }
@@ -120,7 +120,7 @@ export default {
 }
 
 .product-hero-subheading {
-  margin: 0;
+  @include no-margin-padding;
   font-weight: 300;
   font-style: italic;
   color: $white;

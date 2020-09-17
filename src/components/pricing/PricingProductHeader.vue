@@ -54,11 +54,11 @@ export default {
 }
 
 .pricing-product-heading {
-  margin: 0;
+  @include no-margin-padding;
 }
 
 .pricing-product-subheading {
-  margin: 0;
+  @include no-margin-padding;
   font-weight: 400;
 }
 </style>

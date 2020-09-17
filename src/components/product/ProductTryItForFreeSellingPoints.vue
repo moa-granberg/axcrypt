@@ -92,7 +92,7 @@ export default {
 }
 
 .product-selling-points-item-paragraph {
-  margin: 0;
+  @include no-margin-padding;
   text-align: center;
 
   &.mobile {

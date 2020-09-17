@@ -104,7 +104,7 @@ export default {
 .try-preheading,
 .try-subheading {
   font-weight: 300;
-  margin: 0;
+  @include no-margin-padding;
 }
 
 .try-subheading {
@@ -113,6 +113,6 @@ export default {
 
 .try-heading {
   text-transform: uppercase;
-  margin: 0;
+  @include no-margin-padding;
 }
 </style>

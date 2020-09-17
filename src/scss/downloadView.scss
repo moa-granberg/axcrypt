@@ -2,7 +2,7 @@
 
 .download-hero-heading {
   font-weight: 400;
-  margin: 0;
+  @include no-margin-padding;
   max-width: 600px;
   width: 100%;
 
@@ -12,7 +12,7 @@
 }
 
 .download-hero-paragraph {
-  margin: 0;
+  @include no-margin-padding;
 
   > p > a {
     color: $light-green;

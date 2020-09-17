@@ -97,7 +97,7 @@ export default {
 
 .download-information-heading {
   font-weight: 400;
-  margin: 0;
+  @include no-margin-padding;
 }
 
 .download-information-img-wrapper {

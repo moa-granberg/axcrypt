@@ -51,6 +51,6 @@ export default {
 
 .business-card-heading,
 .business-card-paragraph {
-  margin: 0;
+  @include no-margin-padding;
 }
 </style>

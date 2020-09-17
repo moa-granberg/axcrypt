@@ -57,7 +57,7 @@ export default {
   }
 
   &.desktop {
-    margin: 0;
+    @include no-margin-padding;
   }
 }
 

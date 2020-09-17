@@ -130,7 +130,7 @@ export default {
     color: $white;
     font-weight: 600;
     text-shadow: $standard-text-shadow;
-    margin: 0;
+    @include no-margin-padding;
   }
 
   &.mobile {

@@ -134,10 +134,10 @@ export default {
 
 .home-get-started-list-item-text-heading {
   color: $green;
-  margin: 0;
+  @include no-margin-padding;
 }
 
 .home-get-started-list-item-text-paragraph {
-  margin: 0;
+  @include no-margin-padding;
 }
 </style>

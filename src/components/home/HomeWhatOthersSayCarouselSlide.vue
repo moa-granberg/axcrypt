@@ -55,8 +55,8 @@ export default {
   align-self: flex-start;
   font-style: italic;
   font-weight: 400;
-  margin: 0;
-
+  @include no-margin-padding;
+  
   &.mobile {
     font-size: 2rem;
   }

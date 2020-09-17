@@ -41,6 +41,6 @@ export default {
 }
 
 .dash-list-item-paragraph {
-  margin: 0;
+  @include no-margin-padding;
 }
 </style>

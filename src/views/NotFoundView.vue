@@ -38,7 +38,7 @@ export default {
 }
 
 .not-found-heading {
-  margin: 0;
+  @include no-margin-padding;
   color: $green;
 }
 

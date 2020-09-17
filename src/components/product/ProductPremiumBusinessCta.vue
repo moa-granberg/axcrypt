@@ -44,7 +44,7 @@ export default {
 
 .premium-business-cta-preheading {
   font-weight: 400;
-  margin: 0;
+  @include no-margin-padding;
 }
 
 .premium-business-cta-heading {
