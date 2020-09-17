@@ -15,6 +15,7 @@ import RegulatoryCompliancePage from './support/RegulatoryCompliancePage';
 import PasswordGeneratorPage from './support/PasswordGeneratorPage';
 import ServiceStatusPage from './support/ServiceStatusPage';
 
+import AboutAxcryptPage from './about/AboutAxcryptPage';
 import JobsPage from './about/JobsPage';
 import JobPositionPage from './about/JobPositionPage';
 import PressPage from './about/PressPage';
@@ -37,6 +38,7 @@ export {
   RegulatoryCompliancePage,
   PasswordGeneratorPage,
   ServiceStatusPage,
+  AboutAxcryptPage,
   JobsPage,
   JobPositionPage,
   PressPage,

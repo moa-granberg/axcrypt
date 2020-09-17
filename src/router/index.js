@@ -213,6 +213,14 @@ const routes = [
     },
     children: [
       {
+        path: 'axcrypt',
+        name: 'AboutAxcryptPage',
+        component: Pages.AboutAxcryptPage,
+        meta: {
+          title: 'About AxCrypt | ',
+        },
+      },
+      {
         path: 'jobs',
         name: 'JobsPage',
         component: Pages.JobsPage,

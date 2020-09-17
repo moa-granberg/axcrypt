@@ -23,15 +23,101 @@
   },
   {
     "path": "/information",
-    "phraseKey": "InformationLinkLabel"
+    "phraseKey": "InformationLinkLabel",
+    "children": [
+      {
+        "path": "/information/get-started/windows",
+        "phraseKey": "GetStartedLinkLabel"
+      },
+      {
+        "path": "/information/features",
+        "phraseKey": "FeaturesLinkLabel"
+      },
+      {
+        "path": "/information/requirements",
+        "phraseKey": "RequirementsLinkLabel"
+      },
+      {
+        "path": "/information/reseller",
+        "phraseKey": "ResellerLinkLabel"
+      },
+      {
+        "path": "/information/usage-tips",
+        "phraseKey": "UsageTipsLinkLabel"
+      },
+      {
+        "path": "/information/security",
+        "phraseKey": "SecurityLinkLabel"
+      },
+      {
+        "path": "/information/technical-details",
+        "phraseKey": "TechnicalDetailsLinkLabel"
+      },
+      {
+        "path": "/information/release-notes",
+        "phraseKey": "ReleaseNotesLinkLabel"
+      },
+      {
+        "path": "/information/privacy-policy",
+        "phraseKey": "PrivacyPolicyLinkLabel"
+      },
+      {
+        "path": "/information/terms-of-use",
+        "phraseKey": "TermsOfUseLinkLabel"
+      }
+    ]
   },
   {
     "path": "/support",
-    "phraseKey": "SupportLinkLabel"
+    "phraseKey": "SupportLinkLabel",
+    "children": [
+      {
+        "path": "/support/faq",
+        "phraseKey": "FaqLinkLabel"
+      },
+      {
+        "path": "/support/axcrypt-business",
+        "phraseKey": "AxcryptBusinessLinkLabel"
+      },
+      {
+        "path": "/support/regulatory-compliance",
+        "phraseKey": "RegulatoryComplianceLinkLabel"
+      },
+      {
+        "path": "/support/forums",
+        "phraseKey": "ForumsLinkLabel"
+      },
+      {
+        "path": "/support/blog",
+        "phraseKey": "BlogLinkLabel"
+      },
+      {
+        "path": "/support/password-generator",
+        "phraseKey": "PasswordGeneratorLinkLabel"
+      },
+      {
+        "path": "/support/service-status",
+        "phraseKey": "ServiceStatusLinkLabel"
+      }
+    ]
   },
   {
     "path": "/about",
-    "phraseKey": "AboutUsLinkLabel"
+    "phraseKey": "AboutUsLinkLabel",
+    "children": [
+      {
+        "path": "/about/axcrypt",
+        "phraseKey": "AboutAxcryptLinkLabel"
+      },
+      {
+        "path": "/about/press",
+        "phraseKey": "PressAndMediaLinkLabel"
+      },
+      {
+        "path": "/about/jobs",
+        "phraseKey": "JobsLinkLabel"
+      }
+    ]
   },
   {
     "path": "/sign-in",
