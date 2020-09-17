@@ -265,4 +265,13 @@ const routes = [
   { path: '*', redirect: '/404' },
 ];
 
-export default new VueRouter({ routes });
+export default new VueRouter({
+  routes,
+  scrollBehavior(to, from, savedPosition) {
+    if (savedPosition) {
+      return savedPosition;
+    } else {
+      return { x: 0, y: 0 };
+    }
+  },
+});
