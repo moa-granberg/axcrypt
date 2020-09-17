@@ -77,7 +77,7 @@ export default {
   justify-content: center;
   list-style: none;
   @include no-margin-padding;
-  
+
   &.mobile {
     padding: 0 0 16px 0;
     min-width: 320px;

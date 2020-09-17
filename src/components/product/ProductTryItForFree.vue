@@ -28,7 +28,7 @@
         phraseKey="ProductTryItForFreeStartButtonLabel"
         size="large"
         color="dark-green"
-        :path="product === 'premium' ? '/premium-trial' : '/business-trial'"
+        :path="`/${product}`"
       />
     </article>
   </section>

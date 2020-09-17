@@ -9,7 +9,7 @@
     <primary-button
       phraseKey="ProductTryItForFreeButtonLabel"
       size="large"
-      :path="product === 'premium' ? '/premium-trial' : '/business-trial'"
+      :path="`/${product}`"
     />
   </article>
 </template>

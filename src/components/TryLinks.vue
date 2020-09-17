@@ -1,7 +1,7 @@
 <template>
   <div :class="`try-links-wrapper ${$mq}`">
     <router-link
-      to="/premium-trial"
+      to="/premium"
       class="try-wrapper premium"
       :class="[{ transparent }, $mq]"
     >
@@ -19,7 +19,7 @@
     </router-link>
 
     <router-link
-      to="/business-trial"
+      to="/business"
       class="try-wrapper business"
       :class="[{ transparent }, $mq]"
     >

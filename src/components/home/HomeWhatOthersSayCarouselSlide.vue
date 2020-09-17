@@ -56,7 +56,7 @@ export default {
   font-style: italic;
   font-weight: 400;
   @include no-margin-padding;
-  
+
   &.mobile {
     font-size: 2rem;
   }
