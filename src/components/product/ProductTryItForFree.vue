@@ -134,7 +134,6 @@ export default {
 
 .product-try-it-for-free-subheading {
   font-size: 1.125rem;
-  @include no-margin-padding;
   border-top: 2px solid $white;
 
   &.mobile {
@@ -142,6 +141,7 @@ export default {
   }
 
   &.desktop {
+    @include no-margin-padding;
     padding: 20px 0;
   }
 }
