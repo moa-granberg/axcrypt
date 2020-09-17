@@ -48,7 +48,6 @@ export default {
 .product-hero-wrapper {
   background-blend-mode: overlay;
   background-size: cover;
-  height: 470px;
 
   &.premium {
     background-color: rgba(0, 0, 0, 0.5);
@@ -75,6 +74,7 @@ export default {
     display: grid;
     grid: 1fr / 1fr 1fr;
     justify-items: flex-end;
+    height: 470px;
 
     &.premium {
       background-image: url('~@/assets/view/product/premium-desktop-hero.png');
@@ -88,6 +88,10 @@ export default {
 .product-hero-headings-wrapper {
   @include center-column;
   height: 100%;
+
+  &.mobile {
+    padding: 50px 0;
+  }
 }
 
 .product-hero-preheading {
