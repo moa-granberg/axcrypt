@@ -94,9 +94,7 @@ export default {
   }
 
   &.desktop {
-    margin: auto;
-    position: relative;
-    top: 20px;
+    margin: 20px auto -20px auto;
     width: 58rem;
     height: 12rem;
   }

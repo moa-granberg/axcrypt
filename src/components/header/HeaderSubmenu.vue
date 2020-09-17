@@ -56,7 +56,7 @@ export default {
 .submenu-mouseover-div {
   &.desktop {
     position: absolute;
-    top: $header-height;
+    top: $header-height + 1;
     pointer-events: none;
   }
 }
@@ -67,11 +67,11 @@ export default {
   &.mobile {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.4s;
+    transition: max-height 0.2s;
 
     &.show-mobile {
       border-top: 1px solid $light-gray;
-      max-height: 110px;
+      max-height: 500px;
     }
   }
 
@@ -84,7 +84,7 @@ export default {
     transition: max-height 0.1s, opacity 0.1s;
 
     &.show-desktop {
-      max-height: 100px;
+      max-height: 400px;
       opacity: 1;
       transition: max-height 0.3s, opacity 0.3s;
     }
@@ -105,9 +105,8 @@ export default {
   }
 
   &.desktop {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.95);
     border-bottom: 1px solid rgba(255, 255, 255, 0.25);
-    padding: 10px 15px;
   }
 }
 
@@ -126,6 +125,11 @@ export default {
     font-size: 0.7em;
     color: $white;
     text-transform: uppercase;
+    padding: 10px 15px;
+
+    &:hover {
+      color: $light-green;
+    }
   }
 }
 </style>
