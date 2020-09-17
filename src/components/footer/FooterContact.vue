@@ -36,17 +36,15 @@ export default {
 @import '@/scss/variables.scss';
 
 .footer-contact-wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  @include center-column;
   position: relative;
 
   &.mobile {
-    align-items: center;
     padding: 0 0 70px 0;
   }
 
   &.desktop {
+    align-items: flex-start;
     margin: 0 auto 0 30px;
   }
 }

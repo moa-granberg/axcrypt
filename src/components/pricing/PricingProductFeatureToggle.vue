@@ -38,9 +38,7 @@ export default {
 @import '@/scss/variables.scss';
 
 .pricing-product-body-feature-toggle {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include center-row;
   cursor: pointer;
 
   p {

@@ -23,10 +23,7 @@ export default {
 @import '@/scss/variables.scss';
 
 .pricing-product-heading-wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  @include center-column;
   width: 100%;
   text-transform: uppercase;
   color: $white;

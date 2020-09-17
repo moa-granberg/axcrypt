@@ -71,10 +71,7 @@ export default {
   background-color: rgba(0, 0, 0, 0.7);
   box-shadow: $standard-box-shadow;
   color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  @include center-column;
 
   &.mobile {
     padding: 15px 0 0 0;
@@ -107,9 +104,7 @@ export default {
 
 .download-nav-item {
   list-style: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include center-row;
   min-width: 80px;
 
   &.mobile {

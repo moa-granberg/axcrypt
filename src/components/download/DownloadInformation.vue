@@ -103,9 +103,8 @@ export default {
 .download-information-img-wrapper {
   grid-area: img;
   align-self: flex-end;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
+  @include center-row;
 
   &.desktop {
     justify-self: flex-end;

@@ -55,10 +55,7 @@ export default {
 }
 
 .download-hero-platform-inner-wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  @include center-column;
 }
 
 .download-hero-platform-download-button {

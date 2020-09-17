@@ -65,9 +65,7 @@ export default {
 }
 
 .product-selling-points-item {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include center-row;
 
   &.mobile {
     flex-direction: column;

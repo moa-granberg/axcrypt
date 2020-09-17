@@ -22,10 +22,7 @@ export default {
 
 .product-business-big-team-cta-wrapper {
   background-color: $green;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  @include center-column;
 
   &.mobile {
     padding: 28px 0;

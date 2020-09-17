@@ -68,9 +68,7 @@ export default {
   }
 
   &.desktop {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include center-row;
   }
 }
 </style>

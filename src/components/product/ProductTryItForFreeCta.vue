@@ -33,10 +33,7 @@ export default {
 
 .product-try-it-for-free-cta-wrapper {
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  @include center-column;
   padding: 29px 0;
   color: $white;
 

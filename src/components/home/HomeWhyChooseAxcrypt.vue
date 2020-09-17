@@ -22,10 +22,7 @@ export default {
 @import '@/scss/variables.scss';
 
 .home-why-choose-axcrypt-wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  @include center-column;
   background-color: rgba(6, 9, 3, 0.9);
 
   &.mobile {

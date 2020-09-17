@@ -86,10 +86,7 @@ export default {
 }
 
 .product-hero-headings-wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  @include center-column;
   height: 100%;
 }
 

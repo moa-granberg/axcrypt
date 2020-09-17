@@ -96,9 +96,7 @@ export default {
   box-shadow: $standard-box-shadow;
   border: none;
   margin: 0 0 0 8px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include center-row;
   background-color: $dark-green;
 
   position: absolute;

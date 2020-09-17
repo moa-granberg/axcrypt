@@ -134,9 +134,7 @@ export default {
   }
 
   &.desktop {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include center-row;
     height: $header-height;
     text-transform: uppercase;
     color: $gray;
@@ -156,9 +154,7 @@ export default {
 }
 
 .header-submenu-drop-down-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include center-row;
 
   > img {
     padding: 0 25px;

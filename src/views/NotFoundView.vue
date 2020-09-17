@@ -20,10 +20,7 @@ export default {
 @import '@/scss/variables.scss';
 
 .not-found-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+  @include center-column;
 
   a {
     text-transform: uppercase;

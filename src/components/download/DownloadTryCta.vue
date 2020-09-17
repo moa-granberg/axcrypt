@@ -25,10 +25,7 @@ export default {
 @import '@/scss/variables.scss';
 
 .download-try-cta-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  @include center-column;
 
   &.mobile {
     padding: 24px 0;

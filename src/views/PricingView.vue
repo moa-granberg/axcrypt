@@ -98,10 +98,7 @@ export default {
 @import '@/scss/variables.scss';
 
 .pricing-wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  @include center-column;
 
   &.mobile {
     margin: 32px 0 0 0;

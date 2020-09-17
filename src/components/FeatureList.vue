@@ -83,9 +83,7 @@ export default {
 }
 
 .feature-list-item-img-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include center-row;
   width: 40px;
 }
 

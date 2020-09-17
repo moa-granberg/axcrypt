@@ -33,12 +33,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '@/scss/variables.scss';
 
 .home-what-others-say-carousel-slide {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  @include center-column;
 }
 
 .home-what-others-say-carousel-slide-img {

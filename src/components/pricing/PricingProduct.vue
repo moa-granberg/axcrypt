@@ -104,10 +104,7 @@ export default {
 @import '@/scss/variables.scss';
 
 .pricing-product-wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  @include center-column;
 
   &.mobile {
     margin: 32px 0;
@@ -146,10 +143,7 @@ export default {
 }
 
 .pricing-product-body {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  @include center-column;
   width: 100%;
   background-color: $light-gray;
 

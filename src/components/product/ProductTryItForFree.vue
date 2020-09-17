@@ -94,10 +94,7 @@ export default {
 
 .product-try-it-for-free-wrapper {
   color: $white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  @include center-column;
 
   &.mobile {
     &.premium {
@@ -124,10 +121,7 @@ export default {
 }
 
 .product-try-it-for-free-billing-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  @include center-column;
 
   &.mobile {
     padding: 0 0 28px 0;

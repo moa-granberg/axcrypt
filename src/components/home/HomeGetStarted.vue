@@ -49,10 +49,7 @@ export default {
 @import '@/scss/variables.scss';
 
 .home-get-started-wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  @include center-column;
   padding: 4rem 2rem;
 }
 

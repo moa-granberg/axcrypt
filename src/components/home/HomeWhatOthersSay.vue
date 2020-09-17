@@ -58,9 +58,7 @@ export default {
 
 .home-what-others-say-carousel-awards-wrapper {
   &.desktop {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include center-row;
   }
 }
 
@@ -69,11 +67,11 @@ export default {
   flex-direction: column;
   margin: 2rem 0;
 }
+
 .home-what-others-say-awards-logos-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include center-row;
 }
+
 .home-what-others-say-awards-logo {
   margin: 0 0.25rem;
 

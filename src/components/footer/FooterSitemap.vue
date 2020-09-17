@@ -43,17 +43,15 @@ export default {
 @import '@/scss/variables.scss';
 
 .footer-sitemap-wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  @include center-column;
 
   &.mobile {
-    align-items: center;
     background-color: $dark-green;
     box-shadow: inset $standard-box-shadow;
   }
 
   &.desktop {
+    align-items: flex-start;
     min-width: 230px;
     margin: 0 20px;
   }
