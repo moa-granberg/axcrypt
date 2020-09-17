@@ -84,16 +84,19 @@ export default {
 </script>
 
 <style lang="scss">
+@import '@/scss/variables.scss';
+
 .download-hero-wrapper {
+  background-color: $gray;
   background-size: cover;
   background-position: bottom;
 
   &.mobile {
-    background-image: url('~@/assets/view/download/download_hero_mobile.png');
+    background-image: url('~@/assets/hero-imgs/people-mobile.png');
   }
 
   &.desktop {
-    background-image: url('~@/assets/view/download/download_hero_desktop.png');
+    background-image: url('~@/assets/hero-imgs/people-desktop.png');
   }
 }
 
