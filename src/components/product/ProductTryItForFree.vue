@@ -100,9 +100,9 @@ export default {
     &.premium {
       background: linear-gradient(
         to bottom,
-        rgba(73, 119, 44, 0.7) 0%,
+        rgba(33, 80, 6, 0.9) 0%,
         rgba(73, 119, 44, 0.8) 70%,
-        rgba(33, 80, 6, 0.9) 100%
+        rgba(73, 119, 44, 0.7) 100%
       );
     }
     &.business {
