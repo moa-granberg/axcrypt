@@ -1,30 +1,30 @@
 <template>
   <main :class="`pricing-wrapper ${$mq}`">
-    <h1 :class="`pricing-heading ${$mq}`">
+    <h1 :class="`pricing-heading heading-jumbo ${$mq}`">
       {{ $t('PricingLinkLabel') }}
     </h1>
 
-    <p :class="`pricing-subheading ${$mq}`">
+    <p :class="`pricing-subheading heading-medium ${$mq}`">
       {{ $t('PricingSubheading') }}
     </p>
 
-    <annual-monthly-switcher-comp
+    <annual-monthly-switcher
       :active="annualActive"
       @switchMonthly="handleClickMonthly"
       @switchYearly="handleClickYearly"
     />
 
     <section :class="`pricing-product-main-wrapper ${$mq}`">
-      <pricing-product-comp :product="free" price="0" :currency="currency" />
+      <pricing-product :product="free" price="0" :currency="currency" />
 
-      <pricing-product-comp
+      <pricing-product
         :product="premium"
         :annualActive="annualActive"
         :price="premiumPrice"
         :currency="currency"
       />
 
-      <pricing-product-comp
+      <pricing-product
         :product="business"
         :annualActive="annualActive"
         :price="businessPrice"
@@ -35,14 +35,14 @@
 </template>
 
 <script>
-import AnnualMonthlySwitcherComp from '@/components/AnnualMonthlySwitcherComp';
-import PricingProductComp from '@/components/pricing/PricingProductComp';
+import AnnualMonthlySwitcher from '@/components/AnnualMonthlySwitcher';
+import PricingProduct from '@/components/pricing/PricingProduct';
 import { getPricing } from '@/utils/pricing/getPricing';
 
 export default {
   components: {
-    AnnualMonthlySwitcherComp,
-    PricingProductComp,
+    AnnualMonthlySwitcher,
+    PricingProduct,
   },
 
   data() {
@@ -98,10 +98,7 @@ export default {
 @import '@/scss/variables.scss';
 
 .pricing-wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  @include center-column;
 
   &.mobile {
     margin: 32px 0 0 0;
@@ -113,25 +110,15 @@ export default {
 }
 
 .pricing-heading {
-  margin: 0;
-
-  &.mobile {
-    font-size: 1.5rem;
-  }
-
-  &.desktop {
-    font-size: 2.25rem;
-  }
+  @include no-margin-padding;
 }
 
 .pricing-subheading {
   &.mobile {
     margin: 14px 0 18px 0;
-    font-size: 1.125rem;
   }
   &.desktop {
     margin: 34px 0 14px 0;
-    font-size: 1.5rem;
   }
 }
 

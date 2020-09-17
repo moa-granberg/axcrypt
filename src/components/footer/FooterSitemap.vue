@@ -1,6 +1,6 @@
 <template>
   <section :class="'footer-sitemap-wrapper ' + $mq">
-    <h3 :class="'footer-sitemap-heading ' + $mq">
+    <h3 :class="'footer-sitemap-heading body-text-large ' + $mq">
       {{ $t('SitemapHeading') }}
     </h3>
     <ul :class="'footer-sitemap-links-wrapper ' + $mq">
@@ -21,57 +21,20 @@
 export default {
   data() {
     return {
-      footerLinks: [
-        {
-          path: '/',
-          phraseKey: 'HomeLinkLabel',
-        },
-        {
-          path: '/pricing',
-          phraseKey: 'PricingLinkLabel',
-        },
-        {
-          path: '/information/get-started/:platform',
-          phraseKey: 'GetStartedLinkLabel',
-        },
-        {
-          path: '/information/reseller',
-          phraseKey: 'ResellerLinkLabel',
-        },
-        {
-          path: '/support/faq',
-          phraseKey: 'FaqLinkLabel',
-        },
-        {
-          path: '/support/forums',
-          phraseKey: 'ForumsLinkLabel',
-        },
-        {
-          path: '/support/blog',
-          phraseKey: 'BlogLinkLabel',
-        },
-        {
-          path: '/about',
-          phraseKey: 'AboutUsLinkLabel',
-        },
-        {
-          path: '/about/press',
-          phraseKey: 'PressLinkLabel',
-        },
-        {
-          path: '/information/privacy-policy',
-          phraseKey: 'PrivacyPolicyLinkLabel',
-        },
-        {
-          path: '/support/password-generator',
-          phraseKey: 'PasswordGeneratorLinkLabel',
-        },
-        {
-          path: '/sign-in',
-          phraseKey: 'MyAxCryptIDLinkLabel',
-        },
-      ],
+      footerLinks: [],
     };
+  },
+
+  methods: {
+    async getFooterLinks() {
+      this.footerLinks = await (
+        await import('@/data/footer/footer-sitemap-links.json')
+      ).default;
+    },
+  },
+
+  created() {
+    this.getFooterLinks();
   },
 };
 </script>
@@ -80,17 +43,15 @@ export default {
 @import '@/scss/variables.scss';
 
 .footer-sitemap-wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  @include center-column;
 
   &.mobile {
-    align-items: center;
     background-color: $dark-green;
-    box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: inset $standard-box-shadow;
   }
 
   &.desktop {
+    align-items: flex-start;
     min-width: 230px;
     margin: 0 20px;
   }
@@ -105,7 +66,6 @@ export default {
   }
 
   &.desktop {
-    font-size: 0.875rem;
     margin: 0 0 15px 0;
   }
 }
@@ -116,7 +76,7 @@ export default {
   flex-wrap: wrap;
   justify-content: center;
   list-style: none;
-  margin: 0;
+  @include no-margin-padding;
 
   &.mobile {
     padding: 0 0 16px 0;

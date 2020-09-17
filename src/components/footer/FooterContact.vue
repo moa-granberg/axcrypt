@@ -1,6 +1,6 @@
 <template>
   <section :class="'footer-contact-wrapper ' + $mq">
-    <h3 :class="'footer-contact-heading ' + $mq">
+    <h3 :class="'footer-contact-heading body-text-large ' + $mq">
       {{ $t('ContactUsHeading') }}
     </h3>
     <p
@@ -36,17 +36,15 @@ export default {
 @import '@/scss/variables.scss';
 
 .footer-contact-wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  @include center-column;
   position: relative;
 
   &.mobile {
-    align-items: center;
     padding: 0 0 70px 0;
   }
 
   &.desktop {
+    align-items: flex-start;
     margin: 0 auto 0 30px;
   }
 }
@@ -59,14 +57,13 @@ export default {
 
   &.desktop {
     margin: 0 0 15px 0;
-    font-size: 0.875rem;
   }
 }
 
 .footer-contact-paragraph {
   font-size: 0.75rem;
   line-height: 1.2rem;
-  margin: 0;
+  @include no-margin-padding;
   padding: 0 0 16px 0;
 
   &.mobile {

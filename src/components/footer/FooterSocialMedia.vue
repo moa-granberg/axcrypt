@@ -14,6 +14,8 @@ export default {};
 </script>
 
 <style lang="scss" scoped>
+@import '@/scss/variables.scss';
+
 .footer-social-socialmedia-wrapper {
   img {
     width: 32px;
@@ -27,17 +29,13 @@ export default {};
   }
 
   &.mobile {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include center-row;
     position: absolute;
     bottom: 28px;
     left: 28px;
 
     a {
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      @include center-row;
     }
   }
 

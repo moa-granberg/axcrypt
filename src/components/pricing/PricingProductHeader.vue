@@ -1,9 +1,9 @@
 <template>
   <div :class="`pricing-product-heading-wrapper ${product} ${$mq}`">
-    <h1 :class="`pricing-product-heading ${$mq}`">
+    <h1 :class="`pricing-product-heading heading-jumbo ${$mq}`">
       {{ $t(headingPhraseKey) }}
     </h1>
-    <h2 :class="`pricing-product-subheading ${$mq}`">
+    <h2 :class="`pricing-product-subheading body-text-large ${$mq}`">
       {{ $t(subheadingPhraseKey) }}
     </h2>
   </div>
@@ -23,10 +23,7 @@ export default {
 @import '@/scss/variables.scss';
 
 .pricing-product-heading-wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  @include center-column;
   width: 100%;
   text-transform: uppercase;
   color: $white;
@@ -57,27 +54,11 @@ export default {
 }
 
 .pricing-product-heading {
-  margin: 0;
-
-  &.mobile {
-    font-size: 1.5rem;
-  }
-
-  &.desktop {
-    font-size: 2.25rem;
-  }
+  @include no-margin-padding;
 }
 
 .pricing-product-subheading {
-  margin: 0;
+  @include no-margin-padding;
   font-weight: 400;
-
-  &.mobile {
-    font-size: 0.875rem;
-  }
-
-  &.desktop {
-    font-size: 1.125rem;
-  }
 }
 </style>

@@ -213,6 +213,14 @@ const routes = [
     },
     children: [
       {
+        path: 'axcrypt',
+        name: 'AboutAxcryptPage',
+        component: Pages.AboutAxcryptPage,
+        meta: {
+          title: 'About AxCrypt | ',
+        },
+      },
+      {
         path: 'jobs',
         name: 'JobsPage',
         component: Pages.JobsPage,
@@ -255,22 +263,6 @@ const routes = [
     },
   },
   {
-    path: '/business-trial',
-    name: 'BusinessTrialView',
-    component: Views.BusinessTrialView,
-    meta: {
-      title: 'Business Trial | ',
-    },
-  },
-  {
-    path: '/premium-trial',
-    name: 'PremiumTrialView',
-    component: Views.PremiumTrialView,
-    meta: {
-      title: 'Premium Trial | ',
-    },
-  },
-  {
     path: '/404',
     name: 'NotFound',
     component: Views.NotFoundView,
@@ -281,4 +273,13 @@ const routes = [
   { path: '*', redirect: '/404' },
 ];
 
-export default new VueRouter({ routes });
+export default new VueRouter({
+  routes,
+  scrollBehavior(to, from, savedPosition) {
+    if (savedPosition) {
+      return savedPosition;
+    } else {
+      return { x: 0, y: 0 };
+    }
+  },
+});

@@ -1,21 +1,21 @@
 <template>
   <main>
-    <download-hero-comp />
-    <download-try-cta-comp />
-    <download-information-comp />
+    <download-hero />
+    <download-try-cta />
+    <download-information />
   </main>
 </template>
 
 <script>
-import DownloadHeroComp from '@/components/download/DownloadHeroComp.vue';
-import DownloadTryCtaComp from '@/components/download/DownloadTryCtaComp.vue';
-import DownloadInformationComp from '@/components/download/DownloadInformationComp.vue';
+import DownloadHero from '@/components/download/DownloadHero';
+import DownloadTryCta from '@/components/download/DownloadTryCta';
+import DownloadInformation from '@/components/download/DownloadInformation';
 
 export default {
   components: {
-    DownloadHeroComp,
-    DownloadTryCtaComp,
-    DownloadInformationComp,
+    DownloadHero,
+    DownloadTryCta,
+    DownloadInformation,
   },
 };
 </script>

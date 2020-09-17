@@ -47,9 +47,7 @@ export default {
 @import '@/scss/variables.scss';
 
 .language-bar-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include center-row;
   padding: 15px 25px;
 
   &.mobile {
@@ -69,9 +67,7 @@ export default {
 }
 
 .language-selector {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include center-row;
 
   &.mobile {
     flex-direction: row;
@@ -93,12 +89,6 @@ export default {
 }
 
 .language-selector-flag {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  &.mobile {
-    flex-direction: row;
-  }
+  @include center-row;
 }
 </style>

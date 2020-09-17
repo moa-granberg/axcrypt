@@ -1,0 +1,70 @@
+@import './variables.scss';
+
+.body-text {
+  a {
+    color: $green;
+    font-weight: 600;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &.mobile {
+    font-size: 0.75rem;
+  }
+
+  &.desktop {
+    font-size: 0.875rem;
+  }
+}
+
+.body-text-large {
+  &.mobile {
+    font-size: 0.875rem;
+  }
+
+  &.desktop {
+    font-size: 1.125rem;
+  }
+}
+
+.heading-small {
+  &.mobile {
+    font-size: 0.875rem;
+  }
+
+  &.desktop {
+    font-size: 1.5rem;
+  }
+}
+
+.heading-medium {
+  &.mobile {
+    font-size: 1.125rem;
+  }
+
+  &.desktop {
+    font-size: 1.5rem;
+  }
+}
+
+.heading-large {
+  &.mobile {
+    font-size: 1.125rem;
+  }
+
+  &.desktop {
+    font-size: 1.875rem;
+  }
+}
+
+.heading-jumbo {
+  &.mobile {
+    font-size: 1.5rem;
+  }
+  &.desktop {
+    font-size: 2.25rem;
+  }
+}

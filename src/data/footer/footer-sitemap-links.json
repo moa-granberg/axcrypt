@@ -1,0 +1,50 @@
+[
+  {
+    "path": "/",
+    "phraseKey": "HomeLinkLabel"
+  },
+  {
+    "path": "/pricing",
+    "phraseKey": "PricingLinkLabel"
+  },
+  {
+    "path": "/information/get-started/:platform",
+    "phraseKey": "GetStartedLinkLabel"
+  },
+  {
+    "path": "/information/reseller",
+    "phraseKey": "ResellerLinkLabel"
+  },
+  {
+    "path": "/support/faq",
+    "phraseKey": "FaqLinkLabel"
+  },
+  {
+    "path": "/support/forums",
+    "phraseKey": "ForumsLinkLabel"
+  },
+  {
+    "path": "/support/blog",
+    "phraseKey": "BlogLinkLabel"
+  },
+  {
+    "path": "/about",
+    "phraseKey": "AboutUsLinkLabel"
+  },
+  {
+    "path": "/about/press",
+    "phraseKey": "PressLinkLabel"
+  },
+  {
+    "path": "/information/privacy-policy",
+    "phraseKey": "PrivacyPolicyLinkLabel"
+  },
+  {
+    "path": "/support/password-generator",
+    "phraseKey": "PasswordGeneratorLinkLabel"
+  },
+  {
+    "path": "/sign-in",
+    "phraseKey": "MyAxCryptIDLinkLabel"
+  }
+]

@@ -2,7 +2,7 @@
   <header :class="'header ' + this.$mq">
     <section :class="'header-wrapper ' + this.$mq">
       <div :class="'nav ' + this.$mq">
-        <router-link to="/">
+        <router-link to="/" @click.native="showMobileMenu = false">
           <img class="logo" src="@/assets/logos/axcrypt_text.png" alt="Logo" />
         </router-link>
         <hamburger-menu

@@ -67,7 +67,6 @@
   "SupportLinkLabel": "Support",
   "TryForFreeButtonLabel": "Try for free",
   "WhyAxCryptBusiness": "Why AxCrypt Business?",
-
   "HomeHeroHeading": "\"Advanced encryption in a superbly simple setting\"",
   "HomeHeroSubheading": "PCMag Editors´ Choice 2020",
   "HomeHeroUnderSubheading": "over 20 million downloads worldwide",
@@ -75,23 +74,19 @@
   "TryPremiumHeading": "Try Premium",
   "TryBusinessPreHeading": "For business users",
   "TryBusinessHeading": "Try Business",
-
   "WhyChooseAxcrypt": "Why choose AxCrypt?",
-
   "HomeSellingPointStrongEncryptionHeading": "Strong encryption",
   "HomeSellingPointCloudStorageAwarenessHeading": "Cloud storage awareness",
   "HomeSellingPointMultilingualHeading": "Multilingual",
   "HomeSellingPointCollaborationHeading": "Collaboration",
   "HomeSellingPointPasswordManagementHeading": "Password management",
   "HomeSellingPointAxcryptMobileHeading": "AxCrypt Mobile",
-
   "HomeSellingPointStrongEncryptionBody": "File security with 128-bit or 256-bit encryption.",
   "HomeSellingPointCloudStorageAwarenessBody": "Automatically secure your files in Dropbox, Google Drive etc.",
   "HomeSellingPointMultilingualBody": "AxCrypt speaks English, Dutch, French, German, Italian, Korean, Portuguese, Spanish, Swedish, Turkish, Russian, Polish and more to come.",
   "HomeSellingPointCollaborationBody": "Allow secured files to be opened by other AxCrypt users with their own password.",
   "HomeSellingPointPasswordManagementBody": "Manage and access your passwords seamlessly wherever you are.",
   "HomeSellingPointAxcryptMobileBody": "Open your encrypted files on your phone.",
-
   "HomeGetStartedHeading": "How to get started",
   "HomeGetStartedListDownloadHeading": "1. Download",
   "HomeGetStartedListDownloadParagraph": "Get the latest version of AxCrypt",
@@ -99,17 +94,14 @@
   "HomeGetStartedListEncryptParagraph": "Select which files to secure with just a few clicks",
   "HomeGetStartedListShareHeading": "3. Share",
   "HomeGetStartedListShareParagraph": "Share your secured files with a single click",
-
   "HomeGetStartedYoutubeDescription": "This is a video tutorial on how to get started with AxCrypt",
   "HomeWhatOthersSayHeading": "What others say",
-
   "HomeWhatOtherSayTestimonialsText": "<p>For more testimonials, head over to <a href='#/about'>awards & reviews</a></p>",
-
   "DownloadNavHeading": "Other platforms",
   "DownloadHeroHeadingMac": "AxCrypt for macOS",
   "DownloadHeroHeadingWindows": "AxCrypt for Windows",
   "DownloadMobileHeading": "AxCrypt Mobile",
-  "DownloadMobileBodyText": "<p>There are mobile apps available for Android and iOS devices. The mobile version is a viewer app that lets you open and read files and documents encrypted with the desktop application.</p><p>Read more <a href='#'>here</a></p>",
+  "DownloadMobileBodyText": "<p>There are mobile apps available for Android and iOS devices. The mobile version is a viewer app that lets you open and read files and documents encrypted with the desktop application.</p><p>Read more <a href='#/information/get-started/mobile'>here</a></p>",
   "DownloadHeroListOpenSecured": "Open secured files on you mobile device. See information below.",
   "DownloadHeroListSecureAny": "Secure any number of files using strong encryption.",
   "DownloadHeroListDoubleClick": "Double-click integration makes it as easy to open, edit and save secured files as it is to work with files without security.",
@@ -127,16 +119,13 @@
   "DownloadInformationListOfficialDownload": "This is the only official download site for AxCrypt. Lookup SHA256 hash.",
   "DownloadInformationListKeepInMind": "Keep in mind that if you install AxCrypt 2 and open old files, these files will no longer be possible to open with AxCrypt 1.",
   "DownloadInformationButtonLabel": "Read about release notes",
-
   "404Heading": "Page not found.",
   "404Text": "We could not find the page you were looking for. Either something went wrong or the page does not exist.",
   "BackToHomeButtonLabel": "Back to home",
   "PricingSubheading": "How do you want to pay?",
-
   "HideFeaturesLabel": "Hide features",
   "WhatsIncludedLabel": "What's included?",
   "FeatureLabel": "Feature",
-
   "PricingFeatureListViewer": "Viewer",
   "PricingFeatureListAES128": "AES-128 Encryption",
   "PricingFeatureListAccountKey": "Account Key Backup",
@@ -155,7 +144,6 @@
   "PricingFeatureListDirectSupport": "Direct Support",
   "PricingFeatureListBusinessAdmin": "Business Admin",
   "PricingFeatureListMoreUpcoming": "More Upcoming Exclusive Features",
-
   "ForEveryoneLabel": "For everyone",
   "FreeLabel": "Free",
   "CreateAccountLabel": "Create account",
@@ -164,7 +152,19 @@
   "ReadMoreAboutPremiumPlanLabel": "Read more about the premium plan",
   "ForOrganisationsLabel": "For organisations",
   "ReadMoreAboutBusinessPlanLabel": "Read more about the business plan",
-
   "PerMonthPerUserLabel": "Per month | Per user",
-  "OneFreeMonthLabel": "1 free month"
+  "OneFreeMonthLabel": "1 free month",
+  "FeaturesLinkLabel": "Features",
+  "AxcryptBusinessLinkLabel": "AxCrypt Business",
+  "TermsOfUseLinkLabel": "Terms of Use",
+  "RegulatoryComplianceLinkLabel": "Regulatory Compliance",
+  "RequirementsLinkLabel": "Requirements",
+  "UsageTipsLinkLabel": "Usage Tips",
+  "SecurityLinkLabel": "Security",
+  "TechnicalDetailsLinkLabel": "Technical Details",
+  "ReleaseNotesLinkLabel": "Release Notes",
+  "ServiceStatusLinkLabel": "Service Status",
+  "AboutAxcryptLinkLabel": "About AxCrypt",
+  "PressAndMediaLinkLabel": "Press and Media",
+  "JobsLinkLabel": "Jobs"
 }

@@ -2,20 +2,16 @@
   <main :class="`not-found-wrapper ${$mq}`">
     <h1 :class="`not-found-heading ${$mq}`">{{ $t('404Heading') }}</h1>
     <p :class="`not-found-paragraph ${$mq}`">{{ $t('404Text') }}</p>
-    <primary-button-comp
-      path="/"
-      phraseKey="BackToHomeButtonLabel"
-      size="large"
-    />
+    <primary-button path="/" phraseKey="BackToHomeButtonLabel" size="large" />
   </main>
 </template>
 
 <script>
-import PrimaryButtonComp from '@/components/PrimaryButtonComp';
+import PrimaryButton from '@/components/PrimaryButton';
 
 export default {
   components: {
-    PrimaryButtonComp,
+    PrimaryButton,
   },
 };
 </script>
@@ -24,10 +20,7 @@ export default {
 @import '@/scss/variables.scss';
 
 .not-found-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+  @include center-column;
 
   a {
     text-transform: uppercase;
@@ -45,7 +38,7 @@ export default {
 }
 
 .not-found-heading {
-  margin: 0;
+  @include no-margin-padding;
   color: $green;
 }
 
