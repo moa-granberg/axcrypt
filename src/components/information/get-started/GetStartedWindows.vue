@@ -11,7 +11,35 @@ export default {
   components: {
     GetStartedInstructionBlock,
   },
+
+  data() {
+    return {
+      installingAxcryptData: {},
+      howToUseData: {},
+      keySharingData: {},
+      passwordManagementData: {},
+    };
+  },
+
+  methods: {
+    async getInstructionsData() {
+      const data = await (
+        await import('@/data/information/get-started/instructions-windows.json')
+      ).default;
+
+      this.installingAxcryptData = data.installingAxcrypt;
+      this.howToUseData = data.howToUse;
+      this.keySharingData = data.keySharing;
+      this.passwordManagementData = data.passwordManagement;
+    },
+  },
+
+  created() {
+    this.getInstructionsData();
+  },
 };
 </script>
 
-<style></style>
+<style lang="scss" scoped>
+@import '@/scss/variables.scss';
+</style>
