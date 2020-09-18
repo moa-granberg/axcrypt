@@ -6,7 +6,11 @@
       </h1>
     </article>
 
-    <side-menu />
+    <side-menu
+      v-if="$mq === 'desktop'"
+      headingPhraseKey="InformationLinkLabel"
+      :linkList="sideMenuLinks"
+    />
 
     <router-view />
   </main>
@@ -20,10 +24,35 @@ export default {
     SideMenu,
   },
 
+  data() {
+    return {
+      sideMenuLinks: [],
+    };
+  },
+
   computed: {
     getPageName() {
       return this.$route.name.split('Page').join('LinkLabel');
     },
+  },
+
+  methods: {
+    async getSideMenuLinks() {
+      const linkImport = await (
+        await import('@/data/header/header-menu-links.json')
+      ).default;
+
+      this.sideMenuLinks = linkImport
+        .find(item => item.path === '/information')
+        .children.map(child => ({
+          path: child.path,
+          phraseKey: child.phraseKey,
+        }));
+    },
+  },
+
+  created() {
+    this.getSideMenuLinks();
   },
 };
 </script>
