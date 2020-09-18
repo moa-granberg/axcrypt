@@ -1,22 +1,94 @@
 <template>
-  <main>
-    This is Get Started with param {{ $route.params }}
-    <!-- <div
-      v-if="$mq === 'mobile' && getPageName === 'GetStartedLinkLabel'"
-      :class="`information-get-started-platform-wrapper`"
-    >
-      <h2 :class="`body-text-large ${$mq}`">
+  <section>
+    <div :class="`header-wrapper ${$mq}`">
+      <h2 :class="`nav-heading body-text-large ${$mq}`">
         {{ $t('OtherPlatformsLabel') }}
       </h2>
-      <ul :class="`get-started-nav-wrapper ${$mq}`">
-        <li :class="[{ active: activePlatform }, $mq]">Windows</li>
-        <li>Mac</li>
-        <li>Mobile</li>
+      <ul :class="`nav-wrapper ${$mq}`">
+        <li>
+          <router-link
+            to="/information/get-started/windows"
+            :class="`nav-link ${$mq}`"
+          >
+            Windows
+          </router-link>
+        </li>
+        <li>
+          <router-link
+            to="/information/get-started/mac"
+            :class="`nav-link ${$mq}`"
+          >
+            Mac
+          </router-link>
+        </li>
+        <li>
+          <router-link
+            to="/information/get-started/mobile"
+            :class="`nav-link ${$mq}`"
+          >
+            Mobile
+          </router-link>
+        </li>
       </ul>
-    </div> -->
-  </main>
+    </div>
+  </section>
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      activePlatform: this.$route.params.platform,
+    };
+  },
+};
 </script>
+
+<style lang="scss" scoped>
+@import '@/scss/variables.scss';
+
+.header-wrapper {
+  @include center-column;
+  background-color: rgba($black, 0.9);
+
+  &.mobile {
+    gap: 16px;
+    padding: 16px 0;
+  }
+
+  &.desktop {
+    gap: 24px;
+    padding: 40px;
+  }
+}
+
+.nav-heading {
+  @include no-margin-padding;
+  color: $white;
+}
+
+.nav-wrapper {
+  @include center-row;
+  @include no-margin-padding;
+  list-style: none;
+
+  &.mobile {
+    gap: 50px;
+  }
+
+  &.desktop {
+    gap: 60px;
+  }
+}
+
+.nav-link {
+  font-size: 0.875rem;
+  text-decoration: none;
+  color: $white;
+
+  &.router-link-active {
+    color: $light-green;
+    font-weight: 600;
+  }
+}
+</style>
