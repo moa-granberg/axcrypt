@@ -35,18 +35,19 @@ export default {
 .home-hero-wrapper {
   display: grid;
   grid: 2fr 1fr / 1fr;
+  background-color: $gray;
   background-size: cover;
   color: $white;
   text-align: center;
   background-position: center;
 
   &.mobile {
-    background-image: url('~@/assets/view/home/home-hero-mobile.png');
+    background-image: url('~@/assets/hero-imgs/people-mobile.png');
     height: 450px;
   }
 
   &.desktop {
-    background-image: url('~@/assets/view/home/home-hero-desktop.png');
+    background-image: url('~@/assets/hero-imgs/people-desktop.png');
     min-height: 500px;
     max-height: 45vh;
   }

@@ -34,6 +34,7 @@ export default {
   button {
     width: 146px;
     height: 35px;
+    background-color: $light-gray;
     text-transform: uppercase;
     font-weight: 600;
     border: 2px solid $dark-green;
