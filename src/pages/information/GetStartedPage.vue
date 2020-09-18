@@ -31,15 +31,17 @@
         </li>
       </ul>
     </div>
+
+    <get-started-windows v-if="this.$route.params.platform === 'windows'" />
   </section>
 </template>
 
 <script>
+import GetStartedWindows from '@/components/information/get-started/GetStartedWindows';
+
 export default {
-  data() {
-    return {
-      activePlatform: this.$route.params.platform,
-    };
+  components: {
+    GetStartedWindows,
   },
 };
 </script>
