@@ -62,6 +62,7 @@ export default {
 .home-get-started-list-video-wrapper {
   display: flex;
   align-items: center;
+
   &.mobile {
     flex-direction: column;
   }
@@ -77,6 +78,8 @@ export default {
 }
 
 .home-get-started-video {
+  background-color: $gray;
+
   &.mobile {
     margin: 0 0 0.25rem 0;
   }
