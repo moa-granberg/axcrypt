@@ -1,7 +1,7 @@
 <template>
   <section :class="`download-nav-wrapper ${$mq}`">
     <h1 :class="`download-nav-heading ${$mq}`">
-      {{ $t('DownloadNavHeading') }}
+      {{ $t('OtherPlatformsLabel') }}
     </h1>
     <ul :class="`download-nav-items-wrapper ${$mq}`">
       <li
