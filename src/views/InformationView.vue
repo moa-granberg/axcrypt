@@ -5,14 +5,15 @@
         {{ $t(getPageName) }}
       </h1>
     </article>
+    <section :class="`information-aside-content-wrapper ${$mq}`">
+      <side-menu
+        v-if="$mq === 'desktop'"
+        headingPhraseKey="InformationLinkLabel"
+        :linkList="sideMenuLinks"
+      />
 
-    <side-menu
-      v-if="$mq === 'desktop'"
-      headingPhraseKey="InformationLinkLabel"
-      :linkList="sideMenuLinks"
-    />
-
-    <router-view />
+      <router-view />
+    </section>
   </main>
 </template>
 
@@ -60,22 +61,12 @@ export default {
 <style lang="scss" scoped>
 @import '@/scss/variables.scss';
 
-.information-view-wrapper {
-  &.desktop {
-    display: grid;
-    grid: auto 1fr / auto 1fr;
-    grid-template-areas:
-      'header header'
-      'aside main';
-  }
-}
-
 .information-header {
-  grid-area: header;
-
   @include center-column;
   background-blend-mode: overlay;
   background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   color: $white;
 
   &.mobile {
@@ -85,6 +76,12 @@ export default {
   &.desktop {
     background-image: url('~@/assets/hero-imgs/people-desktop.png');
   }
+}
+
+.information-aside-content-wrapper {
+  display: flex;
+  max-width: 1440px;
+  margin: auto;
 }
 
 .information-heading {
