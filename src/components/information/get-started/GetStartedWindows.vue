@@ -1,6 +1,6 @@
 <template>
   <section>
-    <get-started-instruction-block />
+    <get-started-instruction-block :data="installingAxcryptData" />
   </section>
 </template>
 
