@@ -1,14 +1,32 @@
 <template>
-  <article :class="`instruction-block-wrapper ${$mq}`">
-    <div :class="`instruction-wrapper ${$mq}`">
-      <h1 :class="`heading-small ${$mq}`">
+  <article :class="`instruction-wrapper ${$mq}`">
+    <div :class="`instruction-text-wrapper ${$mq}`">
+      <h1 :class="`instruction-heading heading-small ${$mq}`">
         {{ $t(data.heading) }}
       </h1>
 
       <p :class="`body-text ${$mq}`" v-html="$t(data.ingress)" />
 
+      <div :class="`iframe-wrapper ${$mq}`" v-if="$mq === 'mobile'">
+        <iframe
+          :class="`iframe ${$mq}`"
+          :title="data.videoTitle"
+          :src="data.videoUrl"
+          frameborder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        />
+      </div>
+
+      <ol :class="`instruction-list-wrapper ${$mq}`">
+        <li :class="`list-item ${$mq}`" v-for="item of data.list" :key="item">
+          <p :class="`body-text ${$mq}`" v-html="$t(item)" />
+        </li>
+      </ol>
+    </div>
+
+    <div :class="`iframe-wrapper ${$mq}`" v-if="$mq === 'desktop'">
       <iframe
-        v-if="$mq === 'mobile'"
         :class="`iframe ${$mq}`"
         :title="data.videoTitle"
         :src="data.videoUrl"
@@ -16,23 +34,7 @@
         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen
       />
-
-      <ol :class="`instructions-wrapper ${$mq}`">
-        <li v-for="item of data.list" :key="item">
-          <p :class="`body-text ${$mq}`" v-html="$t(item)" />
-        </li>
-      </ol>
     </div>
-
-    <iframe
-      v-if="$mq === 'desktop'"
-      :class="`iframe ${$mq}`"
-      :title="data.videoTitle"
-      :src="data.videoUrl"
-      frameborder="0"
-      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen
-    />
   </article>
 </template>
 
@@ -52,4 +54,87 @@ export default {
 
 <style lang="scss" scoped>
 @import '@/scss/variables.scss';
+
+.instruction-wrapper {
+  padding: 24px;
+
+  &.desktop {
+    display: grid;
+    grid: 1fr / 1fr 1fr;
+    align-items: flex-start;
+    gap: 24px;
+    margin: auto;
+  }
+}
+
+.instruction-text-wrapper {
+  &.mobile {
+    text-align: center;
+  }
+  &.desktop {
+    justify-self: flex-end;
+  }
+}
+
+.instruction-heading {
+  color: $green;
+  font-weight: 400;
+
+  &.desktop {
+    @include no-margin-padding;
+  }
+}
+
+.iframe-wrapper {
+  position: relative;
+  overflow: hidden;
+  padding-top: 56.25%;
+  box-shadow: $standard-box-shadow;
+
+  &.mobile {
+    margin: 20px 0;
+  }
+}
+
+.iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $gray;
+}
+
+.instruction-list-wrapper {
+  @include no-margin-padding;
+  list-style: none;
+  counter-reset: list-item;
+
+  &.mobile {
+    text-align: start;
+  }
+
+  &.desktop {
+    border-top: 1px solid $green;
+  }
+}
+
+.list-item {
+  display: flex;
+  margin: 10px 0;
+  counter-increment: list-item;
+
+  &::before {
+    content: counter(list-item);
+    color: $green;
+    display: inline-block;
+    font-size: 0.875rem;
+    font-weight: 600;
+  }
+
+  p {
+    @include no-margin-padding;
+    margin: 1px 0 0 10px;
+  }
+}
 </style>
