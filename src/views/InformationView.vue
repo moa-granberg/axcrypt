@@ -1,5 +1,5 @@
 <template>
-  <main>
+  <main :class="`information-view-wrapper ${$mq}`">
     <article :class="`information-header ${$mq}`">
       <h1 :class="`information-heading heading-jumbo ${$mq}`">
         {{ $t(getPageName) }}
@@ -60,7 +60,19 @@ export default {
 <style lang="scss" scoped>
 @import '@/scss/variables.scss';
 
+.information-view-wrapper {
+  &.desktop {
+    display: grid;
+    grid: auto 1fr / auto 1fr;
+    grid-template-areas:
+      'header header'
+      'aside main';
+  }
+}
+
 .information-header {
+  grid-area: header;
+
   @include center-column;
   background-blend-mode: overlay;
   background-position: center;
