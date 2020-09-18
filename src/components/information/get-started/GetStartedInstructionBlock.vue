@@ -1,6 +1,6 @@
 <template>
   <article :class="`instruction-block-wrapper ${$mq}`">
-    <mq-layout mq="mobile">
+    <div :class="`instruction-wrapper ${$mq}`">
       <h1 :class="`heading-small ${$mq}`">
         {{ $t(data.heading) }}
       </h1>
@@ -8,6 +8,7 @@
       <p :class="`body-text ${$mq}`" v-html="$t(data.ingress)" />
 
       <iframe
+        v-if="$mq === 'mobile'"
         :class="`iframe ${$mq}`"
         :title="data.videoTitle"
         :src="data.videoUrl"
@@ -21,32 +22,17 @@
           <p :class="`body-text ${$mq}`" v-html="$t(item)" />
         </li>
       </ol>
-    </mq-layout>
+    </div>
 
-    <mq-layout mq="desktop">
-      <div class="instruction-wrapper-desktop">
-        <h1 :class="`heading-small ${$mq}`">
-          {{ $t(data.heading) }}
-        </h1>
-
-        <p :class="`body-text ${$mq}`" v-html="$t(data.ingress)" />
-
-        <ol :class="`instructions-wrapper ${$mq}`">
-          <li v-for="item of data.list" :key="item">
-            <p :class="`body-text ${$mq}`" v-html="$t(item)" />
-          </li>
-        </ol>
-      </div>
-
-      <iframe
-        :class="`iframe ${$mq}`"
-        :title="data.videoTitle"
-        :src="data.videoUrl"
-        frameborder="0"
-        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-      />
-    </mq-layout>
+    <iframe
+      v-if="$mq === 'desktop'"
+      :class="`iframe ${$mq}`"
+      :title="data.videoTitle"
+      :src="data.videoUrl"
+      frameborder="0"
+      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    />
   </article>
 </template>
 
@@ -64,4 +50,6 @@ export default {
 };
 </script>
 
-<style></style>
+<style lang="scss" scoped>
+@import '@/scss/variables.scss';
+</style>
