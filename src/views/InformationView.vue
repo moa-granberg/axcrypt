@@ -32,13 +32,16 @@ export default {
 @import '@/scss/variables.scss';
 
 .information-header {
+  @include center-column;
+  background-blend-mode: overlay;
+  background-position: center;
+  color: $white;
+
   &.mobile {
-    padding: 56px 0;
     background-image: url('~@/assets/hero-imgs/people-mobile.png');
   }
 
   &.desktop {
-    padding: 74px 0 42px 0;
     background-image: url('~@/assets/hero-imgs/people-desktop.png');
   }
 }
@@ -46,6 +49,17 @@ export default {
 .information-heading {
   @include no-margin-padding;
   @include center-row;
-  color: $white;
+  width: 100%;
+  background-color: rgba(72, 119, 44, 0.7);
+  text-shadow: $standard-text-shadow;
+  font-weight: 400;
+
+  &.mobile {
+    padding: 56px 0;
+  }
+
+  &.desktop {
+    padding: 74px 0;
+  }
 }
 </style>
