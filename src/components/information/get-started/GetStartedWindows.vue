@@ -1,6 +1,12 @@
 <template>
   <section>
     <get-started-instruction-block :data="installingAxcryptData" />
+    <get-started-instruction-block :data="howToUseData" :reverse="true" />
+    <get-started-instruction-block :data="keySharingData" />
+    <get-started-instruction-block
+      :data="passwordManagementData"
+      :reverse="true"
+    />
   </section>
 </template>
 

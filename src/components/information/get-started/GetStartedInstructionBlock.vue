@@ -1,13 +1,16 @@
 <template>
-  <article :class="`instruction-wrapper ${$mq}`">
-    <div :class="`instruction-text-wrapper ${$mq}`">
+  <article :class="[{ reverse }, 'instruction-wrapper', $mq]">
+    <div :class="[{ reverse }, 'instruction-text-wrapper', $mq]">
       <h1 :class="`instruction-heading heading-small ${$mq}`">
         {{ $t(data.heading) }}
       </h1>
 
       <p :class="`body-text ${$mq}`" v-html="$t(data.ingress)" />
 
-      <div :class="`iframe-wrapper ${$mq}`" v-if="$mq === 'mobile'">
+      <div
+        :class="[{ reverse }, 'iframe-wrapper', $mq]"
+        v-if="$mq === 'mobile'"
+      >
         <iframe
           :class="`iframe ${$mq}`"
           :title="data.videoTitle"
@@ -48,6 +51,7 @@ export default {
       videoTitle: String,
       list: Array, // Strings
     },
+    reverse: Boolean,
   },
 };
 </script>
@@ -64,6 +68,10 @@ export default {
     align-items: flex-start;
     gap: 24px;
     margin: auto;
+
+    &.reverse {
+      grid-template-areas: 'video text';
+    }
   }
 }
 
@@ -71,8 +79,13 @@ export default {
   &.mobile {
     text-align: center;
   }
+
   &.desktop {
     justify-self: flex-end;
+
+    &.reverse {
+      grid-area: text;
+    }
   }
 }
 
@@ -93,6 +106,12 @@ export default {
 
   &.mobile {
     margin: 20px 0;
+  }
+
+  &.desktop {
+    &.reverse {
+      grid-area: video;
+    }
   }
 }
 
