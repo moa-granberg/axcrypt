@@ -215,5 +215,9 @@
   "GetStartedAccessSecuredImageText": "Open files secured for you by friends and colleagues",
   "GetStartedEasyAccessHeading": "Easy access to passwords",
   "GetStartedEasyAccessText": "With a simple click you can access the AxCrypt online Password Management, which stores all your passwords in a securely encrypted archive online.",
-  "GetStartedEasyAccessImageText": "One click access to our Password Manager"
+  "GetStartedEasyAccessImageText": "One click access to our Password Manager",
+  "ResellerInfoHeading": "Become an AxCrypt Reseller",
+  "ResellerInfoText1": "AxCrypt offers an easy-to-use encryption solution. With over 15 years of experience in the file encryption industry, we have established AxCrypt as one of the strongest brands out there. With over 20 million downloads, we have proven that our service is reliable. AxCrypt has been awarded with PCMag’s Editors’ Choice for Best Encryption Software in 2016, 2017 and 2018.",
+  "ResellerInfoText2": "As a Reseller, you will be able to sell AxCrypt Business (currently not supporting reseller programs for AxCrypt Premium). For a small price, Business members get access to a lot more features and additional support, including; AES-256 bit encryption, Mobile Apps, File Sharing, Cloud Storage Awareness, Password Management, and the ability to manage accounts.",
+  "ResellerInfoText3": "Our mission is to provide teams with encryption solutions that are easier to use than ever before, and you can be a part of it! Please apply by filling out the form by clicking the button below, or contacting us at <a href='mailto:reseller@axcrypt.net'>reseller@axcrypt.net.</a> "
 }
