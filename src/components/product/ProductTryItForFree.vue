@@ -56,7 +56,7 @@ export default {
   data() {
     return {
       annualActive: false,
-      price: '0',
+      price: '',
       currency: 'SEK',
     };
   },
