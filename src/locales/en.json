@@ -192,5 +192,11 @@
   "GetStartedPasswordManagementVideoTitle": "AxCrypt: Password Management",
   "GetStartedPasswordManagementStep1": "Login to get access to the password management",
   "GetStartedPasswordManagementStep2": "Browse through you existing passwords, or create a new one.",
-  "GetStartedPasswordManagementStep3": "Consider using the suggested password for optimal security."
+  "GetStartedPasswordManagementStep3": "Consider using the suggested password for optimal security.",
+  "GetStartedInfoNote1Heading": "A few key things to note during your installation process:",
+  "GetStartedInfoNote1ListItem1": "In order to use AxCrypt you will need to <a href='https://account.axcrypt.net/Home/Register'>create an account</a>.",
+  "GetStartedInfoNote1ListItem2": "If you are upgrading from a previous version of AxCrypt, you may need to restart your computer.",
+  "GetStartedInfoNote1ListItem3": "Verify that the download is undamaged and authentic by checking the digital signature. Right-click the downloaded file in Windows Explorer, and select ‘Properties’ and the ‘Digital Signatures’ tab. Then select the digital signature and click ‘Details’. Ensure that the digital signature is shown as ‘OK’ and that the signer is ‘AxCrypt AB’.",
+  "GetStartedInfoNote2Text1": "If you have any burning issues or questions, check our <a href='#/support/faq'>frequently asked questions</a> page.",
+  "GetStartedInfoNote2Text2": "Please report bugs and comments to us. You’re welcome to request support as well. For other issues, please send us an e-mail."
 }
