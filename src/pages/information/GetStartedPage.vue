@@ -34,15 +34,18 @@
 
     <get-started-desktop v-if="$route.params.platform === 'windows'" />
     <get-started-desktop v-if="$route.params.platform === 'mac'" />
+    <get-started-mobile v-if="$route.params.platform === 'mobile'" />
   </section>
 </template>
 
 <script>
 import GetStartedDesktop from '@/components/information/get-started/GetStartedDesktop';
+import GetStartedMobile from '@/components/information/get-started/GetStartedMobile';
 
 export default {
   components: {
     GetStartedDesktop,
+    GetStartedMobile,
   },
 };
 </script>

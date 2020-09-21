@@ -202,5 +202,18 @@
   "GetStartedInfoNote1ListItem2": "If you are upgrading from a previous version of AxCrypt, you may need to restart your computer.",
   "GetStartedInfoNote1ListItem3": "Verify that the download is undamaged and authentic by checking the digital signature. Right-click the downloaded file in Windows Explorer, and select ‘Properties’ and the ‘Digital Signatures’ tab. Then select the digital signature and click ‘Details’. Ensure that the digital signature is shown as ‘OK’ and that the signer is ‘AxCrypt AB’.",
   "GetStartedInfoNote2Text1": "If you have any burning issues or questions, check our <a href='#/support/faq'>frequently asked questions</a> page.",
-  "GetStartedInfoNote2Text2": "Please report bugs and comments to us. You’re welcome to request support as well. For other issues, please send us an e-mail."
+  "GetStartedInfoNote2Text2": "Please report bugs and comments to us. You’re welcome to request support as well. For other issues, please send us an e-mail.",
+  "MobileAppLabel": "Mobile App",
+  "GetStartedMobileText1": "The AxCrypt mobile app is available on Android and iOS and let’s you open and view any file encrypted by our full versioned desktop apps.",
+  "GetStartedMobileText2": "AxCrypt implements strong encryption with AES-128 or AES-256, along with very advanced, yet easy to use, features for sharing and receiving encrypted files to and from others without sharing passwords.",
+  "GetStartedMobileText3": "The app is compatible with all files encrypted since 2001 with AxCrypt.",
+  "GetStartedMobileText4": "Download AxCrypt for <a href='https://play.google.com/store/apps/details?id=net.axcrypt.axcrypt2x&hl=sv'>Android here</a> and for <a href='https://itunes.apple.com/se/app/axcrypt/id1157695909?mt=8'>iOS here.</a> ",
+  "GetStartedAxcryptMobileText": "Use the app with your AxCrypt ID. A Premium subscription is needed to use both Android and iOS apps. When creating a new AxCrypt ID you will automatically get 30-days Premium trial.",
+  "GetStartedAxcryptMobileImageText": "Open AxCrypt files on your phone",
+  "GetStartedAccessSecuredHeading": "Access secured files",
+  "GetStartedAccessSecuredText": "A simple interface gives you access to your encrypted files stored on Google Drive, Dropbox, received via email etc. The app cannot (yet) encrypt files on your phone, it will let you open files encrypted by you or shared with you by someone else.",
+  "GetStartedAccessSecuredImageText": "Open files secured for you by friends and colleagues",
+  "GetStartedEasyAccessHeading": "Easy access to passwords",
+  "GetStartedEasyAccessText": "With a simple click you can access the AxCrypt online Password Management, which stores all your passwords in a securely encrypted archive online.",
+  "GetStartedEasyAccessImageText": "One click access to our Password Manager"
 }
