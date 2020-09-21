@@ -1,6 +1,6 @@
 <template>
-  <section>
-    <h1 :class="['get-started-mobile-heading heading-medium', $mq]">
+  <section :class="['get-started-mobile-wrapper', $mq]">
+    <h1 :class="['get-started-mobile-heading heading-jumbo', $mq]">
       {{ $t(headingPhraseKey) }}
     </h1>
     <p :class="['body-text', $mq]">{{ $t(textPhraseKey1) }}</p>
@@ -22,10 +22,19 @@
         <h3 :class="['get-started-mobile-img-heading', $mq]">
           {{ $t(item.imgHeadingPhraseKey) }}
         </h3>
-        <p :class="['body-text', $mq]">{{ $t(item.imgTextPhraseKey) }}</p>
+        <p :class="['get-started-mobile-img-text body-text', $mq]">
+          {{ $t(item.imgTextPhraseKey) }}
+        </p>
       </div>
+
       <div :class="['get-started-mobile-instruction-text-wrapper', $mq]">
-        <h2 :class="['get-started-mobile-instruction-heading', $mq]">
+        <h2
+          :class="[
+            'get-started-mobile-instruction-heading heading-medium',
+            $mq,
+          ]"
+          v-if="$mq === 'desktop'"
+        >
           {{ $t(item.headingPhraseKey) }}
         </h2>
         <p :class="['body-text', $mq]">{{ $t(item.textPhraseKey) }}</p>
@@ -73,4 +82,60 @@ export default {
 
 <style lang="scss" scoped>
 @import '@/scss/variables.scss';
+
+.get-started-mobile-wrapper {
+  &.mobile {
+    padding: 24px;
+  }
+
+  &.desktop {
+    padding: 34px;
+  }
+}
+
+.get-started-mobile-heading {
+  @include no-margin-padding;
+  font-weight: 400;
+}
+
+.get-started-mobile-instruction-wrapper {
+  padding: 3rem 0 0 0;
+
+  &.desktop {
+    display: grid;
+    grid: 1fr / 1fr 2fr;
+  }
+}
+
+.get-started-mobile-instruction-img-wrapper {
+  @include center-column;
+  text-align: center;
+}
+
+.get-started-mobile-img {
+  width: 200px;
+}
+
+.get-started-mobile-img-heading {
+  margin: 12px 0 0 0;
+  font-weight: 400;
+}
+
+.get-started-mobile-img-text {
+  @include no-margin-padding;
+  font-weight: 300;
+}
+
+.get-started-mobile-instruction-text-wrapper {
+  max-width: 600px;
+
+  &.mobile {
+    margin: auto;
+  }
+}
+
+.get-started-mobile-instruction-heading {
+  font-weight: 400;
+  color: $green;
+}
 </style>
