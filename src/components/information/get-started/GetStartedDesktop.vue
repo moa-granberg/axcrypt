@@ -11,7 +11,7 @@
       </h1>
       <img
         :class="['information-note-img', $mq]"
-        src="@/assets/view/get-started/information-note-img1.svg"
+        src="@/assets/view/information/information-note-img1.svg"
         alt=""
       />
       <div :class="['information-note-inner-wrapper', $mq]">
@@ -40,7 +40,7 @@
       </h1>
       <img
         :class="['information-note-img', $mq]"
-        src="@/assets/view/get-started/information-note-img2.svg"
+        src="@/assets/view/information/information-note-img2.svg"
         alt=""
       />
       <div :class="['information-note-inner-wrapper', $mq]">
