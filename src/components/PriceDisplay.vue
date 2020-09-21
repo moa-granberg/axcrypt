@@ -1,8 +1,19 @@
 <template>
   <div class="price-display-price-wrapper">
-    <h1 class="price-display-price" :class="[{ annual: annualActive }, $mq]">
+    <h1
+      v-if="price"
+      class="price-display-price"
+      :class="[{ annual: annualActive }, $mq]"
+    >
       {{ price }} <span>{{ currency }}</span>
     </h1>
+    <img
+      v-else
+      src="@/assets/axcrypt-spinner.svg"
+      alt=""
+      class="price-display-price"
+      :class="[{ annual: annualActive }, $mq]"
+    />
 
     <p :class="`price-display-per-month body-text-large ${$mq}`">
       {{ $t(perMonthPhraseKey) }}
@@ -17,6 +28,10 @@ export default {
     price: String,
     currency: String,
     perMonthPhraseKey: String,
+  },
+
+  created() {
+    console.log(Boolean(this.price));
   },
 };
 </script>

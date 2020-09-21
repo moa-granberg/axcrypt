@@ -48,8 +48,8 @@ export default {
   data() {
     return {
       annualActive: false,
-      premiumPrice: '0',
-      businessPrice: '0',
+      premiumPrice: '',
+      businessPrice: '',
       currency: 'SEK',
       free: {},
       premium: {},
