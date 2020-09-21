@@ -95,9 +95,7 @@ export default {
         ).default;
       } else {
         data = await (
-          await import(
-            '@/data/information/get-started/instructions-mac.json'
-          )
+          await import('@/data/information/get-started/instructions-mac.json')
         ).default;
       }
 
@@ -114,7 +112,7 @@ export default {
 
   updated() {
     this.getInstructionsData();
-  }
+  },
 };
 </script>
 
