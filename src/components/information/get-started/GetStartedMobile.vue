@@ -1,6 +1,6 @@
 <template>
   <section :class="['get-started-mobile-wrapper', $mq]">
-    <h1 :class="['get-started-mobile-heading heading-jumbo', $mq]">
+    <h1 :class="['get-started-mobile-heading heading-small', $mq]">
       {{ $t(headingPhraseKey) }}
     </h1>
     <p :class="['body-text', $mq]">{{ $t(textPhraseKey1) }}</p>
@@ -96,6 +96,7 @@ export default {
 .get-started-mobile-heading {
   @include no-margin-padding;
   font-weight: 400;
+  color: $green;
 }
 
 .get-started-mobile-instruction-wrapper {
