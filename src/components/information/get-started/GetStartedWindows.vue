@@ -145,7 +145,7 @@ export default {
 
   &.mobile {
     width: 100px;
-    margin: -56px 0 0 0;
+    margin: -50px 0 0 0;
   }
 
   &.desktop {
