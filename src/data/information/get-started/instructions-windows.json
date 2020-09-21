@@ -1,0 +1,48 @@
+{
+  "installingAxcrypt": {
+    "heading": "GetStartedInstallingHeading",
+    "ingress": "GetStartedInstallingIngress",
+    "videoUrl": "https://www.youtube.com/embed/liEfwTSALM0",
+    "videoTitle": "GetStartedInstallingVideoTitleWindows",
+    "list": [
+      "GetStartedInstallingStep1",
+      "GetStartedInstallingStep2",
+      "GetStartedInstallingStep3",
+      "GetStartedInstallingStep4"
+    ]
+  },
+  "howToUse": {
+    "heading": "GetStartedHowToUseHeading",
+    "ingress": "GetStartedHowToUseIngress",
+    "videoUrl": "https://www.youtube.com/embed/jyixJ03qmkg",
+    "videoTitle": "GetStartedHowToUseVideoTitleWindows",
+    "list": [
+      "GetStartedHowToUseStep1",
+      "GetStartedHowToUseStep2Windows",
+      "GetStartedHowToUseStep3"
+    ]
+  },
+  "keySharing": {
+    "heading": "GetStartedKeySharingHeading",
+    "ingress": "GetStartedKeySharingIngress",
+    "videoUrl": "https://www.youtube.com/embed/grDPq8qKwF0",
+    "videoTitle": "GetStartedKeySharingVideoTitle",
+    "list": [
+      "GetStartedKeySharingStep1",
+      "GetStartedKeySharingStep2",
+      "GetStartedKeySharingStep3",
+      "GetStartedKeySharingStep4"
+    ]
+  },
+  "passwordManagement": {
+    "heading": "GetStartedPasswordManagementHeading",
+    "ingress": "GetStartedPasswordManagementIngress",
+    "videoUrl": "https://www.youtube.com/embed/kE8fuBglFhA",
+    "videoTitle": "GetStartedPasswordManagementVideoTitleWindows",
+    "list": [
+      "GetStartedPasswordManagementStep1",
+      "GetStartedPasswordManagementStep2",
+      "GetStartedPasswordManagementStep3"
+    ]
+  }
+}
