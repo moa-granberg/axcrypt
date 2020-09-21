@@ -2,7 +2,10 @@
   <section>
     <get-started-instruction-block :data="installingAxcryptData" />
 
-    <article :class="['information-note-wrapper', $mq]">
+    <article
+      v-if="$route.params.platform === 'windows'"
+      :class="['information-note-wrapper', $mq]"
+    >
       <h1 :class="['information-note-heading heading-small', $mq]">
         {{ $t(infoNoteData1.heading) }}
       </h1>
@@ -83,9 +86,20 @@ export default {
 
   methods: {
     async getInstructionsData() {
-      const data = await (
-        await import('@/data/information/get-started/instructions-windows.json')
-      ).default;
+      let data;
+      if (this.$route.params.platform === 'windows') {
+        data = await (
+          await import(
+            '@/data/information/get-started/instructions-windows.json'
+          )
+        ).default;
+      } else {
+        data = await (
+          await import(
+            '@/data/information/get-started/instructions-mac.json'
+          )
+        ).default;
+      }
 
       this.installingAxcryptData = data.installingAxcrypt;
       this.howToUseData = data.howToUse;
@@ -97,6 +111,10 @@ export default {
   created() {
     this.getInstructionsData();
   },
+
+  updated() {
+    this.getInstructionsData();
+  }
 };
 </script>
 

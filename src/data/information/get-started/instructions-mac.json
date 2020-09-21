@@ -2,8 +2,8 @@
   "installingAxcrypt": {
     "heading": "GetStartedInstallingHeading",
     "ingress": "GetStartedInstallingIngress",
-    "videoUrl": "https://www.youtube.com/embed/liEfwTSALM0",
-    "videoTitle": "GetStartedInstallingVideoTitleWindows",
+    "videoUrl": "https://www.youtube.com/embed/Cplw-8KtJyw",
+    "videoTitle": "GetStartedInstallingVideoTitleMac",
     "list": [
       "GetStartedInstallingStep1",
       "GetStartedInstallingStep2",
@@ -14,11 +14,11 @@
   "howToUse": {
     "heading": "GetStartedHowToUseHeading",
     "ingress": "GetStartedHowToUseIngress",
-    "videoUrl": "https://www.youtube.com/embed/jyixJ03qmkg",
-    "videoTitle": "GetStartedHowToUseVideoTitleWindows",
+    "videoUrl": "https://www.youtube.com/embed/FFK4wqQH5yA",
+    "videoTitle": "GetStartedHowToUseVideoTitleMac",
     "list": [
       "GetStartedHowToUseStep1",
-      "GetStartedHowToUseStep2Windows",
+      "GetStartedHowToUseStep2Mac",
       "GetStartedHowToUseStep3"
     ]
   },
@@ -37,8 +37,8 @@
   "passwordManagement": {
     "heading": "GetStartedPasswordManagementHeading",
     "ingress": "GetStartedPasswordManagementIngress",
-    "videoUrl": "https://www.youtube.com/embed/kE8fuBglFhA",
-    "videoTitle": "GetStartedPasswordManagementVideoTitleWindows",
+    "videoUrl": "https://www.youtube.com/embed/KqKwgnBy-Io",
+    "videoTitle": "GetStartedPasswordManagementVideoTitleMac",
     "list": [
       "GetStartedPasswordManagementStep1",
       "GetStartedPasswordManagementStep2",

@@ -32,16 +32,17 @@
       </ul>
     </div>
 
-    <get-started-windows v-if="this.$route.params.platform === 'windows'" />
+    <get-started-desktop v-if="$route.params.platform === 'windows'" />
+    <get-started-desktop v-if="$route.params.platform === 'mac'" />
   </section>
 </template>
 
 <script>
-import GetStartedWindows from '@/components/information/get-started/GetStartedWindows';
+import GetStartedDesktop from '@/components/information/get-started/GetStartedDesktop';
 
 export default {
   components: {
-    GetStartedWindows,
+    GetStartedDesktop,
   },
 };
 </script>
