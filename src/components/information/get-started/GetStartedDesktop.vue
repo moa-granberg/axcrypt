@@ -34,7 +34,7 @@
       :reverse="true"
     />
 
-    <article :class="['information-note-wrapper', $mq]">
+    <article :class="['information-note-wrapper reverse', $mq]">
       <h1 :class="['information-note-heading heading-small', $mq]">
         {{ $t(infoNoteData2.heading) }}
       </h1>
@@ -129,15 +129,17 @@ export default {
   &.mobile {
     grid: auto 1fr / 2fr 1fr;
     grid-template-areas: 'heading img' 'content content';
-
     padding: 24px;
   }
 
   &.desktop {
     grid: auto 1fr / 1fr 1fr;
     grid-template-areas: 'img heading' 'img content';
-
     padding: 34px;
+
+    &.reverse {
+      grid-template-areas: 'heading img' 'content img';
+    }
   }
 }
 
@@ -168,7 +170,7 @@ export default {
 
   &.desktop {
     align-self: center;
-    width: 180px;
+    width: 280px;
   }
 }
 
