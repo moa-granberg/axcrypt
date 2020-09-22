@@ -11,7 +11,7 @@
           :class="['information-header-button', $mq]"
           size="extra-small"
           phraseKey="ApplyNowLabel"
-          path="/"
+          path="/information/reseller-application"
         />
       </div>
     </article>

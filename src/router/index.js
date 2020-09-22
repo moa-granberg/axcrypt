@@ -87,6 +87,14 @@ const routes = [
         },
       },
       {
+        path: 'reseller-application',
+        name: 'ResellerApplicationPage',
+        component: Pages.ResellerApplicationPage,
+        meta: {
+          title: 'Reseller Application | ',
+        },
+      },
+      {
         path: 'usage-tips',
         name: 'UsageTipsPage',
         component: Pages.UsageTipsPage,

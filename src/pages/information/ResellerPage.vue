@@ -44,7 +44,7 @@
         :class="['reseller-benefits-button', $mq]"
         phraseKey="ApplyNowLabel"
         size="small"
-        path="/resellers-form"
+        path="/information/resellers-application"
       />
     </article>
   </main>

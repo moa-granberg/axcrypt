@@ -2,6 +2,7 @@ import GetStartedPage from './information/GetStartedPage';
 import FeaturesPage from './information/FeaturesPage';
 import RequirementsPage from './information/RequirementsPage';
 import ResellerPage from './information/ResellerPage';
+import ResellerApplicationPage from './information/ResellerApplicationPage';
 import UsageTipsPage from './information/UsageTipsPage';
 import SecurityPage from './information/SecurityPage';
 import TechnicalDetailsPage from './information/TechnicalDetailsPage';
@@ -27,6 +28,7 @@ export {
   FeaturesPage,
   RequirementsPage,
   ResellerPage,
+  ResellerApplicationPage,
   UsageTipsPage,
   SecurityPage,
   TechnicalDetailsPage,
