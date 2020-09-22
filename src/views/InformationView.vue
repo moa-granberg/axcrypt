@@ -1,10 +1,21 @@
 <template>
   <main :class="`information-view-wrapper ${$mq}`">
     <article :class="`information-header ${$mq}`">
-      <h1 :class="`information-heading heading-jumbo ${$mq}`">
-        {{ $t(getPageName) }}
-      </h1>
+      <div :class="['information-header-inner-wrapper', $mq]">
+        <h1 :class="`information-heading heading-jumbo ${$mq}`">
+          {{ $t(getPageName) }}
+        </h1>
+
+        <primary-button
+          v-if="$route.name === 'ResellerPage'"
+          :class="['information-header-button', $mq]"
+          size="extra-small"
+          phraseKey="ApplyNowLabel"
+          path="/"
+        />
+      </div>
     </article>
+
     <section :class="`information-aside-content-wrapper ${$mq}`">
       <side-menu
         v-if="$mq === 'desktop'"
@@ -19,10 +30,12 @@
 
 <script>
 import SideMenu from '@/components/SideMenu';
+import PrimaryButton from '@/components/PrimaryButton';
 
 export default {
   components: {
     SideMenu,
+    PrimaryButton,
   },
 
   data() {
@@ -71,11 +84,25 @@ export default {
 
   &.mobile {
     background-image: url('~@/assets/hero-imgs/people-mobile.png');
+    height: 145px;
   }
 
   &.desktop {
     background-image: url('~@/assets/hero-imgs/people-desktop.png');
+    height: 200px;
   }
+}
+
+.information-header-inner-wrapper {
+  @include center-column;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(72, 119, 44, 0.7);
+}
+
+.information-header-button {
+  text-transform: uppercase;
 }
 
 .information-aside-content-wrapper {
@@ -86,18 +113,7 @@ export default {
 
 .information-heading {
   @include no-margin-padding;
-  @include center-row;
-  width: 100%;
-  background-color: rgba(72, 119, 44, 0.7);
   text-shadow: $standard-text-shadow;
   font-weight: 400;
-
-  &.mobile {
-    padding: 56px 0;
-  }
-
-  &.desktop {
-    padding: 74px 0;
-  }
 }
 </style>
