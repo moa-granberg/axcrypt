@@ -148,6 +148,10 @@ export default {
   &.mobile {
     margin: 0 0 24px 0;
   }
+
+  &.desktop {
+    margin: 0 0 58px 0;
+  }
 }
 
 .reseller-benefits-offer-heading {
