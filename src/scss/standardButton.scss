@@ -14,10 +14,9 @@
   text-align: center;
 
   &.extra-small {
-    padding: 4px 10px;
-
     &.mobile {
       font-size: 0.875rem;
+      padding: 10px 24px;
     }
 
     &.desktop {
@@ -27,10 +26,9 @@
   }
 
   &.small {
-    padding: 10px 23px;
-
     &.mobile {
       font-size: 0.875rem;
+      padding: 10px 24px;
     }
 
     &.desktop {
