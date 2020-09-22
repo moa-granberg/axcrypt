@@ -112,8 +112,16 @@ export default {
 }
 
 .information-heading {
-  @include no-margin-padding;
   text-shadow: $standard-text-shadow;
   font-weight: 400;
+  text-align: center;
+
+  &.mobile {
+    margin: 0 24px;
+  }
+
+  &.desktop {
+    @include no-margin-padding;
+  }
 }
 </style>
