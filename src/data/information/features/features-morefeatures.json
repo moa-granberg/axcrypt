@@ -1,0 +1,128 @@
+[
+  {
+    "featurePhraseKey": "LightweightLabel",
+    "descriptionPhraseKey": "LightweightText",
+    "free": true,
+    "premium": true,
+    "business": true
+  },
+  {
+    "featurePhraseKey": "EasyInstallationLabel",
+    "descriptionPhraseKey": "EasyInstallationText",
+    "free": true,
+    "premium": true,
+    "business": true
+  },
+  {
+    "featurePhraseKey": "FastDownloadLabel",
+    "descriptionPhraseKey": "FastDownloadText",
+    "free": true,
+    "premium": true,
+    "business": true
+  },
+  {
+    "featurePhraseKey": "ConvenientToUseLabel",
+    "descriptionPhraseKey": "ConvenientToUseText",
+    "free": true,
+    "premium": true,
+    "business": true
+  },
+  {
+    "featurePhraseKey": "WindowsCompatibleLabel",
+    "descriptionPhraseKey": "WindowsCompatibleText",
+    "free": true,
+    "premium": true,
+    "business": true
+  },
+  {
+    "featurePhraseKey": "MacOsCompatibleLabel",
+    "descriptionPhraseKey": "MacOsCompatibleText",
+    "free": true,
+    "premium": true,
+    "business": true
+  },
+  {
+    "featurePhraseKey": "MobileAppLabel",
+    "descriptionPhraseKey": "MobileAppText",
+    "free": true,
+    "premium": true,
+    "business": true
+  },
+  {
+    "featurePhraseKey": "StandardsBasedLabel",
+    "descriptionPhraseKey": "StandardsBasedText",
+    "free": true,
+    "premium": true,
+    "business": true
+  },
+  {
+    "featurePhraseKey": "DataIntegrityLabel",
+    "descriptionPhraseKey": "DataIntegrityText",
+    "free": true,
+    "premium": true,
+    "business": true
+  },
+  {
+    "featurePhraseKey": "AutomaticFileUpdatingLabel",
+    "descriptionPhraseKey": "AutomaticFileUpdatingText",
+    "free": true,
+    "premium": true,
+    "business": true
+  },
+  {
+    "featurePhraseKey": "LocalDeviceSecurityLabel",
+    "descriptionPhraseKey": "LocalDeviceSecurityText",
+    "free": true,
+    "premium": true,
+    "business": true
+  },
+  {
+    "featurePhraseKey": "LargeFileSupportLabel",
+    "descriptionPhraseKey": "LargeFileSupportText",
+    "free": true,
+    "premium": true,
+    "business": true
+  },
+  {
+    "featurePhraseKey": "MetadataRetentionLabel",
+    "descriptionPhraseKey": "MetadataRetentionText",
+    "free": true,
+    "premium": true,
+    "business": true
+  },
+  {
+    "featurePhraseKey": "FileWipeLabel",
+    "descriptionPhraseKey": "FileWipeText",
+    "free": true,
+    "premium": true,
+    "business": true
+  },
+  {
+    "featurePhraseKey": "BruteForceResistantLabel",
+    "descriptionPhraseKey": "BruteForceResistantText",
+    "free": true,
+    "premium": true,
+    "business": true
+  },
+  {
+    "featurePhraseKey": "ScriptingEnabledLabel",
+    "descriptionPhraseKey": "ScriptingEnabledText",
+    "free": true,
+    "premium": true,
+    "business": true
+  },
+  {
+    "featurePhraseKey": "OpenSourceLabel",
+    "descriptionPhraseKey": "OpenSourceText",
+    "free": true,
+    "premium": true,
+    "business": true
+  },
+  {
+    "featurePhraseKey": "SupportLinkLabel",
+    "descriptionPhraseKey": "SupportText",
+    "free": true,
+    "premium": true,
+    "business": true
+  }
+]

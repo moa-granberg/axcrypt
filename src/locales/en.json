@@ -146,6 +146,8 @@
   "PricingFeatureListMoreUpcoming": "More Upcoming Exclusive Features",
   "ForEveryoneLabel": "For everyone",
   "FreeLabel": "Free",
+  "PremiumLabel": "Premium",
+  "BusinessLabel": "Business",
   "CreateAccountLabel": "Create account",
   "ForIndividualsLabel": "For individuals",
   "StartFreeMonthLabel": "Start free month",
@@ -259,5 +261,7 @@
   "OpenSourceLabel": "Open source",
   "OpenSourceText": "Open source under GNU General Public License.",
   "SupportText": "User support via e-mail, form and second level support via chat.",
-  "DescriptionLabel": "Description"
+  "DescriptionLabel": "Description",
+  "FeaturesChoosePlanHeading": "Choose plan to see included features:",
+  "FeaturesClickFeatureText": "Click on a feature to read more..."
 }

@@ -1,0 +1,37 @@
+[
+  {
+    "src": "shield-256.png",
+    "headingPhraseKey": "HomeSellingPointStrongEncryptionHeading",
+    "textPhraseKey": "FeaturesFeatureListItem1Text"
+  },
+  {
+    "src": "123-circle.png",
+    "headingPhraseKey": "FeaturesFeatureListItem2Heading",
+    "textPhraseKey": "FeaturesFeatureListItem2Text"
+  },
+  {
+    "src": "cloud.png",
+    "headingPhraseKey": "HomeSellingPointCloudStorageAwarenessHeading",
+    "textPhraseKey": "FeaturesFeatureListItem3Text"
+  },
+  {
+    "src": "spin-key.png",
+    "headingPhraseKey": "HomeSellingPointCollaborationHeading",
+    "textPhraseKey": "FeaturesFeatureListItem4Text"
+  },
+  {
+    "src": "folder-key.png",
+    "headingPhraseKey": "HomeSellingPointPasswordManagementHeading",
+    "textPhraseKey": "FeaturesFeatureListItem5Text"
+  },
+  {
+    "src": "folder-eye.png",
+    "headingPhraseKey": "FeaturesFeatureListItem6Heading",
+    "textPhraseKey": "FeaturesFeatureListItem6Text"
+  },
+  {
+    "src": "globe.png",
+    "headingPhraseKey": "HomeSellingPointMultilingualHeading",
+    "textPhraseKey": "HomeSellingPointMultilingualBody"
+  }
+]

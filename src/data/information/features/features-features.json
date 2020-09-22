@@ -1,0 +1,26 @@
+[
+  {
+    "src": "viewer.svg",
+    "featureNamePhraseKey": "PricingFeatureListViewer",
+    "featureDescriptionPhraseKey": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat consequatur laboriosam animi doloribus recusandae in dolores nostrum ad cumque vero.",
+    "free": true,
+    "premium": true,
+    "business": true
+  },
+  {
+    "src": "cloud.png",
+    "featureNamePhraseKey": "PricingFeatureListAES128",
+    "featureDescriptionPhraseKey": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat consequatur laboriosam animi doloribus recusandae in dolores nostrum ad cumque vero.",
+    "free": true,
+    "premium": false,
+    "business": false
+  },
+  {
+    "src": "shield-256.png",
+    "featureNamePhraseKey": "PricingFeatureListAES256",
+    "featureDescriptionPhraseKey": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat consequatur laboriosam animi doloribus recusandae in dolores nostrum ad cumque vero.",
+    "free": false,
+    "premium": true,
+    "business": true
+  }
+]
