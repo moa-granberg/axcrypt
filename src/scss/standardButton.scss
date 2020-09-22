@@ -13,6 +13,19 @@
   text-decoration: none;
   text-align: center;
 
+  &.extra-small {
+    padding: 4px 10px;
+
+    &.mobile {
+      font-size: 0.875rem;
+    }
+
+    &.desktop {
+      font-size: 1.125rem;
+      padding: 10px 36px;
+    }
+  }
+
   &.small {
     padding: 10px 23px;
 
