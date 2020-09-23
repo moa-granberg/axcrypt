@@ -140,6 +140,7 @@ export default {
   margin: 16px 0 0 0;
   &.desktop {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     gap: 1vw;
   }

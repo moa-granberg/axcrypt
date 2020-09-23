@@ -52,7 +52,8 @@ export default {
   }
 
   &.desktop {
-    max-width: 250px;
+    padding: 0 12px;
+    max-width: 260px;
     position: relative;
     border-radius: 5px;
   }
@@ -79,6 +80,7 @@ export default {
   font-weight: 600;
 
   &.desktop {
+    text-align: center;
     margin: auto;
   }
 }
