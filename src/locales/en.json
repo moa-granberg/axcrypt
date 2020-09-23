@@ -219,5 +219,9 @@
   "RequirementsTableDescription": "AxCrypt is currently available on most major platforms. The table below shows all supported operating systems.",
   "NoteLabel": "Note",
   "RequirementsNoteText": "AxCrypt runs on 32-bit and 64-bit versions of Windows. On Windows 8 and 10, AxCrypt works in desktop mode, but there is no Metro app available yet, nor does AxCrypt run on Windows RT. We recommend to user desktop viewers and editors to open files secured with AxCrypt, as the Metro apps sometimes cause various issues.",
-  "RequirementsLinuxText": "Other users have reported success running AxCrypt under Wine. However, it may be tricky to install since it requires dependencies to be manually installed, and the state of Mono (on which it depends) is very varying depending on the distribution."
+  "RequirementsLinuxText": "Other users have reported success running AxCrypt under Wine. However, it may be tricky to install since it requires dependencies to be manually installed, and the state of Mono (on which it depends) is very varying depending on the distribution.",
+  "OperatingSystemsLabel": "Operating system",
+  "Windows95-NTLabel": "Windows 95, 98 and NT",
+  "Windows2000-XPLabel": "Windows 2000, ME and XP",
+  "Windows2008-10Label": "Windows 2008, Vista, 7, 8 and 10"
 }

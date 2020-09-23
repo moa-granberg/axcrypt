@@ -29,11 +29,15 @@ export default {
 
   data() {
     return {
-      headings: ['Operating Systems', 'AxCrypt 1.x', 'AxCrypt 2.x'],
+      headings: [
+        `${this.$t('OperatingSystemsLabel')}`,
+        'AxCrypt 1.x',
+        'AxCrypt 2.x',
+      ],
       itemList: [
-        ['Windows 95, 98 and NT', true, false],
-        ['Windows 2000, ME and XP', true, false],
-        ['Windows 2008, Vista, 7, 8 and 10', true, true],
+        [`${this.$t('Windows95-NTLabel')}`, true, false],
+        [`${this.$t('Windows2000-XPLabel')}`, true, false],
+        [`${this.$t('Windows2008-10Label')}`, true, true],
         ['Mac OS X', false, true],
         ['Linux', false, false],
         ['iOS', false, true],
