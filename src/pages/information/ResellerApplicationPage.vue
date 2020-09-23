@@ -17,33 +17,41 @@
           :class="['text-input-wrapper', $mq]"
           v-if="item.type === 'text' || item.type === 'number'"
         >
-          <label :for="item.id" :class="['body-text', $mq]">{{
-            $t(item.phraseKey)
-          }}</label>
+          <label :for="item.id" :class="['body-text', $mq]">
+            {{ $t(item.phraseKey) }}
+          </label>
           <input
             type="text"
             :id="item.id"
             v-model="response[item.id]"
-            :class="['input', $mq]"
+            :class="[{ invalid: item.error }, 'input', $mq]"
+            @blur="validate(item.id)"
           />
+          <p v-if="item.error" :class="['error-msg body-text', $mq]">
+            {{ $t(item.error) }}
+          </p>
         </div>
 
         <div
           :class="['select-input-wrapper', $mq]"
           v-if="item.type === 'select'"
         >
-          <label :for="item.id" :class="['body-text', $mq]"
-            >{{ $t(item.phraseKey) }}
+          <label :for="item.id" :class="['body-text', $mq]">
+            {{ $t(item.phraseKey) }}
           </label>
           <select
             :id="item.id"
             v-model="response[item.id]"
-            :class="['input', $mq]"
+            :class="[{ invalid: item.error }, 'input', $mq]"
+            @blur="validate(item.id)"
           >
             <option v-for="value of item.options" :key="value" :value="value">
               {{ value }}
             </option>
           </select>
+          <p v-if="item.error" :class="['error-msg body-text', $mq]">
+            {{ $t(item.error) }}
+          </p>
         </div>
 
         <div
@@ -112,6 +120,16 @@ export default {
   methods: {
     handleSubmit() {
       console.log(this.response);
+
+    validate(id) {
+      if (id !== 'otherInformation') {
+        const error = this.response[id] ? '' : 'ErrorRequiredField';
+
+        this.data = this.data.map(input =>
+          input.id === id ? { ...input, error } : input
+        );
+      }
+    },
     },
   },
 };
@@ -156,8 +174,14 @@ export default {
   }
 
   &.invalid {
-    border: 1px solid red;
+    border: 1px solid #cb544c;
   }
+}
+
+.error-msg {
+  @include no-margin-padding;
+  color: #cb544c;
+  align-self: flex-end;
 }
 
 .text-input-wrapper,
@@ -165,6 +189,7 @@ export default {
   display: flex;
   flex-direction: column;
   margin: 24px 0;
+  height: 54px;
 }
 
 .radio-buttons-wrapper {
