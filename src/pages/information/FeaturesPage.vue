@@ -1,53 +1,50 @@
 <template>
-  <section>
+  <section :class="['features', $mq]">
     <article :class="['features-wrapper', $mq]">
       <p
-        :class="['choose-plan-heading', $mq]"
+        :class="['choose-plan-text body-text', $mq]"
         v-html="$t('FeaturesChoosePlanHeading')"
       />
 
       <div :class="['plan-buttons-wrapper', $mq]">
-        <div :class="['plan-button', $mq]">
-          <p :class="['plan-button-label', $mq]" v-html="$t('FreeLabel')" />
-        </div>
+        <features-plan-button
+          @click.native="activePlan = 'free'"
+          :active="activePlan === 'free'"
+          phraseKey="FreeLabel"
+          plan="free"
+        />
 
-        <div :class="['plan-button', $mq]">
-          <p :class="['plan-button-label', $mq]" v-html="$t('PremiumLabel')" />
-        </div>
+        <features-plan-button
+          @click.native="activePlan = 'premium'"
+          :active="activePlan === 'premium'"
+          phraseKey="PremiumLabel"
+          plan="premium"
+        />
 
-        <div :class="['plan-button', $mq]">
-          <p :class="['plan-button-label', $mq]" v-html="$t('BusinessLabel')" />
-        </div>
+        <features-plan-button
+          @click.native="activePlan = 'business'"
+          :active="activePlan === 'business'"
+          phraseKey="BusinessLabel"
+          plan="business"
+        />
       </div>
 
       <p
-        :class="['click-feature-text', $mq]"
-        v-html="$t('FeaturesClickFeatureText')"
+        :class="['click-feature-text body-text', $mq]"
+        v-html="
+          $mq === 'mobile'
+            ? $t('FeaturesClickFeatureText')
+            : $t('FeaturesHoverFeatureText')
+        "
       />
 
       <div :class="['divider', $mq]" />
 
-      <div
-        :class="['feature-item-wrapper', $mq]"
-        v-for="item of featureList"
-        :key="item.src"
-      >
-        <div :class="['feature-item-img-name-wrapper', $mq]">
-          <img
-            :class="['feature-item-img', $mq]"
-            :src="require(`@/assets/view/information/${item.src}`)"
-            :alt="item.src"
-          />
-
-          <p
-            :class="['feature-item-name', $mq]"
-            v-html="$t(item.featureNamePhraseKey)"
-          />
-        </div>
-
-        <p
-          :class="['feature-item-description', $mq]"
-          v-html="$t(item.featureDescriptionPhraseKey)"
+      <div :class="['feature-items-wrapper', $mq]">
+        <features-feature-item
+          v-for="feature of currentFeatureList"
+          :key="feature.src"
+          :item="feature"
         />
       </div>
     </article>
@@ -87,31 +84,119 @@
 </template>
 
 <script>
+import FeaturesFeatureItem from '@/components/information/features/FeaturesFeatureItem';
+import FeaturesPlanButton from '@/components/information/features/FeaturesPlanButton';
+import FeatureListJson from '@/data/information/features/features-features';
+import MoreFeaturesListJson from '@/data/information/features/features-morefeatures';
+
 export default {
+  components: {
+    FeaturesFeatureItem,
+    FeaturesPlanButton,
+  },
+
   data() {
     return {
-      featureList: [],
-      moreFeaturesList: [],
+      featureList: FeatureListJson,
+      moreFeaturesList: MoreFeaturesListJson,
+      activePlan: 'free',
     };
   },
 
-  methods: {
-    async getData() {
-      this.featureList = await (
-        await import('@/data/information/features/features-features.json')
-      ).default;
-      this.moreFeaturesList = await (
-        await import('@/data/information/features/features-morefeatures.json')
-      ).default;
+  computed: {
+    currentFeatureList() {
+      if (this.activePlan === 'free') {
+        return this.featureList.filter(item => item.free === true);
+      } else if (this.activePlan === 'premium') {
+        return this.featureList.filter(item => item.premium === true);
+      } else if (this.activePlan === 'business') {
+        return this.featureList.filter(item => item.business === true);
+      } else {
+        return null;
+      }
     },
-  },
-
-  created() {
-    this.getData();
   },
 };
 </script>
 
 <style lang="scss" scoped>
 @import '@/scss/variables.scss';
+
+.features {
+  @include no-margin-padding;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.features-wrapper {
+  @include no-margin-padding;
+  @include center-column;
+  padding: 24px;
+  box-sizing: border-box;
+  background-color: rgba($black, 0.9);
+  box-shadow: $standard-box-shadow;
+  width: 100%;
+}
+
+.choose-plan-text {
+  @include no-margin-padding;
+  color: $white;
+  font-weight: 600;
+}
+
+.plan-buttons-wrapper {
+  @include center-row;
+  margin: 16px 0 0 0;
+
+  &.mobile {
+    gap: 4px;
+  }
+
+  &.desktop {
+    gap: 20px;
+  }
+}
+
+.click-feature-text {
+  color: $white;
+  font-style: italic;
+}
+
+.divider {
+  width: 60%;
+  border: 1px solid $green;
+}
+
+.feature-items-wrapper {
+  margin: 16px 0 0 0;
+  &.desktop {
+    display: flex;
+    justify-content: space-around;
+    gap: 1vw;
+  }
+}
+
+.more-features-wrapper {
+}
+
+.more-features-heading {
+}
+
+.more-features-table-wrapper {
+}
+
+.more-features-table-headings-wrapper {
+}
+
+.more-features-table-heading {
+}
+
+.more-features-item-wrapper {
+}
+
+.more-features-item-label {
+}
+
+.more-features-item-description {
+}
 </style>

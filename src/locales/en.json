@@ -263,5 +263,6 @@
   "SupportText": "User support via e-mail, form and second level support via chat.",
   "DescriptionLabel": "Description",
   "FeaturesChoosePlanHeading": "Choose plan to see included features:",
-  "FeaturesClickFeatureText": "Click on a feature to read more..."
+  "FeaturesClickFeatureText": "Click on a feature to read more...",
+  "FeaturesHoverFeatureText": "Hover over a feature to read more..."
 }
