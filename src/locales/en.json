@@ -251,5 +251,6 @@
   "ResellerApplicationOtherInformationLabel": "Any other information or files you would like to provide (optinal)",
   "SubmitLabel": "Submit",
   "ErrorRequiredField": "This field is required",
-  "ErrorInvalidEmail": "The e-mail address entered is invalid"
+  "ErrorInvalidEmail": "The e-mail address entered is invalid",
+  "ErrorConfirmNotRobot": "Please confirm that you are not a robot"
 }

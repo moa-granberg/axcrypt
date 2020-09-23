@@ -82,9 +82,13 @@
       </article>
 
       <vue-recaptcha
+        :class="['recaptcha-wrapper', $mq]"
         @verify="handleVerify"
         sitekey="6Lchj88ZAAAAAAYuwcZHGwZ-izWcOq4_B7LHaOyI"
       >
+        <p v-if="robotError" :class="['error-msg robot body-text', $mq]">
+          {{ $t('ErrorConfirmNotRobot') }}
+        </p>
       </vue-recaptcha>
 
       <input
@@ -127,12 +131,32 @@ export default {
         expectedSales: '',
         otherInformation: '',
       },
+      robot: false,
+      robotError: false,
     };
   },
 
   methods: {
     handleSubmit() {
-      console.log(this.response);
+      this.data.forEach(input => {
+        this.validate(input.id);
+        if (input.error) {
+          return;
+        }
+      });
+      if (this.robot) {
+        //send data
+      } else {
+        this.robotError = true;
+      }
+    },
+
+    handleVerify(resp) {
+      if (resp) {
+        this.robot = true;
+        this.robotError = false;
+      }
+    },
 
     validate(id) {
       if (id !== 'otherInformation') {
@@ -213,6 +237,10 @@ export default {
   &.desktop {
     height: 19px;
   }
+
+  &.robot {
+    align-self: center;
+  }
 }
 
 .text-input-wrapper,
@@ -232,6 +260,12 @@ export default {
 
   > input {
     margin: 0 8px;
+  }
+}
+
+.recaptcha-wrapper {
+  &.mobile {
+    @include center-column;
   }
 }
 
