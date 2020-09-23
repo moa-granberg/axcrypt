@@ -43,12 +43,12 @@
       <div :class="['feature-items-wrapper', $mq]">
         <features-feature-item
           v-for="feature of currentFeatureList"
-          :key="feature.src"
+          :key="feature.featureNamePhraseKey"
           :item="feature"
         />
       </div>
     </article>
-    <features-more-features />
+    <features-more-features :plan="activePlan" />
   </section>
 </template>
 

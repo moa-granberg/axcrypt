@@ -1,16 +1,10 @@
 <template>
   <div :class="['feature-item-wrapper', $mq]">
     <div
-      :class="['feature-item-img-name-dropdown-wrapper', $mq]"
+      :class="['feature-item-name-wrapper', $mq]"
       @mouseenter="descriptionOpen = true"
       @mouseleave="descriptionOpen = false"
     >
-      <img
-        :class="['feature-item-img', $mq]"
-        :src="require(`@/assets/view/information/${item.src}`)"
-        :alt="item.src"
-      />
-
       <p
         :class="['feature-item-name body-text', $mq]"
         v-html="$t(item.featureNamePhraseKey)"
@@ -51,6 +45,7 @@ export default {
 .feature-item-wrapper {
   background-color: $white;
   margin: 0 0 16px 0;
+  cursor: default;
 
   &.mobile {
     border-radius: 2px;
@@ -63,8 +58,8 @@ export default {
   }
 }
 
-.feature-item-img-name-dropdown-wrapper {
-  display: grid;
+.feature-item-name-wrapper {
+  @include center-row;
 
   &.mobile {
     align-items: center;
@@ -75,36 +70,16 @@ export default {
     grid: 1fr / 1fr 3fr;
     place-items: center;
     padding: 5px;
-    min-height: 60px;
   }
-}
-
-.feature-item-img {
-  min-width: 50px;
-  max-height: 50px;
-  max-width: 50px;
-
-  &.mobile {
-    margin: auto;
-  }
-
-  &.desktop {
-    margin: 0 0 0 16px;
-  }
+  min-height: 60px;
+  min-width: 200px;
 }
 
 .feature-item-name {
+  font-weight: 600;
+
   &.desktop {
     margin: auto;
-  }
-}
-
-.feature-item-dropdown-arrow {
-  transform: rotate(0);
-  transition: transform 0.3s;
-
-  &.rotated {
-    transform: rotate(180deg);
   }
 }
 
