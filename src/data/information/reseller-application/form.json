@@ -358,7 +358,7 @@
     "phraseKey": "ResellerApplicationExpectedSalesLabel"
   },
   {
-    "type": "text",
+    "type": "textarea",
     "id": "otherInformation",
     "phraseKey": "ResellerApplicationOtherInformationLabel"
   }

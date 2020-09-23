@@ -248,7 +248,7 @@
   "NoLabel": "No",
   "ResellerApplicationSaleRepresentativesLabel": "How many sales representatives do you have?",
   "ResellerApplicationExpectedSalesLabel": "How many sales do you expect monthly?",
-  "ResellerApplicationOtherInformationLabel": "Any other information or files you would like to provide (optinal)",
+  "ResellerApplicationOtherInformationLabel": "Any other information or files you would like to provide (optional)",
   "SubmitLabel": "Submit",
   "ErrorRequiredField": "This field is required",
   "ErrorInvalidEmail": "The e-mail address entered is invalid",

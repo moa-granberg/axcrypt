@@ -14,7 +14,7 @@
     >
       <article v-for="item of data" :key="item.id">
         <div
-          :class="['text-input-wrapper', $mq]"
+          :class="['input-wrapper', $mq]"
           v-if="item.type === 'text' || item.type === 'number'"
         >
           <label :for="item.id" :class="['input-label body-text', $mq]">
@@ -33,10 +33,7 @@
           <p v-else :class="['error-msg body-text', $mq]"></p>
         </div>
 
-        <div
-          :class="['select-input-wrapper', $mq]"
-          v-if="item.type === 'select'"
-        >
+        <div :class="['input-wrapper', $mq]" v-if="item.type === 'select'">
           <label :for="item.id" :class="['body-text', $mq]">
             {{ $t(item.phraseKey) }}
           </label>
@@ -78,6 +75,18 @@
               </label>
             </div>
           </div>
+        </div>
+
+        <div :class="['input-wrapper', $mq]" v-if="item.type === 'textarea'">
+          <label :for="item.id" :class="['input-label body-text', $mq]">
+            {{ $t(item.phraseKey) }}
+          </label>
+          <textarea
+            :id="item.id"
+            v-model="response[item.id]"
+            :class="['input textarea', $mq]"
+            rows="5"
+          />
         </div>
       </article>
 
@@ -223,6 +232,11 @@ export default {
   &.invalid {
     border: 1px solid #cb544c;
   }
+
+  &.textarea {
+    resize: none;
+    margin: 0 0 8px 0;
+  }
 }
 
 .error-msg {
@@ -243,8 +257,7 @@ export default {
   }
 }
 
-.text-input-wrapper,
-.select-input-wrapper {
+.input-wrapper {
   display: flex;
   flex-direction: column;
   margin: 6px 0;
