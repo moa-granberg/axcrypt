@@ -13,11 +13,22 @@
   text-decoration: none;
   text-align: center;
 
-  &.small {
-    padding: 10px 23px;
-
+  &.extra-small {
     &.mobile {
       font-size: 0.875rem;
+      padding: 10px 24px;
+    }
+
+    &.desktop {
+      font-size: 1.125rem;
+      padding: 10px 36px;
+    }
+  }
+
+  &.small {
+    &.mobile {
+      font-size: 0.875rem;
+      padding: 10px 24px;
     }
 
     &.desktop {
