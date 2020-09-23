@@ -4,7 +4,7 @@
       {{ $t('RequirementsTableDescription') }}
     </p>
 
-    <!-- table -->
+    <standard-table :headings="headings" :itemList="itemList" />
 
     <article :class="['requirements-note-wrapper', $mq]">
       <p :class="['body-text', $mq]">
@@ -20,7 +20,29 @@
 </template>
 
 <script>
-export default {};
+import StandardTable from '@/components/StandardTable';
+
+export default {
+  components: {
+    StandardTable,
+  },
+
+  data() {
+    return {
+      headings: ['Operating Systems', 'AxCrypt 1.x', 'AxCrypt 2.x'],
+      itemList: [
+        ['Windows 95, 98 and NT', true, false],
+        ['Windows 2000, ME and XP', true, false],
+        ['Windows 2008, Vista, 7, 8 and 10', true, true],
+        ['Mac OS X', false, true],
+        ['Linux', false, false],
+        ['iOS', false, true],
+        ['Android', false, true],
+        ['Windows Phone', false, false],
+      ],
+    };
+  },
+};
 </script>
 
 <style lang="scss" scoped>
@@ -34,6 +56,7 @@ export default {};
   }
 
   &.desktop {
+    padding: 0 24px 0 0;
     margin: 60px auto;
   }
 }
