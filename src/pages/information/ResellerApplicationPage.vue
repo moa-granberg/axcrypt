@@ -123,13 +123,23 @@ export default {
 
     validate(id) {
       if (id !== 'otherInformation') {
-        const error = this.response[id] ? '' : 'ErrorRequiredField';
+        const error = !this.response[id]
+          ? 'ErrorRequiredField'
+          : id === 'email'
+          ? this.validateEmail()
+          : '';
 
         this.data = this.data.map(input =>
           input.id === id ? { ...input, error } : input
         );
       }
     },
+
+    validateEmail() {
+      const re = /^(([^<>()\]\\.,;:\s@"]+(\.[^<>()\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      return re.test(String(this.response.email).toLowerCase())
+        ? ''
+        : 'ErrorInvalidEmail';
     },
   },
 };
