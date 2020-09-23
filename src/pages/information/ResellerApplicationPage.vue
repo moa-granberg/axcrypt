@@ -81,6 +81,12 @@
         </div>
       </article>
 
+      <vue-recaptcha
+        @verify="handleVerify"
+        sitekey="6Lchj88ZAAAAAAYuwcZHGwZ-izWcOq4_B7LHaOyI"
+      >
+      </vue-recaptcha>
+
       <input
         type="submit"
         :value="$t('SubmitLabel')"
@@ -92,8 +98,13 @@
 
 <script>
 import data from '@/data/information/reseller-application/form.json';
+import VueRecaptcha from 'vue-recaptcha';
 
 export default {
+  components: {
+    VueRecaptcha,
+  },
+
   data() {
     return {
       data,
