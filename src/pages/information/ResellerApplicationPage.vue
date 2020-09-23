@@ -81,10 +81,12 @@
 </template>
 
 <script>
+import data from '@/data/information/reseller-application/form.json';
+
 export default {
   data() {
     return {
-      data: [],
+      data,
       response: {
         name: '',
         companyName: '',
@@ -111,17 +113,6 @@ export default {
     handleSubmit() {
       console.log(this.response);
     },
-
-    async getData() {
-      this.data = await (
-        await import('@/data/information/reseller-application/form.json')
-      ).default;
-    },
-  },
-
-  created() {
-    this.getData();
-    console.log(this['name']);
   },
 };
 </script>
@@ -162,6 +153,10 @@ export default {
     box-shadow: $standard-box-shadow;
     border: 1px solid rgba($gray, 1);
     outline: none;
+  }
+
+  &.invalid {
+    border: 1px solid red;
   }
 }
 
