@@ -17,7 +17,7 @@
           :class="['text-input-wrapper', $mq]"
           v-if="item.type === 'text' || item.type === 'number'"
         >
-          <label :for="item.id" :class="['body-text', $mq]">
+          <label :for="item.id" :class="['input-label body-text', $mq]">
             {{ $t(item.phraseKey) }}
           </label>
           <input
@@ -30,6 +30,7 @@
           <p v-if="item.error" :class="['error-msg body-text', $mq]">
             {{ $t(item.error) }}
           </p>
+          <p v-else :class="['error-msg body-text', $mq]"></p>
         </div>
 
         <div
@@ -52,6 +53,7 @@
           <p v-if="item.error" :class="['error-msg body-text', $mq]">
             {{ $t(item.error) }}
           </p>
+          <p v-else :class="['error-msg body-text', $mq]"></p>
         </div>
 
         <div
@@ -151,7 +153,6 @@ export default {
 
 .reseller-application-wrapper {
   @include center-column;
-  padding: 24px;
 
   &.mobile {
     margin: auto;
@@ -165,10 +166,11 @@ export default {
 
 .reseller-application-text {
   text-align: center;
+  margin: 0 24px 24px 24px;
 }
 
 .reseller-application-form {
-  width: 100%;
+  width: 90%;
 }
 
 .input {
@@ -192,14 +194,21 @@ export default {
   @include no-margin-padding;
   color: #cb544c;
   align-self: flex-end;
+
+  &.mobile {
+    height: 17px;
+  }
+
+  &.desktop {
+    height: 19px;
+  }
 }
 
 .text-input-wrapper,
 .select-input-wrapper {
   display: flex;
   flex-direction: column;
-  margin: 24px 0;
-  height: 54px;
+  margin: 6px 0;
 }
 
 .radio-buttons-wrapper {
@@ -207,15 +216,16 @@ export default {
 }
 
 .radio-button-wrapper {
+  @include center-row;
   margin: 8px 12px;
 
   > input {
-    @include no-margin-padding;
+    margin: 0 8px;
   }
 }
 
 .submit-button {
-  margin: auto;
+  margin: 24px auto;
   text-transform: uppercase;
 }
 </style>
