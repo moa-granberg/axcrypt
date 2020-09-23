@@ -48,57 +48,26 @@
         />
       </div>
     </article>
-
-    <article :class="['more-features-wrapper', $mq]">
-      <h1 :class="['more-features-heading', $mq]">
-        {{ $t('MoreFeaturesLabel') }}
-      </h1>
-
-      <div :class="['more-features-table-wrapper', $mq]">
-        <div :class="['more-features-table-headings-wrapper', $mq]">
-          <p :class="['more-features-table-heading', $mq]">
-            {{ $t('FeatureLabel') }}
-          </p>
-
-          <p :class="['more-features-table-heading', $mq]">
-            {{ $t('DescriptionLabel') }}
-          </p>
-        </div>
-
-        <div
-          :class="['more-features-item-wrapper', $mq]"
-          v-for="item of moreFeaturesList"
-          :key="item.featurePhraseKey"
-        >
-          <p :class="['more-features-item-label', $mq]">
-            {{ $t(item.featurePhraseKey) }}
-          </p>
-
-          <p :class="['more-features-item-description', $mq]">
-            {{ $t(item.descriptionPhraseKey) }}
-          </p>
-        </div>
-      </div>
-    </article>
+    <features-more-features />
   </section>
 </template>
 
 <script>
 import FeaturesFeatureItem from '@/components/information/features/FeaturesFeatureItem';
 import FeaturesPlanButton from '@/components/information/features/FeaturesPlanButton';
+import FeaturesMoreFeatures from '@/components/information/features/FeaturesMoreFeatures';
 import FeatureListJson from '@/data/information/features/features-features';
-import MoreFeaturesListJson from '@/data/information/features/features-morefeatures';
 
 export default {
   components: {
     FeaturesFeatureItem,
     FeaturesPlanButton,
+    FeaturesMoreFeatures,
   },
 
   data() {
     return {
       featureList: FeatureListJson,
-      moreFeaturesList: MoreFeaturesListJson,
       activePlan: 'free',
     };
   },
@@ -174,29 +143,5 @@ export default {
     justify-content: space-around;
     gap: 1vw;
   }
-}
-
-.more-features-wrapper {
-}
-
-.more-features-heading {
-}
-
-.more-features-table-wrapper {
-}
-
-.more-features-table-headings-wrapper {
-}
-
-.more-features-table-heading {
-}
-
-.more-features-item-wrapper {
-}
-
-.more-features-item-label {
-}
-
-.more-features-item-description {
 }
 </style>
