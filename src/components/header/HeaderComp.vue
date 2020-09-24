@@ -3,6 +3,7 @@
     <section
       v-if="$mq === 'mobile'"
       :class="[{ show: showMobileMenu }, 'fade-layer', $mq]"
+      @click="showMobileMenu = false"
     ></section>
 
     <section :class="'header-wrapper ' + this.$mq">
