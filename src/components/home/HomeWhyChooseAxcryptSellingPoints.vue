@@ -35,23 +35,13 @@
 </template>
 
 <script>
+import homeSellingPointItems from '@/data/home/home-selling-points';
+
 export default {
   data() {
     return {
-      homeSellingPointItems: [],
+      homeSellingPointItems,
     };
-  },
-
-  methods: {
-    async getSellingPoints() {
-      this.homeSellingPointItems = await (
-        await import('@/data/home/home-selling-points.json')
-      ).default;
-    },
-  },
-
-  created() {
-    this.getSellingPoints();
   },
 };
 </script>

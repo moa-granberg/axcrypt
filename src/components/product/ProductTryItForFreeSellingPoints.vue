@@ -23,6 +23,9 @@
 </template>
 
 <script>
+import premiumSellingPointItems from '@/data/product/premium-selling-points';
+import businessSellingPointItems from '@/data/product/business-selling-points';
+
 export default {
   props: {
     product: String,
@@ -30,24 +33,9 @@ export default {
 
   data() {
     return {
-      premiumSellingPointItems: [],
-      businessSellingPointItems: [],
+      premiumSellingPointItems,
+      businessSellingPointItems,
     };
-  },
-
-  methods: {
-    async getSellingPoints() {
-      this.premiumSellingPointItems = await (
-        await import('@/data/product/premium-selling-points.json')
-      ).default;
-      this.businessSellingPointItems = await (
-        await import('@/data/product/business-selling-points.json')
-      ).default;
-    },
-  },
-
-  created() {
-    this.getSellingPoints();
   },
 };
 </script>

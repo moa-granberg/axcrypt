@@ -84,6 +84,7 @@ import ProductTryItForFreeCta from '@/components/product/ProductTryItForFreeCta'
 import FeatureList from '@/components/FeatureList';
 import ProductBusinessBigTeamCta from '@/components/product/ProductBusinessBigTeamCta';
 import BusinessCard from '@/components/product/BusinessCard';
+import businessFeatureList from '@/data/product/business-feature-list';
 
 export default {
   components: {
@@ -98,7 +99,7 @@ export default {
 
   data() {
     return {
-      businessFeatureList: [],
+      businessFeatureList,
 
       contactPerson: {
         src: '/view/product/angelique.png',
@@ -107,18 +108,6 @@ export default {
         email: 'angelique.huige@axcrypt.net',
       },
     };
-  },
-
-  methods: {
-    async getFeatureList() {
-      this.businessFeatureList = await (
-        await import('@/data/product/business-feature-list.json')
-      ).default;
-    },
-  },
-
-  created() {
-    this.getFeatureList();
   },
 };
 </script>

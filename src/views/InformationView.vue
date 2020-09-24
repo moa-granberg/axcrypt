@@ -31,6 +31,7 @@
 <script>
 import SideMenu from '@/components/SideMenu';
 import PrimaryButton from '@/components/PrimaryButton';
+import data from '@/data/header/header-menu-links';
 
 export default {
   components: {
@@ -38,35 +39,19 @@ export default {
     PrimaryButton,
   },
 
-  data() {
-    return {
-      sideMenuLinks: [],
-    };
-  },
-
   computed: {
     getPageName() {
       return this.$route.name.split('Page').join('LinkLabel');
     },
-  },
 
-  methods: {
-    async getSideMenuLinks() {
-      const linkImport = await (
-        await import('@/data/header/header-menu-links.json')
-      ).default;
-
-      this.sideMenuLinks = linkImport
+    sideMenuLinks() {
+      return data
         .find(item => item.path === '/information')
         .children.map(child => ({
           path: child.path,
           phraseKey: child.phraseKey,
         }));
     },
-  },
-
-  created() {
-    this.getSideMenuLinks();
   },
 };
 </script>

@@ -38,6 +38,9 @@
 import AnnualMonthlySwitcher from '@/components/AnnualMonthlySwitcher';
 import PricingProduct from '@/components/pricing/PricingProduct';
 import { getPricing } from '@/utils/pricing/getPricing';
+import free from '@/data/pricing/free';
+import premium from '@/data/pricing/premium';
+import business from '@/data/pricing/business';
 
 export default {
   components: {
@@ -51,9 +54,9 @@ export default {
       premiumPrice: '',
       businessPrice: '',
       currency: 'SEK',
-      free: {},
-      premium: {},
-      business: {},
+      free,
+      premium,
+      business,
     };
   },
 
@@ -79,17 +82,10 @@ export default {
       this.businessPrice = businessPriceData.price;
       this.currency = premiumPriceData.currency;
     },
-
-    async getProductJson() {
-      this.free = await import('@/data/pricing/free.json');
-      this.premium = await import('@/data/pricing/premium.json');
-      this.business = await import('@/data/pricing/business.json');
-    },
   },
 
   async created() {
     this.setPriceData('month');
-    this.getProductJson();
   },
 };
 </script>

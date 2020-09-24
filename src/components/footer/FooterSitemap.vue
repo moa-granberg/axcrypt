@@ -18,23 +18,13 @@
 </template>
 
 <script>
+import footerLinks from '@/data/footer/footer-sitemap-links';
+
 export default {
   data() {
     return {
-      footerLinks: [],
+      footerLinks,
     };
-  },
-
-  methods: {
-    async getFooterLinks() {
-      this.footerLinks = await (
-        await import('@/data/footer/footer-sitemap-links.json')
-      ).default;
-    },
-  },
-
-  created() {
-    this.getFooterLinks();
   },
 };
 </script>

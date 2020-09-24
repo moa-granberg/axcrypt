@@ -18,6 +18,7 @@
 <script>
 import { Carousel, Slide } from 'vue-carousel';
 import HomeWhatOthersSayCarouselSlide from '@/components/home/HomeWhatOthersSayCarouselSlide';
+import whatOthersSayCarouselItems from '@/data/home/home-carousel-items';
 
 export default {
   components: {
@@ -28,20 +29,8 @@ export default {
 
   data() {
     return {
-      whatOthersSayCarouselItems: [],
+      whatOthersSayCarouselItems,
     };
-  },
-
-  methods: {
-    async getCarouselItems() {
-      this.whatOthersSayCarouselItems = await (
-        await import('@/data/home/home-carousel-items.json')
-      ).default;
-    },
-  },
-
-  created() {
-    this.getCarouselItems();
   },
 };
 </script>

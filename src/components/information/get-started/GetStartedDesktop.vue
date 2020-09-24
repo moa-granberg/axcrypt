@@ -57,6 +57,8 @@
 
 <script>
 import GetStartedInstructionBlock from './GetStartedInstructionBlock';
+import dataWindows from '@/data/information/get-started/instructions-windows';
+import dataMac from '@/data/information/get-started/instructions-mac';
 
 export default {
   components: {
@@ -65,10 +67,6 @@ export default {
 
   data() {
     return {
-      installingAxcryptData: {},
-      howToUseData: {},
-      keySharingData: {},
-      passwordManagementData: {},
       infoNoteData1: {
         heading: 'GetStartedInfoNote1Heading',
         list: [
@@ -84,34 +82,30 @@ export default {
     };
   },
 
-  methods: {
-    async getInstructionsData() {
-      let data;
-      if (this.$route.params.platform === 'windows') {
-        data = await (
-          await import(
-            '@/data/information/get-started/instructions-windows.json'
-          )
-        ).default;
-      } else {
-        data = await (
-          await import('@/data/information/get-started/instructions-mac.json')
-        ).default;
-      }
-
-      this.installingAxcryptData = data.installingAxcrypt;
-      this.howToUseData = data.howToUse;
-      this.keySharingData = data.keySharing;
-      this.passwordManagementData = data.passwordManagement;
+  computed: {
+    installingAxcryptData() {
+      return this.$route.params.platform === 'windows'
+        ? dataWindows.installingAxcrypt
+        : dataMac.installingAxcrypt;
     },
-  },
 
-  created() {
-    this.getInstructionsData();
-  },
+    howToUseData() {
+      return this.$route.params.platform === 'windows'
+        ? dataWindows.howToUse
+        : dataMac.howToUse;
+    },
 
-  updated() {
-    this.getInstructionsData();
+    keySharingData() {
+      return this.$route.params.platform === 'windows'
+        ? dataWindows.keySharing
+        : dataMac.keySharing;
+    },
+
+    passwordManagementData() {
+      return this.$route.params.platform === 'windows'
+        ? dataWindows.passwordManagement
+        : dataMac.passwordManagement;
+    },
   },
 };
 </script>
