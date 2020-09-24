@@ -93,7 +93,7 @@
   {
     "featurePhraseKey": "FileWipeLabel",
     "descriptionPhraseKey": "FileWipeText",
-    "free": true,
+    "free": false,
     "premium": true,
     "business": true
   },
@@ -121,7 +121,7 @@
   {
     "featurePhraseKey": "SupportLinkLabel",
     "descriptionPhraseKey": "SupportText",
-    "free": true,
+    "free": false,
     "premium": true,
     "business": true
   }
