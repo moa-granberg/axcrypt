@@ -29,10 +29,6 @@ export default {
     currency: String,
     perMonthPhraseKey: String,
   },
-
-  created() {
-    console.log(Boolean(this.price));
-  },
 };
 </script>
 
