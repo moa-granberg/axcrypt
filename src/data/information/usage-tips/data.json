@@ -1,0 +1,83 @@
+{
+  "targetUseList": [
+    "UsageTipsTargetUseListItem1",
+    "UsageTipsTargetUseListItem2",
+    "UsageTipsTargetUseListItem3",
+    "UsageTipsTargetUseListItem4",
+    "UsageTipsTargetUseListItem5",
+    "UsageTipsTargetUseListItem6"
+  ],
+  "personalPrivacyList": [
+    "UsageTipsPersonalPrivacyListItem1",
+    "UsageTipsPersonalPrivacyListItem2",
+    "UsageTipsPersonalPrivacyListItem3"
+  ],
+  "infoBlockList": [
+    {
+      "heading": "UsageTipsAnonymousFileHeading",
+      "texts": [
+        "UsageTipsAnonymousFileText"
+      ]
+    },
+    {
+      "heading": "UsageTipsMakingArchivesHeading",
+      "texts": [
+        "UsageTipsMakingArchivesText1",
+        "UsageTipsMakingArchivesText2"
+      ]
+    },
+    {
+      "heading": "UsageTipsSecuringFoldersHeading",
+      "texts": [
+        "UsageTipsSecuringFoldersText1",
+        "UsageTipsSecuringFoldersText2"
+      ]
+    },
+    {
+      "heading": "UsageTipsBackupsHeading",
+      "texts": [
+        "UsageTipsBackupsText1",
+        "UsageTipsBackupsText2"
+      ]
+    },
+    {
+      "heading": "UsageTipsConfidentialDataHeading",
+      "texts": [
+        "UsageTipsConfidentialDataText1",
+        "UsageTipsConfidentialDataText2"
+      ]
+    },
+    {
+      "heading": "UsageTipsNetworksHeading",
+      "texts": [
+        "UsageTipsNetworksText1",
+        "UsageTipsNetworksText2",
+        "UsageTipsNetworksText3",
+        "UsageTipsNetworksText4"
+      ]
+    },
+    {
+      "heading": "UsageTipsPreDistributionHeading",
+      "texts": [
+        "UsageTipsPreDistributionText1",
+        "UsageTipsPreDistributionText2"
+      ]
+    },
+    {
+      "heading": "UsageTipsConfidentialEmailHeading",
+      "texts": [
+        "UsageTipsConfidentialEmailText1",
+        "UsageTipsConfidentialEmailText2",
+        "UsageTipsConfidentialEmailText3",
+        "UsageTipsConfidentialEmailText4"
+      ]
+    },
+    {
+      "heading": "UsageTipsHideShowHeading",
+      "texts": [
+        "UsageTipsHideShowText1",
+        "UsageTipsHideShowText2"
+      ]
+    }
+  ]
+}

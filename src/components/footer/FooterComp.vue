@@ -1,7 +1,6 @@
 <template>
   <footer :class="'footer-wrapper ' + $mq">
     <mq-layout mq="mobile" :class="'footer ' + $mq">
-      <footer-newsletter />
       <footer-sitemap />
       <footer-contact />
     </mq-layout>
@@ -14,10 +13,7 @@
       />
       <footer-sitemap />
       <footer-contact />
-      <div :class="'footer-social-newsletter-wrapper ' + $mq">
-        <footer-newsletter />
-        <footer-social-media />
-      </div>
+      <footer-social-media />
     </mq-layout>
   </footer>
 </template>
@@ -25,14 +21,12 @@
 <script>
 import FooterSitemap from './FooterSitemap';
 import FooterContact from './FooterContact';
-import FooterNewsletter from './FooterNewsletter';
 import FooterSocialMedia from './FooterSocialMedia';
 
 export default {
   components: {
     FooterSitemap,
     FooterContact,
-    FooterNewsletter,
     FooterSocialMedia,
   },
 };
@@ -61,15 +55,6 @@ export default {
 .footer-logo {
   &.desktop {
     width: 51px;
-  }
-}
-
-.footer-social-newsletter-wrapper {
-  &.desktop {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
   }
 }
 </style>
