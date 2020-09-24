@@ -1,0 +1,128 @@
+[
+  {
+    "featureNamePhraseKey": "PricingFeatureListViewer",
+    "featureDescriptionPhraseKey": "FeaturesViewerDescription",
+    "free": true,
+    "premium": true,
+    "business": true
+  },
+  {
+    "featureNamePhraseKey": "PricingFeatureListAES128",
+    "featureDescriptionPhraseKey": "FeaturesAES128Description",
+    "free": true,
+    "premium": true,
+    "business": true
+  },
+  {
+    "featureNamePhraseKey": "PricingFeatureListAccountKey",
+    "featureDescriptionPhraseKey": "FeaturesAccountKeyDescription",
+    "free": true,
+    "premium": true,
+    "business": true
+  },
+  {
+    "featureNamePhraseKey": "PricingFeatureListOpenShared",
+    "featureDescriptionPhraseKey": "FeaturesOpenSharedDescription",
+    "free": true,
+    "premium": true,
+    "business": true
+  },
+  {
+    "featureNamePhraseKey": "PricingFeatureListCommunitySupport",
+    "featureDescriptionPhraseKey": "FeaturesCommunitySupportDescription",
+    "free": true,
+    "premium": true,
+    "business": true
+  },
+  {
+    "featureNamePhraseKey": "PricingFeatureListAES256",
+    "featureDescriptionPhraseKey": "FeaturesAES256Description",
+    "free": false,
+    "premium": true,
+    "business": true
+  },
+  {
+    "featureNamePhraseKey": "PricingFeatureListMobileApps",
+    "featureDescriptionPhraseKey": "FeaturesMobileAppsDescription",
+    "free": false,
+    "premium": true,
+    "business": true
+  },
+  {
+    "featureNamePhraseKey": "PricingFeatureListSecuredFolders",
+    "featureDescriptionPhraseKey": "FeaturesSecuredFoldersDescription",
+    "free": false,
+    "premium": true,
+    "business": true
+  },
+  {
+    "featureNamePhraseKey": "PricingFeatureListIncludeSubfolders",
+    "featureDescriptionPhraseKey": "FeaturesIncludeSubfoldersDescription",
+    "free": false,
+    "premium": true,
+    "business": true
+  },
+  {
+    "featureNamePhraseKey": "PricingFeatureListKeySharing",
+    "featureDescriptionPhraseKey": "FeaturesKeySharingDescription",
+    "free": false,
+    "premium": true,
+    "business": true
+  },
+  {
+    "featureNamePhraseKey": "PricingFeatureListCloudStorage",
+    "featureDescriptionPhraseKey": "FeaturesCloudStorageDescription",
+    "free": false,
+    "premium": true,
+    "business": true
+  },
+  {
+    "featureNamePhraseKey": "PricingFeatureListPasswordManagement",
+    "featureDescriptionPhraseKey": "FeaturesPasswordManagementDescription",
+    "free": false,
+    "premium": true,
+    "business": true
+  },
+  {
+    "featureNamePhraseKey": "PricingFeatureListFileWipe",
+    "featureDescriptionPhraseKey": "FeaturesFileWipeDescription",
+    "free": false,
+    "premium": true,
+    "business": true
+  },
+  {
+    "featureNamePhraseKey": "PricingFeatureListAnonymousFile",
+    "featureDescriptionPhraseKey": "FeaturesAnonymousFileDescription",
+    "free": false,
+    "premium": true,
+    "business": true
+  },
+  {
+    "featureNamePhraseKey": "PricingFeatureListPasswordGenerator",
+    "featureDescriptionPhraseKey": "FeaturesPasswordGeneratorDescription",
+    "free": false,
+    "premium": true,
+    "business": true
+  },
+  {
+    "featureNamePhraseKey": "PricingFeatureListDirectSupport",
+    "featureDescriptionPhraseKey": "FeaturesDirectSupportDescription",
+    "free": false,
+    "premium": true,
+    "business": true
+  },
+  {
+    "featureNamePhraseKey": "PricingFeatureListBusinessAdmin",
+    "featureDescriptionPhraseKey": "FeaturesBusinessAdminDescription",
+    "free": false,
+    "premium": false,
+    "business": true
+  },
+  {
+    "featureNamePhraseKey": "PricingFeatureListMoreUpcoming",
+    "featureDescriptionPhraseKey": "FeaturesMoreUpcomingDescription",
+    "free": false,
+    "premium": false,
+    "business": true
+  }
+]
