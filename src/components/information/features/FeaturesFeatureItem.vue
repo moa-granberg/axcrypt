@@ -12,7 +12,11 @@
     </div>
 
     <p
-      :class="[{ show: descriptionOpen }, 'feature-item-description', $mq]"
+      :class="[
+        { show: descriptionOpen },
+        'feature-item-description body-text',
+        $mq,
+      ]"
       v-html="$t(item.featureDescriptionPhraseKey)"
     />
   </div>
@@ -89,10 +93,13 @@ export default {
 
   &.mobile {
     max-height: 0;
+    width: 240px;
     overflow: hidden;
     opacity: 0;
     padding: 0 16px;
     transition: max-height 0.3s, opacity 0.1s, padding 0.3s;
+
+    text-align: center;
 
     &.show {
       max-height: 300px;

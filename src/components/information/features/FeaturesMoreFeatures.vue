@@ -4,8 +4,8 @@
       {{ $t('MoreFeaturesLabel') }}
     </h1>
 
-    <div :class="['more-features-table-wrapper', $mq]">
-      <div :class="['more-features-table-headings-wrapper', $mq]">
+    <ul :class="['more-features-table-wrapper', $mq]">
+      <li :class="['more-features-table-headings-wrapper', $mq]">
         <p :class="['more-features-table-heading', $mq]">
           {{ $t('FeatureLabel') }}
         </p>
@@ -13,9 +13,9 @@
         <p :class="['more-features-table-heading', $mq]">
           {{ $t('DescriptionLabel') }}
         </p>
-      </div>
+      </li>
 
-      <div
+      <li
         :class="['more-features-item-wrapper', $mq]"
         v-for="item of currentList"
         :key="item.featurePhraseKey"
@@ -27,8 +27,8 @@
         <p :class="['more-features-item-description body-text', $mq]">
           {{ $t(item.descriptionPhraseKey) }}
         </p>
-      </div>
-    </div>
+      </li>
+    </ul>
   </article>
 </template>
 
@@ -90,6 +90,9 @@ $list-grid: 1fr / 1fr 2fr;
 }
 
 .more-features-table-wrapper {
+  @include no-margin-padding;
+  list-style: none;
+
   &.mobile {
     border: 1px solid $light-gray;
     border-radius: 0 0 5px 5px;

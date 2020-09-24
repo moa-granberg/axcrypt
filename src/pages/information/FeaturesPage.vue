@@ -1,10 +1,9 @@
 <template>
   <section :class="['features', $mq]">
     <article :class="['features-wrapper', $mq]">
-      <p
-        :class="['choose-plan-text body-text', $mq]"
-        v-html="$t('FeaturesChoosePlanHeading')"
-      />
+      <p :class="['choose-plan-text body-text', $mq]">
+        {{ $t('FeaturesChoosePlanHeading') }}
+      </p>
 
       <div :class="['plan-buttons-wrapper', $mq]">
         <features-plan-button
@@ -29,14 +28,13 @@
         />
       </div>
 
-      <p
-        :class="['click-feature-text body-text', $mq]"
-        v-html="
+      <p :class="['click-feature-text body-text', $mq]">
+        {{
           $mq === 'mobile'
             ? $t('FeaturesClickFeatureText')
             : $t('FeaturesHoverFeatureText')
-        "
-      />
+        }}
+      </p>
 
       <div :class="['divider', $mq]" />
 
