@@ -1,6 +1,10 @@
 <template>
   <header :class="'header ' + this.$mq">
-    <section v-if="$mq === 'mobile'" :class="['fade-layer', $mq]"></section>
+    <section
+      v-if="$mq === 'mobile'"
+      :class="[{ show: showMobileMenu }, 'fade-layer', $mq]"
+    ></section>
+
     <section :class="'header-wrapper ' + this.$mq">
       <div :class="'nav ' + this.$mq">
         <router-link to="/" @click.native="showMobileMenu = false">
@@ -95,8 +99,11 @@ export default {
   z-index: 1;
   position: fixed;
   top: 0;
-  height: 100ch;
-  width: 100vw;
-  background-color: rgba($black, 0.6);
+
+  &.show {
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba($black, 0.6);
+  }
 }
 </style>
