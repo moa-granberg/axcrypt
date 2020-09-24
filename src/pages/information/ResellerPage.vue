@@ -62,11 +62,11 @@ export default {
     return {
       benefits: [
         {
-          phraseKey: 'BusinessFeatureListBestEncryption',
+          phraseKey: 'FeaturesBestEncryption',
           src: 'check.svg',
         },
         {
-          phraseKey: 'BusinessFeatureListMadeInSweden',
+          phraseKey: 'FeaturesMadeInSweden',
           src: 'outlined_flag.svg',
         },
         {
