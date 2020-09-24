@@ -16,7 +16,7 @@
       <div :class="['get-started-mobile-instruction-img-wrapper', $mq]">
         <img
           :class="['get-started-mobile-img', $mq]"
-          :src="require(`@/assets/view/information/${item.src}`)"
+          :src="require(`@/assets/view/information/get-started/${item.src}`)"
           alt=""
         />
         <h3 :class="['get-started-mobile-img-heading', $mq]">
