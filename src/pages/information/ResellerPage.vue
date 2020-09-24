@@ -9,7 +9,7 @@
         <p :class="['body-text', $mq]">{{ $t('ResellerInfoText2') }}</p>
         <p v-html="$t('ResellerInfoText3')" :class="['body-text', $mq]"></p>
       </div>
-      <img src="@/assets/view/reseller/resell.png" alt="resell" />
+      <img src="@/assets/view/information/reseller/resell.png" alt="resell" />
     </article>
 
     <article :class="['reseller-benefits-wrapper', $mq]">
