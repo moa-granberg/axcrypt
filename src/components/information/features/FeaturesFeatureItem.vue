@@ -52,8 +52,7 @@ export default {
   }
 
   &.desktop {
-    padding: 0 12px;
-    max-width: 260px;
+    width: 200px;
     position: relative;
     border-radius: 5px;
   }
@@ -73,7 +72,7 @@ export default {
     padding: 5px;
   }
   min-height: 60px;
-  min-width: 200px;
+  min-width: 170px;
 }
 
 .feature-item-name {
@@ -103,20 +102,22 @@ export default {
   }
 
   &.desktop {
+    position: absolute;
+    top: 110%;
+
     background-color: $dark-green;
     color: $white;
     border-radius: 5px;
-    opacity: 0;
     max-height: 0;
+    width: 100%;
+    opacity: 0;
+    z-index: 2;
     overflow: hidden;
     pointer-events: none;
-    max-width: 100%;
     transition: max-height 0.3s, opacity 0.3s;
 
+    box-sizing: border-box;
     padding: 20px;
-
-    position: absolute;
-    top: 110%;
 
     &.show {
       max-height: 200px;
