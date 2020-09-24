@@ -50,13 +50,14 @@ export default {
 
   &.mobile {
     padding: 0 14px;
-    margin: 0 18px;
+    margin: 0 $margin-mobile;
     background-color: $white;
     border-radius: 5px;
   }
 
   &.desktop {
-    padding: 0 16px 24px 16px;
+    margin: 0;
+    padding: 0 16px 16px 16px;
   }
 }
 

@@ -53,7 +53,8 @@ export default {};
   color: $white;
 
   &.mobile {
-    margin: 24px 24px 0 24px;
+    margin: $margin-mobile;
+    margin-bottom: 0;
   }
 
   &.desktop {
@@ -66,7 +67,7 @@ export default {};
 }
 
 .download-hero-mobile-text-wrapper {
-  max-width: 600px;
+  max-width: $max-text-width;
 
   &.mobile {
     margin: auto;
@@ -78,7 +79,7 @@ export default {};
 }
 
 .download-hero-mobile-images-wrapper {
-  max-width: 600px;
+  max-width: $max-text-width;
   display: flex;
   justify-content: space-between;
 

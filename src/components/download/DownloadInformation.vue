@@ -75,7 +75,8 @@ export default {
     grid: 70% 30% / 1fr 1fr;
     grid-template-areas: 'text text' 'btn img';
     justify-items: center;
-    padding: 24px 24px 0 24px;
+    padding: $margin-mobile;
+    padding-bottom: 0;
   }
 
   &.desktop {
@@ -92,7 +93,7 @@ export default {
 
 .download-information-text-wrapper {
   grid-area: text;
-  max-width: 600px;
+  max-width: $max-text-width;
 }
 
 .download-information-heading {

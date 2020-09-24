@@ -105,15 +105,8 @@ export default {
 }
 
 .reseller-info-text-wrapper {
-  max-width: 600px;
-
-  &.mobile {
-    margin: 24px;
-  }
-
-  &.desktop {
-    margin: 34px;
-  }
+  @include standard-margin;
+  max-width: $max-text-width;
 }
 
 .reseller-info-heading {
@@ -122,16 +115,9 @@ export default {
 }
 
 .reseller-benefits-wrapper {
+  @include standard-padding;
   background-color: rgba($black, 0.8);
   @include center-column;
-
-  &.mobile {
-    padding: 24px;
-  }
-
-  &.desktop {
-    padding: 34px;
-  }
 }
 
 .reseller-benefits-heading {
@@ -141,12 +127,12 @@ export default {
 }
 
 .reseller-benefits-text {
-  max-width: 600px;
+  max-width: $max-text-width;
   color: $white;
   text-align: center;
 
   &.mobile {
-    margin: 0 0 24px 0;
+    margin: 0 0 $margin-mobile 0;
   }
 
   &.desktop {
@@ -204,14 +190,7 @@ export default {
 }
 
 .reseller-benefits-button {
+  @include standard-margin;
   text-transform: uppercase;
-
-  &.mobile {
-    margin: 18px;
-  }
-
-  &.desktop {
-    margin: 32px;
-  }
 }
 </style>

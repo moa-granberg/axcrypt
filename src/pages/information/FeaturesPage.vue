@@ -97,8 +97,9 @@ export default {
 
 .features-wrapper {
   @include no-margin-padding;
+  @include standard-padding;
   @include center-column;
-  padding: 24px;
+
   box-sizing: border-box;
   background-color: rgba($black, 0.9);
   box-shadow: $standard-box-shadow;

@@ -84,13 +84,7 @@ export default {
 @import '@/scss/variables.scss';
 
 .get-started-mobile-wrapper {
-  &.mobile {
-    padding: 24px;
-  }
-
-  &.desktop {
-    padding: 34px;
-  }
+  @include standard-padding;
 }
 
 .get-started-mobile-heading {
@@ -128,7 +122,7 @@ export default {
 }
 
 .get-started-mobile-instruction-text-wrapper {
-  max-width: 600px;
+  max-width: $max-text-width;
 
   &.mobile {
     margin: auto;

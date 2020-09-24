@@ -53,10 +53,10 @@ export default {
 @import '@/scss/variables.scss';
 
 .requirements-wrapper {
-  max-width: 900px;
+  max-width: $max-content-width;
 
   &.mobile {
-    padding: 24px;
+    padding: $margin-mobile;
   }
 
   &.desktop {

@@ -97,7 +97,7 @@ export default {
   @include center-column;
 
   &.mobile {
-    margin: 32px 0 0 0;
+    margin: $margin-mobile 0 0 0;
   }
 
   &.desktop {

@@ -39,12 +39,12 @@ export default {
 .feature-list-wrapper {
   &.mobile {
     max-width: 350px;
-    padding: 32px 0;
+    padding: $margin-mobile 0;
     margin: auto;
   }
 
   &.desktop {
-    margin: 32px;
+    margin: $margin-desktop;
   }
 }
 
@@ -53,7 +53,8 @@ export default {
   font-weight: 400;
 
   &.mobile {
-    margin: 0 32px;
+    @include no-margin-padding;
+    text-align: center;
   }
 
   &.desktop {

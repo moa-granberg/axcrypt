@@ -58,10 +58,17 @@ export default {
 .standard-table-wrapper {
   padding: 0;
   list-style: none;
-  margin: 24px 0;
 
   > :nth-child(2n) {
     background-color: $light-gray;
+  }
+
+  &.mobile {
+    margin: $margin-mobile 0;
+  }
+
+  &.desktop {
+    margin: $margin-desktop 0;
   }
 }
 

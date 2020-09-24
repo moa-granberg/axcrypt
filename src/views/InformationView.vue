@@ -92,7 +92,7 @@ export default {
 
 .information-aside-content-wrapper {
   display: flex;
-  max-width: 1440px;
+  max-width: $max-viewport-width;
   margin: auto;
 }
 
@@ -102,7 +102,7 @@ export default {
   text-align: center;
 
   &.mobile {
-    margin: 0 24px;
+    margin: 0 $margin-mobile;
   }
 
   &.desktop {

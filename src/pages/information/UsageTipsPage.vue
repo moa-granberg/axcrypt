@@ -65,16 +65,16 @@ export default {
 @import '@/scss/variables.scss';
 
 .usage-tips-wrapper {
-  max-width: 900px;
+  max-width: $max-content-width;
 
   &.mobile {
-    padding: 24px;
+    padding: $margin-mobile;
   }
 }
 
 .usage-tips-description {
   text-align: center;
-  max-width: 600px;
+  max-width: $max-text-width;
 
   &.mobile {
     margin: 0 auto 14px auto;

@@ -23,7 +23,7 @@ export default {
 @import '@/scss/variables.scss';
 
 .product-body-wrapper {
-  margin: 32px;
+  @include standard-margin;
 }
 
 .product-body-header {

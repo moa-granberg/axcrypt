@@ -209,8 +209,9 @@ export default {
 }
 
 .reseller-application-text {
+  @include standard-margin;
+  margin-top: 0;
   text-align: center;
-  margin: 0 24px 24px 24px;
 }
 
 .reseller-application-form {

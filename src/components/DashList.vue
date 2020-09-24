@@ -27,7 +27,7 @@ export default {
 .dash-list-wrapper {
   margin: 0 0 20px 0;
   padding: 0;
-  max-width: 600px;
+  max-width: $max-text-width;
 }
 
 .dash-list-item {

@@ -46,7 +46,7 @@ export default {
   justify-content: flex-end;
 
   &.mobile {
-    padding: 24px;
+    padding: $margin-mobile;
   }
 
   &.desktop {

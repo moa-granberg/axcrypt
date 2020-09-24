@@ -60,13 +60,13 @@ export default {
 @import '@/scss/variables.scss';
 
 .instruction-wrapper {
-  padding: 24px;
+  @include standard-padding;
 
   &.desktop {
     display: grid;
     grid: 1fr / 1fr 1fr;
     align-items: flex-start;
-    gap: 24px;
+    gap: $margin-desktop;
     margin: auto;
 
     &.reverse {

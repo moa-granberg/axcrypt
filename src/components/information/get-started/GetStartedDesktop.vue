@@ -114,6 +114,7 @@ export default {
 @import '@/scss/variables.scss';
 
 .information-note-wrapper {
+  @include standard-padding;
   display: grid;
   background-color: $dark-green;
   box-shadow: $standard-box-shadow;
@@ -121,13 +122,11 @@ export default {
   &.mobile {
     grid: auto 1fr / 2fr 1fr;
     grid-template-areas: 'heading img' 'content content';
-    padding: 24px;
   }
 
   &.desktop {
     grid: auto 1fr / 1fr 1fr;
     grid-template-areas: 'img heading' 'img content';
-    padding: 34px;
 
     &.reverse {
       grid-template-areas: 'heading img' 'content img';
