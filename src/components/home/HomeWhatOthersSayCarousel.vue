@@ -57,7 +57,6 @@ export default {
 
   &.desktop {
     max-width: 25rem;
-    margin: 0 clamp(10rem, 25vw, 20rem) 2rem 0;
   }
 }
 </style>

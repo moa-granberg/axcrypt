@@ -44,6 +44,7 @@ export default {
 .home-what-others-say-wrapper {
   background-color: $light-gray;
   padding: 1rem;
+  @include center-column;
 }
 
 .home-what-others-say-heading {
@@ -58,7 +59,10 @@ export default {
 
 .home-what-others-say-carousel-awards-wrapper {
   &.desktop {
-    @include center-row;
+    display: grid;
+    grid: 1fr / 450px 450px;
+    align-items: center;
+    margin: auto;
   }
 }
 
