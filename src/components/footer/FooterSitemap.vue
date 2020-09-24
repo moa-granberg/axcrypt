@@ -45,11 +45,6 @@ export default {
 .footer-sitemap-wrapper {
   @include center-column;
 
-  &.mobile {
-    background-color: $dark-green;
-    box-shadow: inset $standard-box-shadow;
-  }
-
   &.desktop {
     align-items: flex-start;
     min-width: 230px;
@@ -82,6 +77,7 @@ export default {
     padding: 0 0 16px 0;
     min-width: 320px;
     max-height: 185px;
+    border-bottom: 1px solid rgba($white, 0.7);
   }
 
   &.desktop {
