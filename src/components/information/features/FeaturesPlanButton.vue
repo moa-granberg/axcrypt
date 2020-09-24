@@ -18,6 +18,7 @@ export default {
 @import '@/scss/variables.scss';
 
 .plan-button {
+  @include button-hover;
   opacity: 0.5;
   border: 1px solid $gray;
   border-radius: 2px;

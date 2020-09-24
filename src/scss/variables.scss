@@ -66,3 +66,9 @@ $standard-text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
     @include no-margin-padding;
   }
 }
+
+@mixin button-hover {
+  &:hover {
+    box-shadow: $standard-box-shadow, inset 0 0 14px 0 rgba($white, 0.4);
+  }
+}

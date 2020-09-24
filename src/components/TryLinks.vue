@@ -76,6 +76,7 @@ export default {
 
 .try-wrapper {
   @include center-column;
+  @include button-hover;
   height: 100%;
   width: 50%;
   box-shadow: $standard-box-shadow;
