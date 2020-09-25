@@ -34,6 +34,9 @@ export default {
   padding: $margin-top-aside-content;
   display: flex;
   flex-direction: column;
+  border-right: 1px solid $light-gray;
+  width: 240px;
+  box-sizing: border-box;
 }
 
 .side-menu-heading {
@@ -48,7 +51,7 @@ export default {
 }
 
 .side-menu-link-item {
-  padding: 5px 10px;
+  padding: 5px 0;
 
   a {
     color: $gray;

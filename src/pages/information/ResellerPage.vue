@@ -1,5 +1,5 @@
 <template>
-  <main :class="['reseller-wrapper', $mq]">
+  <section :class="['reseller-wrapper', $mq]">
     <article :class="['reseller-info-wrapper', $mq]">
       <div :class="['reseller-info-text-wrapper', $mq]">
         <h1 :class="['reseller-info-heading heading-small', $mq]">
@@ -47,7 +47,7 @@
         path="/information/resellers-application"
       />
     </article>
-  </main>
+  </section>
 </template>
 
 <script>
