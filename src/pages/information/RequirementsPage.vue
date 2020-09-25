@@ -12,7 +12,9 @@
       </p>
     </article>
 
-    <h1 :class="['requirements-linux-heading heading-small', $mq]">Linux</h1>
+    <h1 :class="['requirements-linux-heading heading-medium-green', $mq]">
+      Linux
+    </h1>
     <p :class="['requirements-linux-text body-text', $mq]">
       {{ $t('RequirementsLinuxText') }}
     </p>
@@ -74,8 +76,7 @@ export default {
 }
 
 .requirements-linux-heading {
-  color: $green;
-  font-weight: 400;
+  margin: $margin-medium-heading;
 }
 
 .requirements-linux-text {

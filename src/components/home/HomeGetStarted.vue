@@ -1,6 +1,6 @@
 <template>
   <section :class="`home-get-started-wrapper ${$mq}`">
-    <h1 :class="`home-get-started-heading heading-medium ${$mq}`">
+    <h1 :class="`home-get-started-heading heading-medium-green ${$mq}`">
       {{ $t('HomeGetStartedHeading') }}
     </h1>
 
@@ -54,8 +54,6 @@ export default {
 }
 
 .home-get-started-heading {
-  color: $green;
-  font-weight: 400;
   margin: 0 0 2rem 0;
 }
 

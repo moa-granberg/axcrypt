@@ -1,6 +1,6 @@
 <template>
   <section :class="['reseller-application-wrapper', $mq]">
-    <h1 :class="['reseller-application-heading heading-medium', $mq]">
+    <h1 :class="['reseller-application-heading heading-medium-green', $mq]">
       {{ $t('ResellerApplicationHeading') }}
     </h1>
     <p :class="['reseller-application-text body-text', $mq]">
@@ -208,11 +208,8 @@ export default {
 }
 
 .reseller-application-heading {
-  color: $green;
-  font-weight: 400;
-
-  &.desktop {
-    margin: 0;
+  &.mobile {
+    margin: 18px 0 0 0;
   }
 }
 

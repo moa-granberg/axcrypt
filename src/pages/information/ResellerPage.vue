@@ -2,7 +2,7 @@
   <section :class="['reseller-wrapper', $mq]">
     <article :class="['reseller-info-wrapper', $mq]">
       <div :class="['reseller-info-text-wrapper', $mq]">
-        <h1 :class="['reseller-info-heading heading-small', $mq]">
+        <h1 :class="['reseller-info-heading heading-medium-green', $mq]">
           {{ $t('ResellerInfoHeading') }}
         </h1>
         <p :class="['body-text', $mq]">{{ $t('ResellerInfoText1') }}</p>
@@ -117,8 +117,6 @@ export default {
 }
 
 .reseller-info-heading {
-  font-weight: 400;
-  color: $green;
   margin: 0 0 18px 0;
 }
 

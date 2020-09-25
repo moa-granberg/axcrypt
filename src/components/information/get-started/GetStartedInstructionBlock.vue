@@ -1,7 +1,7 @@
 <template>
   <article :class="[{ reverse }, 'instruction-wrapper', $mq]">
     <div :class="[{ reverse }, 'instruction-text-wrapper', $mq]">
-      <h1 :class="`instruction-heading heading-small ${$mq}`">
+      <h1 :class="`heading-medium-green ${$mq}`">
         {{ $t(data.heading) }}
       </h1>
 
@@ -87,12 +87,6 @@ export default {
       grid-area: text;
     }
   }
-}
-
-.instruction-heading {
-  @include no-margin-padding;
-  color: $green;
-  font-weight: 400;
 }
 
 .iframe-wrapper {

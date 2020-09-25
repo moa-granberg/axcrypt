@@ -1,6 +1,6 @@
 <template>
   <section :class="`feature-list-wrapper ${$mq}`">
-    <h1 :class="`feature-list-header heading-medium ${$mq}`">
+    <h1 :class="`feature-list-header heading-medium-green ${$mq}`">
       {{ $t(headingPhraseKey) }}
     </h1>
     <ul :class="`feature-list-items-wrapper ${$mq}`">
@@ -49,16 +49,8 @@ export default {
 }
 
 .feature-list-header {
-  color: $green;
-  font-weight: 400;
-
   &.mobile {
-    @include no-margin-padding;
     text-align: center;
-  }
-
-  &.desktop {
-    @include no-margin-padding;
   }
 }
 
