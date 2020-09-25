@@ -90,12 +90,9 @@ export default {
 }
 
 .instruction-heading {
+  @include no-margin-padding;
   color: $green;
   font-weight: 400;
-
-  &.desktop {
-    @include no-margin-padding;
-  }
 }
 
 .iframe-wrapper {
