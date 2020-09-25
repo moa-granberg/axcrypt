@@ -143,6 +143,14 @@ const routes = [
         },
       },
       {
+        path: 'gdpr',
+        name: 'GdprPage',
+        component: Pages.GdprPage,
+        meta: {
+          title: 'GDPR | ',
+        },
+      },
+      {
         path: 'terms-of-use',
         name: 'TermsOfUsePage',
         component: Pages.TermsOfUsePage,

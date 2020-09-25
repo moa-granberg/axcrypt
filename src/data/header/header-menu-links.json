@@ -62,6 +62,10 @@
         "phraseKey": "PrivacyPolicyLinkLabel"
       },
       {
+        "path": "/information/gdpr",
+        "phraseKey": "GdprLinkLabel"
+      },
+      {
         "path": "/information/terms-of-use",
         "phraseKey": "TermsOfUseLinkLabel"
       }

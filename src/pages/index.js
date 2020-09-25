@@ -9,6 +9,7 @@ import TechnicalDetailsPage from './information/TechnicalDetailsPage';
 import ReleaseNotesPage from './information/ReleaseNotesPage';
 import CryptographicHashesOfFilesPage from './information/CryptographicHashesOfFilesPage';
 import PrivacyPolicyPage from './information/PrivacyPolicyPage';
+import GdprPage from './information/GdprPage';
 import TermsOfUsePage from './information/TermsOfUsePage';
 
 import FaqPage from './support/FaqPage';
@@ -36,6 +37,7 @@ export {
   ReleaseNotesPage,
   CryptographicHashesOfFilesPage,
   PrivacyPolicyPage,
+  GdprPage,
   TermsOfUsePage,
   FaqPage,
   AxcryptBusinessPage,
