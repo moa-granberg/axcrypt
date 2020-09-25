@@ -450,5 +450,8 @@
   "PrivacyPolicyBlock3Text4": "Our privacy policy may be updated from time to time without prior notice. Please check here for the currently valid policy.",
   "PrivacyPolicyBlock4Heading": "Contact",
   "PrivacyPolicyBlock4Text1": "Should you have any specific questions about what we need a particular piece of information for, or if you want your data removed, please contact us at <a href='mailto:support@axcrypt.net.'>support@axcrypt.net</a>",
-  "PrivacyPolicyBlock4Text2": "If you are a Business users, and do not want to be included in our CRM system, please contact us at <a href='mailto:business@axcrypt.net.'>business@axcrypt.net</a>"
+  "PrivacyPolicyBlock4Text2": "If you are a Business users, and do not want to be included in our CRM system, please contact us at <a href='mailto:business@axcrypt.net.'>business@axcrypt.net</a>",
+  "CryptographicHashesOfFilesLinkLabel": "Cryptographic Hashes of Files",
+  "CryptographicHashesOfFilesSLLText": "Our web sites are protected with SSL encryption, and for reference we here publish the current thumbprints and expiration dates of these certificates:",
+  "CryptographicHashesOfFilesSHA256Text": "This is a list of cryptographic hashes of published files that can be used to verify downloads."
 }
