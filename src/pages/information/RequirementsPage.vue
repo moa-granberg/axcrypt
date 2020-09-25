@@ -61,7 +61,7 @@ export default {
 
   &.desktop {
     padding: 0 24px 0 0;
-    margin: 60px auto;
+    margin: $margin-top-aside-content auto;
   }
 }
 

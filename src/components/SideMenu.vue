@@ -31,10 +31,13 @@ export default {
 @import '@/scss/variables.scss';
 
 .side-menu-wrapper {
-  padding: 42px;
+  padding: $margin-top-aside-content;
+  display: flex;
+  flex-direction: column;
 }
 
 .side-menu-heading {
+  margin: 0 0 18px 0;
   color: $green;
   font-weight: 400;
 }

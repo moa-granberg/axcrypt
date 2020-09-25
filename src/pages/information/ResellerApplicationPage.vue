@@ -201,11 +201,19 @@ export default {
   &.mobile {
     margin: auto;
   }
+
+  &.desktop {
+    margin: $margin-top-aside-content auto;
+  }
 }
 
 .reseller-application-heading {
   color: $green;
   font-weight: 400;
+
+  &.desktop {
+    margin: 0;
+  }
 }
 
 .reseller-application-text {
@@ -215,7 +223,13 @@ export default {
 }
 
 .reseller-application-form {
-  width: 90%;
+  &.mobile {
+    width: 90%;
+  }
+
+  &.desktop {
+    width: 70%;
+  }
 }
 
 .input {

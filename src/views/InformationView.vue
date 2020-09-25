@@ -59,6 +59,10 @@ export default {
 <style lang="scss" scoped>
 @import '@/scss/variables.scss';
 
+.information-view-wrapper {
+  background-color: $light-gray;
+}
+
 .information-header {
   @include center-column;
   background-blend-mode: overlay;
@@ -94,6 +98,11 @@ export default {
   display: flex;
   max-width: $max-viewport-width;
   margin: auto;
+  background-color: $white;
+
+  > section {
+    width: $sidemenu-served-content-width;
+  }
 }
 
 .information-heading {

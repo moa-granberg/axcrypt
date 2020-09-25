@@ -105,13 +105,21 @@ export default {
 }
 
 .reseller-info-text-wrapper {
-  @include standard-margin;
   max-width: $max-text-width;
+
+  &.mobile {
+    margin: $margin-mobile;
+  }
+
+  &.desktop {
+    margin: $margin-top-aside-content;
+  }
 }
 
 .reseller-info-heading {
   font-weight: 400;
   color: $green;
+  margin: 0 0 18px 0;
 }
 
 .reseller-benefits-wrapper {

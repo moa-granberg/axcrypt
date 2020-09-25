@@ -97,13 +97,20 @@ export default {
 
 .features-wrapper {
   @include no-margin-padding;
-  @include standard-padding;
   @include center-column;
 
   box-sizing: border-box;
   background-color: rgba($black, 0.9);
   box-shadow: $standard-box-shadow;
   width: 100%;
+
+  &.mobile {
+    padding: $margin-mobile 0;
+  }
+
+  &.desktop {
+    padding: $margin-top-aside-content;
+  }
 }
 
 .choose-plan-text {

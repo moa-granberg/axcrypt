@@ -66,6 +66,7 @@ export default {
 
 .usage-tips-wrapper {
   max-width: $max-content-width;
+  margin: auto;
 
   &.mobile {
     padding: $margin-mobile;
@@ -81,7 +82,7 @@ export default {
   }
 
   &.desktop {
-    margin: 58px auto 0 auto;
+    margin: $margin-top-aside-content auto 0 auto;
   }
 }
 
