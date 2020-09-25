@@ -360,5 +360,19 @@
   "UsageTipsConfidentialEmailText4": "This is not quite as easy as regular mail – but not far from it – and most approaches instead require encrypting and decrypting using the clipboard with cut and paste.",
   "UsageTipsHideShowHeading": "Hide/show the .axx extention",
   "UsageTipsHideShowText1": "Normally, AxCrypt files will display the .axx extension or not, depending on your global Windows settings. This behavior may be changed by modifying the Windows registry.",
-  "UsageTipsHideShowText2": "AxCrypt does not implement any configuration settings to keep things simple, but if you really want this, you can modify the registry manually. If you do not know how to do this, you should probably refrain as the full implications may not be clear then."
+  "UsageTipsHideShowText2": "AxCrypt does not implement any configuration settings to keep things simple, but if you really want this, you can modify the registry manually. If you do not know how to do this, you should probably refrain as the full implications may not be clear then.",
+  "TechnicalDetailsDescription": "This section describes in detail just what AxCrypt is, what it does, and how it does it. It is mostly for technical experts, who have a good grasp on software development as well as cryptography. Information here is intended to be complete enough to build AxCrypt-compatible software for example.",
+  "TechnicalDetailsV2PDFLinkLabel": "AxCrypt Version 2 Algorithms and File Format",
+  "TechnicalDetailsV1PDFLinkLabel": "AxCrypt Version 1 Algorithms and File Format",
+  "TechnicalDetailsSourceCodeHeading": "Source code",
+  "TechnicalDetailsSourceCodeText": "The complete source code for the core libraries and the Windows client are found at <a href='https://bitbucket.org/axcryptab/axcrypt-net'>https://bitbucket.org/axcryptab/axcrypt-net.</a>",
+  "TechnicalDetailsStoredOnServerHeading": "What is stored on the server?",
+  "TechnicalDetailsStoredOnServerText1": "When an account is created, we store some basic information.",
+  "TechnicalDetailsStoredOnServerText2": "If the password manager is used, we also store an AES-256 XML-encrypted file with the password records, encrypted with the sign in password.",
+  "TechnicalDetailsStoredOnServerText3": "Apart from the above, we perform some logging that helps us monitor the infrastructure, and improve our support capabilities. This is detailed at <a href='#/information/privacy-policy/'>privacy policy</a>.",
+  "TechnicalDetailsStoredOnServerListText1": "The email address of the account.",
+  "TechnicalDetailsStoredOnServerListText2": "The sign in status, number of failed sign in attempts, last time of sign in etc.",
+  "TechnicalDetailsStoredOnServerListText3": "The payment status.",
+  "TechnicalDetailsStoredOnServerListText4": "A RSA-4096 public key that is available for others to download in order to perform file key sharing.",
+  "TechnicalDetailsStoredOnServerListText5": "One or more RSA-4096 private keys, encrypted using AxCrypt and the sign in password, so we can keep it synchronized across devices, and as a backup should a device be lost or destroyed."
 }
