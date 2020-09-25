@@ -1,0 +1,100 @@
+@import './variables.scss';
+
+.text-view-wrapper {
+  max-width: $max-content-width;
+  margin: auto;
+
+  &.mobile {
+    padding: $margin-mobile;
+  }
+
+  &.desktop {
+    padding: 0 $margin-desktop;
+    margin: $margin-top-aside-content auto;
+  }
+
+  .description {
+    text-align: center;
+
+    &.mobile {
+      margin: 0 auto 14px auto;
+      font-size: 0.75rem;
+    }
+
+    &.desktop {
+      font-size: 0.875rem;
+    }
+  }
+
+  > article {
+    &.mobile {
+      padding: 14px 0;
+    }
+
+    &.desktop {
+      padding: 20px 0;
+    }
+  }
+
+  > article > h1 {
+    @include no-margin-padding;
+    color: $green;
+    font-weight: 400;
+
+    &.mobile {
+      font-size: 1.125rem;
+    }
+
+    &.desktop {
+      font-size: 1.5rem;
+    }
+  }
+
+  > article > p {
+    a {
+      color: $green;
+      font-weight: 600;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    &.mobile {
+      font-size: 0.75rem;
+    }
+
+    &.desktop {
+      font-size: 0.875rem;
+    }
+  }
+
+  > article > ul {
+    @include no-margin-padding;
+    list-style: none;
+
+    > li {
+      @include list-bullet;
+    }
+  }
+
+  > article > a {
+    margin: 14px 0 0 0;
+    display: block;
+    color: $green;
+    text-decoration: none;
+
+    &.mobile {
+      font-size: 0.75rem;
+    }
+
+    &.desktop {
+      font-size: 0.875rem;
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
