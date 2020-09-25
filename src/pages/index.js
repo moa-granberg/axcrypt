@@ -8,6 +8,7 @@ import SecurityPage from './information/SecurityPage';
 import TechnicalDetailsPage from './information/TechnicalDetailsPage';
 import ReleaseNotesPage from './information/ReleaseNotesPage';
 import PrivacyPolicyPage from './information/PrivacyPolicyPage';
+import GdprPage from './information/GdprPage';
 import TermsOfUsePage from './information/TermsOfUsePage';
 
 import FaqPage from './support/FaqPage';
@@ -34,6 +35,7 @@ export {
   TechnicalDetailsPage,
   ReleaseNotesPage,
   PrivacyPolicyPage,
+  GdprPage,
   TermsOfUsePage,
   FaqPage,
   AxcryptBusinessPage,
