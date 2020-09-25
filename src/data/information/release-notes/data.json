@@ -1,0 +1,122 @@
+[
+  {
+    "heading": "Windows Desktop 2.1.1598 2020-06-25",
+    "summary": "Minor update with usability and stability enhancements, various bug-fixes, refactoring, performance improvements and maintenance work.",
+    "changeLog": [
+      "#186: Add option to disable recent files",
+      "#242: Upgrade to latest NUnit",
+      "#374: Update copyright year in about",
+      "#459: Downgrade encryption level when updating document on Free plan",
+      "#465 : Key share icon should use the selected files in the recent files list",
+      "#53: Translations and Texts Maintenance",
+      "#61: Code Maintenance"
+    ],
+    "changesInCommonCode": [
+      "AXC-10: Add in-app purchases to iOS app",
+      "AXC-62: Configure new subscriptions in Stripe",
+      "AXC-72: Add a link from desktop apps to open the account web to handle account changes",
+      "AXC-63: Configure new subscriptions in PayPal"
+    ]
+  },
+  {
+    "heading": "iOS 2.1.588 2020-01-17",
+    "summary": "Minor update with bug-fixes and improvements. See iOS release 2.1.587 for details."
+  },
+  {
+    "heading": "iOS 2.1.587 2019-12-23",
+    "summary": "Minor update with bug-fixes, updation of build support and dependencies, relocation of icons, and changes due to changes in common code and most importantly framework updates to the most current versions.",
+    "changeLog": [
+      "#111: Update Dependencies",
+      "#160: IOS: Terms & Conditions link should redirect to AxCrypt terms and conditions",
+      "#163: IOS: Line should be visible between each files in recent files list",
+      "#164: IOS: Getting an exception when opening an encrypted file",
+      "#165: IOS: Left side menu should get highlighted when selecting the menu options",
+      "#166: IOS: File selection dialog should be fit to the screen in iPad",
+      "#15: Code Maintenance [axcrypt-xamforms]"
+    ]
+  },
+  {
+    "heading": "Android 2.1.608 2019-12-06",
+    "summary": "Various bug-fixes, refactoring, updated icons, updated build support, updated dependencies and tooling, changes due to changes in common code and most importantly framework updates to the most current versions.",
+    "changeLog": [
+      "#111: Update Dependencies",
+      "#155: Build as 64-bit",
+      "#156: Upgrade android target version to latest",
+      "#157: Change the icons position in the android app",
+      "#158: Key share icon should be visible when opening the encrypted files with file password",
+      "#162: Full file name is not visible when removing from the recent files list",
+      "#15: Code Maintenance [axcrypt-xamforms]"
+    ]
+  },
+  {
+    "heading": "macOS Desktop 2.2.668.0 2019-09-05",
+    "summary": "Minor update with usability and stability enhancements, various bug-fixes and maintenance work.",
+    "changeLog": [
+      "#173: The clean open files broom icon is not shown in the recent files list",
+      "#175: Check for update should always pop up a dialog",
+      "#176: “Get Premium” is missing from Help Menu",
+      "#189: When inviting a user, allow the inviter to select recipient language and include personal message",
+      "#190: Add subscription status and validity time in About box",
+      "#191: Add restore original name",
+      "#192: Add option to clear the recent files list",
+      "#193: Key share icon should display in recent files tab once key share the file",
+      "#194: Enable open file while logged out",
+      "#195: Enable ‘Change Password’ even when signed out",
+      "#196: Add a ‘Reset’ button to the sign in dialog so a user can change the email",
+      "#197: Add possibility to remove key sharing recipients from the list of known recipients",
+      "#198: Remove from Recent Files list options are enabled when file is open and decrypted",
+      "#200: Key Sharing does not work when working [local] and this should be indicated",
+      "#201: Key share new recipient should not allow the viewers to type the email address",
+      "#202: Refresh account status when going from offline to online",
+      "#203: When signing in [Local] a pop-up message should be displayed",
+      "#204: Clean Broom button does not work",
+      "#207: Implement Check and Verify File options under the Debug Menu",
+      "#208: Increase Mac target to 10.9 Maverick",
+      "#209: Update copyright year in about",
+      "#211: Invitation dialog",
+      "#212: Do not allow user to exit the AxCrypt app when encrypted files are pending",
+      "#213: Code changes to do not allow the app to open the encrypted compressed zip/rar files",
+      "#217: Should have a context menu option to remove the selected secured folder(s)",
+      "#12: Code Maintenance [axcrypt-xwt]"
+    ],
+    "changesInCommonCode": [
+      "#348: Do not key share when updating document on Free plan",
+      "#368: Improve upgrade from Legacy to be Upgrade from 128-bit",
+      "#433: Warning popup when skipping ignored files",
+      "#449: Should hide/remove the share key icon after encrypting a file in the recent files tab",
+      "#450: Key share icon should display in recent files tab once key share the file",
+      "#455: Do not allow the app to open the encrypted compressed zip/rar files",
+      "#458: Error message should be displayed when the entered activation code is wrong",
+      "#462: Invitation dialog causes deserialization exception in XWT desktops",
+      "#53: Translations and texts maintenance"
+    ]
+  },
+  {
+    "heading": "Windows Desktop 2.1.1585 2019-05-23",
+    "summary": "Minor update with usability and stability enhancements, various bug-fixes, refactoring and maintenance work.",
+    "changeLog": [
+      "#206: Invitation dialog",
+      "#226: Remove from Recent Files list options are enabled when file is open and decrypted",
+      "#349: Drag and dropped files to recent files do not display decrypted file name",
+      "#369: Info dialog about opening without asking is displayed even when asking for file password",
+      "#374: Update copyright year in about",
+      "#388: Max button size is too small",
+      "#423: Enable ‘Change Password’ even when signed out.",
+      "#431: Desktop notification when a lengthy operation has completed.",
+      "#433: Warning popup when skipping ignored files",
+      "#441: Enable open file while logged out",
+      "#442: Update Code Signing certificate",
+      "#445: When inviting users, allow the inviter to select recipient language",
+      "#446: When inviting a user, a free-text-field should be included for a personal message",
+      "#447: Help button missing in initial information signup dialog",
+      "#448: Password reset disabled after local reset",
+      "#449: Should hide/remove the share key icon after encrypting a file in the recent files tab.",
+      "#450: Key share icon should display in recent files tab once key share the file.",
+      "#451: Get premium/Try premium text should be translated when changing the languages.",
+      "#453: ArgumentOutOfRangeException when using close(x) icon to close the app startup alert popups",
+      "#456: Do not allow the user to exit the AxCrypt app when encrypted files are pending",
+      "#458: Error message should be displayed when the entered activation code is wrong",
+      "#53: Translations and texts maintenance"
+    ]
+  }
+]

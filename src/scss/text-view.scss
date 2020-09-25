@@ -4,6 +4,16 @@
   max-width: $max-content-width;
   margin: auto;
 
+  a {
+    color: $green;
+    text-decoration: none;
+    font-weight: 400;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
   &.mobile {
     padding: $margin-mobile;
 
@@ -55,18 +65,6 @@
     }
   }
 
-  > article > p {
-    a {
-      color: $green;
-      font-weight: 600;
-      text-decoration: none;
-
-      &:hover {
-        text-decoration: underline;
-      }
-    }
-  }
-
   > article > ul {
     @include no-margin-padding;
     list-style: none;
@@ -79,11 +77,5 @@
   > article > a {
     margin: 14px 0 0 0;
     display: block;
-    color: $green;
-    text-decoration: none;
-
-    &:hover {
-      text-decoration: underline;
-    }
   }
 }
