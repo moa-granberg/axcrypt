@@ -16,11 +16,21 @@
 
   &.mobile {
     padding: $margin-mobile;
+
+    p,
+    a {
+      font-size: 0.75rem;
+    }
   }
 
   &.desktop {
     padding: 0 $margin-desktop;
     margin: $margin-top-aside-content auto;
+
+    p,
+    a {
+      font-size: 0.875rem;
+    }
   }
 
   .description {
@@ -28,11 +38,6 @@
 
     &.mobile {
       margin: 0 auto 14px auto;
-      font-size: 0.75rem;
-    }
-
-    &.desktop {
-      font-size: 0.875rem;
     }
   }
 
@@ -60,16 +65,6 @@
     }
   }
 
-  > article > p {
-    &.mobile {
-      font-size: 0.75rem;
-    }
-
-    &.desktop {
-      font-size: 0.875rem;
-    }
-  }
-
   > article > ul {
     @include no-margin-padding;
     list-style: none;
@@ -82,13 +77,5 @@
   > article > a {
     margin: 14px 0 0 0;
     display: block;
-
-    &.mobile {
-      font-size: 0.75rem;
-    }
-
-    &.desktop {
-      font-size: 0.875rem;
-    }
   }
 }
