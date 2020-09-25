@@ -127,6 +127,14 @@ const routes = [
         },
       },
       {
+        path: 'cryptographic-hashes-of-files',
+        name: 'CryptographicHashesOfFilesPage',
+        component: Pages.CryptographicHashesOfFilesPage,
+        meta: {
+          title: 'Cryptographic Hashes of Files | ',
+        },
+      },
+      {
         path: 'privacy-policy',
         name: 'PrivacyPolicyPage',
         component: Pages.PrivacyPolicyPage,

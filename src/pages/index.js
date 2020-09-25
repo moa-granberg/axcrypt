@@ -7,6 +7,7 @@ import UsageTipsPage from './information/UsageTipsPage';
 import SecurityPage from './information/SecurityPage';
 import TechnicalDetailsPage from './information/TechnicalDetailsPage';
 import ReleaseNotesPage from './information/ReleaseNotesPage';
+import CryptographicHashesOfFilesPage from './information/CryptographicHashesOfFilesPage';
 import PrivacyPolicyPage from './information/PrivacyPolicyPage';
 import GdprPage from './information/GdprPage';
 import TermsOfUsePage from './information/TermsOfUsePage';
@@ -34,6 +35,7 @@ export {
   SecurityPage,
   TechnicalDetailsPage,
   ReleaseNotesPage,
+  CryptographicHashesOfFilesPage,
   PrivacyPolicyPage,
   GdprPage,
   TermsOfUsePage,
