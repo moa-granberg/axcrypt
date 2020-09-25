@@ -68,7 +68,7 @@ export default {
 $list-grid: 1fr / 1fr 2fr;
 
 .more-features-wrapper {
-  margin: 36px 24px;
+  @include standard-margin;
 }
 
 .more-features-heading {

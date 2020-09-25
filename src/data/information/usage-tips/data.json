@@ -15,16 +15,11 @@
   "infoBlockList": [
     {
       "heading": "UsageTipsAnonymousFileHeading",
-      "texts": [
-        "UsageTipsAnonymousFileText"
-      ]
+      "texts": ["UsageTipsAnonymousFileText"]
     },
     {
       "heading": "UsageTipsMakingArchivesHeading",
-      "texts": [
-        "UsageTipsMakingArchivesText1",
-        "UsageTipsMakingArchivesText2"
-      ]
+      "texts": ["UsageTipsMakingArchivesText1", "UsageTipsMakingArchivesText2"]
     },
     {
       "heading": "UsageTipsSecuringFoldersHeading",
@@ -35,10 +30,7 @@
     },
     {
       "heading": "UsageTipsBackupsHeading",
-      "texts": [
-        "UsageTipsBackupsText1",
-        "UsageTipsBackupsText2"
-      ]
+      "texts": ["UsageTipsBackupsText1", "UsageTipsBackupsText2"]
     },
     {
       "heading": "UsageTipsConfidentialDataHeading",
@@ -74,10 +66,7 @@
     },
     {
       "heading": "UsageTipsHideShowHeading",
-      "texts": [
-        "UsageTipsHideShowText1",
-        "UsageTipsHideShowText2"
-      ]
+      "texts": ["UsageTipsHideShowText1", "UsageTipsHideShowText2"]
     }
   ]
 }

@@ -11,7 +11,7 @@
       </h1>
       <img
         :class="['information-note-img', $mq]"
-        src="@/assets/view/information/information-note-img1.svg"
+        src="@/assets/view/information/get-started/information-note-img1.svg"
         alt=""
       />
       <div :class="['information-note-inner-wrapper', $mq]">
@@ -40,7 +40,7 @@
       </h1>
       <img
         :class="['information-note-img', $mq]"
-        src="@/assets/view/information/information-note-img2.svg"
+        src="@/assets/view/information/get-started/information-note-img2.svg"
         alt=""
       />
       <div :class="['information-note-inner-wrapper', $mq]">
@@ -57,6 +57,8 @@
 
 <script>
 import GetStartedInstructionBlock from './GetStartedInstructionBlock';
+import dataWindows from '@/data/information/get-started/instructions-windows';
+import dataMac from '@/data/information/get-started/instructions-mac';
 
 export default {
   components: {
@@ -65,10 +67,6 @@ export default {
 
   data() {
     return {
-      installingAxcryptData: {},
-      howToUseData: {},
-      keySharingData: {},
-      passwordManagementData: {},
       infoNoteData1: {
         heading: 'GetStartedInfoNote1Heading',
         list: [
@@ -84,34 +82,30 @@ export default {
     };
   },
 
-  methods: {
-    async getInstructionsData() {
-      let data;
-      if (this.$route.params.platform === 'windows') {
-        data = await (
-          await import(
-            '@/data/information/get-started/instructions-windows.json'
-          )
-        ).default;
-      } else {
-        data = await (
-          await import('@/data/information/get-started/instructions-mac.json')
-        ).default;
-      }
-
-      this.installingAxcryptData = data.installingAxcrypt;
-      this.howToUseData = data.howToUse;
-      this.keySharingData = data.keySharing;
-      this.passwordManagementData = data.passwordManagement;
+  computed: {
+    installingAxcryptData() {
+      return this.$route.params.platform === 'windows'
+        ? dataWindows.installingAxcrypt
+        : dataMac.installingAxcrypt;
     },
-  },
 
-  created() {
-    this.getInstructionsData();
-  },
+    howToUseData() {
+      return this.$route.params.platform === 'windows'
+        ? dataWindows.howToUse
+        : dataMac.howToUse;
+    },
 
-  updated() {
-    this.getInstructionsData();
+    keySharingData() {
+      return this.$route.params.platform === 'windows'
+        ? dataWindows.keySharing
+        : dataMac.keySharing;
+    },
+
+    passwordManagementData() {
+      return this.$route.params.platform === 'windows'
+        ? dataWindows.passwordManagement
+        : dataMac.passwordManagement;
+    },
   },
 };
 </script>
@@ -120,6 +114,7 @@ export default {
 @import '@/scss/variables.scss';
 
 .information-note-wrapper {
+  @include standard-padding;
   display: grid;
   background-color: $dark-green;
   box-shadow: $standard-box-shadow;
@@ -127,13 +122,11 @@ export default {
   &.mobile {
     grid: auto 1fr / 2fr 1fr;
     grid-template-areas: 'heading img' 'content content';
-    padding: 24px;
   }
 
   &.desktop {
     grid: auto 1fr / 1fr 1fr;
     grid-template-areas: 'img heading' 'img content';
-    padding: 34px;
 
     &.reverse {
       grid-template-areas: 'heading img' 'content img';

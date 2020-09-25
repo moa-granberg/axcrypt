@@ -1,6 +1,6 @@
 <template>
   <section :class="['get-started-mobile-wrapper', $mq]">
-    <h1 :class="['get-started-mobile-heading heading-small', $mq]">
+    <h1 :class="['heading-medium-green', $mq]">
       {{ $t(headingPhraseKey) }}
     </h1>
     <p :class="['body-text', $mq]">{{ $t(textPhraseKey1) }}</p>
@@ -16,7 +16,7 @@
       <div :class="['get-started-mobile-instruction-img-wrapper', $mq]">
         <img
           :class="['get-started-mobile-img', $mq]"
-          :src="require(`@/assets/view/information/${item.src}`)"
+          :src="require(`@/assets/view/information/get-started/${item.src}`)"
           alt=""
         />
         <h3 :class="['get-started-mobile-img-heading', $mq]">
@@ -84,19 +84,7 @@ export default {
 @import '@/scss/variables.scss';
 
 .get-started-mobile-wrapper {
-  &.mobile {
-    padding: 24px;
-  }
-
-  &.desktop {
-    padding: 34px;
-  }
-}
-
-.get-started-mobile-heading {
-  @include no-margin-padding;
-  font-weight: 400;
-  color: $green;
+  @include standard-padding;
 }
 
 .get-started-mobile-instruction-wrapper {
@@ -128,7 +116,7 @@ export default {
 }
 
 .get-started-mobile-instruction-text-wrapper {
-  max-width: 600px;
+  max-width: $max-text-width;
 
   &.mobile {
     margin: auto;

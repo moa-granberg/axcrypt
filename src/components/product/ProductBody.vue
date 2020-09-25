@@ -1,6 +1,6 @@
 <template>
   <section :class="'product-body-wrapper ' + $mq">
-    <h1 :class="'product-body-header heading-medium ' + $mq">
+    <h1 :class="'product-body-header heading-medium-green ' + $mq">
       {{ $t(headerPhraseKey) }}
     </h1>
     <div
@@ -23,12 +23,7 @@ export default {
 @import '@/scss/variables.scss';
 
 .product-body-wrapper {
-  margin: 32px;
-}
-
-.product-body-header {
-  color: $green;
-  font-weight: 400;
+  @include standard-margin;
 }
 
 .product-body-text > p > a {

@@ -31,6 +31,7 @@
 <script>
 import SideMenu from '@/components/SideMenu';
 import PrimaryButton from '@/components/PrimaryButton';
+import data from '@/data/header/header-menu-links';
 
 export default {
   components: {
@@ -38,25 +39,13 @@ export default {
     PrimaryButton,
   },
 
-  data() {
-    return {
-      sideMenuLinks: [],
-    };
-  },
-
   computed: {
     getPageName() {
       return this.$route.name.split('Page').join('LinkLabel');
     },
-  },
 
-  methods: {
-    async getSideMenuLinks() {
-      const linkImport = await (
-        await import('@/data/header/header-menu-links.json')
-      ).default;
-
-      this.sideMenuLinks = linkImport
+    sideMenuLinks() {
+      return data
         .find(item => item.path === '/information')
         .children.map(child => ({
           path: child.path,
@@ -64,15 +53,15 @@ export default {
         }));
     },
   },
-
-  created() {
-    this.getSideMenuLinks();
-  },
 };
 </script>
 
 <style lang="scss" scoped>
 @import '@/scss/variables.scss';
+
+.information-view-wrapper {
+  background-color: $light-gray;
+}
 
 .information-header {
   @include center-column;
@@ -107,8 +96,13 @@ export default {
 
 .information-aside-content-wrapper {
   display: flex;
-  max-width: 1440px;
+  max-width: $max-viewport-width;
   margin: auto;
+  background-color: $white;
+
+  > section {
+    width: $sidemenu-served-content-width;
+  }
 }
 
 .information-heading {
@@ -117,7 +111,7 @@ export default {
   text-align: center;
 
   &.mobile {
-    margin: 0 24px;
+    margin: 0 $margin-mobile;
   }
 
   &.desktop {

@@ -1,10 +1,10 @@
 [
   {
-    "phraseKey": "BusinessFeatureListBestEncryption",
+    "phraseKey": "FeaturesBestEncryption",
     "src": "/icons/check.svg"
   },
   {
-    "phraseKey": "BusinessFeatureListMadeInSweden",
+    "phraseKey": "FeaturesMadeInSweden",
     "src": "/icons/outlined_flag.svg"
   },
   {

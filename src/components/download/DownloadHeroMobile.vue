@@ -33,7 +33,7 @@
       <div :class="`download-hero-mobile-img-wrapper ${$mq}`">
         <img
           :class="`download-hero-mobile-img ${$mq}`"
-          src="@/assets/view/download/mobile_application.svg"
+          src="@/assets/view/download/mobile_application.png"
           alt=""
         />
       </div>
@@ -53,12 +53,13 @@ export default {};
   color: $white;
 
   &.mobile {
-    margin: 24px 24px 0 24px;
+    margin: $margin-mobile;
+    margin-bottom: 0;
   }
 
   &.desktop {
     flex-grow: 1;
-    margin: 80px 0 0 80px;
+    margin: 80px 80px 0 80px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -66,7 +67,7 @@ export default {};
 }
 
 .download-hero-mobile-text-wrapper {
-  max-width: 600px;
+  max-width: $max-text-width;
 
   &.mobile {
     margin: auto;
@@ -78,7 +79,7 @@ export default {};
 }
 
 .download-hero-mobile-images-wrapper {
-  max-width: 600px;
+  max-width: $max-text-width;
   display: flex;
   justify-content: space-between;
 
@@ -110,12 +111,13 @@ export default {};
 
 .download-hero-mobile-img-wrapper {
   align-self: flex-end;
-  overflow: hidden;
   display: flex;
   align-items: flex-end;
 }
 
 .download-hero-mobile-img {
-  max-width: 125%;
+  &.mobile {
+    max-width: 30vw;
+  }
 }
 </style>

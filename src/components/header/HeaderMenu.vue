@@ -13,6 +13,7 @@
 <script>
 import LanguageBar from './LanguageBar';
 import HeaderMenuItem from './HeaderMenuItem';
+import headerLinks from '@/data/header/header-menu-links';
 
 export default {
   components: {
@@ -26,7 +27,7 @@ export default {
 
   data() {
     return {
-      headerLinks: [],
+      headerLinks,
     };
   },
 
@@ -34,16 +35,6 @@ export default {
     handleHideMobileMenu() {
       this.$emit('hideMobileMenu');
     },
-
-    async getMenuLinks() {
-      this.headerLinks = await (
-        await import('@/data/header/header-menu-links.json')
-      ).default;
-    },
-  },
-
-  created() {
-    this.getMenuLinks();
   },
 };
 </script>

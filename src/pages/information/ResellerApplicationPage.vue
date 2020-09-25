@@ -1,6 +1,6 @@
 <template>
   <section :class="['reseller-application-wrapper', $mq]">
-    <h1 :class="['reseller-application-heading heading-medium', $mq]">
+    <h1 :class="['reseller-application-heading heading-medium-green', $mq]">
       {{ $t('ResellerApplicationHeading') }}
     </h1>
     <p :class="['reseller-application-text body-text', $mq]">
@@ -201,20 +201,32 @@ export default {
   &.mobile {
     margin: auto;
   }
+
+  &.desktop {
+    margin: $margin-top-aside-content auto;
+  }
 }
 
 .reseller-application-heading {
-  color: $green;
-  font-weight: 400;
+  &.mobile {
+    margin: 18px 0 0 0;
+  }
 }
 
 .reseller-application-text {
+  @include standard-margin;
+  margin-top: 0;
   text-align: center;
-  margin: 0 24px 24px 24px;
 }
 
 .reseller-application-form {
-  width: 90%;
+  &.mobile {
+    width: 90%;
+  }
+
+  &.desktop {
+    width: 70%;
+  }
 }
 
 .input {

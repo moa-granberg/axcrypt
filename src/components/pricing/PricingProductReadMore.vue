@@ -52,5 +52,9 @@ export default {
   &.business {
     background-color: $black;
   }
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
 </style>

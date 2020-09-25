@@ -1,15 +1,15 @@
 <template>
-  <main :class="['reseller-wrapper', $mq]">
+  <section :class="['reseller-wrapper', $mq]">
     <article :class="['reseller-info-wrapper', $mq]">
       <div :class="['reseller-info-text-wrapper', $mq]">
-        <h1 :class="['reseller-info-heading heading-small', $mq]">
+        <h1 :class="['reseller-info-heading heading-medium-green', $mq]">
           {{ $t('ResellerInfoHeading') }}
         </h1>
         <p :class="['body-text', $mq]">{{ $t('ResellerInfoText1') }}</p>
         <p :class="['body-text', $mq]">{{ $t('ResellerInfoText2') }}</p>
         <p v-html="$t('ResellerInfoText3')" :class="['body-text', $mq]"></p>
       </div>
-      <img src="@/assets/view/reseller/resell.png" alt="resell" />
+      <img src="@/assets/view/information/reseller/resell.png" alt="resell" />
     </article>
 
     <article :class="['reseller-benefits-wrapper', $mq]">
@@ -47,7 +47,7 @@
         path="/information/resellers-application"
       />
     </article>
-  </main>
+  </section>
 </template>
 
 <script>
@@ -62,11 +62,11 @@ export default {
     return {
       benefits: [
         {
-          phraseKey: 'BusinessFeatureListBestEncryption',
+          phraseKey: 'FeaturesBestEncryption',
           src: 'check.svg',
         },
         {
-          phraseKey: 'BusinessFeatureListMadeInSweden',
+          phraseKey: 'FeaturesMadeInSweden',
           src: 'outlined_flag.svg',
         },
         {
@@ -105,33 +105,25 @@ export default {
 }
 
 .reseller-info-text-wrapper {
-  max-width: 600px;
+  max-width: $max-text-width;
 
   &.mobile {
-    margin: 24px;
+    margin: $margin-mobile;
   }
 
   &.desktop {
-    margin: 34px;
+    margin: $margin-top-aside-content;
   }
 }
 
 .reseller-info-heading {
-  font-weight: 400;
-  color: $green;
+  margin: 0 0 18px 0;
 }
 
 .reseller-benefits-wrapper {
+  @include standard-padding;
   background-color: rgba($black, 0.8);
   @include center-column;
-
-  &.mobile {
-    padding: 24px;
-  }
-
-  &.desktop {
-    padding: 34px;
-  }
 }
 
 .reseller-benefits-heading {
@@ -141,12 +133,12 @@ export default {
 }
 
 .reseller-benefits-text {
-  max-width: 600px;
+  max-width: $max-text-width;
   color: $white;
   text-align: center;
 
   &.mobile {
-    margin: 0 0 24px 0;
+    margin: 0 0 $margin-mobile 0;
   }
 
   &.desktop {
@@ -204,14 +196,7 @@ export default {
 }
 
 .reseller-benefits-button {
+  @include standard-margin;
   text-transform: uppercase;
-
-  &.mobile {
-    margin: 18px;
-  }
-
-  &.desktop {
-    margin: 32px;
-  }
 }
 </style>

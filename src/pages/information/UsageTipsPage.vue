@@ -5,7 +5,7 @@
     </p>
 
     <article :class="['usage-tips-article', $mq]">
-      <h1 :class="['heading-medium', $mq]">
+      <h1 :class="['heading-medium-green', $mq]">
         {{ $t('UsageTipsTargetUseHeading') }}
       </h1>
       <ul :class="['usage-tips-list', $mq]">
@@ -20,7 +20,7 @@
     </article>
 
     <article :class="['usage-tips-article', $mq]">
-      <h1 :class="['heading-medium', $mq]">
+      <h1 :class="['heading-medium-green', $mq]">
         {{ $t('UsageTipsPersonalPrivacyHeading') }}
       </h1>
       <ul :class="['usage-tips-list', $mq]">
@@ -39,7 +39,7 @@
       :key="obj.heading"
       :class="['usage-tips-article', $mq]"
     >
-      <h1 :class="['heading-medium', $mq]">{{ $t(obj.heading) }}</h1>
+      <h1 :class="['heading-medium-green', $mq]">{{ $t(obj.heading) }}</h1>
       <p v-for="text of obj.texts" :key="text" :class="['body-text', $mq]">
         {{ $t(text) }}
       </p>
@@ -65,23 +65,24 @@ export default {
 @import '@/scss/variables.scss';
 
 .usage-tips-wrapper {
-  max-width: 900px;
+  max-width: $max-content-width;
+  margin: auto;
 
   &.mobile {
-    padding: 24px;
+    padding: $margin-mobile;
   }
 }
 
 .usage-tips-description {
   text-align: center;
-  max-width: 600px;
+  max-width: $max-text-width;
 
   &.mobile {
     margin: 0 auto 14px auto;
   }
 
   &.desktop {
-    margin: 58px auto 0 auto;
+    margin: $margin-top-aside-content auto 0 auto;
   }
 }
 
@@ -92,12 +93,6 @@ export default {
 
   &.desktop {
     padding: 20px 0;
-  }
-
-  h1 {
-    @include no-margin-padding;
-    color: $green;
-    font-weight: 400;
   }
 }
 

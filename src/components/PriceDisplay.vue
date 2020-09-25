@@ -29,10 +29,6 @@ export default {
     currency: String,
     perMonthPhraseKey: String,
   },
-
-  created() {
-    console.log(Boolean(this.price));
-  },
 };
 </script>
 
@@ -56,7 +52,7 @@ export default {
   }
 
   &.mobile {
-    margin: 24px 0 0 0;
+    margin: $margin-mobile 0 0 0;
   }
 
   &.desktop {

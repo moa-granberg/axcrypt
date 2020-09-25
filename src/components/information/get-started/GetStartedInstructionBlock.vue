@@ -1,7 +1,7 @@
 <template>
   <article :class="[{ reverse }, 'instruction-wrapper', $mq]">
     <div :class="[{ reverse }, 'instruction-text-wrapper', $mq]">
-      <h1 :class="`instruction-heading heading-small ${$mq}`">
+      <h1 :class="`heading-medium-green ${$mq}`">
         {{ $t(data.heading) }}
       </h1>
 
@@ -60,13 +60,13 @@ export default {
 @import '@/scss/variables.scss';
 
 .instruction-wrapper {
-  padding: 24px;
+  @include standard-padding;
 
   &.desktop {
     display: grid;
     grid: 1fr / 1fr 1fr;
     align-items: flex-start;
-    gap: 24px;
+    gap: $margin-desktop;
     margin: auto;
 
     &.reverse {
@@ -86,15 +86,6 @@ export default {
     &.reverse {
       grid-area: text;
     }
-  }
-}
-
-.instruction-heading {
-  color: $green;
-  font-weight: 400;
-
-  &.desktop {
-    @include no-margin-padding;
   }
 }
 

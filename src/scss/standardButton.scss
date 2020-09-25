@@ -1,9 +1,12 @@
 @import '@/scss/variables.scss';
 
 .standard-button {
+  @include button-hover;
+
   display: flex;
   background-color: $light-green;
   color: $white;
+  text-shadow: $standard-text-shadow;
   fill: $white;
   font-weight: 600;
   font-family: $standard-font;

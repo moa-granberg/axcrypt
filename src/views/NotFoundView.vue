@@ -27,8 +27,7 @@ export default {
   }
 
   &.mobile {
-    margin: 25px 0;
-    padding: 30px;
+    padding: $margin-mobile;
   }
 
   &.desktop {
@@ -43,7 +42,8 @@ export default {
 }
 
 .not-found-paragraph {
-  max-width: 600px;
-  margin: 32px 0;
+  text-align: center;
+  max-width: $max-text-width;
+  margin: $margin-mobile 0;
 }
 </style>

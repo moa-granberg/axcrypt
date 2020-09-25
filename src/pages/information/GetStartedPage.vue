@@ -64,7 +64,7 @@ export default {
 
   &.desktop {
     gap: 24px;
-    padding: 40px;
+    padding: $margin-top-aside-content;
   }
 }
 

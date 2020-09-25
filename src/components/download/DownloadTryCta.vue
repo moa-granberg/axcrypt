@@ -28,7 +28,7 @@ export default {
   @include center-column;
 
   &.mobile {
-    padding: 24px 0;
+    padding: $margin-mobile 0;
   }
 
   &.desktop {
@@ -42,7 +42,7 @@ export default {
   max-width: 280px;
 
   &.mobile {
-    margin: 0 0 24px 0;
+    margin: 0 0 $margin-mobile 0;
   }
 
   &.desktop {
