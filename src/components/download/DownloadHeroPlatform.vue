@@ -43,19 +43,24 @@ export default {
   background-color: rgba($color: $light-green, $alpha: 0.7);
   color: #000000;
   display: flex;
-  justify-content: flex-end;
 
   &.mobile {
+    justify-content: center;
     padding: $margin-mobile;
   }
 
   &.desktop {
+    justify-content: flex-end;
     padding: 80px;
   }
 }
 
 .download-hero-platform-inner-wrapper {
   @include center-column;
+
+  &.desktop {
+    justify-content: flex-start;
+  }
 }
 
 .download-hero-platform-download-button {

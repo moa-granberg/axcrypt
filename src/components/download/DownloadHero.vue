@@ -88,15 +88,16 @@ export default {
 
 .download-hero-wrapper {
   background-color: $gray;
-  background-size: cover;
-  background-position: bottom;
+  background-position: top;
 
   &.mobile {
     background-image: url('~@/assets/hero-imgs/people-mobile.png');
+    background-size: cover;
   }
 
   &.desktop {
     background-image: url('~@/assets/hero-imgs/people-desktop.png');
+    background-size: auto 100vh;
   }
 }
 
