@@ -71,7 +71,7 @@ export default {
 }
 
 .hash {
-  width: 100vw;
+  width: 80vw;
   word-wrap: break-word;
 }
 </style>
