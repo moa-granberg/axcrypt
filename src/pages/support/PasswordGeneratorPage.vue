@@ -13,7 +13,7 @@
         {{ $t('PasswordGeneratorText2') }}
       </p>
 
-      <button :class="['standard-button small', $mq]">
+      <button :class="['standard-button small', $mq]" @click="getNewPasswords">
         {{ $t('PasswordGeneratorButtonLabel') }}
       </button>
     </article>
@@ -23,21 +23,36 @@
         <label :class="$mq" for="password-suggestion-strong">
           {{ $t('StrongPasswordLabel') }}
         </label>
-        <input :class="$mq" type="text" id="password-suggestion-strong" />
+        <input
+          v-model="strong"
+          :class="$mq"
+          type="text"
+          id="password-suggestion-strong"
+        />
       </div>
 
       <div :class="['label-input-wrapper', $mq]">
         <label :class="$mq" for="password-suggestion-medium">{{
           $t('MediumPasswordLabel')
         }}</label>
-        <input :class="$mq" type="text" id="password-suggestion-medium" />
+        <input
+          v-model="medium"
+          :class="$mq"
+          type="text"
+          id="password-suggestion-medium"
+        />
       </div>
 
       <div :class="['label-input-wrapper', $mq]">
         <label :class="$mq" for="password-suggestion-weak">{{
           $t('WeakPasswordLabel')
         }}</label>
-        <input :class="$mq" type="text" id="password-suggestion-weak" />
+        <input
+          v-model="weak"
+          :class="$mq"
+          type="text"
+          id="password-suggestion-weak"
+        />
       </div>
     </article>
 
@@ -48,7 +63,27 @@
 </template>
 
 <script>
-export default {};
+import { getPasswords } from '@/utils/password-generator/getPasswordSuggestions';
+
+export default {
+  data() {
+    return {
+      weak: '',
+      medium: '',
+      strong: '',
+    };
+  },
+
+  methods: {
+    async getNewPasswords() {
+      const newPasswords = await getPasswords();
+
+      this.weak = newPasswords.weak;
+      this.medium = newPasswords.medium;
+      this.strong = newPasswords.strong;
+    },
+  },
+};
 </script>
 
 <style lang="scss" scoped>
