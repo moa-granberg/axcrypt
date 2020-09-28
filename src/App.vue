@@ -26,6 +26,7 @@ export default {
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
 @import './scss/variables.scss';
 @import './scss/fonts.scss';
+@import './scss/viewWithSidemenu.scss';
 @import './scss/text-view.scss';
 
 body {

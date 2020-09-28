@@ -1,14 +1,14 @@
 <template>
-  <main :class="`information-view-wrapper ${$mq}`">
-    <article :class="`information-header ${$mq}`">
-      <div :class="['information-header-inner-wrapper', $mq]">
-        <h1 :class="`information-heading heading-jumbo ${$mq}`">
+  <main :class="`view-wrapper ${$mq}`">
+    <article :class="`header ${$mq}`">
+      <div :class="['header-inner-wrapper green', $mq]">
+        <h1 :class="`heading ${$mq}`">
           {{ $t(getPageName) }}
         </h1>
 
         <primary-button
           v-if="$route.name === 'ResellerPage'"
-          :class="['information-header-button', $mq]"
+          :class="['header-button', $mq]"
           size="extra-small"
           phraseKey="ApplyNowLabel"
           path="/information/reseller-application"
@@ -16,7 +16,7 @@
       </div>
     </article>
 
-    <section :class="`information-aside-content-wrapper ${$mq}`">
+    <section :class="`aside ${$mq}`">
       <side-menu
         v-if="$mq === 'desktop'"
         headingPhraseKey="InformationLinkLabel"
@@ -55,67 +55,3 @@ export default {
   },
 };
 </script>
-
-<style lang="scss" scoped>
-@import '@/scss/variables.scss';
-
-.information-view-wrapper {
-  background-color: $light-gray;
-}
-
-.information-header {
-  @include center-column;
-  background-blend-mode: overlay;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  color: $white;
-
-  &.mobile {
-    background-image: url('~@/assets/hero-imgs/people-mobile.png');
-    height: 145px;
-  }
-
-  &.desktop {
-    background-image: url('~@/assets/hero-imgs/people-desktop.png');
-    height: 200px;
-  }
-}
-
-.information-header-inner-wrapper {
-  @include center-column;
-  justify-content: space-evenly;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(72, 119, 44, 0.7);
-}
-
-.information-header-button {
-  text-transform: uppercase;
-}
-
-.information-aside-content-wrapper {
-  display: flex;
-  max-width: $max-viewport-width;
-  margin: auto;
-  background-color: $white;
-
-  > section {
-    width: $sidemenu-served-content-width;
-  }
-}
-
-.information-heading {
-  text-shadow: $standard-text-shadow;
-  font-weight: 400;
-  text-align: center;
-
-  &.mobile {
-    margin: 0 $margin-mobile;
-  }
-
-  &.desktop {
-    @include no-margin-padding;
-  }
-}
-</style>
