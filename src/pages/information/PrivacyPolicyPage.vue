@@ -80,9 +80,3 @@
     </article>
   </section>
 </template>
-
-<style lang="scss" scoped>
-.description {
-  margin-top: 0;
-}
-</style>

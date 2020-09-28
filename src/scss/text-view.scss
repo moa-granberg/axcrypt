@@ -39,6 +39,10 @@
     &.mobile {
       margin: 0 auto 14px auto;
     }
+
+    &.desktop {
+      margin: 0;
+    }
   }
 
   > article {
