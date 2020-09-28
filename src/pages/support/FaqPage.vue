@@ -62,23 +62,51 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '@/scss/variables.scss';
+
 .text-view-wrapper :first-child {
   padding-top: 0;
 }
 
-.faq-list-question {
+.faq-list-item {
+  margin: 20px 0;
+}
+
+.faq-list-question-wrapper {
   display: flex;
+  align-items: flex-start;
+
+  cursor: pointer;
 }
 
 .faq-list-img {
-  width: 24px;
-  margin: 0 10px 0 0;
+  margin: 2px 10px 0 0;
+
+  &.mobile {
+    width: 20px;
+  }
+
+  &.desktop {
+    width: 24px;
+  }
 }
 
-.question {
+.question-heading {
+  @include no-margin-padding;
   font-weight: 400;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
-.faq-list-answer {
+.faq-answer {
+  height: 0;
+  overflow: hidden;
+
+  &.show {
+    height: auto;
+    border-bottom: 1px solid $light-gray;
+  }
 }
 </style>
