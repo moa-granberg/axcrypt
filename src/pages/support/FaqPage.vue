@@ -1,21 +1,47 @@
 <template>
   <section :class="['text-view-wrapper', $mq]">
-    <article :class="$mq">
-      <h1 :class="$mq">List heading</h1>
+    <article v-for="item of data" :key="item.heading" :class="$mq">
+      <h1 :class="$mq">{{ $t(item.heading) }}</h1>
 
-      <div :class="['faq-list', $mq]">
-        <div :class="['faq-list-item', $mq]">
-          <div :class="['faq-list-question', $mq]">
-            <img
-              :class="['faq-list-img', $mq]"
-              src="@/assets/icons/add_circle_outline.svg"
-              alt="show"
-            />
-            <h3 :class="['question', $mq]">Item heading (question)</h3>
-          </div>
-          <div :class="['faq-list-answer', $mq]">
-            <p>text (answer)</p>
-          </div>
+      <div
+        v-for="question of item.questions"
+        :key="question.heading"
+        :class="['faq-list-item', $mq]"
+      >
+        <div :class="['faq-list-question-wrapper', $mq]">
+          <img
+            v-if="showItem === question.heading"
+            :class="['faq-list-img', $mq]"
+            src="@/assets/icons/remove_circle_outline.svg"
+            alt="hide"
+            @click="showItem = ''"
+          />
+
+          <img
+            v-else
+            :class="['faq-list-img', $mq]"
+            src="@/assets/icons/add_circle_outline.svg"
+            alt="show"
+            @click="showItem = question.heading"
+          />
+
+          <h2
+            :class="['question-heading body-text-large', $mq]"
+            @click="
+              showItem = showItem === question.heading ? '' : question.heading
+            "
+          >
+            {{ $t(question.heading) }}
+          </h2>
+        </div>
+        <div
+          :class="[{ show: showItem === question.heading }, 'faq-answer', $mq]"
+        >
+          <p
+            v-for="answer of question.answer"
+            :key="answer"
+            v-html="$t(answer)"
+          />
         </div>
       </div>
     </article>
@@ -23,7 +49,16 @@
 </template>
 
 <script>
-export default {};
+import data from '@/data/support/faq/data';
+
+export default {
+  data() {
+    return {
+      data,
+      showItem: '',
+    };
+  },
+};
 </script>
 
 <style lang="scss" scoped>
