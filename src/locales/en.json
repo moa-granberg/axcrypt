@@ -687,5 +687,10 @@
   "AxcryptBusinessBlock6Text3": "For the purposes of a subscription, a month is defined as 30 days and a year as 360 days.",
   "AxcryptBusinessBlock6Text4": "When a subscription is created or renewed, the period is a month or a year, depending on the plan you chose.",
   "AxcryptBusinessBlock6Text5": "When additional members licenses are purchased for a subscription within the subscription period, only the remaining months rounded upwards to whole months are charged for. If 50 days remain for the current period, and additional members are added, this will be for 2 months/additional member.",
-  "LegacyDownloadsLinkLabel": "Legacy Downloads"
+  "LegacyDownloadsLinkLabel": "Legacy Downloads",
+  "LegacyDownloadsWarning": "This version is obsolete and we do not offer support for it. AxCrypt 1.x is not maintained and you should not download it, unless specifically needed. Using it is at your own risk.",
+  "LegacyDownloadsDescription": "These are Legacy AxCrypt 1.x downloads. We do not endorse them and urge you not to download and use these, unless you have a specific need for it. <strong>New files encrypted with AxCrypt 2.x are not compatible with legacy AxCrypt 1.x!</strong> Files encrypted with legacy AxCrypt 1.x are decryptable by AxCrypt 2.x.",
+  "LegacyDownloadsHowToVerifyHeading": "How to Verify a Download",
+  "LegacyDownloadsHowToVerifyText": "Most installers and executables are digitally signed with <a href='http://msdn.microsoft.com/en-us/library/ms537361(v=VS.85).aspx'>Authenticode</a> by ‘Axantum Software AB’ or ‘AxCrypt AB’. Verify the signature after downloading by right-clicking the file and select ‘Properties | Digital Signatures’. Then double-click on the signature and confirm that ‘This digital signature is OK’ is shown.",
+  "DownloadAxcrypt2LinkLabel": "Download AxCrypt 2"
 }
