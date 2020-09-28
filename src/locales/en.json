@@ -686,5 +686,8 @@
   "AxcryptBusinessBlock6Text2": "For current pricing in relevant currencies visit our <a href='#/pricing'>pricing</a> page.",
   "AxcryptBusinessBlock6Text3": "For the purposes of a subscription, a month is defined as 30 days and a year as 360 days.",
   "AxcryptBusinessBlock6Text4": "When a subscription is created or renewed, the period is a month or a year, depending on the plan you chose.",
-  "AxcryptBusinessBlock6Text5": "When additional members licenses are purchased for a subscription within the subscription period, only the remaining months rounded upwards to whole months are charged for. If 50 days remain for the current period, and additional members are added, this will be for 2 months/additional member."
+  "AxcryptBusinessBlock6Text5": "When additional members licenses are purchased for a subscription within the subscription period, only the remaining months rounded upwards to whole months are charged for. If 50 days remain for the current period, and additional members are added, this will be for 2 months/additional member.",
+  "ServiceStatusDescription": "This page contains information about AxCrypt’s service status . The button leads to the page that includes the uptime/downtime monitors. You will also find a list below with comments on past incidents that occurred recently.",
+  "ServerStatusLabel": "Server status",
+  "PastIncidentsHeading": "Past incidents"
 }
