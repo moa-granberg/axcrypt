@@ -1,0 +1,192 @@
+[
+  {
+    "heading": "GeneralLabel",
+    "questions": [
+      {
+        "heading": "FaqWhySecure",
+        "answer": [
+          "FaqWhySecureAnswer1",
+          "FaqWhySecureAnswer2",
+          "FaqWhySecureAnswer3",
+          "FaqWhySecureAnswer4",
+          "FaqWhySecureAnswer5",
+          "FaqWhySecureAnswer6",
+          "FaqWhySecureAnswer7"
+        ]
+      },
+      {
+        "heading": "FaqDifference1&2",
+        "answer": [
+          "FaqDifference1&2Answer1",
+          "FaqDifference1&2Answer2"
+        ]
+      },
+      {
+        "heading": "FaqWhatPlatforms",
+        "answer": [
+          "FaqWhatPlatformsAnswer1"
+        ]
+      },
+      {
+        "heading": "FaqPasswordRecoveryCorporate",
+        "answer": [
+          "FaqPasswordRecoveryCorporateAnswer1",
+          "FaqPasswordRecoveryCorporateAnswer2",
+          "FaqPasswordRecoveryCorporateAnswer3",
+          "FaqPasswordRecoveryCorporateAnswer4"
+        ]
+      },
+      {
+        "heading": "FaqHowLargeFileSupport",
+        "answer": [
+          "FaqHowLargeFileSupportAnswer1"
+        ]
+      },
+      {
+        "heading": "FaqWhyTimeStap",
+        "answer": [
+          "FaqWhyTimeStapAnswer1",
+          "FaqWhyTimeStapAnswer2",
+          "FaqWhyTimeStapAnswer3",
+          "FaqWhyTimeStapAnswer4",
+          "FaqWhyTimeStapAnswer5"
+        ]
+      },
+      {
+        "heading": "FaqHowManyPassesWipe",
+        "answer": [
+          "FaqHowManyWipeAnswer1",
+          "FaqHowManyWipeAnswer2",
+          "FaqHowManyWipeAnswer3"
+        ]
+      },
+      {
+        "heading": "FaqDifferenceStandaloneInstaller",
+        "answer": [
+          "FaqDifferenceStandaloneInstallerAnswer1",
+          "FaqDifferenceStandaloneInstallerAnswer2"
+        ]
+      },
+      {
+        "heading": "FaqStopFromSecuring",
+        "answer": [
+          "FaqStopFromSecuringAnswer1",
+          "FaqStopFromSecuringAnswer2",
+          "FaqStopFromSecuringAnswer3"
+        ]
+      }
+    ]
+  },
+  {
+    "heading": "AccountLabel",
+    "questions": [
+      {
+        "heading": "FaqWhatHappensExpire",
+        "answer": [
+          "FaqWhatHappensExpireAnswer1",
+          "FaqWhatHappensExpireAnswer2"
+        ]
+      },
+      {
+        "heading": "FaqHowToRenew",
+        "answer": [
+          "FaqHowToRenewAnswer1",
+          "FaqHowToRenewAnswer2"
+        ]
+      },
+      {
+        "heading": "FaqEmailUsedFor",
+        "answer": [
+          "FaqEmailUsedForAnswer1",
+          "FaqEmailUsedForAnswer2",
+          "FaqEmailUsedForAnswer3"
+        ]
+      },
+      {
+        "heading": "FaqKeysAndPasswords",
+        "answer": [
+          "FaqKeysAndPasswordsAnswer1",
+          "FaqKeysAndPasswordsAnswer2"
+        ]
+      },
+      {
+        "heading": "FaqWhyPasswordSignIn",
+        "answer": [
+          "FaqWhyPasswordSignInAnswer1",
+          "FaqWhyPasswordSignInAnswer2",
+          "FaqWhyPasswordSignInAnswer3",
+          "FaqWhyPasswordSignInAnswer4",
+          "FaqWhyPasswordSignInAnswer5",
+          "FaqWhyPasswordSignInAnswer6"
+        ]
+      }
+    ]
+  },
+  {
+    "heading": "TroubleShootingLabel",
+    "questions": [
+      {
+        "heading": "FaqSignInWithoutPassword",
+        "answer": [
+          "FaqSignInWithoutPasswordAnswer1"
+        ]
+      },
+      {
+        "heading": "FaqFileEncryptionNotWorking",
+        "answer": [
+          "FaqFileEncryptionNotWorkingAnswer1",
+          "FaqFileEncryptionNotWorkingAnswer2"
+        ]
+      },
+      {
+        "heading": "FaqForgotPassword",
+        "answer": [
+          "FaqForgotPasswordAnswer1",
+          "FaqForgotPasswordAnswer2",
+          "FaqForgotPasswordAnswer3",
+          "FaqForgotPasswordAnswer4",
+          "FaqForgotPasswordAnswer5"
+        ]
+      },
+      {
+        "heading": "FaqAntivirusWarning",
+        "answer": [
+          "FaqAntivirusWarningAnswer1"
+        ]
+      },
+      {
+        "heading": "FaqAccessDenied",
+        "answer": [
+          "FaqAccessDeniedAnswer1",
+          "FaqAccessDeniedAnswer2",
+          "FaqAccessDeniedAnswer3",
+          "FaqAccessDeniedAnswer4",
+          "FaqAccessDeniedAnswer5",
+          "FaqAccessDeniedAnswer6"
+        ]
+      },
+      {
+        "heading": "FaqDamagedFile",
+        "answer": [
+          "FaqDamagedFileAnswer1",
+          "FaqDamagedFileAnswer2",
+          "FaqDamagedFileAnswer3",
+          "FaqDamagedFileAnswer4",
+          "FaqDamagedFileAnswer5",
+          "FaqDamagedFileAnswer6"
+        ]
+      },
+      {
+        "heading": "FaqAnyoneCanDeleteFile",
+        "answer": [
+          "FaqAnyoneCanDeleteFileAnswer1",
+          "FaqAnyoneCanDeleteFileAnswer2",
+          "FaqAnyoneCanDeleteFileAnswer3",
+          "FaqAnyoneCanDeleteFileAnswer4",
+          "FaqAnyoneCanDeleteFileAnswer5",
+          "FaqAnyoneCanDeleteFileAnswer6"
+        ]
+      }
+    ]
+  }
+]
