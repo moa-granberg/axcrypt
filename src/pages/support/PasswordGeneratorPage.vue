@@ -1,3 +1,56 @@
 <template>
-  <main>This is Password Generator</main>
+  <section :class="['text-view-wrapper', $mq]">
+    <article :class="['info-block', $mq]">
+      <h1 :class="$mq">
+        {{ $t('PasswordGeneratorHeading') }}
+      </h1>
+
+      <p :class="$mq">
+        {{ $t('PasswordGeneratorText1') }}
+      </p>
+
+      <p :class="$mq">
+        {{ $t('PasswordGeneratorText2') }}
+      </p>
+
+      <button :class="['standard-button small', $mq]">
+        {{ $t('PasswordGeneratorButtonLabel') }}
+      </button>
+    </article>
+
+    <article :class="$mq">
+      <div :class="['label-input-wrapper', $mq]">
+        <label :class="$mq" for="password-suggestion-strong">
+          {{ $t('StrongPasswordLabel') }}
+        </label>
+        <input :class="$mq" type="text" id="password-suggestion-strong" />
+      </div>
+
+      <div :class="['label-input-wrapper', $mq]">
+        <label :class="$mq" for="password-suggestion-medium">{{
+          $t('MediumPasswordLabel')
+        }}</label>
+        <input :class="$mq" type="text" id="password-suggestion-medium" />
+      </div>
+
+      <div :class="['label-input-wrapper', $mq]">
+        <label :class="$mq" for="password-suggestion-weak">{{
+          $t('WeakPasswordLabel')
+        }}</label>
+        <input :class="$mq" type="text" id="password-suggestion-weak" />
+      </div>
+    </article>
+
+    <a href="https://account.axcrypt.net/Secrets/" target="_blank">
+      {{ $t('PasswordGeneratorSavePasswordLinkLabel') }}
+    </a>
+  </section>
 </template>
+
+<script>
+export default {};
+</script>
+
+<style lang="scss" scoped>
+@import '@/scss/variables.scss';
+</style>
