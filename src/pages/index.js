@@ -13,6 +13,7 @@ import GdprPage from './information/GdprPage';
 import TermsOfUsePage from './information/TermsOfUsePage';
 
 import FaqPage from './support/FaqPage';
+import LegacyDownloadsPage from './support/LegacyDownloadsPage';
 import AxcryptBusinessPage from './support/AxcryptBusinessPage';
 import RegulatoryCompliancePage from './support/RegulatoryCompliancePage';
 import PasswordGeneratorPage from './support/PasswordGeneratorPage';
@@ -40,6 +41,7 @@ export {
   GdprPage,
   TermsOfUsePage,
   FaqPage,
+  LegacyDownloadsPage,
   AxcryptBusinessPage,
   RegulatoryCompliancePage,
   PasswordGeneratorPage,
