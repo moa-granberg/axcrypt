@@ -31,7 +31,7 @@ export default {
 @import '@/scss/variables.scss';
 
 .side-menu-wrapper {
-  padding: $margin-top-aside-content;
+  padding: $margin-top-aside-content 36px;
   display: flex;
   flex-direction: column;
   border-right: 1px solid $light-gray;
