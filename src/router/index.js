@@ -193,7 +193,7 @@ const routes = [
         },
       },
       {
-        path: 'forum',
+        path: 'forums',
         name: 'ForumLink',
         beforeEnter() {
           {
