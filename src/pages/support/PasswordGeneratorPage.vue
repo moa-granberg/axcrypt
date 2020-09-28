@@ -13,12 +13,15 @@
         {{ $t('PasswordGeneratorText2') }}
       </p>
 
-      <button :class="['standard-button small', $mq]" @click="getNewPasswords">
+      <button
+        :class="['standard-button small dark-green', $mq]"
+        @click="getNewPasswords"
+      >
         {{ $t('PasswordGeneratorButtonLabel') }}
       </button>
     </article>
 
-    <article :class="$mq">
+    <article :class="['passwords-wrapper', $mq]">
       <div :class="['label-input-wrapper', $mq]">
         <label :class="$mq" for="password-suggestion-strong">
           {{ $t('StrongPasswordLabel') }}
@@ -57,7 +60,7 @@
     </article>
 
     <a href="https://account.axcrypt.net/Secrets/" target="_blank">
-      {{ $t('PasswordGeneratorSavePasswordLinkLabel') }}
+      <p :class="$mq">{{ $t('PasswordGeneratorSavePasswordLinkLabel') }}</p>
     </a>
   </section>
 </template>
@@ -88,4 +91,53 @@ export default {
 
 <style lang="scss" scoped>
 @import '@/scss/variables.scss';
+
+.text-view-wrapper {
+  @include center-column;
+}
+
+.info-block {
+  padding: 0 !important;
+}
+
+.passwords-wrapper {
+  background-color: $green;
+  width: 100%;
+  border-radius: 5px;
+  box-shadow: $standard-box-shadow;
+
+  &.mobile {
+    @include center-column;
+  }
+
+  &.desktop {
+    @include center-row;
+    justify-content: space-around;
+    padding: 36px;
+  }
+}
+
+.standard-button {
+  margin: 24px auto;
+}
+
+.label-input-wrapper {
+  @include center-column;
+
+  label {
+    margin: 0 0 4px 0;
+    text-shadow: $standard-text-shadow;
+    color: $white;
+  }
+
+  input {
+    border: none;
+    border-radius: 2px;
+    padding: 5px;
+
+    &:focus {
+      box-shadow: $standard-box-shadow;
+    }
+  }
+}
 </style>
