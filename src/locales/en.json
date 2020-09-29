@@ -694,5 +694,14 @@
   "StrongPasswordLabel": "Strong password",
   "MediumPasswordLabel": "Medium password",
   "WeakPasswordLabel": "Weak password",
-  "PasswordGeneratorSavePasswordLinkLabel": "Save your new password in AxCrypt Password Management."
+  "PasswordGeneratorSavePasswordLinkLabel": "Save your new password in AxCrypt Password Management.",
+  "ServiceStatusDescription": "This page contains information about AxCrypt’s service status . The button leads to the page that includes the uptime/downtime monitors. You will also find a list below with comments on past incidents that occurred recently.",
+  "ServerStatusLabel": "Server status",
+  "PastIncidentsHeading": "Past incidents",
+  "LegacyDownloadsLinkLabel": "Legacy Downloads",
+  "LegacyDownloadsWarning": "This version is obsolete and we do not offer support for it. AxCrypt 1.x is not maintained and you should not download it, unless specifically needed. Using it is at your own risk.",
+  "LegacyDownloadsDescription": "These are Legacy AxCrypt 1.x downloads. We do not endorse them and urge you not to download and use these, unless you have a specific need for it. <strong>New files encrypted with AxCrypt 2.x are not compatible with legacy AxCrypt 1.x!</strong> Files encrypted with legacy AxCrypt 1.x are decryptable by AxCrypt 2.x.",
+  "LegacyDownloadsHowToVerifyHeading": "How to Verify a Download",
+  "LegacyDownloadsHowToVerifyText": "Most installers and executables are digitally signed with <a href='http://msdn.microsoft.com/en-us/library/ms537361(v=VS.85).aspx'>Authenticode</a> by ‘Axantum Software AB’ or ‘AxCrypt AB’. Verify the signature after downloading by right-clicking the file and select ‘Properties | Digital Signatures’. Then double-click on the signature and confirm that ‘This digital signature is OK’ is shown.",
+  "DownloadAxcrypt2LinkLabel": "Download AxCrypt 2"
 }
