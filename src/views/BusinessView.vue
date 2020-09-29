@@ -102,7 +102,7 @@ export default {
       businessFeatureList,
 
       contactPerson: {
-        src: '/view/product/angelique.png',
+        src: '/team-photos/angelique-150x150.png',
         name: 'Angélique Huige',
         jobTitle: 'Business Manager',
         email: 'angelique.huige@axcrypt.net',
