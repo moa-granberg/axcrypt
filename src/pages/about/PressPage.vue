@@ -46,6 +46,35 @@
         </div>
       </div>
     </article>
+
+    <article :class="['branding-guidelines-wrapper', $mq]">
+      <h1 :class="[$mq]">{{ $t('BrandingGuidelinesLabel') }}</h1>
+      <p :class="[$mq]">{{ $t('BrandingGuidelinesDescription') }}</p>
+      <ul :class="[$mq]">
+        <li :class="[$mq]">
+          <p :class="[$mq]">{{ $t('AboutUsLinkLabel') }}</p>
+        </li>
+        <li :class="[$mq]">
+          <p :class="[$mq]">{{ $t('BrandToneLabel') }}</p>
+        </li>
+        <li :class="[$mq]">
+          <p :class="[$mq]">{{ $t('LogoAndIconLabel') }}</p>
+        </li>
+        <li :class="[$mq]">
+          <p :class="[$mq]">{{ $t('ColorPaletteLabel') }}</p>
+        </li>
+        <li :class="[$mq]">
+          <p :class="[$mq]">{{ $t('TypographyLabel') }}</p>
+        </li>
+      </ul>
+      <a
+        :class="['standard-button small dark-green download-button', $mq]"
+        href="https://www.axcrypt.net/downloads/15808/"
+      >
+        {{ $t('DownloadLinkLabel') }} {{ $t('BrandingGuidelinesLabel') }}</a
+      >
+      <img :class="[$mq]" src="" alt="" />
+    </article>
   </section>
 </template>
 
@@ -108,6 +137,26 @@ export default {};
 
   &.desktop {
     max-width: 100%;
+  }
+}
+
+.branding-guidelines-wrapper {
+  display: flex;
+  flex-direction: column;
+  max-width: $max-text-width;
+}
+
+.download-button {
+  align-self: center;
+  color: $white;
+  text-transform: uppercase;
+
+  &.mobile {
+    margin: $margin-mobile 0 0 0;
+  }
+
+  &.desktop {
+    margin: $margin-desktop 0 0 0;
   }
 }
 </style>
