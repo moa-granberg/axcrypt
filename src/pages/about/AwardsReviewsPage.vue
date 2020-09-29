@@ -44,67 +44,14 @@
 </template>
 
 <script>
+import AwardsData from '@/data/about/awards-and-reviews/awards';
+import ReviewsData from '@/data/about/awards-and-reviews/reviews';
+
 export default {
   data() {
     return {
-      awards: [
-        {
-          src: 'award-pcmag.png',
-          href:
-            'http://uk.pcmag.com/encryption-products/83934/review/axcrypt-premium',
-        },
-        {
-          src: 'award-zwodnik.png',
-          href: 'http://www.zwodnik.com/software/windows/axcrypt/',
-        },
-        {
-          src: 'award-programosy.png',
-          href: 'http://www.programosy.pl/program,axcrypt.html%20_blank',
-        },
-        {
-          src: 'award-softpedia.png',
-          href:
-            'http://www.softpedia.com/get/Security/Encrypting/AxCrypt.shtml',
-        },
-        {
-          src: 'award-pcadvisor.png',
-          href:
-            'http://www.pcadvisor.co.uk/features/software/3290443/five-of-the-best-encryption-tools/',
-        },
-        {
-          src: 'award-maddownload.png',
-          href: 'https://maddownload.com/security/axcrypt/',
-        },
-      ],
-      reviews: [
-        {
-          src: 'review-softpedia.png',
-          href:
-            'http://www.softpedia.com/get/Security/Encrypting/AxCrypt.shtml',
-          phraseKey: 'AwardsReviewsReviewSoftpediaText',
-        },
-        {
-          src: 'review-techradar.png',
-          href: 'https://www.techradar.com/news/top-5-best-encryption-tools',
-          phraseKey: 'AwardsReviewsReviewTechradarText',
-        },
-        {
-          src: 'review-windowscentral.png',
-          href: 'https://www.windowscentral.com/best-encryption-software',
-          phraseKey: 'AwardsReviewsReviewWindowscentralText',
-        },
-        {
-          src: 'review-pcmag.png',
-          href:
-            'http://uk.pcmag.com/encryption-products/83934/review/axcrypt-premium',
-          phraseKey: 'AwardsReviewsReviewPcmagText',
-        },
-        {
-          src: 'review-vpncrew.png',
-          href: 'https://www.vpncrew.com/axcrypt-review/',
-          phraseKey: 'AwardsReviewsReviewVpncrewText',
-        },
-      ],
+      awards: AwardsData,
+      reviews: ReviewsData,
     };
   },
 };
