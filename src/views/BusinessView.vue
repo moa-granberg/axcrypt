@@ -83,7 +83,7 @@ import ProductTryItForFree from '@/components/product/ProductTryItForFree';
 import ProductTryItForFreeCta from '@/components/product/ProductTryItForFreeCta';
 import FeatureList from '@/components/FeatureList';
 import ProductBusinessBigTeamCta from '@/components/product/ProductBusinessBigTeamCta';
-import BusinessCard from '@/components/product/BusinessCard';
+import BusinessCard from '@/components/BusinessCard';
 import businessFeatureList from '@/data/product/business-feature-list';
 
 export default {
