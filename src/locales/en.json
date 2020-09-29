@@ -704,5 +704,14 @@
   "SimplicityLabel": "Simplicity",
   "AboutAxcryptVisionSecurityText": "Security is crucial to us. Everything we do with AxCrypt is done with security as the highest priority. We make sure that no one ever gets access to your encrypted files, as long as you have control of your own password.",
   "AboutAxcryptVisionReliabilityText": "AxCrypt has been on the market for 15 years, and has grown to become one of the world’s most popular encryption softwares with more than 20 million downloads. Over the years we have also been mentioned and rated by many as one of the world’s best softwares for encryption.",
-  "AboutAxcryptVisionSimplicityText": "Encryption is complicated, but this has not prevented us from constantly working to simplify it for the user. We have developed unique features that make the use of strong encryption and the sharing of encryption keys more simple and secure than any other software."
+  "AboutAxcryptVisionSimplicityText": "Encryption is complicated, but this has not prevented us from constantly working to simplify it for the user. We have developed unique features that make the use of strong encryption and the sharing of encryption keys more simple and secure than any other software.",
+  "OurTeamLabel": "Our team",
+  "PartnerLabel": "Partner",
+  "CompanyInfoLabel": "Company info",
+  "AboutPartnerSting": "STING helps talented people to turn their ideas info sustainable businesses.",
+  "OrgNumberLabel": "Org. number",
+  "TelLabel": "Tel",
+  "TechnicalSupportLabel": "Technical support",
+  "ResellingLabel": "Reselling",
+  "ReqruitmentLabel": "Requritment"
 }
