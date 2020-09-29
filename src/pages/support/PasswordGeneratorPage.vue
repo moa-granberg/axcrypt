@@ -108,6 +108,8 @@ export default {
 
   &.mobile {
     @include center-column;
+    gap: 16px;
+    padding: 24px 0;
   }
 
   &.desktop {
@@ -119,6 +121,8 @@ export default {
 
 .standard-button {
   margin: 24px auto;
+  cursor: pointer;
+  outline: none;
 }
 
 .label-input-wrapper {
