@@ -194,7 +194,9 @@ export default {
 }
 
 .review-link {
-  @include center-column;
+  display: grid;
+  grid: 60px 1fr / 1fr;
+  place-items: center;
   text-decoration: none;
   color: $gray;
 
