@@ -60,8 +60,6 @@ export default {};
 @import '@/scss/variables.scss';
 
 .about-axcrypt-wrapper {
-  @include standard-margin;
-
   &.desktop {
     margin-top: $margin-top-aside-content;
   }
@@ -77,9 +75,11 @@ export default {};
 }
 
 .history-wrapper {
+  @include standard-margin;
+
   &.desktop {
     max-width: $max-content-width;
-    margin: auto;
+    margin: 0 auto $margin-desktop auto;
     column-count: 2;
   }
 
