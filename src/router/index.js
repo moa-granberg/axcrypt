@@ -254,8 +254,8 @@ const routes = [
       },
       {
         path: 'awards',
-        name: 'AwardsPage',
-        component: Pages.AwardsPage,
+        name: 'AwardsReviewsPage',
+        component: Pages.AwardsReviewsPage,
         meta: {
           title: 'Awards & Reviews | ',
         },

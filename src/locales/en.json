@@ -704,5 +704,5 @@
   "LegacyDownloadsHowToVerifyHeading": "How to Verify a Download",
   "LegacyDownloadsHowToVerifyText": "Most installers and executables are digitally signed with <a href='http://msdn.microsoft.com/en-us/library/ms537361(v=VS.85).aspx'>Authenticode</a> by ‘Axantum Software AB’ or ‘AxCrypt AB’. Verify the signature after downloading by right-clicking the file and select ‘Properties | Digital Signatures’. Then double-click on the signature and confirm that ‘This digital signature is OK’ is shown.",
   "DownloadAxcrypt2LinkLabel": "Download AxCrypt 2",
-  "AwardsLinkLabel": "Awards & Reviews"
+  "AwardsReviewsLinkLabel": "Awards & Reviews"
 }
