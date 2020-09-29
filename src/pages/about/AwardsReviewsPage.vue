@@ -27,7 +27,7 @@
               "
               :alt="review.src.split('.png')[0]"
             />
-            <div :class="['quote-wrapper', $mq]">
+            <div>
               <img
                 src="@/assets/view/about/awards-and-reviews/quotation-mark.png"
                 alt="quotation mark"
@@ -195,8 +195,9 @@ export default {
 
 .review-link {
   display: grid;
-  grid: 60px 1fr / 1fr;
-  place-items: center;
+  grid: 40px 1fr / 1fr;
+  justify-items: center;
+
   text-decoration: none;
   color: $gray;
 
@@ -208,10 +209,6 @@ export default {
 .review-logo {
   max-height: 40px;
   max-width: 100px;
-}
-
-.quote-wrapper {
-  margin: 12px;
 }
 
 .quote {
