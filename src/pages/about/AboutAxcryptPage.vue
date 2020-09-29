@@ -49,11 +49,143 @@
         </div>
       </div>
     </article>
+
+    <article :class="['info-wrapper', $mq]">
+      <article :class="['our-team-wrapper', $mq]">
+        <h1 :class="['about-axcrypt-heading heading-large', $mq]">
+          {{ $t('OurTeamLabel') }}
+        </h1>
+        <div :class="['business-cards-wrapper', $mq]">
+          <business-card
+            :class="['business-card', $mq]"
+            v-for="person of ourTeam"
+            :key="person.name"
+            :person="person"
+          />
+        </div>
+      </article>
+
+      <article :class="['partner-wrapper', $mq]">
+        <h1 :class="['about-axcrypt-heading heading-large', $mq]">
+          {{ $t('PartnerLabel') }}
+        </h1>
+        <p :class="['body-text', $mq]">
+          {{ $t('AboutPartnerSting') }}
+        </p>
+        <a href="http://www.stockholminnovation.com/">
+          <img src="@/assets/logos/sting.jpg" alt="sting" />
+        </a>
+      </article>
+
+      <article :class="['company-info-wrapper', $mq]">
+        <h1 :class="['about-axcrypt-heading heading-large', $mq]">
+          {{ $t('CompanyInfoLabel') }}
+        </h1>
+
+        <div>
+          <p :class="['body-text', $mq]">
+            {{ $t('EmailLabel') }}:
+            <a href="mailto:info@axcrypt.net">info@axcrypt.net</a>
+          </p>
+          <p :class="['body-text', $mq]">
+            {{ $t('OrgNumberLabel') }}: 556967-6181
+          </p>
+          <p :class="['body-text', $mq]">
+            {{ $t('TelLabel') }}: +46 (0)8 550 10 274
+          </p>
+        </div>
+
+        <div>
+          <h2 :class="['body-text about-axcrypt-minor-heading', $mq]">
+            Stockholm
+          </h2>
+          <p :class="['body-text', $mq]">AxCrypt AB</p>
+          <p :class="['body-text', $mq]">Birger Jarlsgatan 58</p>
+          <p :class="['body-text', $mq]">114 29 Stockholm</p>
+          <p :class="['body-text', $mq]">Sweden</p>
+        </div>
+
+        <div>
+          <h2 :class="['body-text about-axcrypt-minor-heading', $mq]">
+            Bangalore
+          </h2>
+          <p :class="['body-text', $mq]">AxCrypt Software Private Limited</p>
+          <p :class="['body-text', $mq]">
+            #131, SriKrupa, First Floor, 10th Cross
+          </p>
+          <p :class="['body-text', $mq]">CMH Road</p>
+          <p :class="['body-text', $mq]">
+            Indirangar, Bangalore, Karnataka 560038
+          </p>
+          <p :class="['body-text', $mq]">India</p>
+        </div>
+      </article>
+
+      <article :class="['contact-wrapper', $mq]">
+        <h1 :class="['about-axcrypt-heading heading-large', $mq]">
+          {{ $t('ContactHeading') }}
+        </h1>
+
+        <h2 :class="['body-text about-axcrypt-minor-heading', $mq]">
+          {{ $t('TechnicalSupportLabel') }}:
+          <a href="mailto:support@axcrypt.net"> support@axcrypt.net </a>
+        </h2>
+        <h2 :class="['body-text about-axcrypt-minor-heading', $mq]">
+          {{ $t('AxcryptBusinessLinkLabel') }}:
+          <a href="mailto:business@axcrypt.net"> business@axcrypt.net </a>
+        </h2>
+        <h2 :class="['body-text about-axcrypt-minor-heading', $mq]">
+          {{ $t('ResellingLabel') }}:
+          <a href="mailto:reseller@axcrypt.net"> reseller@axcrypt.net </a>
+        </h2>
+        <h2 :class="['body-text about-axcrypt-minor-heading', $mq]">
+          {{ $t('ReqruitmentLabel') }}:
+          <a href="mailto:apply@axcrypt.net"> apply@axcrypt.net </a>
+        </h2>
+      </article>
+    </article>
   </section>
 </template>
 
 <script>
-export default {};
+import BusinessCard from '@/components/BusinessCard';
+
+export default {
+  components: {
+    BusinessCard,
+  },
+
+  data() {
+    return {
+      ourTeam: [
+        {
+          name: 'Zebastian Victorin',
+          src: '/team-photos/zebastian-150x150.png',
+          jobTitle: 'CEO',
+          email: 'zebastian.victorin@axcrypt.net',
+        },
+        {
+          name: 'Måns Hansson',
+          src: '/team-photos/mans-150x150.png',
+          jobTitle: 'Creative Director',
+          email: 'mans.hansson@axcrypt.net',
+        },
+        {
+          name: 'Jonatan Pettersson',
+          src: '/team-photos/jonatan-150x150.png',
+          jobTitle: 'CTO',
+          email: 'jonatan.pettersson@axcrypt.net',
+        },
+        {
+          name: 'Angélique Huige',
+          src: '/team-photos/angelique-150x150.png',
+          jobTitle: 'Business Manager',
+          email: 'angelique.huige@axcrypt.net',
+        },
+      ],
+    };
+  },
+};
 </script>
 
 <style lang="scss" scoped>
@@ -63,10 +195,14 @@ export default {};
   &.desktop {
     margin-top: $margin-top-aside-content;
   }
+  > article {
+    @include standard-padding;
+  }
 }
 
 .about-axcrypt-heading {
   font-weight: 400;
+  @include no-margin-padding;
 }
 
 .about-axcrypt-subheading {
@@ -74,9 +210,11 @@ export default {};
   color: $green;
 }
 
-.history-wrapper {
-  @include standard-margin;
+.about-axcrypt-minor-heading {
+  font-weight: 600;
+}
 
+.history-wrapper {
   &.desktop {
     max-width: $max-content-width;
     margin: 0 auto $margin-desktop auto;
@@ -89,11 +227,9 @@ export default {};
 }
 
 .vision-wrapper {
-  @include standard-padding;
   background-color: $light-gray;
 
   .about-axcrypt-heading {
-    @include no-margin-padding;
     text-align: center;
   }
 
@@ -123,6 +259,69 @@ export default {};
 
     img {
       width: 150px;
+    }
+  }
+}
+
+.info-wrapper {
+  &.mobile {
+    > article {
+      margin: 0 0 $margin-mobile * 2 0;
+
+      &:last-of-type {
+        margin: 0;
+      }
+    }
+  }
+
+  &.desktop {
+    display: grid;
+    grid: 2fr 1fr / 2fr 1fr;
+    grid-auto-flow: column;
+    gap: 20px;
+  }
+}
+
+.business-cards-wrapper {
+  &.desktop {
+    margin: $margin-desktop 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: $margin-desktop;
+  }
+}
+
+.business-card {
+  &.mobile {
+    margin: $margin-mobile 0;
+  }
+}
+
+.partner-wrapper {
+  img {
+    margin: 12px 0 0 0;
+  }
+}
+
+.company-info-wrapper {
+  p,
+  h2 {
+    @include no-margin-padding;
+  }
+
+  &.mobile {
+    div {
+      margin: $margin-mobile 0;
+    }
+
+    div:first-of-type {
+      margin: 10px 0 0 0;
+    }
+  }
+
+  &.desktop {
+    div {
+      margin: $margin-desktop 0;
     }
   }
 }
