@@ -12,7 +12,7 @@
 
     <li
       v-for="item of itemList"
-      :key="item[0]"
+      :key="`${item[0]} + ${item[1]} + ${item[2]}`"
       :class="['standard-table-item', $mq]"
     >
       <div
@@ -26,6 +26,9 @@
         >
           {{ content }}
         </p>
+        <a v-else-if="content.path" :href="content.path">
+          {{ content.string }}
+        </a>
         <img
           v-else-if="content"
           src="@/assets/icons/check.svg"

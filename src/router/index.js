@@ -177,6 +177,14 @@ const routes = [
         },
       },
       {
+        path: 'legacy-downloads',
+        name: 'LegacyDownloadsPage',
+        component: Pages.LegacyDownloadsPage,
+        meta: {
+          title: 'Legacy Downloads | ',
+        },
+      },
+      {
         path: 'axcrypt-business',
         name: 'AxcryptBusinessPage',
         component: Pages.AxcryptBusinessPage,
