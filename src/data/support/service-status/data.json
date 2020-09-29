@@ -1,0 +1,27 @@
+[
+  {
+    "date": "August 24, 2020",
+    "time": "10:12 PM - 12:36 AM CEST",
+    "errors": [
+      {
+        "siteTitle": "AxCrypt Account Authenticated REST API",
+        "url": "https://account.axcrypt.net/api/users/my/account/"
+      },
+      {
+        "siteTitle": "AxCrypt Account",
+        "url": "https://account.axcrypt.net/en/Home/Login"
+      }
+    ],
+    "comment": "Users may have experienced on and off issues accessing the account site, due to intermittent server issues."
+  },
+  {
+    "date": "August 6, 2020",
+    "time": "(01:26 AM - 01:35 AM CEST",
+    "errors": [
+      {
+        "siteTitle": "AxCrypt Web",
+        "url": "https://www.axcrypt.net"
+      }
+    ]
+  }
+]
