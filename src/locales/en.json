@@ -744,5 +744,6 @@
   "ResellingLabel": "Reselling",
   "ReqruitmentLabel": "Requritment",
   "DownloadAxcrypt2LinkLabel": "Download AxCrypt 2",
-  "JobPositionLinkLabel": "Job Position"
+  "JobPositionLinkLabel": "Job Position",
+  "JobApplicationLinkLabel": "Job Application"
 }
