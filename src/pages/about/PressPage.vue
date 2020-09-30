@@ -104,6 +104,7 @@ export default {};
 
   &.desktop {
     max-width: $sidemenu-served-content-width !important;
+    border-right: 1px solid $white;
   }
 }
 
