@@ -154,7 +154,7 @@ export default {
 
 .job-application-wrapper {
   &.mobile {
-    margin: $margin-mobile;
+    @include center-column;
   }
 
   &.desktop {
@@ -163,8 +163,15 @@ export default {
 }
 
 .text-wrapper {
-  margin: auto;
   max-width: $max-text-width;
+
+  &.mobile {
+    margin: $margin-mobile;
+  }
+  
+  &.desktop {
+    margin: auto;
+  }
 }
 
 .position-heading {
@@ -175,10 +182,6 @@ export default {
 }
 
 .job-application-form {
-  &.mobile {
-    margin: $margin-mobile auto;
-  }
-
   &.desktop {
     margin: $margin-desktop auto;
   }
