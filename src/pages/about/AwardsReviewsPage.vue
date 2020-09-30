@@ -6,9 +6,7 @@
         <a v-for="award of awards" :key="award.src" :href="award.href">
           <img
             :class="['award-logo', $mq]"
-            :src="
-              require(`@/assets/view/about/awards-and-reviews/${award.src}`)
-            "
+            :src="require(`@/assets/logos/${award.src}`)"
             :alt="award.src.split('.png')[0]"
           />
         </a>
@@ -22,9 +20,7 @@
           <a :class="['review-link', $mq]" :href="review.href">
             <img
               :class="['review-logo', $mq]"
-              :src="
-                require(`@/assets/view/about/awards-and-reviews/${review.src}`)
-              "
+              :src="require(`@/assets/logos/${review.src}`)"
               :alt="review.src.split('.png')[0]"
             />
             <div>

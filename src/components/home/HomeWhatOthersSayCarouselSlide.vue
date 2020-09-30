@@ -2,7 +2,7 @@
   <div :class="`home-what-others-say-carousel-slide ${$mq}`">
     <img
       :class="`home-what-others-say-carousel-slide-img ${$mq}`"
-      :src="require(`@/assets/view/home/${item.src}`)"
+      :src="require(`@/assets/logos/${item.src}`)"
       :alt="item.alt"
     />
     <h1 :class="`home-what-others-say-carousel-slide-quotation-mark ${$mq}`">
