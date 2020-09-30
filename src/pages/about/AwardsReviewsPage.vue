@@ -132,11 +132,12 @@ export default {
 
   &.mobile {
     grid: auto / 1fr;
+    gap: $margin-mobile * 3;
   }
 
   &.desktop {
     grid: auto / 1fr 1fr 1fr;
-    gap: $margin-desktop;
+    gap: $margin-desktop * 3;
   }
 }
 
@@ -149,18 +150,19 @@ export default {
   color: $gray;
 
   &.mobile {
-    margin: 0 0 $margin-mobile * 2 0;
+    /* margin: 0 0 ($margin-mobile * 3) 0; */
   }
 }
 
 .review-logo {
   max-height: 40px;
-  max-width: 100px;
+  max-width: 120px;
 }
 
 .quote {
   text-align: center;
   margin: 0;
-  padding: 12px;
+  padding: 0 12px;
+  max-width: 240px;
 }
 </style>
