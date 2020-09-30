@@ -277,6 +277,14 @@ const routes = [
         },
       },
       {
+        path: 'jobs/application/:id',
+        name: 'JobApplicationPage',
+        component: Pages.JobApplicationPage,
+        meta: {
+          title: 'Application Form | ',
+        },
+      },
+      {
         path: 'press',
         name: 'PressPage',
         component: Pages.PressPage,
@@ -292,14 +300,6 @@ const routes = [
     component: Views.SignInView,
     meta: {
       title: 'Sign In | ',
-    },
-  },
-  {
-    path: '/application/:id',
-    name: 'JobApplicationPage',
-    component: Pages.JobApplicationPage,
-    meta: {
-      title: 'Application Form | ',
     },
   },
   {

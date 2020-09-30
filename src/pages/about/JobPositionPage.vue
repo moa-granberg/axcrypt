@@ -22,7 +22,7 @@
         :class="['apply-button', $mq]"
         phraseKey="ApplyNowLabel"
         size="small"
-        :path="`/application/${position.id}`"
+        :path="`/about/jobs/application/${position.id}`"
       />
     </article>
 
