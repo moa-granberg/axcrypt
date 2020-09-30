@@ -23,9 +23,8 @@ import AboutAxcryptPage from './about/AboutAxcryptPage';
 import AwardsReviewsPage from './about/AwardsReviewsPage';
 import JobsPage from './about/JobsPage';
 import JobPositionPage from './about/JobPositionPage';
+import JobApplicationPage from './about/JobApplicationPage';
 import PressPage from './about/PressPage';
-
-import JobApplicationPage from './JobApplicationPage';
 
 export {
   GetStartedPage,

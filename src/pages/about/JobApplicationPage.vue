@@ -1,24 +1,35 @@
 <template>
-  <section :class="['reseller-application-wrapper', $mq]">
-    <h1 :class="['reseller-application-heading heading-medium-green', $mq]">
-      {{ $t('ResellerApplicationHeading') }}
-    </h1>
-    <p :class="['reseller-application-text body-text', $mq]">
-      {{ $t('ResellerApplicationText') }}
-    </p>
+  <section :class="['job-application-wrapper', $mq]">
+    <article :class="['text-wrapper', $mq]">
+      <h1 :class="['position-heading heading-jumbo', $mq]">
+        {{ position.position }}
+      </h1>
+      <h2 :class="['position-heading heading-medium', $mq]">
+        {{ position.location }}
+      </h2>
+      <p :class="['body-text', $mq]">
+        Thank you for your interest in applying for a job at AxCrypt. Please
+        take a minute to fill out the following form. After you have completed
+        your application, we will contact you via email.
+      </p>
+    </article>
 
     <form
       v-if="data.length"
-      :class="['form-wrapper', $mq]"
+      :class="['form-wrapper job-application-form', $mq]"
       v-on:submit.prevent="handleSubmit"
     >
       <article v-for="item of data" :key="item.id">
         <div
           :class="['input-wrapper', $mq]"
-          v-if="item.type === 'text' || item.type === 'number'"
+          v-if="
+            item.type === 'text' ||
+            item.type === 'number' ||
+            item.type === 'file'
+          "
         >
           <label :for="item.id" :class="['body-text', $mq]">
-            {{ $t(item.phraseKey) }}
+            {{ item.text }}
           </label>
           <input
             :type="item.type"
@@ -26,6 +37,7 @@
             v-model="response[item.id]"
             :class="[{ invalid: item.error }, $mq]"
             @blur="validate(item.id)"
+            :accept="item.accept"
           />
           <p v-if="item.error" :class="['error-msg body-text', $mq]">
             {{ $t(item.error) }}
@@ -35,7 +47,7 @@
 
         <div :class="['input-wrapper', $mq]" v-if="item.type === 'select'">
           <label :for="item.id" :class="['body-text', $mq]">
-            {{ $t(item.phraseKey) }}
+            {{ item.text }}
           </label>
           <select
             :id="item.id"
@@ -51,42 +63,6 @@
             {{ $t(item.error) }}
           </p>
           <p v-else :class="['error-msg body-text', $mq]"></p>
-        </div>
-
-        <div
-          :class="['radio-button-input-wrapper', $mq]"
-          v-if="item.type === 'radio'"
-        >
-          <label :class="['body-text', $mq]">{{ $t(item.phraseKey) }} </label>
-          <div :class="['radio-buttons-wrapper', $mq]">
-            <div
-              v-for="button of item.radioButtons"
-              :key="button.id"
-              :class="['radio-button-wrapper', $mq]"
-            >
-              <input
-                :type="item.type"
-                v-model="response[item.id]"
-                :value="button.value"
-                :id="button.id"
-              />
-              <label :for="button.id" :class="['body-text', $mq]">
-                {{ $t(button.phraseKey) }}
-              </label>
-            </div>
-          </div>
-        </div>
-
-        <div :class="['input-wrapper', $mq]" v-if="item.type === 'textarea'">
-          <label :for="item.id" :class="['body-text', $mq]">
-            {{ $t(item.phraseKey) }}
-          </label>
-          <textarea
-            :id="item.id"
-            v-model="response[item.id]"
-            :class="[$mq]"
-            rows="5"
-          />
         </div>
       </article>
 
@@ -110,8 +86,9 @@
 </template>
 
 <script>
-import data from '@/data/information/reseller-application/form.json';
 import VueRecaptcha from 'vue-recaptcha';
+import jobPositions from '@/data/about/jobs/job-positions';
+import data from '@/data/about/job-application/form';
 import { validate } from '@/utils/formValidation';
 
 export default {
@@ -123,27 +100,24 @@ export default {
     return {
       data,
       response: {
-        name: '',
-        companyName: '',
-        jobTitle: '',
-        email: '',
+        firstName: '',
+        lastName: '',
         phone: '',
+        email: '',
+        city: '',
         country: '',
-        address: '',
-        vat: '',
-        numberOfEmployees: '',
-        annualRevenue: '',
-        servedCountries: '',
-        primaryOffers: '',
-        similarity: '',
-        support: '',
-        saleRepresentatives: '',
-        expectedSales: '',
-        otherInformation: '',
       },
       robot: false,
       robotError: false,
     };
+  },
+
+  computed: {
+    position() {
+      return jobPositions.find(
+        job => job.id === this.$route.path.split('/about/jobs/application/')[1]
+      );
+    },
   },
 
   methods: {
@@ -178,27 +152,38 @@ export default {
 <style lang="scss" scoped>
 @import '@/scss/form';
 
-.reseller-application-wrapper {
-  @include center-column;
-
+.job-application-wrapper {
   &.mobile {
-    margin: auto;
+    @include center-column;
   }
 
   &.desktop {
-    margin: $margin-top-aside-content auto;
+    margin: $margin-top-aside-content 0 $margin-desktop 0;
   }
 }
 
-.reseller-application-heading {
+.text-wrapper {
+  max-width: $max-text-width;
+
   &.mobile {
-    margin: 18px 0 0 0;
+    margin: $margin-mobile;
+  }
+
+  &.desktop {
+    margin: auto;
   }
 }
 
-.reseller-application-text {
-  @include standard-margin;
-  margin-top: 0;
+.position-heading {
+  @include no-margin-padding;
   text-align: center;
+  color: $green;
+  font-weight: 400;
+}
+
+.job-application-form {
+  &.desktop {
+    margin: $margin-desktop auto;
+  }
 }
 </style>

@@ -14,17 +14,23 @@
 
     <article :class="$mq">
       <h1 :class="$mq">2018</h1>
-      <a href="pdfs/ReleaseNotes2018.pdf" target="_blank"> {{$t('ReleaseNotesYearLabel')}} 2018</a>
+      <a href="pdfs/ReleaseNotes2018.pdf" target="_blank">
+        {{ $t('ReleaseNotesYearLabel') }} 2018</a
+      >
     </article>
 
     <article :class="$mq">
       <h1 :class="$mq">2017</h1>
-      <a href="pdfs/ReleaseNotes2017.pdf" target="_blank"> {{$t('ReleaseNotesYearLabel')}} 2017</a>
+      <a href="pdfs/ReleaseNotes2017.pdf" target="_blank">
+        {{ $t('ReleaseNotesYearLabel') }} 2017</a
+      >
     </article>
 
     <article :class="$mq">
       <h1 :class="$mq">2016</h1>
-      <a href="pdfs/ReleaseNotes2016.pdf" target="_blank"> {{$t('ReleaseNotesYearLabel')}} 2016</a>
+      <a href="pdfs/ReleaseNotes2016.pdf" target="_blank">
+        {{ $t('ReleaseNotesYearLabel') }} 2016</a
+      >
     </article>
   </section>
 </template>
