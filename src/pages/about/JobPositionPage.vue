@@ -1,22 +1,44 @@
 <template>
-  <section>
-    <article>
-      <h1></h1>
-      <p></p>
-      <primary-button path="/#" />
+  <section :class="['job-position-wrapper text-view-wrapper', $mq]">
+    <article :class="['about-wrapper', $mq]">
+      <h1 :class="$mq">About the position</h1>
+      <p
+        v-for="text of position.aboutPosition"
+        :key="text"
+        :class="['job-position-text']"
+      >
+        {{ text }}
+      </p>
+      <primary-button
+        phraseKey="Apply Now"
+        size="small"
+        :path="`/application/${position.id}`"
+      />
     </article>
 
-    <article>
-      <h1></h1>
-      <ul>
-        <li><p></p></li>
+    <article :class="['key-responsibilities-wrapper', $mq]">
+      <h1 :class="$mq">Key Responsibilities</h1>
+      <ul :class="['list-wrapper', $mq]">
+        <li
+          v-for="text of position.keyResponsibilities"
+          :key="text"
+          :class="['list-item', $mq]"
+        >
+          <p :class="['job-position-text', $mq]">{{ text }}</p>
+        </li>
       </ul>
     </article>
 
-    <article>
-      <h1></h1>
-      <ul>
-        <li><p></p></li>
+    <article :class="['skills-and-experience-wrapper']">
+      <h1 :class="$mq">Skills and Experience</h1>
+      <ul :class="['list-wrapper', $mq]">
+        <li
+          v-for="text of position.skillsAndExperience"
+          :key="text"
+          :class="['list-item', $mq]"
+        >
+          <p :class="['job-position-text', $mq]">{{ text }}</p>
+        </li>
       </ul>
     </article>
   </section>
