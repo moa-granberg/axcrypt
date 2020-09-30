@@ -21,7 +21,7 @@
             {{ $t(item.phraseKey) }}
           </label>
           <input
-            type="text"
+            :type="item.type"
             :id="item.id"
             v-model="response[item.id]"
             :class="[{ invalid: item.error }, $mq]"
