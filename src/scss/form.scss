@@ -1,0 +1,85 @@
+@import './variables';
+@import './standardButton';
+
+.form-wrapper {
+  &.mobile {
+    width: 90%;
+  }
+
+  &.desktop {
+    width: 70%;
+  }
+}
+
+input,
+select,
+textarea {
+  padding: 8px;
+  font-size: 0.875rem;
+  border-radius: 4px;
+  border: 1px solid rgba($gray, 0.7);
+  background-color: $white;
+
+  &:focus {
+    box-shadow: $standard-box-shadow;
+    border: 1px solid rgba($gray, 1);
+    outline: none;
+  }
+
+  &.invalid {
+    border: 1px solid #cb544c;
+  }
+
+  &[type='submit'] {
+    margin: 24px auto;
+    text-transform: uppercase;
+  }
+}
+
+textarea {
+  resize: none;
+  margin: 0 0 8px 0;
+}
+
+.error-msg {
+  @include no-margin-padding;
+  color: #cb544c;
+  align-self: flex-end;
+
+  &.mobile {
+    height: 17px;
+  }
+
+  &.desktop {
+    height: 19px;
+  }
+
+  &.robot {
+    align-self: center;
+  }
+}
+
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 6px 0;
+}
+
+.radio-buttons-wrapper {
+  display: flex;
+}
+
+.radio-button-wrapper {
+  @include center-row;
+  margin: 8px 12px;
+
+  > input {
+    margin: 0 8px;
+  }
+}
+
+.recaptcha-wrapper {
+  &.mobile {
+    @include center-column;
+  }
+}

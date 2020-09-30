@@ -9,7 +9,7 @@
 
     <form
       v-if="data.length"
-      :class="['reseller-application-form', $mq]"
+      :class="['form-wrapper', $mq]"
       v-on:submit.prevent="handleSubmit"
     >
       <article v-for="item of data" :key="item.id">
@@ -17,14 +17,14 @@
           :class="['input-wrapper', $mq]"
           v-if="item.type === 'text' || item.type === 'number'"
         >
-          <label :for="item.id" :class="['input-label body-text', $mq]">
+          <label :for="item.id" :class="['body-text', $mq]">
             {{ $t(item.phraseKey) }}
           </label>
           <input
             type="text"
             :id="item.id"
             v-model="response[item.id]"
-            :class="[{ invalid: item.error }, 'input', $mq]"
+            :class="[{ invalid: item.error }, $mq]"
             @blur="validate(item.id)"
           />
           <p v-if="item.error" :class="['error-msg body-text', $mq]">
@@ -40,7 +40,7 @@
           <select
             :id="item.id"
             v-model="response[item.id]"
-            :class="[{ invalid: item.error }, 'input', $mq]"
+            :class="[{ invalid: item.error }, $mq]"
             @blur="validate(item.id)"
           >
             <option v-for="value of item.options" :key="value" :value="value">
@@ -78,13 +78,13 @@
         </div>
 
         <div :class="['input-wrapper', $mq]" v-if="item.type === 'textarea'">
-          <label :for="item.id" :class="['input-label body-text', $mq]">
+          <label :for="item.id" :class="['body-text', $mq]">
             {{ $t(item.phraseKey) }}
           </label>
           <textarea
             :id="item.id"
             v-model="response[item.id]"
-            :class="['input textarea', $mq]"
+            :class="[$mq]"
             rows="5"
           />
         </div>
@@ -103,7 +103,7 @@
       <input
         type="submit"
         :value="$t('SubmitLabel')"
-        :class="['submit-button standard-button small', $mq]"
+        :class="['standard-button small', $mq]"
       />
     </form>
   </section>
@@ -192,8 +192,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '@/scss/variables.scss';
-@import '@/scss/standardButton.scss';
+@import '@/scss/form';
 
 .reseller-application-wrapper {
   @include center-column;
@@ -217,85 +216,5 @@ export default {
   @include standard-margin;
   margin-top: 0;
   text-align: center;
-}
-
-.reseller-application-form {
-  &.mobile {
-    width: 90%;
-  }
-
-  &.desktop {
-    width: 70%;
-  }
-}
-
-.input {
-  padding: 8px;
-  font-size: 0.875rem;
-  border-radius: 4px;
-  border: 1px solid rgba($gray, 0.7);
-
-  &:focus {
-    box-shadow: $standard-box-shadow;
-    border: 1px solid rgba($gray, 1);
-    outline: none;
-  }
-
-  &.invalid {
-    border: 1px solid #cb544c;
-  }
-
-  &.textarea {
-    resize: none;
-    margin: 0 0 8px 0;
-  }
-}
-
-.error-msg {
-  @include no-margin-padding;
-  color: #cb544c;
-  align-self: flex-end;
-
-  &.mobile {
-    height: 17px;
-  }
-
-  &.desktop {
-    height: 19px;
-  }
-
-  &.robot {
-    align-self: center;
-  }
-}
-
-.input-wrapper {
-  display: flex;
-  flex-direction: column;
-  margin: 6px 0;
-}
-
-.radio-buttons-wrapper {
-  display: flex;
-}
-
-.radio-button-wrapper {
-  @include center-row;
-  margin: 8px 12px;
-
-  > input {
-    margin: 0 8px;
-  }
-}
-
-.recaptcha-wrapper {
-  &.mobile {
-    @include center-column;
-  }
-}
-
-.submit-button {
-  margin: 24px auto;
-  text-transform: uppercase;
 }
 </style>
