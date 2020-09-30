@@ -743,5 +743,6 @@
   "TechnicalSupportLabel": "Technical support",
   "ResellingLabel": "Reselling",
   "ReqruitmentLabel": "Requritment",
-  "DownloadAxcrypt2LinkLabel": "Download AxCrypt 2"
+  "DownloadAxcrypt2LinkLabel": "Download AxCrypt 2",
+  "JobPositionLinkLabel": "Job Position"
 }
