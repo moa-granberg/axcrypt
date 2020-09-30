@@ -10,12 +10,12 @@
         <div :class="`home-what-others-say-awards-logos-wrapper ${$mq}`">
           <img
             :class="`home-what-others-say-awards-logo pc-mag ${$mq}`"
-            src="@/assets/view/home/pc-mag.png"
+            src="@/assets/logos/award-pcmag.png"
             alt="PC Mag Logo"
           />
           <img
             :class="`home-what-others-say-awards-logo softpedia ${$mq}`"
-            src="@/assets/view/home/award-softpedia.png"
+            src="@/assets/logos/award-softpedia.png"
             alt="Softpedia Award Logo"
           />
         </div>

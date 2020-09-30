@@ -20,6 +20,7 @@ import PasswordGeneratorPage from './support/PasswordGeneratorPage';
 import ServiceStatusPage from './support/ServiceStatusPage';
 
 import AboutAxcryptPage from './about/AboutAxcryptPage';
+import AwardsReviewsPage from './about/AwardsReviewsPage';
 import JobsPage from './about/JobsPage';
 import JobPositionPage from './about/JobPositionPage';
 import PressPage from './about/PressPage';
@@ -47,6 +48,7 @@ export {
   PasswordGeneratorPage,
   ServiceStatusPage,
   AboutAxcryptPage,
+  AwardsReviewsPage,
   JobsPage,
   JobPositionPage,
   PressPage,

@@ -114,6 +114,10 @@
         "phraseKey": "AboutAxcryptLinkLabel"
       },
       {
+        "path": "/about/awards",
+        "phraseKey": "AwardsReviewsLinkLabel"
+      },
+      {
         "path": "/about/press",
         "phraseKey": "PressAndMediaLinkLabel"
       },

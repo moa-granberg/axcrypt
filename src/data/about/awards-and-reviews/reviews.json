@@ -1,0 +1,27 @@
+[
+  {
+    "src": "review-softpedia.png",
+    "href": "http://www.softpedia.com/get/Security/Encrypting/AxCrypt.shtml",
+    "phraseKey": "AwardsReviewsReviewSoftpediaText"
+  },
+  {
+    "src": "review-techradar.png",
+    "href": "https://www.techradar.com/news/top-5-best-encryption-tools",
+    "phraseKey": "AwardsReviewsReviewTechradarText"
+  },
+  {
+    "src": "review-windowscentral.png",
+    "href": "https://www.windowscentral.com/best-encryption-software",
+    "phraseKey": "AwardsReviewsReviewWindowscentralText"
+  },
+  {
+    "src": "review-pcmag.png",
+    "href": "http://uk.pcmag.com/encryption-products/83934/review/axcrypt-premium",
+    "phraseKey": "AwardsReviewsReviewPcmagText"
+  },
+  {
+    "src": "review-vpncrew.png",
+    "href": "https://www.vpncrew.com/axcrypt-review/",
+    "phraseKey": "AwardsReviewsReviewVpncrewText"
+  }
+]

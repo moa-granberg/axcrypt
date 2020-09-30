@@ -253,6 +253,14 @@ const routes = [
         },
       },
       {
+        path: 'awards',
+        name: 'AwardsReviewsPage',
+        component: Pages.AwardsReviewsPage,
+        meta: {
+          title: 'Awards & Reviews | ',
+        },
+      },
+      {
         path: 'jobs',
         name: 'JobsPage',
         component: Pages.JobsPage,
