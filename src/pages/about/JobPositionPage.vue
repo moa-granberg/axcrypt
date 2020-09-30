@@ -20,7 +20,7 @@
       </p>
       <primary-button
         :class="['apply-button', $mq]"
-        phraseKey="Apply Now"
+        phraseKey="ApplyNowLabel"
         size="small"
         :path="`/application/${position.id}`"
       />
