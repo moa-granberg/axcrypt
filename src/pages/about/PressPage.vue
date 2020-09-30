@@ -49,31 +49,39 @@
 
     <article :class="['branding-guidelines-wrapper', $mq]">
       <h1 :class="[$mq]">{{ $t('BrandingGuidelinesLabel') }}</h1>
-      <p :class="[$mq]">{{ $t('BrandingGuidelinesDescription') }}</p>
-      <ul :class="[$mq]">
-        <li :class="[$mq]">
-          <p :class="[$mq]">{{ $t('AboutUsLinkLabel') }}</p>
-        </li>
-        <li :class="[$mq]">
-          <p :class="[$mq]">{{ $t('BrandToneLabel') }}</p>
-        </li>
-        <li :class="[$mq]">
-          <p :class="[$mq]">{{ $t('LogoAndIconLabel') }}</p>
-        </li>
-        <li :class="[$mq]">
-          <p :class="[$mq]">{{ $t('ColorPaletteLabel') }}</p>
-        </li>
-        <li :class="[$mq]">
-          <p :class="[$mq]">{{ $t('TypographyLabel') }}</p>
-        </li>
-      </ul>
-      <a
-        :class="['standard-button small dark-green download-button', $mq]"
-        href="https://www.axcrypt.net/downloads/15808/"
-      >
-        {{ $t('DownloadLinkLabel') }} {{ $t('BrandingGuidelinesLabel') }}</a
-      >
-      <img :class="[$mq]" src="" alt="" />
+      <div :class="['branding-guidelines-content-wrapper', $mq]">
+        <div :class="['branding-guidelines-text-wrapper', $mq]">
+          <p :class="[$mq]">{{ $t('BrandingGuidelinesDescription') }}</p>
+          <ul :class="['branding-guidelines-list', $mq]">
+            <li :class="[$mq]">
+              <p :class="[$mq]">{{ $t('AboutUsLinkLabel') }}</p>
+            </li>
+            <li :class="[$mq]">
+              <p :class="[$mq]">{{ $t('BrandToneLabel') }}</p>
+            </li>
+            <li :class="[$mq]">
+              <p :class="[$mq]">{{ $t('LogoAndIconLabel') }}</p>
+            </li>
+            <li :class="[$mq]">
+              <p :class="[$mq]">{{ $t('ColorPaletteLabel') }}</p>
+            </li>
+            <li :class="[$mq]">
+              <p :class="[$mq]">{{ $t('TypographyLabel') }}</p>
+            </li>
+          </ul>
+          <a
+            :class="['standard-button small dark-green download-button', $mq]"
+            href="https://www.axcrypt.net/downloads/15808/"
+          >
+            {{ $t('DownloadLinkLabel') }} {{ $t('BrandingGuidelinesLabel') }}</a
+          >
+        </div>
+        <img
+          :class="['logo', $mq]"
+          src="@/assets/logos/axcrypt_transparent.png"
+          alt=""
+        />
+      </div>
     </article>
   </section>
 </template>
@@ -143,20 +151,55 @@ export default {};
 .branding-guidelines-wrapper {
   display: flex;
   flex-direction: column;
-  max-width: $max-text-width;
 }
 
 .download-button {
-  align-self: center;
   color: $white;
   text-transform: uppercase;
 
   &.mobile {
-    margin: $margin-mobile 0 0 0;
+    margin: $margin-mobile 0;
   }
 
   &.desktop {
-    margin: $margin-desktop 0 0 0;
+    margin: $margin-desktop 0;
+  }
+}
+
+.branding-guidelines-content-wrapper {
+  &.mobile {
+    margin: auto;
+  }
+
+  &.desktop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.branding-guidelines-text-wrapper {
+  max-width: $max-text-width;
+
+  &.mobile {
+    @include center-column;
+  }
+
+  &.desktop {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+}
+
+.logo {
+  &.mobile {
+    max-width: 80vw;
+  }
+
+  &.desktop {
+    max-width: 250px;
   }
 }
 </style>
