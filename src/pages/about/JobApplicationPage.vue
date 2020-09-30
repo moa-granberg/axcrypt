@@ -22,17 +22,22 @@
       <article v-for="item of data" :key="item.id">
         <div
           :class="['input-wrapper', $mq]"
-          v-if="item.type === 'text' || item.type === 'number'"
+          v-if="
+            item.type === 'text' ||
+            item.type === 'number' ||
+            item.type === 'file'
+          "
         >
           <label :for="item.id" :class="['body-text', $mq]">
             {{ item.text }}
           </label>
           <input
-            type="text"
+            :type="item.type"
             :id="item.id"
             v-model="response[item.id]"
             :class="[{ invalid: item.error }, $mq]"
             @blur="validate(item.id)"
+            :accept="item.accept"
           />
           <p v-if="item.error" :class="['error-msg body-text', $mq]">
             {{ $t(item.error) }}

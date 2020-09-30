@@ -1,5 +1,17 @@
 [
   {
+    "type": "file",
+    "id": "resume",
+    "text": "Upload your resume here (pdf)",
+    "accept": ".pdf"
+  },
+  {
+    "type": "file",
+    "id": "coverLetter",
+    "text": "Upload your cover letter here (pdf/doc/docx)",
+    "accept": ".pdf, .doc, .docx"
+  },
+  {
     "type": "text",
     "id": "firstName",
     "text": "First name"
