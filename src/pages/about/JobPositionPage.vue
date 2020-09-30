@@ -1,5 +1,14 @@
 <template>
   <section :class="['job-position-wrapper text-view-wrapper', $mq]">
+    <div :class="['position-headings-wrapper', $mq]">
+      <h1 :class="['position-heading heading-jumbo', $mq]">
+        {{ position.position }}
+      </h1>
+      <h2 :class="['position-heading heading-medium', $mq]">
+        {{ position.location }}
+      </h2>
+    </div>
+
     <article :class="['about-wrapper', $mq]">
       <h1 :class="$mq">About the position</h1>
       <p
@@ -10,6 +19,7 @@
         {{ text }}
       </p>
       <primary-button
+        :class="['apply-button', $mq]"
         phraseKey="Apply Now"
         size="small"
         :path="`/application/${position.id}`"
@@ -29,7 +39,7 @@
       </ul>
     </article>
 
-    <article :class="['skills-and-experience-wrapper']">
+    <article :class="['skills-and-experience-wrapper', $mq]">
       <h1 :class="$mq">Skills and Experience</h1>
       <ul :class="['list-wrapper', $mq]">
         <li
@@ -63,4 +73,58 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+@import '@/scss/variables';
+
+.job-position-wrapper {
+  > article:last-of-type {
+    padding-bottom: 0;
+  }
+
+  &.mobile {
+    max-width: $max-text-width;
+  }
+
+  &.desktop {
+    display: grid;
+    grid: auto / 1fr 1fr;
+    gap: $margin-desktop;
+    grid-template-areas:
+      'headings headings'
+      'about about';
+  }
+}
+
+.position-headings-wrapper {
+  grid-area: headings;
+
+  &.mobile {
+    margin: 0 0 $margin-mobile 0;
+  }
+
+  &.desktop {
+    margin: 0 0 $margin-desktop 0;
+  }
+}
+
+.position-heading {
+  @include no-margin-padding;
+  text-align: center;
+  color: $green;
+  font-weight: 400;
+}
+
+.about-wrapper {
+  grid-area: about;
+  @include center-column;
+  align-items: flex-start;
+}
+
+.apply-button {
+  align-self: center;
+
+  &.desktop {
+    margin: $margin-desktop 0 0 0;
+  }
+}
+</style>
