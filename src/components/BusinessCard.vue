@@ -12,9 +12,12 @@
       <p :class="`business-card-paragraph body-text ${$mq}`">
         {{ person.jobTitle }}
       </p>
-      <p :class="`business-card-paragraph body-text ${$mq}`">
+      <a
+        :class="`business-card-paragraph body-text email ${$mq}`"
+        :href="`mailto:${person.email}`"
+      >
         {{ person.email }}
-      </p>
+      </a>
     </div>
   </article>
 </template>
@@ -38,11 +41,16 @@ export default {
 .business-card-wrapper {
   display: flex;
   align-items: center;
-  margin: 28px;
 }
 
 .business-card-img {
-  width: 119px;
+  &.mobile {
+    width: 84px;
+  }
+
+  &.desktop {
+    width: 119px;
+  }
 }
 
 .business-card-text-wrapper {
@@ -52,5 +60,14 @@ export default {
 .business-card-heading,
 .business-card-paragraph {
   @include no-margin-padding;
+}
+
+.email {
+  color: $green;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
 </style>
