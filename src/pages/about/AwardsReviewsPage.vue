@@ -144,10 +144,6 @@ export default {
 
   text-decoration: none;
   color: $gray;
-
-  &.mobile {
-    /* margin: 0 0 ($margin-mobile * 3) 0; */
-  }
 }
 
 .review-logo {
