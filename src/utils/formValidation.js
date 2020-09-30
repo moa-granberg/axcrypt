@@ -11,9 +11,6 @@ export const validate = (id, response, data) => {
       ? validateEmail(response.email)
       : '';
 
-
-    return data.map(input =>
-      input.id === id ? { ...input, error } : input
-    );
+    return data.map(input => (input.id === id ? { ...input, error } : input));
   }
 };

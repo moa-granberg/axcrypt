@@ -168,7 +168,7 @@ export default {
   &.mobile {
     margin: $margin-mobile;
   }
-  
+
   &.desktop {
     margin: auto;
   }

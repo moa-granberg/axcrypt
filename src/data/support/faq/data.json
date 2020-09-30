@@ -16,16 +16,11 @@
       },
       {
         "heading": "FaqDifference1&2",
-        "answer": [
-          "FaqDifference1&2Answer1",
-          "FaqDifference1&2Answer2"
-        ]
+        "answer": ["FaqDifference1&2Answer1", "FaqDifference1&2Answer2"]
       },
       {
         "heading": "FaqWhatPlatforms",
-        "answer": [
-          "FaqWhatPlatformsAnswer1"
-        ]
+        "answer": ["FaqWhatPlatformsAnswer1"]
       },
       {
         "heading": "FaqPasswordRecoveryCorporate",
@@ -38,9 +33,7 @@
       },
       {
         "heading": "FaqHowLargeFileSupport",
-        "answer": [
-          "FaqHowLargeFileSupportAnswer1"
-        ]
+        "answer": ["FaqHowLargeFileSupportAnswer1"]
       },
       {
         "heading": "FaqWhyTimeStap",
@@ -82,17 +75,11 @@
     "questions": [
       {
         "heading": "FaqWhatHappensExpire",
-        "answer": [
-          "FaqWhatHappensExpireAnswer1",
-          "FaqWhatHappensExpireAnswer2"
-        ]
+        "answer": ["FaqWhatHappensExpireAnswer1", "FaqWhatHappensExpireAnswer2"]
       },
       {
         "heading": "FaqHowToRenew",
-        "answer": [
-          "FaqHowToRenewAnswer1",
-          "FaqHowToRenewAnswer2"
-        ]
+        "answer": ["FaqHowToRenewAnswer1", "FaqHowToRenewAnswer2"]
       },
       {
         "heading": "FaqEmailUsedFor",
@@ -104,10 +91,7 @@
       },
       {
         "heading": "FaqKeysAndPasswords",
-        "answer": [
-          "FaqKeysAndPasswordsAnswer1",
-          "FaqKeysAndPasswordsAnswer2"
-        ]
+        "answer": ["FaqKeysAndPasswordsAnswer1", "FaqKeysAndPasswordsAnswer2"]
       },
       {
         "heading": "FaqWhyPasswordSignIn",
@@ -127,9 +111,7 @@
     "questions": [
       {
         "heading": "FaqSignInWithoutPassword",
-        "answer": [
-          "FaqSignInWithoutPasswordAnswer1"
-        ]
+        "answer": ["FaqSignInWithoutPasswordAnswer1"]
       },
       {
         "heading": "FaqFileEncryptionNotWorking",
@@ -150,9 +132,7 @@
       },
       {
         "heading": "FaqAntivirusWarning",
-        "answer": [
-          "FaqAntivirusWarningAnswer1"
-        ]
+        "answer": ["FaqAntivirusWarningAnswer1"]
       },
       {
         "heading": "FaqAccessDenied",
