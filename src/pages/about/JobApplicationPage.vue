@@ -16,7 +16,7 @@
 
     <form
       v-if="data.length"
-      :class="['form-wrapper', $mq]"
+      :class="['form-wrapper job-application-form', $mq]"
       v-on:submit.prevent="handleSubmit"
     >
       <article v-for="item of data" :key="item.id">
@@ -167,5 +167,15 @@ export default {
   text-align: center;
   color: $green;
   font-weight: 400;
+}
+
+.job-application-form {
+  &.mobile {
+    margin: $margin-mobile auto;
+  }
+
+  &.desktop {
+    margin: $margin-desktop auto;
+  }
 }
 </style>
