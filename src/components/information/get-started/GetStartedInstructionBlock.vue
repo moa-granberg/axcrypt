@@ -5,7 +5,14 @@
         {{ $t(data.heading) }}
       </h1>
 
-      <p :class="`body-text ${$mq}`" v-html="$t(data.ingress)" />
+      <p
+        :class="`body-text ${$mq}`"
+        v-html="
+          data.ingress.url
+            ? $t(data.ingress.phraseKey, { url: data.ingress.url })
+            : $t(data.ingress)
+        "
+      />
 
       <div
         :class="[{ reverse }, 'iframe-wrapper', $mq]"
@@ -22,8 +29,15 @@
       </div>
 
       <ol :class="`instruction-list-wrapper ${$mq}`">
-        <li :class="`list-item ${$mq}`" v-for="item of data.list" :key="item">
-          <p :class="`body-text ${$mq}`" v-html="$t(item)" />
+        <li
+          :class="`list-item ${$mq}`"
+          v-for="item of data.list"
+          :key="item.phraseKey"
+        >
+          <p
+            :class="`body-text ${$mq}`"
+            v-html="item.url ? $t(item.phraseKey, { url: item.url }) : $t(item)"
+          />
         </li>
       </ol>
     </div>

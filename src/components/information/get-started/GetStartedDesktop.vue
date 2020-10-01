@@ -19,9 +19,14 @@
           <li
             :class="['information-note-list-item', $mq]"
             v-for="item of infoNoteData1.list"
-            :key="item"
+            :key="item.phraseKey"
           >
-            <p v-html="$t(item)" :class="['body-text', $mq]"></p>
+            <p
+              v-html="
+                item.url ? $t(item.phraseKey, { url: item.url }) : $t(item)
+              "
+              :class="['body-text', $mq]"
+            ></p>
           </li>
         </ul>
       </div>
@@ -46,8 +51,8 @@
       <div :class="['information-note-inner-wrapper', $mq]">
         <p
           v-for="item of infoNoteData2.texts"
-          :key="item"
-          v-html="$t(item)"
+          :key="item.phraseKey"
+          v-html="item.url ? $t(item.phraseKey, { url: item.url }) : $t(item)"
           :class="['body-text', $mq]"
         ></p>
       </div>
@@ -70,14 +75,20 @@ export default {
       infoNoteData1: {
         heading: 'GetStartedInfoNote1Heading',
         list: [
-          'GetStartedInfoNote1ListItem1',
+          {
+            phraseKey: 'GetStartedInfoNote1ListItem1',
+            url: 'https://account.axcrypt.net/Home/Register',
+          },
           'GetStartedInfoNote1ListItem2',
           'GetStartedInfoNote1ListItem3',
         ],
       },
       infoNoteData2: {
         heading: 'SupportLinkLabel',
-        texts: ['GetStartedInfoNote2Text1', 'GetStartedInfoNote2Text2'],
+        texts: [
+          { phraseKey: 'GetStartedInfoNote2Text1', url: '#/support/faq' },
+          'GetStartedInfoNote2Text2',
+        ],
       },
     };
   },

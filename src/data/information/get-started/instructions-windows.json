@@ -1,11 +1,17 @@
 {
   "installingAxcrypt": {
     "heading": "GetStartedInstallingHeading",
-    "ingress": "GetStartedInstallingIngress",
+    "ingress": {
+      "phraseKey": "GetStartedInstallingIngress",
+      "url": "https://account.axcrypt.net/Home/Register"
+    },
     "videoUrl": "https://www.youtube.com/embed/liEfwTSALM0",
     "videoTitle": "GetStartedInstallingVideoTitleWindows",
     "list": [
-      "GetStartedInstallingStep1",
+      {
+        "phraseKey": "GetStartedInstallingStep1",
+        "url": "#/download"
+      },
       "GetStartedInstallingStep2",
       "GetStartedInstallingStep3",
       "GetStartedInstallingStep4"
@@ -24,7 +30,10 @@
   },
   "keySharing": {
     "heading": "GetStartedKeySharingHeading",
-    "ingress": "GetStartedKeySharingIngress",
+    "ingress": {
+      "phraseKey": "GetStartedKeySharingIngress",
+      "url": "#/information/features"
+    },
     "videoUrl": "https://www.youtube.com/embed/grDPq8qKwF0",
     "videoTitle": "GetStartedKeySharingVideoTitle",
     "list": [
@@ -36,7 +45,10 @@
   },
   "passwordManagement": {
     "heading": "GetStartedPasswordManagementHeading",
-    "ingress": "GetStartedPasswordManagementIngress",
+    "ingress": {
+      "phraseKey": "GetStartedPasswordManagementIngress",
+      "url": "#/information/features"
+    },
     "videoUrl": "https://www.youtube.com/embed/kE8fuBglFhA",
     "videoTitle": "GetStartedPasswordManagementVideoTitleWindows",
     "list": [
