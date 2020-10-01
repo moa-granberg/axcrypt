@@ -23,7 +23,14 @@
 
     <article>
       <h1>{{ $t('LegacyDownloadsHowToVerifyHeading') }}</h1>
-      <p v-html="$t('LegacyDownloadsHowToVerifyText')" />
+      <p
+        v-html="
+          $t('LegacyDownloadsHowToVerifyText', {
+            url:
+              'http://msdn.microsoft.com/en-us/library/ms537361(v=VS.85).aspx',
+          })
+        "
+      />
     </article>
   </section>
 </template>
