@@ -5,7 +5,12 @@
     </h3>
     <p
       :class="'footer-contact-paragraph ' + $mq"
-      v-html="$t('FooterContactUsParagraph')"
+      v-html="
+        $t('FooterContactUsParagraph', {
+          forumUrl: 'http://www.axcrypt.net/forums/',
+          mailUrl: 'mailto:support@axcrypt.net',
+        })
+      "
     />
 
     <mq-layout mq="mobile" class="footer-contact-socialmedia-wrapper">

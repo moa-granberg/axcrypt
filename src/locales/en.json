@@ -23,7 +23,7 @@
   "ContactUsHeading": "Contact us",
   "DownloadLinkLabel": "Download",
   "FaqLinkLabel": "FAQ",
-  "FooterContactUsParagraph": "Talk to us! <br> Please use our <a href='/#/about'>Community Forums</a> for general questions, feedback and technical support. You can also email directly to <a href='mailto:support@axcrypt.net'>support@axcrypt.net</a>",
+  "FooterContactUsParagraph": "Talk to us! <br> Please use our <a href={forumUrl}>Community Forums</a> for general questions, feedback and technical support. You can also email directly to <a href={mailUrl}>support@axcrypt.net</a>",
   "ForumsLinkLabel": "Forums",
   "GetStartedLinkLabel": "Get started",
   "HomeLinkLabel": "Home",
