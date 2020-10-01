@@ -16,11 +16,25 @@
       },
       {
         "heading": "FaqDifference1&2",
-        "answer": ["FaqDifference1&2Answer1", "FaqDifference1&2Answer2"]
+        "answer": [
+          {
+            "text": "FaqDifference1&2Answer1",
+            "url": "#/download"
+          },
+          {
+            "text": "FaqDifference1&2Answer2",
+            "url": "#/support/legacy-downloads"
+          }
+        ]
       },
       {
         "heading": "FaqWhatPlatforms",
-        "answer": ["FaqWhatPlatformsAnswer1"]
+        "answer": [
+          {
+            "text": "FaqWhatPlatformsAnswer1",
+            "url": "#/information/requirements"
+          }
+        ]
       },
       {
         "heading": "FaqPasswordRecoveryCorporate",
@@ -33,7 +47,9 @@
       },
       {
         "heading": "FaqHowLargeFileSupport",
-        "answer": ["FaqHowLargeFileSupportAnswer1"]
+        "answer": [
+          "FaqHowLargeFileSupportAnswer1"
+        ]
       },
       {
         "heading": "FaqWhyTimeStap",
@@ -75,23 +91,38 @@
     "questions": [
       {
         "heading": "FaqWhatHappensExpire",
-        "answer": ["FaqWhatHappensExpireAnswer1", "FaqWhatHappensExpireAnswer2"]
+        "answer": [
+          "FaqWhatHappensExpireAnswer1",
+          "FaqWhatHappensExpireAnswer2"
+        ]
       },
       {
         "heading": "FaqHowToRenew",
-        "answer": ["FaqHowToRenewAnswer1", "FaqHowToRenewAnswer2"]
+        "answer": [
+          {
+            "text": "FaqHowToRenewAnswer1",
+            "url": "https://account.axcrypt.net/en/Home/Login"
+          },
+          "FaqHowToRenewAnswer2"
+        ]
       },
       {
         "heading": "FaqEmailUsedFor",
         "answer": [
           "FaqEmailUsedForAnswer1",
           "FaqEmailUsedForAnswer2",
-          "FaqEmailUsedForAnswer3"
+          {
+            "text": "FaqEmailUsedForAnswer3",
+            "url": "#/information/terms-of-use"
+          }
         ]
       },
       {
         "heading": "FaqKeysAndPasswords",
-        "answer": ["FaqKeysAndPasswordsAnswer1", "FaqKeysAndPasswordsAnswer2"]
+        "answer": [
+          "FaqKeysAndPasswordsAnswer1",
+          "FaqKeysAndPasswordsAnswer2"
+        ]
       },
       {
         "heading": "FaqWhyPasswordSignIn",
@@ -111,13 +142,21 @@
     "questions": [
       {
         "heading": "FaqSignInWithoutPassword",
-        "answer": ["FaqSignInWithoutPasswordAnswer1"]
+        "answer": [
+          {
+            "text": "FaqSignInWithoutPasswordAnswer1",
+            "url": "https://account.axcrypt.net/en/Home/PasswordReset"
+          }
+        ]
       },
       {
         "heading": "FaqFileEncryptionNotWorking",
         "answer": [
           "FaqFileEncryptionNotWorkingAnswer1",
-          "FaqFileEncryptionNotWorkingAnswer2"
+          {
+            "text": "FaqFileEncryptionNotWorkingAnswer2",
+            "url": "http://www.axcrypt.net/blog/send-complete-error-report/"
+          }
         ]
       },
       {
@@ -132,12 +171,17 @@
       },
       {
         "heading": "FaqAntivirusWarning",
-        "answer": ["FaqAntivirusWarningAnswer1"]
+        "answer": [
+          "FaqAntivirusWarningAnswer1"
+        ]
       },
       {
         "heading": "FaqAccessDenied",
         "answer": [
-          "FaqAccessDeniedAnswer1",
+          {
+            "text": "FaqAccessDeniedAnswer1",
+            "url": "http://windows.microsoft.com/en-US/windows7/What-is-Encrypting-File-System-EFS"
+          },
           "FaqAccessDeniedAnswer2",
           "FaqAccessDeniedAnswer3",
           "FaqAccessDeniedAnswer4",
