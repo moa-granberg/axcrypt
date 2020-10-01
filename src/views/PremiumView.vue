@@ -6,6 +6,7 @@
       <product-body
         headerPhraseKey="PremiumFirstBodyHeading"
         bodyPhraseKey="PremiumFirstBodyText"
+        url="https://account.axcrypt.net/en/Home/Purchase"
       />
 
       <product-try-it-for-free product="premium" />
@@ -20,6 +21,7 @@
       <product-body
         headerPhraseKey="PremiumThirdBodyHeading"
         bodyPhraseKey="PremiumThirdBodyText"
+        url="#/information/features"
       />
     </mq-layout>
 
@@ -31,6 +33,7 @@
           class="main-grid-body1"
           headerPhraseKey="PremiumFirstBodyHeading"
           bodyPhraseKey="PremiumFirstBodyText"
+          url="https://account.axcrypt.net/en/Home/Purchase"
         />
 
         <div class="product-try-it-for-free-desktop-wrapper premium">
@@ -51,6 +54,7 @@
         <product-body
           headerPhraseKey="PremiumThirdBodyHeading"
           bodyPhraseKey="PremiumThirdBodyText"
+          url="#/information/features"
         />
         <img
           src="@/assets/view/product/more-information.png"
