@@ -12,8 +12,6 @@
 }
 
 .download-hero-paragraph {
-  @include no-margin-padding;
-
   > p > a {
     color: $light-green;
   }

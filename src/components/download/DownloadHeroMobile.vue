@@ -4,14 +4,17 @@
       <h1 :class="`download-hero-heading heading-medium ${$mq}`">
         {{ $t('DownloadMobileHeading') }}
       </h1>
+      <p :class="`download-hero-paragraph body-text ${$mq}`">
+        {{ $t('DownloadMobileBodyText1') }}
+      </p>
       <p
         :class="`download-hero-paragraph body-text ${$mq}`"
         v-html="
-          $t('DownloadMobileBodyText', {
+          $t('DownloadMobileBodyText2', {
             url: '#/information/get-started/mobile',
           })
         "
-      ></p>
+      />
     </div>
 
     <article :class="`download-hero-mobile-images-wrapper ${$mq}`">
