@@ -1,6 +1,14 @@
 <template>
   <section :class="['text-view-wrapper', $mq]">
-    <p :class="['description', $mq]" v-html="$t('ReleaseNotesDescription')" />
+    <p
+      :class="['description', $mq]"
+      v-html="
+        $t('ReleaseNotesDescription', {
+          bitbucketUrl: 'https://bitbucket.org/axcryptab/axcrypt-net',
+          cryptoUrl: '#/information/cryptographic-hashes-of-files',
+        })
+      "
+    />
 
     <article :class="$mq" v-for="note of releaseNotes" :key="note.heading">
       <h1 :class="$mq">{{ note.heading }}</h1>
