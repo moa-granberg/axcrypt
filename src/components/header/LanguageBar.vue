@@ -1,9 +1,10 @@
 <template>
   <li :class="'language-bar-wrapper ' + $mq">
     <img
+      :class="['flag', $mq]"
       v-if="this.$mq === 'desktop'"
       @click="toggleLanguageSelector"
-      :src="require(`@/assets/flags/${this.$i18n.locale}.png`)"
+      :src="require(`@/assets/flags/${this.$i18n.locale}.svg`)"
       alt="flag"
     />
     <div
@@ -16,7 +17,11 @@
         :key="lang"
         @click="setCurrentLocale(lang)"
       >
-        <img :src="require(`@/assets/flags/${lang}.png`)" :alt="lang" />
+        <img
+          :class="['flag', $mq]"
+          :src="require(`@/assets/flags/${lang}.svg`)"
+          :alt="lang"
+        />
       </a>
     </div>
   </li>
@@ -38,6 +43,7 @@ export default {
     },
     setCurrentLocale(locale) {
       this.$i18n.locale = locale;
+      this.showLanguageSelector = false;
     },
   },
 };
@@ -90,5 +96,9 @@ export default {
 
 .language-selector-flag {
   @include center-row;
+}
+
+.flag {
+  height: 1rem;
 }
 </style>
