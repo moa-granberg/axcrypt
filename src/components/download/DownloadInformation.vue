@@ -8,7 +8,11 @@
 
         <h2
           :class="`body-text ${$mq}`"
-          v-html="$t('DownloadInformationSubheading')"
+          v-html="
+            $t('DownloadInformationSubheading', {
+              url: '#/information/release-notes',
+            })
+          "
         ></h2>
 
         <dash-list :list="informationList" />

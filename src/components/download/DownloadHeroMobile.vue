@@ -6,7 +6,11 @@
       </h1>
       <p
         :class="`download-hero-paragraph body-text ${$mq}`"
-        v-html="$t('DownloadMobileBodyText')"
+        v-html="
+          $t('DownloadMobileBodyText', {
+            url: '#/information/get-started/mobile',
+          })
+        "
       ></p>
     </div>
 
