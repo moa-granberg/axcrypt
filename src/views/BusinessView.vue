@@ -27,7 +27,7 @@
         bodyPhraseKey="BusinessContactBodyText"
       />
 
-      <business-card :person="contactPerson" />
+      <business-card :class="['business-card', $mq]" :person="contactPerson" />
     </mq-layout>
 
     <mq-layout mq="desktop">
@@ -69,7 +69,10 @@
             bodyPhraseKey="BusinessContactBodyText"
           />
 
-          <business-card :person="contactPerson" />
+          <business-card
+            :class="['business-card', $mq]"
+            :person="contactPerson"
+          />
         </div>
       </section>
     </mq-layout>
@@ -127,6 +130,15 @@ export default {
 
   img {
     width: 400px;
+  }
+}
+
+.business-card {
+  &.mobile {
+    margin: 0 0 $margin-mobile $margin-mobile;
+  }
+  &.desktop {
+    margin: 0 0 $margin-desktop $margin-desktop;
   }
 }
 </style>
