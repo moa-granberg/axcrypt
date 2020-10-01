@@ -23,8 +23,13 @@
     </div>
     <div
       :class="`home-what-others-say-awards-testimonials-text body-text ${$mq}`"
-      v-html="$t('HomeWhatOtherSayTestimonialsText')"
-    ></div>
+    >
+      <p
+        v-html="
+          $t('HomeWhatOtherSayTestimonialsText', { url: '#/about/awards' })
+        "
+      />
+    </div>
   </section>
 </template>
 
