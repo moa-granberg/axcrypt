@@ -53,7 +53,7 @@ export default {
     max-height: 0;
 
     &.show {
-      max-height: 65vh;
+      max-height: 70vh;
       overflow-y: scroll;
     }
   }
