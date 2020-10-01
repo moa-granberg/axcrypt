@@ -28,21 +28,34 @@
     <article :class="$mq">
       <h1 :class="$mq">{{ $t('TermsOfUseBlock5Heading') }}</h1>
       <p :class="$mq">{{ $t('TermsOfUseBlock5Text1') }}</p>
-      <p :class="$mq" v-html="$t('TermsOfUseBlock5Text2')" />
+      <p
+        :class="$mq"
+        v-html="$t('TermsOfUseBlock5Text2', { url: '#/pricing' })"
+      />
       <p :class="$mq">{{ $t('TermsOfUseBlock5Text3') }}</p>
       <p :class="$mq">{{ $t('TermsOfUseBlock5Text4') }}</p>
     </article>
 
     <article :class="$mq">
       <h1 :class="$mq">{{ $t('TermsOfUseBlock6Heading') }}</h1>
-      <p :class="$mq" v-html="$t('TermsOfUseBlock6Text1')" />
+      <p
+        :class="$mq"
+        v-html="$t('TermsOfUseBlock6Text1', { url: '#/pricing' })"
+      />
       <p :class="$mq">{{ $t('TermsOfUseBlock6Text2') }}</p>
       <p :class="$mq">{{ $t('TermsOfUseBlock6Text3') }}</p>
     </article>
 
     <article :class="$mq">
       <h1 :class="$mq">{{ $t('TermsOfUseBlock7Heading') }}</h1>
-      <p :class="$mq" v-html="$t('TermsOfUseBlock7Text1')" />
+      <p
+        :class="$mq"
+        v-html="
+          $t('TermsOfUseBlock7Text1', {
+            url: 'https://www.gnu.org/licenses/gpl-3.0.en.html',
+          })
+        "
+      />
       <p :class="$mq">{{ $t('TermsOfUseBlock7Text2') }}</p>
     </article>
 
@@ -55,7 +68,12 @@
     <article :class="$mq">
       <h1 :class="$mq">{{ $t('TermsOfUseBlock9Heading') }}</h1>
       <p :class="$mq">{{ $t('TermsOfUseBlock9Text1') }}</p>
-      <p :class="$mq" v-html="$t('TermsOfUseBlock9Text2')" />
+      <p
+        :class="$mq"
+        v-html="
+          $t('TermsOfUseBlock9Text2', { url: '#/information/privacy-policy' })
+        "
+      />
     </article>
 
     <article :class="$mq">
@@ -101,7 +119,16 @@
       <p :class="$mq">{{ $t('TermsOfUseBlock17Text1') }}</p>
       <p :class="$mq">{{ $t('TermsOfUseBlock17Text2') }}</p>
       <p :class="$mq">{{ $t('TermsOfUseBlock17Text3') }}</p>
-      <p :class="$mq" v-html="$t('TermsOfUseBlock17Text4')" />
+      <p
+        :class="$mq"
+        v-html="
+          $t('TermsOfUseBlock17Text4', {
+            bitbucketUrl: 'https://bitbucket.org/axcryptab/axcrypt-net',
+            techUrl: '#/information/technical-details',
+            securityUrl: '#/information/security',
+          })
+        "
+      />
       <p :class="$mq">{{ $t('TermsOfUseBlock17Text5') }}</p>
       <p :class="$mq">{{ $t('TermsOfUseBlock17Text6') }}</p>
       <p :class="$mq">{{ $t('TermsOfUseBlock17Text7') }}</p>
