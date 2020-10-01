@@ -7,7 +7,12 @@
         </h1>
         <p :class="['body-text', $mq]">{{ $t('ResellerInfoText1') }}</p>
         <p :class="['body-text', $mq]">{{ $t('ResellerInfoText2') }}</p>
-        <p v-html="$t('ResellerInfoText3')" :class="['body-text', $mq]"></p>
+        <p
+          v-html="
+            $t('ResellerInfoText3', { url: 'mailto:reseller@axcrypt.net' })
+          "
+          :class="['body-text', $mq]"
+        ></p>
       </div>
       <img src="@/assets/view/information/reseller/resell.png" alt="resell" />
     </article>
