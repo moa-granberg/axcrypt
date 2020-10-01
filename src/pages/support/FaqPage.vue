@@ -39,7 +39,7 @@
         >
           <p
             v-for="answer of question.answer"
-            :key="answer"
+            :key="answer.text"
             v-html="
               answer.url ? $t(answer.text, { url: answer.url }) : $t(answer)
             "
