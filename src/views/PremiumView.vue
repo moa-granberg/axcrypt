@@ -86,6 +86,8 @@ export default {
 .premium-third-body-wrapper {
   display: flex;
   justify-content: space-around;
+  max-width: $max-viewport-width;
+  margin: auto;
 
   img {
     margin: 0 0 20px 0;
