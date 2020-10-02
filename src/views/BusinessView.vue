@@ -134,6 +134,10 @@ export default {
         'https://account.axcrypt.net/en/HomeBusiness/CreateSubscription',
     };
   },
+
+  mounted() {
+    window.scrollTo(0, 0);
+  },
 };
 </script>
 
