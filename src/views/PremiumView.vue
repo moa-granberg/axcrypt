@@ -79,8 +79,12 @@
       <section class="premium-third-body-wrapper">
         <product-body
           headerPhraseKey="PremiumThirdBodyHeading"
-          :body="[{ phraseKey: 'PremiumThirdBodyText' }]"
-          url="#/information/features"
+          :body="[
+            {
+              phraseKey: 'PremiumThirdBodyText',
+              url: '#/information/features',
+            },
+          ]"
         />
         <img
           src="@/assets/view/product/more-information.png"
