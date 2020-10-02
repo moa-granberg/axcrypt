@@ -24,10 +24,7 @@
         :perMonthPhraseKey="'PerMonthLabel'"
       />
 
-      <a
-        :class="['standard-button large dark-green', $mq]"
-        :href="trialButtonHref"
-      >
+      <a :class="['standard-button large dark-green', $mq]" :href="url">
         {{ $t('ProductTryItForFreeButtonLabel') }}
       </a>
     </article>
@@ -43,6 +40,7 @@ import { getPricing } from '@/utils/pricing/getPricing';
 export default {
   props: {
     product: String,
+    url: String,
   },
 
   components: {
@@ -78,18 +76,6 @@ export default {
       const priceData = await getPricing(this.product, period);
       this.price = priceData.price;
       this.currency = priceData.currency;
-    },
-  },
-
-  computed: {
-    trialButtonHref() {
-      if (this.product === 'business') {
-        return 'https://account.axcrypt.net/en/HomeBusiness/CreateSubscription';
-      } else if (this.product === 'premium') {
-        return 'https://account.axcrypt.net/en/Home/Login?purchase=true';
-      } else {
-        return null;
-      }
     },
   },
 

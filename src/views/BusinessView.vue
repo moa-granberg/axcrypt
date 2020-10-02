@@ -47,8 +47,11 @@
         />
 
         <div class="product-try-it-for-free-desktop-wrapper business">
-          <product-try-it-for-free-cta product="business" />
-          <product-try-it-for-free product="business" />
+          <product-try-it-for-free-cta
+            product="business"
+            :url="trialButtonUrl"
+          />
+          <product-try-it-for-free product="business" :url="trialButtonUrl" />
         </div>
       </section>
 
@@ -110,6 +113,9 @@ export default {
         jobTitle: 'Business Manager',
         email: 'angelique.huige@axcrypt.net',
       },
+
+      trialButtonUrl:
+        'https://account.axcrypt.net/en/HomeBusiness/CreateSubscription',
     };
   },
 };

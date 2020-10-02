@@ -8,7 +8,7 @@
       {{ $t('ProductTryItForFreeSubheading') }}
     </h2>
 
-    <a :class="['standard-button large', $mq]" :href="trialButtonHref">
+    <a :class="['standard-button large', $mq]" :href="url">
       {{ $t('ProductTryItForFreeButtonLabel') }}
     </a>
   </article>
@@ -18,18 +18,7 @@
 export default {
   props: {
     product: String,
-  },
-
-  computed: {
-    trialButtonHref() {
-      if (this.product === 'business') {
-        return 'https://account.axcrypt.net/en/HomeBusiness/CreateSubscription';
-      } else if (this.product === 'premium') {
-        return 'https://account.axcrypt.net/en/Home/Login?purchase=true';
-      } else {
-        return null;
-      }
-    },
+    url: String,
   },
 };
 </script>
