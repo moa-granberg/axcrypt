@@ -48,7 +48,6 @@ export default {
     padding: 37px 20px;
     max-width: 1130px;
     margin: auto;
-    height: 177px;
   }
 }
 
