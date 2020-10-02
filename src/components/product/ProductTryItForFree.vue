@@ -24,18 +24,17 @@
         :perMonthPhraseKey="'PerMonthLabel'"
       />
 
-      <primary-button
-        phraseKey="ProductTryItForFreeStartButtonLabel"
-        size="large"
-        color="dark-green"
-        :path="`/${product}`"
-      />
+      <a
+        :class="['standard-button large dark-green', $mq]"
+        :href="trialButtonHref"
+      >
+        {{ $t('ProductTryItForFreeButtonLabel') }}
+      </a>
     </article>
   </section>
 </template>
 
 <script>
-import PrimaryButton from '@/components/PrimaryButton';
 import ProductTryItForFreeSellingPoints from '@/components/product/ProductTryItForFreeSellingPoints';
 import AnnualMonthlySwitcher from '@/components/AnnualMonthlySwitcher';
 import PriceDisplay from '@/components/PriceDisplay';
@@ -47,7 +46,6 @@ export default {
   },
 
   components: {
-    PrimaryButton,
     ProductTryItForFreeSellingPoints,
     AnnualMonthlySwitcher,
     PriceDisplay,
@@ -80,6 +78,18 @@ export default {
       const priceData = await getPricing(this.product, period);
       this.price = priceData.price;
       this.currency = priceData.currency;
+    },
+  },
+
+  computed: {
+    trialButtonHref() {
+      if (this.product === 'business') {
+        return 'https://account.axcrypt.net/en/HomeBusiness/CreateSubscription';
+      } else if (this.product === 'premium') {
+        return 'https://account.axcrypt.net/en/Home/Login?purchase=true';
+      } else {
+        return null;
+      }
     },
   },
 

@@ -3,27 +3,33 @@
     <h1 :class="'product-try-it-for-free-cta-heading heading-jumbo ' + $mq">
       {{ $t('ProductTryItForFreeHeading') }}
     </h1>
+
     <h2 :class="'product-try-it-for-free-cta-subheading heading-medium ' + $mq">
       {{ $t('ProductTryItForFreeSubheading') }}
     </h2>
-    <primary-button
-      phraseKey="ProductTryItForFreeButtonLabel"
-      size="large"
-      :path="`/${product}`"
-    />
+
+    <a :class="['standard-button large', $mq]" :href="trialButtonHref">
+      {{ $t('ProductTryItForFreeButtonLabel') }}
+    </a>
   </article>
 </template>
 
 <script>
-import PrimaryButton from '@/components/PrimaryButton';
-
 export default {
   props: {
     product: String,
   },
 
-  components: {
-    PrimaryButton,
+  computed: {
+    trialButtonHref() {
+      if (this.product === 'business') {
+        return 'https://account.axcrypt.net/en/HomeBusiness/CreateSubscription';
+      } else if (this.product === 'premium') {
+        return 'https://account.axcrypt.net/en/Home/Login?purchase=true';
+      } else {
+        return null;
+      }
+    },
   },
 };
 </script>
