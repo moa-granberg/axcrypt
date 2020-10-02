@@ -50,7 +50,7 @@ export default {
 
   data() {
     return {
-      annualActive: false,
+      annualActive: true,
       premiumPrice: '',
       businessPrice: '',
       currency: 'SEK',
@@ -85,7 +85,7 @@ export default {
   },
 
   async created() {
-    this.setPriceData('month');
+    this.setPriceData('year');
   },
 
   mounted() {
