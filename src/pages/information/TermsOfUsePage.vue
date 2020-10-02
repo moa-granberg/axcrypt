@@ -123,7 +123,7 @@
         :class="$mq"
         v-html="
           $t('TermsOfUseBlock17Text4', {
-            bitbucketUrl: 'https://bitbucket.org/axcryptab/axcrypt-net',
+            mailUrl: 'mailto:support@axcrypt.net',
             techUrl: '#/information/technical-details',
             securityUrl: '#/information/security',
           })
