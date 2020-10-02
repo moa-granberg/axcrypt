@@ -46,5 +46,9 @@ export default {
       infoBlockList: data.infoBlockList,
     };
   },
+
+  mounted() {
+    window.scrollTo(0, 0);
+  },
 };
 </script>

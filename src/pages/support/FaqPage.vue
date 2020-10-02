@@ -60,6 +60,10 @@ export default {
       showItem: '',
     };
   },
+
+  mounted() {
+    window.scrollTo(0, 0);
+  },
 };
 </script>
 

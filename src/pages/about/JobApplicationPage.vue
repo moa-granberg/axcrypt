@@ -146,6 +146,10 @@ export default {
       this.data = validate(id, this.response, this.data);
     },
   },
+
+  mounted() {
+    window.scrollTo(0, 0);
+  },
 };
 </script>
 
