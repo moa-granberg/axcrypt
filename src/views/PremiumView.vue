@@ -31,8 +31,9 @@
 
       <product-body
         headerPhraseKey="PremiumThirdBodyHeading"
-        :body="[{ phraseKey: 'PremiumThirdBodyText' }]"
-        url="#/information/features"
+        :body="[
+          { phraseKey: 'PremiumThirdBodyText', url: '#/information/features' },
+        ]"
       />
     </mq-layout>
 
