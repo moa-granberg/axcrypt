@@ -128,7 +128,7 @@
     ]
   },
   {
-    "path": "/sign-in",
+    "path": "https://account.axcrypt.net/en/Home/Login",
     "phraseKey": "SignInLinkLabel"
   },
   {
