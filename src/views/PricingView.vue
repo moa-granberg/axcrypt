@@ -87,6 +87,10 @@ export default {
   async created() {
     this.setPriceData('month');
   },
+
+  mounted() {
+    window.scrollTo(0, 0);
+  },
 };
 </script>
 

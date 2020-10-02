@@ -42,6 +42,14 @@
   </section>
 </template>
 
+<script>
+export default {
+  mounted() {
+    window.scrollTo(0, 0);
+  },
+};
+</script>
+
 <style lang="scss" scoped>
 .no-description {
   padding-top: 0 !important;

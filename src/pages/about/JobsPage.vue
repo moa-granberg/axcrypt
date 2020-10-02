@@ -31,6 +31,10 @@ export default {
       jobPositions,
     };
   },
+
+  mounted() {
+    window.scrollTo(0, 0);
+  },
 };
 </script>
 

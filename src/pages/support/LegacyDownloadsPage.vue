@@ -44,6 +44,7 @@ export default {
     PrimaryButton,
     StandardTable,
   },
+
   data() {
     return {
       headings: [
@@ -88,6 +89,10 @@ export default {
         ],
       ],
     };
+  },
+
+  mounted() {
+    window.scrollTo(0, 0);
   },
 };
 </script>

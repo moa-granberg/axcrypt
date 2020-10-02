@@ -86,6 +86,10 @@ export default {
       this.strong = newPasswords.strong;
     },
   },
+
+  mounted() {
+    window.scrollTo(0, 0);
+  },
 };
 </script>
 

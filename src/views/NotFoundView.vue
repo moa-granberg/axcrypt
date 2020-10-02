@@ -13,6 +13,10 @@ export default {
   components: {
     PrimaryButton,
   },
+
+  mounted() {
+    window.scrollTo(0, 0);
+  },
 };
 </script>
 

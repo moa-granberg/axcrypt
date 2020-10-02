@@ -112,6 +112,10 @@ export default {
       trialButtonUrl: 'https://account.axcrypt.net/en/Home/Login?purchase=true',
     };
   },
+
+  mounted() {
+    window.scrollTo(0, 0);
+  },
 };
 </script>
 
