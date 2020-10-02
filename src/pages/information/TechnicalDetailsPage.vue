@@ -26,7 +26,7 @@
         :class="$mq"
         v-html="
           $t('TechnicalDetailsSourceCodeText', {
-            url: 'https://bitbucket.org/axcryptab/axcrypt-net',
+            url: 'mailto:support@axcrypt.net',
           })
         "
       ></p>

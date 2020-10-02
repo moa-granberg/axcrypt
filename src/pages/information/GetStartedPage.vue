@@ -1,14 +1,11 @@
 <template>
   <section>
     <div :class="`header-wrapper ${$mq}`">
-      <h2 :class="`nav-heading body-text-large ${$mq}`">
-        {{ $t('OtherPlatformsLabel') }}
-      </h2>
       <ul :class="`nav-wrapper ${$mq}`">
         <li>
           <router-link
             to="/information/get-started/windows"
-            :class="`nav-link ${$mq}`"
+            :class="`nav-link body-text-large ${$mq}`"
           >
             Windows
           </router-link>
@@ -16,7 +13,7 @@
         <li>
           <router-link
             to="/information/get-started/mac"
-            :class="`nav-link ${$mq}`"
+            :class="`nav-link body-text-large ${$mq}`"
           >
             Mac
           </router-link>
@@ -24,7 +21,7 @@
         <li>
           <router-link
             to="/information/get-started/mobile"
-            :class="`nav-link ${$mq}`"
+            :class="`nav-link body-text-large ${$mq}`"
           >
             Mobile
           </router-link>
@@ -59,12 +56,12 @@ export default {
 
   &.mobile {
     gap: 16px;
-    padding: 16px 0;
+    padding: $margin-mobile 0;
   }
 
   &.desktop {
     gap: 24px;
-    padding: $margin-top-aside-content;
+    padding: $margin-desktop 0;
   }
 }
 
@@ -88,7 +85,6 @@ export default {
 }
 
 .nav-link {
-  font-size: 0.875rem;
   text-decoration: none;
   color: $white;
 

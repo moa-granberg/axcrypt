@@ -4,8 +4,7 @@
       :class="['description', $mq]"
       v-html="
         $t('ReleaseNotesDescription', {
-          bitbucketUrl: 'https://bitbucket.org/axcryptab/axcrypt-net',
-          cryptoUrl: '#/information/cryptographic-hashes-of-files',
+          url: '#/information/cryptographic-hashes-of-files',
         })
       "
     />

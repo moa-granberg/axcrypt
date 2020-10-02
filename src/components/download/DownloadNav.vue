@@ -1,8 +1,5 @@
 <template>
   <section :class="`download-nav-wrapper ${$mq}`">
-    <h1 :class="`download-nav-heading ${$mq}`">
-      {{ $t('OtherPlatformsLabel') }}
-    </h1>
     <ul :class="`download-nav-items-wrapper ${$mq}`">
       <li
         v-for="item of platforms"
@@ -21,7 +18,7 @@
           :class="[{ active: activePlatform === item.name }, $mq]"
         />
         <p
-          class="download-nav-item-paragraph body-text"
+          class="download-nav-item-paragraph body-text-large"
           :class="[{ active: activePlatform === item.name }, $mq]"
         >
           {{ item.name }}
@@ -74,17 +71,12 @@ export default {
   @include center-column;
 
   &.mobile {
-    padding: 15px 0 0 0;
+    padding: $margin-mobile 0;
   }
 
   &.desktop {
-    padding: 20px 0 0 0;
+    padding: $margin-desktop 0;
   }
-}
-
-.download-nav-heading {
-  font-size: 0.875rem;
-  @include no-margin-padding;
 }
 
 .download-nav-items-wrapper {
@@ -98,7 +90,7 @@ export default {
   }
 
   &.desktop {
-    margin: 15px 0 20px 0;
+    margin: 20px 0;
   }
 }
 
