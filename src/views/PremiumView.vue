@@ -57,8 +57,11 @@
         />
 
         <div class="product-try-it-for-free-desktop-wrapper premium">
-          <product-try-it-for-free-cta product="premium" />
-          <product-try-it-for-free product="premium" />
+          <product-try-it-for-free-cta
+            product="premium"
+            :url="trialButtonUrl"
+          />
+          <product-try-it-for-free product="premium" :url="trialButtonUrl" />
         </div>
 
         <product-body
@@ -102,6 +105,12 @@ export default {
     ProductTryItForFree,
     ProductTryItForFreeCta,
     ProductPremiumBusinessCta,
+  },
+
+  data() {
+    return {
+      trialButtonUrl: 'https://account.axcrypt.net/en/Home/Login?purchase=true',
+    };
   },
 };
 </script>

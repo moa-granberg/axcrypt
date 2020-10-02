@@ -24,18 +24,14 @@
         :perMonthPhraseKey="'PerMonthLabel'"
       />
 
-      <primary-button
-        phraseKey="ProductTryItForFreeStartButtonLabel"
-        size="large"
-        color="dark-green"
-        :path="`/${product}`"
-      />
+      <a :class="['standard-button large dark-green', $mq]" :href="url">
+        {{ $t('ProductTryItForFreeButtonLabel') }}
+      </a>
     </article>
   </section>
 </template>
 
 <script>
-import PrimaryButton from '@/components/PrimaryButton';
 import ProductTryItForFreeSellingPoints from '@/components/product/ProductTryItForFreeSellingPoints';
 import AnnualMonthlySwitcher from '@/components/AnnualMonthlySwitcher';
 import PriceDisplay from '@/components/PriceDisplay';
@@ -44,10 +40,10 @@ import { getPricing } from '@/utils/pricing/getPricing';
 export default {
   props: {
     product: String,
+    url: String,
   },
 
   components: {
-    PrimaryButton,
     ProductTryItForFreeSellingPoints,
     AnnualMonthlySwitcher,
     PriceDisplay,
