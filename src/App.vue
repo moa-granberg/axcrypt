@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <header-comp />
-    <router-view />
+    <router-view id="content" />
     <footer-comp />
     <fixed-side-button />
   </div>
@@ -33,5 +33,15 @@ body {
   font-family: $standard-font;
   color: $gray;
   @include no-margin-padding;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+#content {
+  flex: 1;
 }
 </style>

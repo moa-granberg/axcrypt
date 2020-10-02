@@ -75,7 +75,7 @@
     </article>
 
     <article :class="$mq">
-      <h1 :class="$mq">{{ $t('BusinessLinkLabel') }}</h1>
+      <h1 :class="$mq">{{ $t('PrivacyPolicyBlock3Heading') }}</h1>
       <p :class="$mq">{{ $t('PrivacyPolicyBlock3Text1') }}</p>
       <p :class="$mq">{{ $t('PrivacyPolicyBlock3Text2') }}</p>
       <p :class="$mq">{{ $t('PrivacyPolicyBlock3Text3') }}</p>

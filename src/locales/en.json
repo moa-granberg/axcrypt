@@ -755,5 +755,6 @@
   "ReqruitmentLabel": "Requritment",
   "DownloadAxcrypt2LinkLabel": "Download AxCrypt 2",
   "JobPositionLinkLabel": "Job Position",
-  "JobApplicationLinkLabel": "Job Application"
+  "JobApplicationLinkLabel": "Job Application",
+  "SignUpLinkLabel": "Sign up"
 }

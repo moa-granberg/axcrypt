@@ -8,7 +8,7 @@
     "phraseKey": "PricingLinkLabel"
   },
   {
-    "path": "/information/get-started/:platform",
+    "path": "/information/get-started/windows",
     "phraseKey": "GetStartedLinkLabel"
   },
   {
@@ -28,7 +28,7 @@
     "phraseKey": "BlogLinkLabel"
   },
   {
-    "path": "/about",
+    "path": "/about/axcrypt",
     "phraseKey": "AboutUsLinkLabel"
   },
   {
@@ -42,9 +42,5 @@
   {
     "path": "/support/password-generator",
     "phraseKey": "PasswordGeneratorLinkLabel"
-  },
-  {
-    "path": "/sign-in",
-    "phraseKey": "MyAxCryptIDLinkLabel"
   }
 ]
