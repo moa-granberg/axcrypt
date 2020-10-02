@@ -10,7 +10,11 @@
       </h3>
     </div>
 
-    <product-try-it-for-free-cta :product="product" v-if="$mq === 'mobile'" />
+    <product-try-it-for-free-cta
+      :product="product"
+      :url="url"
+      v-if="$mq === 'mobile'"
+    />
     <div v-else></div>
   </section>
 </template>
@@ -21,6 +25,7 @@ import ProductTryItForFreeCta from './ProductTryItForFreeCta';
 export default {
   props: {
     product: String,
+    url: String,
   },
 
   components: {

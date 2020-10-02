@@ -1,7 +1,7 @@
 <template>
   <main>
     <mq-layout mq="mobile">
-      <product-hero product="business" />
+      <product-hero product="business" :url="trialButtonUrl" />
 
       <product-body
         headerPhraseKey="BusinessFirstBodyHeading"
@@ -13,7 +13,7 @@
         ]"
       />
 
-      <product-try-it-for-free product="business" />
+      <product-try-it-for-free product="business" :url="trialButtonUrl" />
 
       <feature-list
         headingPhraseKey="WhyAxCryptBusiness"
