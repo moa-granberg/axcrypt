@@ -6,7 +6,6 @@ import PricingView from './PricingView';
 import InformationView from './InformationView';
 import SupportView from './SupportView';
 import AboutView from './AboutView';
-import SignInView from './SignInView';
 import NotFoundView from './NotFoundView';
 
 export {
@@ -18,6 +17,5 @@ export {
   InformationView,
   SupportView,
   AboutView,
-  SignInView,
   NotFoundView,
 };

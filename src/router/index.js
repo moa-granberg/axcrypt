@@ -295,14 +295,6 @@ const routes = [
     ],
   },
   {
-    path: '/sign-in',
-    name: 'SignInView',
-    component: Views.SignInView,
-    meta: {
-      title: 'Sign In | ',
-    },
-  },
-  {
     path: '/404',
     name: 'NotFound',
     component: Views.NotFoundView,
