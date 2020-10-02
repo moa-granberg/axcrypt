@@ -130,5 +130,9 @@
   {
     "path": "/sign-in",
     "phraseKey": "SignInLinkLabel"
+  },
+  {
+    "path": "https://account.axcrypt.net/en/Home/Register",
+    "phraseKey": "SignUpLinkLabel"
   }
 ]
