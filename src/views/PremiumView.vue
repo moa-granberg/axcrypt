@@ -1,14 +1,14 @@
 <template>
   <main>
     <mq-layout mq="mobile">
-      <product-hero product="premium" />
+      <product-hero product="premium" :url="trialButtonUrl" />
 
       <product-body
         headerPhraseKey="PremiumFirstBodyHeading"
         :body="[
           {
             phraseKey: 'PremiumFirstBodyText1',
-            url: 'https://account.axcrypt.net/en/Home/Purchase',
+            url: trialButtonUrl,
           },
           { phraseKey: 'PremiumFirstBodyText2' },
           { phraseKey: 'PremiumFirstBodyText3' },
@@ -17,7 +17,7 @@
         ]"
       />
 
-      <product-try-it-for-free product="premium" />
+      <product-try-it-for-free product="premium" :url="trialButtonUrl" />
 
       <product-body
         headerPhraseKey="PremiumSecondBodyHeading"
@@ -54,7 +54,7 @@
             { phraseKey: 'PremiumFirstBodyText4' },
             { phraseKey: 'PremiumFirstBodyText5' },
           ]"
-          url="https://account.axcrypt.net/en/Home/Purchase"
+          :url="trialButtonUrl"
         />
 
         <div class="product-try-it-for-free-desktop-wrapper premium">
