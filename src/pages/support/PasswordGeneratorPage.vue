@@ -115,7 +115,7 @@ export default {
   &.desktop {
     @include center-row;
     justify-content: space-around;
-    padding: 36px;
+    padding: 36px 0;
   }
 }
 
