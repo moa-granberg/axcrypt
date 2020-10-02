@@ -3,19 +3,14 @@
     <h1 :class="`product-business-big-team-cta-heading heading-large ${$mq}`">
       {{ $t('BusinessBigTeamCtaHeading') }}
     </h1>
-    <primary-button phraseKey="ContactUsHeading" size="small" path="/about" />
+    <a
+      :class="['standard-button small green', $mq]"
+      href="mailto:angelique.huighe@axcrypt.net"
+    >
+      {{ $t('ContactUsHeading') }}
+    </a>
   </section>
 </template>
-
-<script>
-import PrimaryButton from '@/components/PrimaryButton';
-
-export default {
-  components: {
-    PrimaryButton,
-  },
-};
-</script>
 
 <style lang="scss" scoped>
 @import '@/scss/variables.scss';

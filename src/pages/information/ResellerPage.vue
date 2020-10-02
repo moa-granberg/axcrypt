@@ -49,7 +49,7 @@
         :class="['reseller-benefits-button', $mq]"
         phraseKey="ApplyNowLabel"
         size="small"
-        path="/information/resellers-application"
+        path="/information/reseller-application"
       />
     </article>
   </section>
