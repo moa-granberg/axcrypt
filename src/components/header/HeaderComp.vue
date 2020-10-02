@@ -56,11 +56,10 @@ export default {
 }
 
 .header {
-  &.mobile {
-    position: relative;
-  }
+  position: relative;
 
   &.desktop {
+    z-index: 2;
     border-bottom: 1px solid $light-gray;
   }
 }
