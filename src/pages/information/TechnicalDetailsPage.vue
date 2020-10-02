@@ -7,12 +7,12 @@
     <article :class="$mq">
       <h1 :class="$mq">{{ $t('TechnicalDetailsV2PDFLinkLabel') }} (PDF)</h1>
       <a :class="$mq" href="https://www.axcrypt.net/downloads/3432/">{{
-        $t('TechnicalDetailsV1PDFLinkLabel')
+        $t('TechnicalDetailsV2PDFLinkLabel')
       }}</a>
     </article>
 
     <article :class="$mq">
-      <h1 :class="$mq">{{ $t('TechnicalDetailsV2PDFLinkLabel') }} (PDF)</h1>
+      <h1 :class="$mq">{{ $t('TechnicalDetailsV1PDFLinkLabel') }} (PDF)</h1>
       <a :class="$mq" href="https://www.axcrypt.net/downloads/3871/">{{
         $t('TechnicalDetailsV1PDFLinkLabel')
       }}</a>
