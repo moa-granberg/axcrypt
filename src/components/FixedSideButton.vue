@@ -1,5 +1,5 @@
 <template>
-  <router-link to="/premium" :class="'fixed-side-try-for-free-button ' + $mq">
+  <router-link to="/pricing" :class="'fixed-side-try-for-free-button ' + $mq">
     {{ $t('TryForFreeButtonLabel') }}
   </router-link>
 </template>
