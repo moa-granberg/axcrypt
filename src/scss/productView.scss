@@ -22,9 +22,7 @@
 
 .product-try-it-for-free-desktop-wrapper {
   grid-area: aside;
-  position: relative;
-  top: -225px;
-  margin: 0 0 -200px 0;
+  margin: -220px 0 $margin-desktop 0;
   width: 450px;
 
   &.premium {
