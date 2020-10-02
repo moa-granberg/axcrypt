@@ -420,7 +420,7 @@
   "TechnicalDetailsV2PDFLinkLabel": "AxCrypt Version 2 Algorithms and File Format",
   "TechnicalDetailsV1PDFLinkLabel": "AxCrypt Version 1 Algorithms and File Format",
   "TechnicalDetailsSourceCodeHeading": "Source code",
-  "TechnicalDetailsSourceCodeText": "The complete source code for the core libraries and the Windows client are found at <a href={url}>https://bitbucket.org/axcryptab/axcrypt-net.</a>",
+  "TechnicalDetailsSourceCodeText": "The complete source code for the core libraries and the Windows client used to be in a mercurial repository in Bitbucket. But as of summer 2020 Bitbucket discountinued their mercurial support and we’re actively working on finding a alternative solution to make the source code easily available. For now, please contact <a href={url}>support@axcrypt.net</a> and we will supply the source code.",
   "TechnicalDetailsStoredOnServerHeading": "What is stored on the server?",
   "TechnicalDetailsStoredOnServerText1": "When an account is created, we store some basic information.",
   "TechnicalDetailsStoredOnServerText2": "If the password manager is used, we also store an AES-256 XML-encrypted file with the password records, encrypted with the sign in password.",
