@@ -28,7 +28,7 @@
       phraseKey="GetStartedLinkLabel"
       size="large"
       color="dark-green"
-      path="/get-started"
+      path="/information/get-started/windows"
     />
   </section>
 </template>
