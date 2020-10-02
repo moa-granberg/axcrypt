@@ -6,6 +6,7 @@
       @mouseleave="handleHideSubmenuDesktop"
     >
       <router-link
+        v-if="link.path[0] === '/'"
         @click.native="handleHideMenuMobile(link.children)"
         :to="link.children ? link.children[0].path : link.path"
         class="header-menu-item-link"
@@ -13,6 +14,10 @@
       >
         {{ $t(link.phraseKey) }}
       </router-link>
+      <a v-else :href="link.path" :class="['header-menu-item-link', $mq]">
+        {{ $t(link.phraseKey) }}
+      </a>
+
       <div
         class="header-submenu-drop-down-btn"
         v-if="$mq === 'mobile' && link.children"
