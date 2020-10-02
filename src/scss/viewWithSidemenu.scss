@@ -11,7 +11,7 @@
     background-repeat: no-repeat;
     color: $white;
     position: relative;
-    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: $standard-text-shadow;
 
     &.mobile {
       background-image: url('~@/assets/hero-imgs/people-mobile.png');
