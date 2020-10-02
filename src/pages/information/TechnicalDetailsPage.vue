@@ -22,7 +22,14 @@
       <h1 :class="$mq">
         {{ $t('TechnicalDetailsSourceCodeHeading') }}
       </h1>
-      <p :class="$mq" v-html="$t('TechnicalDetailsSourceCodeText')"></p>
+      <p
+        :class="$mq"
+        v-html="
+          $t('TechnicalDetailsSourceCodeText', {
+            url: 'https://bitbucket.org/axcryptab/axcrypt-net',
+          })
+        "
+      ></p>
     </article>
 
     <article :class="$mq">
@@ -46,7 +53,14 @@
       <p :class="$mq">
         {{ $t('TechnicalDetailsStoredOnServerText2') }}
       </p>
-      <p :class="$mq" v-html="$t('TechnicalDetailsStoredOnServerText3')"></p>
+      <p
+        :class="$mq"
+        v-html="
+          $t('TechnicalDetailsStoredOnServerText3', {
+            url: '#/information/privacy-policy/',
+          })
+        "
+      ></p>
     </article>
   </section>
 </template>

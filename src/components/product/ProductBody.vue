@@ -3,10 +3,15 @@
     <h1 :class="'product-body-header heading-medium-green ' + $mq">
       {{ $t(headerPhraseKey) }}
     </h1>
-    <div
-      :class="'product-body-text body-text ' + $mq"
-      v-html="$t(bodyPhraseKey)"
-    ></div>
+    <div :class="'product-body-text body-text ' + $mq">
+      <p
+        v-for="item of body"
+        :key="item.phraseKey"
+        v-html="
+          item.url ? $t(item.phraseKey, { url: item.url }) : $t(item.phraseKey)
+        "
+      />
+    </div>
   </section>
 </template>
 
@@ -14,7 +19,7 @@
 export default {
   props: {
     headerPhraseKey: String,
-    bodyPhraseKey: String,
+    body: Array, //obj with string & ?url
   },
 };
 </script>

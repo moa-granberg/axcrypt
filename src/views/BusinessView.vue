@@ -5,7 +5,12 @@
 
       <product-body
         headerPhraseKey="BusinessFirstBodyHeading"
-        bodyPhraseKey="BusinessFirstBodyText"
+        :body="[
+          { phraseKey: 'BusinessFirstBodyText1' },
+          { phraseKey: 'BusinessFirstBodyText2' },
+          { phraseKey: 'BusinessFirstBodyText3' },
+          { phraseKey: 'BusinessFirstBodyText4' },
+        ]"
       />
 
       <product-try-it-for-free product="business" />
@@ -19,12 +24,15 @@
 
       <product-body
         headerPhraseKey="BusinessAfterTrialHeading"
-        bodyPhraseKey="BusinessAfterTrialBodyText"
+        :body="[
+          { phraseKey: 'BusinessAfterTrialBodyText1' },
+          { phraseKey: 'BusinessAfterTrialBodyText2' },
+        ]"
       />
 
       <product-body
         headerPhraseKey="ContactHeading"
-        bodyPhraseKey="BusinessContactBodyText"
+        :body="[{ phraseKey: 'BusinessContactBodyText' }]"
       />
 
       <business-card :class="['business-card', $mq]" :person="contactPerson" />
@@ -37,7 +45,12 @@
         <product-body
           class="main-grid-body1"
           headerPhraseKey="BusinessFirstBodyHeading"
-          bodyPhraseKey="BusinessFirstBodyText"
+          :body="[
+            { phraseKey: 'BusinessFirstBodyText1' },
+            { phraseKey: 'BusinessFirstBodyText2' },
+            { phraseKey: 'BusinessFirstBodyText3' },
+            { phraseKey: 'BusinessFirstBodyText4' },
+          ]"
         />
 
         <feature-list
@@ -57,8 +70,11 @@
       <section class="business-after-trial-wrapper">
         <product-body
           class="grid-body2"
-          headerPhraseKey="PremiumSecondBodyHeading"
-          bodyPhraseKey="PremiumSecondBodyText"
+          headerPhraseKey="BusinessAfterTrialHeading"
+          :body="[
+            { phraseKey: 'BusinessAfterTrialBodyText1' },
+            { phraseKey: 'BusinessAfterTrialBodyText2' },
+          ]"
         />
         <img src="@/assets/view/product/what-happens-1.png" alt="" />
         <img src="@/assets/view/product/what-happens-2.png" alt="" />
@@ -66,7 +82,7 @@
         <div class="business-contact-wrapper">
           <product-body
             headerPhraseKey="ContactHeading"
-            bodyPhraseKey="BusinessContactBodyText"
+            :body="[{ phraseKey: 'BusinessContactBodyText' }]"
           />
 
           <business-card

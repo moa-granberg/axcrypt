@@ -36,7 +36,15 @@
 
     <article :class="$mq">
       <h1 :class="$mq">{{ $t('GdprBlock7Heading') }}</h1>
-      <p :class="$mq" v-html="$t('GdprBlock7Text1')" />
+      <p
+        :class="$mq"
+        v-html="
+          $t('GdprBlock7Text1', {
+            url:
+              'https://www.vpnmentor.com/blog/report-only-34-percent-of-websites-in-the-eu-are-ready-for-gdpr/',
+          })
+        "
+      />
       <p :class="$mq">{{ $t('GdprBlock7Text2') }}</p>
     </article>
 

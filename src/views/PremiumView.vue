@@ -5,21 +5,34 @@
 
       <product-body
         headerPhraseKey="PremiumFirstBodyHeading"
-        bodyPhraseKey="PremiumFirstBodyText"
+        :body="[
+          {
+            phraseKey: 'PremiumFirstBodyText1',
+            url: 'https://account.axcrypt.net/en/Home/Purchase',
+          },
+          { phraseKey: 'PremiumFirstBodyText2' },
+          { phraseKey: 'PremiumFirstBodyText3' },
+          { phraseKey: 'PremiumFirstBodyText4' },
+          { phraseKey: 'PremiumFirstBodyText5' },
+        ]"
       />
 
       <product-try-it-for-free product="premium" />
 
       <product-body
         headerPhraseKey="PremiumSecondBodyHeading"
-        bodyPhraseKey="PremiumSecondBodyText"
+        :body="[
+          { phraseKey: 'PremiumSecondBodyText1' },
+          { phraseKey: 'PremiumSecondBodyText2' },
+        ]"
       />
 
       <product-premium-business-cta />
 
       <product-body
         headerPhraseKey="PremiumThirdBodyHeading"
-        bodyPhraseKey="PremiumThirdBodyText"
+        :body="[{ phraseKey: 'PremiumThirdBodyText' }]"
+        url="#/information/features"
       />
     </mq-layout>
 
@@ -30,7 +43,17 @@
         <product-body
           class="main-grid-body1"
           headerPhraseKey="PremiumFirstBodyHeading"
-          bodyPhraseKey="PremiumFirstBodyText"
+          :body="[
+            {
+              phraseKey: 'PremiumFirstBodyText1',
+              url: 'https://account.axcrypt.net/en/Home/Purchase',
+            },
+            { phraseKey: 'PremiumFirstBodyText2' },
+            { phraseKey: 'PremiumFirstBodyText3' },
+            { phraseKey: 'PremiumFirstBodyText4' },
+            { phraseKey: 'PremiumFirstBodyText5' },
+          ]"
+          url="https://account.axcrypt.net/en/Home/Purchase"
         />
 
         <div class="product-try-it-for-free-desktop-wrapper premium">
@@ -41,7 +64,10 @@
         <product-body
           class="main-grid-body2"
           headerPhraseKey="PremiumSecondBodyHeading"
-          bodyPhraseKey="PremiumSecondBodyText"
+          :body="[
+            { phraseKey: 'PremiumSecondBodyText1' },
+            { phraseKey: 'PremiumSecondBodyText2' },
+          ]"
         />
       </section>
 
@@ -50,7 +76,8 @@
       <section class="premium-third-body-wrapper">
         <product-body
           headerPhraseKey="PremiumThirdBodyHeading"
-          bodyPhraseKey="PremiumThirdBodyText"
+          :body="[{ phraseKey: 'PremiumThirdBodyText' }]"
+          url="#/information/features"
         />
         <img
           src="@/assets/view/product/more-information.png"

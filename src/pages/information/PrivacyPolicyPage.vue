@@ -3,7 +3,16 @@
     <p :class="['description', $mq]">{{ $t('PrivacyPolicyDescription') }}</p>
 
     <article :class="$mq">
-      <p :class="$mq" v-html="$t('PrivacyPolicyBlock1Text1')" />
+      <p
+        :class="$mq"
+        v-html="
+          $t('PrivacyPolicyBlock1Text1', {
+            externLink:
+              'https://ec.europa.eu/commission/priorities/justice-and-fundamental-rights/data-protection/2018-reform-eu-data-protection-rules_en',
+            internLink: '#/information/gdpr',
+          })
+        "
+      />
       <p :class="$mq">{{ $t('PrivacyPolicyBlock1Text2') }}</p>
       <p :class="$mq">{{ $t('PrivacyPolicyBlock1Text3') }}</p>
       <p :class="$mq">{{ $t('PrivacyPolicyBlock1Text4') }}</p>
@@ -75,8 +84,18 @@
 
     <article :class="$mq">
       <h1 :class="$mq">{{ $t('PrivacyPolicyBlock4Heading') }}</h1>
-      <p :class="$mq" v-html="$t('PrivacyPolicyBlock4Text1')" />
-      <p :class="$mq" v-html="$t('PrivacyPolicyBlock4Text2')" />
+      <p
+        :class="$mq"
+        v-html="
+          $t('PrivacyPolicyBlock4Text1', { url: 'mailto:support@axcrypt.net.' })
+        "
+      />
+      <p
+        :class="$mq"
+        v-html="
+          $t('PrivacyPolicyBlock4Text2', { url: 'mailto:business@axcrypt.net' })
+        "
+      />
     </article>
   </section>
 </template>
