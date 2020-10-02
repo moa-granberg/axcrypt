@@ -10,6 +10,8 @@
     background-size: cover;
     background-repeat: no-repeat;
     color: $white;
+    position: relative;
+    box-shadow: $standard-text-shadow;
 
     &.mobile {
       background-image: url('~@/assets/hero-imgs/people-mobile.png');

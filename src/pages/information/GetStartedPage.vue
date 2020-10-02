@@ -53,6 +53,7 @@ export default {
 .header-wrapper {
   @include center-column;
   background-color: rgba($black, 0.9);
+  box-shadow: $standard-text-shadow;
 
   &.mobile {
     gap: 16px;
