@@ -13,6 +13,14 @@
           {{ $t(link.phraseKey) }}
         </router-link>
       </li>
+      <li :class="'footer-sitemap-item ' + $mq">
+        <a
+          href="https://account.axcrypt.net/en/Home/Login"
+          :class="'footer-sitemap-item-link ' + $mq"
+        >
+          {{ $t('MyAxCryptIDLinkLabel') }}</a
+        >
+      </li>
     </ul>
   </section>
 </template>
