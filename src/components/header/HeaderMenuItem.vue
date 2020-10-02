@@ -7,13 +7,9 @@
     >
       <router-link
         @click.native="handleHideMenuMobile(link.children)"
-        :to="link.path"
+        :to="link.children ? link.children[0].path : link.path"
         class="header-menu-item-link"
-        :class="[
-          { 'router-link-active': subIsActive(link.children) },
-          { 'router-link-disabled': link.children },
-          $mq,
-        ]"
+        :class="[{ 'router-link-active': subIsActive(link.children) }, $mq]"
       >
         {{ $t(link.phraseKey) }}
       </router-link>
