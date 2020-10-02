@@ -10,7 +10,10 @@
         :key="link.path"
         :class="`side-menu-link-item body-text ${$mq}`"
       >
-        <router-link :to="link.path">
+        <router-link
+          :to="link.path"
+          :class="[{ active: getActiveWhenSublinks(link) }]"
+        >
           {{ $t(link.phraseKey) }}
         </router-link>
       </li>
@@ -23,6 +26,16 @@ export default {
   props: {
     headingPhraseKey: String,
     linkList: Array, // { path: String, phraseKey: String }
+  },
+
+  methods: {
+    getActiveWhenSublinks(link) {
+      return (
+        link.path === '/information/get-started/windows' &&
+        (this.$route.path === '/information/get-started/mac' ||
+          this.$route.path === '/information/get-started/mobile')
+      );
+    },
   },
 };
 </script>
@@ -57,7 +70,8 @@ export default {
     color: $gray;
     font-weight: 400;
 
-    &.router-link-active {
+    &.router-link-active,
+    &.active {
       font-weight: 600;
       color: $green;
     }
