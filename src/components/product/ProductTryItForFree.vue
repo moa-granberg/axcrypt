@@ -34,7 +34,6 @@
 import ProductTryItForFreeSellingPoints from '@/components/product/ProductTryItForFreeSellingPoints';
 import AnnualMonthlySwitcher from '@/components/AnnualMonthlySwitcher';
 import PriceDisplay from '@/components/PriceDisplay';
-import { getPricing } from '@/utils/pricing/getPricing';
 
 export default {
   props: {
@@ -51,8 +50,6 @@ export default {
   data() {
     return {
       annualActive: true,
-      price: '',
-      currency: 'SEK',
     };
   },
 
@@ -60,26 +57,14 @@ export default {
     handleClickMonthly() {
       if (this.annualActive) {
         this.annualActive = false;
-        this.setPriceData('month');
       }
     },
 
     handleClickYearly() {
       if (!this.annualActive) {
         this.annualActive = true;
-        this.setPriceData('year');
       }
     },
-
-    async setPriceData(period) {
-      const priceData = await getPricing(this.product, period);
-      this.price = priceData.price;
-      this.currency = priceData.currency;
-    },
-  },
-
-  async created() {
-    this.setPriceData('year');
   },
 };
 </script>

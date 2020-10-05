@@ -67,8 +67,6 @@ export default {
 
   props: {
     annualActive: Boolean,
-    price: String,
-    currency: String,
     product: {
       productName: String,
       headingPhraseKey: String,
