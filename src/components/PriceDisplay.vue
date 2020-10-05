@@ -49,18 +49,27 @@ export default {
   },
 
   methods: {
+    async getPriceData(period) {
+      return this.product === 'business'
+        ? await getPricing('business', period)
+        : await getPricing('premium', period);
+    },
+
     async setPriceData(period) {
-      const priceData =
-        this.product === 'business'
-          ? await getPricing('business', period)
-          : await getPricing('premium', period);
+      const priceData = await this.getPriceData(period);
       this.price = this.product === 'free' ? '0' : priceData.price;
       this.currency = priceData.currency;
+    },
+
+    async setComparisonPrice() {
+      const priceData = await this.getPriceData('month');
+      this.comparisonPrice = this.product === 'free' ? '0' : priceData.price;
     },
   },
 
   created() {
     this.setPriceData(this.annualActive ? 'year' : 'month');
+    this.setComparisonPrice();
   },
 
   updated() {
