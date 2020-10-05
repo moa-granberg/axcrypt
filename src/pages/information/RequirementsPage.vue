@@ -4,7 +4,11 @@
       {{ $t('RequirementsTableDescription') }}
     </p>
 
-    <standard-table :headings="headings" :itemList="itemList" />
+    <standard-table
+      :headings="headings"
+      :itemList="itemList"
+      :class="['requirements-table', $mq]"
+    />
 
     <article :class="['requirements-note-wrapper', $mq]">
       <p :class="['body-text', $mq]">
@@ -31,20 +35,16 @@ export default {
 
   data() {
     return {
-      headings: [
-        `${this.$t('OperatingSystemsLabel')}`,
-        'AxCrypt 1.x',
-        'AxCrypt 2.x',
-      ],
+      headings: [`${this.$t('OperatingSystemsLabel')}`, 'AxCrypt 2.x'],
       itemList: [
-        [`${this.$t('Windows95-NTLabel')}`, true, false],
-        [`${this.$t('Windows2000-XPLabel')}`, true, false],
-        [`${this.$t('Windows2008-10Label')}`, true, true],
-        ['Mac OS X', false, true],
-        ['Linux', false, false],
-        ['iOS', false, true],
-        ['Android', false, true],
-        ['Windows Phone', false, false],
+        [`${this.$t('Windows95-NTLabel')}`, false],
+        [`${this.$t('Windows2000-XPLabel')}`, false],
+        [`${this.$t('Windows2008-10Label')}`, true],
+        ['Mac OS X', true],
+        ['Linux', false],
+        ['iOS', true],
+        ['Android', true],
+        ['Windows Phone', false],
       ],
     };
   },
@@ -55,7 +55,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import '@/scss/variables.scss';
 
 .requirements-wrapper {
@@ -73,6 +73,10 @@ export default {
 
 .requirements-table-text {
   @include no-margin-padding;
+}
+
+.requirements-table > li {
+  grid: 1fr / 3fr 1fr !important;
 }
 
 .requirements-note-wrapper {
