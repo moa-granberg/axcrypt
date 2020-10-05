@@ -1,5 +1,8 @@
 <template>
   <div class="price-display-price-wrapper">
+    <p :class="[{ visible: comparisonPriceVisible }, 'price-comparison', $mq]">
+      {{ comparisonPrice }} {{ currency }}
+    </p>
     <h1
       v-if="price"
       class="price-display-price"
@@ -46,6 +49,10 @@ export default {
         ? 'PerMonthPerUserLabel'
         : '';
     },
+
+    comparisonPriceVisible() {
+      return this.annualActive && this.product !== 'free';
+    },
   },
 
   methods: {
@@ -82,11 +89,23 @@ export default {
 @import '@/scss/variables.scss';
 
 .price-display-price-wrapper {
-  display: grid;
-  place-items: center;
+  @include center-column;
+}
+
+.price-comparison {
+  margin-bottom: 0;
+  font-weight: 600;
+  align-self: flex-end;
+  text-decoration: line-through;
+  opacity: 0;
+
+  &.visible {
+    opacity: 1;
+  }
 }
 
 .price-display-price {
+  @include no-margin-padding;
   font-size: 3rem;
 
   span {
@@ -95,14 +114,6 @@ export default {
 
   &.annual {
     color: #cb544c;
-  }
-
-  &.mobile {
-    margin: $margin-mobile 0 0 0;
-  }
-
-  &.desktop {
-    margin: 30px 0 0 0;
   }
 }
 
