@@ -22,7 +22,6 @@
         phraseKey="DownloadInformationButtonLabel"
         path="/information/release-notes"
         size="small"
-        color="dark-green"
       />
 
       <div :class="`download-information-img-wrapper ${$mq}`">

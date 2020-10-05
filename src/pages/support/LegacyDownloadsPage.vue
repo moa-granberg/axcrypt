@@ -8,7 +8,6 @@
     <primary-button
       :class="['legacy-downloads-button', $mq]"
       size="small"
-      color="dark-green"
       phraseKey="DownloadAxcrypt2LinkLabel"
       path="/download"
     />
