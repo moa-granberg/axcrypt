@@ -1,8 +1,8 @@
 <template>
   <section :class="'footer-contact-wrapper ' + $mq">
-    <h3 :class="'footer-contact-heading body-text-large ' + $mq">
+    <h2 :class="'footer-contact-heading body-text-large ' + $mq">
       {{ $t('ContactUsHeading') }}
-    </h3>
+    </h2>
     <p
       :class="'footer-contact-paragraph ' + $mq"
       v-html="
