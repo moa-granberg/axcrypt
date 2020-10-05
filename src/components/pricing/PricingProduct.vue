@@ -16,8 +16,7 @@
     <div :class="`pricing-product-body ${$mq}`">
       <price-display
         :annualActive="annualActive"
-        :price="price"
-        :currency="currency"
+        :product="product.productName"
         :perMonthPhraseKey="perMonth"
       />
 

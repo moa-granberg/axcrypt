@@ -19,8 +19,7 @@
 
       <price-display
         :annualActive="annualActive"
-        :price="price"
-        :currency="currency"
+        :product="product"
         :perMonthPhraseKey="'PerMonthLabel'"
       />
 

@@ -22,12 +22,40 @@
 </template>
 
 <script>
+import { getPricing } from '@/utils/pricing/getPricing';
+
 export default {
   props: {
     annualActive: Boolean,
-    price: String,
-    currency: String,
     perMonthPhraseKey: String,
+    product: String,
+  },
+
+  data() {
+    return {
+      price: null,
+      comparisonPrice: null,
+      currency: null,
+    };
+  },
+
+  methods: {
+    async setPriceData(period) {
+      const priceData =
+        this.product === 'business'
+          ? await getPricing('business', period)
+          : await getPricing('premium', period);
+      this.price = this.product === 'free' ? '0' : priceData.price;
+      this.currency = priceData.currency;
+    },
+  },
+
+  created() {
+    this.setPriceData(this.annualActive ? 'year' : 'month');
+  },
+
+  updated() {
+    this.setPriceData(this.annualActive ? 'year' : 'month');
   },
 };
 </script>
