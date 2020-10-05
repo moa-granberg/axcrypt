@@ -16,7 +16,7 @@
     />
 
     <p :class="`price-display-per-month body-text-large ${$mq}`">
-      {{ $t(perMonthPhraseKey) }}
+      {{ $t(perMonth) }}
     </p>
   </div>
 </template>
@@ -27,7 +27,6 @@ import { getPricing } from '@/utils/pricing/getPricing';
 export default {
   props: {
     annualActive: Boolean,
-    perMonthPhraseKey: String,
     product: String,
   },
 
@@ -37,6 +36,16 @@ export default {
       comparisonPrice: null,
       currency: null,
     };
+  },
+
+  computed: {
+    perMonth() {
+      return this.product === 'premium'
+        ? 'PerMonthLabel'
+        : this.product === 'business'
+        ? 'PerMonthPerUserLabel'
+        : '';
+    },
   },
 
   methods: {

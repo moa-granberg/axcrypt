@@ -17,11 +17,7 @@
         @switchYearly="handleClickYearly"
       />
 
-      <price-display
-        :annualActive="annualActive"
-        :product="product"
-        :perMonthPhraseKey="'PerMonthLabel'"
-      />
+      <price-display :annualActive="annualActive" :product="product" />
 
       <a :class="['standard-button large dark-green', $mq]" :href="url">
         {{ $t('ProductTryItForFreeButtonLabel') }}

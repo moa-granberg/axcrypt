@@ -17,7 +17,6 @@
       <price-display
         :annualActive="annualActive"
         :product="product.productName"
-        :perMonthPhraseKey="perMonth"
       />
 
       <a
@@ -83,16 +82,6 @@ export default {
     return {
       showFeatureList: false,
     };
-  },
-
-  computed: {
-    perMonth() {
-      return this.product.productName === 'premium'
-        ? 'PerMonthLabel'
-        : this.product.productName === 'business'
-        ? 'PerMonthPerUserLabel'
-        : '';
-    },
   },
 };
 </script>
