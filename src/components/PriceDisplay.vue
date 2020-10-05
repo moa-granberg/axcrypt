@@ -1,5 +1,8 @@
 <template>
   <div class="price-display-price-wrapper">
+    <p :class="[{ visible: comparisonPriceVisible }, 'price-comparison', $mq]">
+      {{ comparisonPrice }} {{ currency }}
+    </p>
     <h1
       v-if="price"
       class="price-display-price"
@@ -16,18 +19,68 @@
     />
 
     <p :class="`price-display-per-month body-text-large ${$mq}`">
-      {{ $t(perMonthPhraseKey) }}
+      {{ $t(perMonth) }}
     </p>
   </div>
 </template>
 
 <script>
+import { getPricing } from '@/utils/pricing/getPricing';
+
 export default {
   props: {
     annualActive: Boolean,
-    price: String,
-    currency: String,
-    perMonthPhraseKey: String,
+    product: String,
+  },
+
+  data() {
+    return {
+      price: null,
+      comparisonPrice: null,
+      currency: null,
+    };
+  },
+
+  computed: {
+    perMonth() {
+      return this.product === 'premium'
+        ? 'PerMonthLabel'
+        : this.product === 'business'
+        ? 'PerMonthPerUserLabel'
+        : '';
+    },
+
+    comparisonPriceVisible() {
+      return this.annualActive && this.product !== 'free';
+    },
+  },
+
+  methods: {
+    async getPriceData(period) {
+      return this.product === 'business'
+        ? await getPricing('business', period)
+        : await getPricing('premium', period);
+    },
+
+    async setPriceData(period) {
+      const priceData = await this.getPriceData(period);
+      this.price = this.product === 'free' ? '0' : priceData.price;
+      this.currency = priceData.currency;
+    },
+
+    async setComparisonPrice() {
+      const priceData = await this.getPriceData('month');
+      this.comparisonPrice = this.product === 'free' ? '0' : priceData.price;
+    },
+  },
+
+  created() {
+    this.setPriceData(this.annualActive ? 'year' : 'month');
+    this.setComparisonPrice();
+  },
+
+  updated() {
+    this.setPriceData(this.annualActive ? 'year' : 'month');
   },
 };
 </script>
@@ -36,11 +89,23 @@ export default {
 @import '@/scss/variables.scss';
 
 .price-display-price-wrapper {
-  display: grid;
-  place-items: center;
+  @include center-column;
+}
+
+.price-comparison {
+  margin-bottom: 0;
+  font-weight: 600;
+  align-self: flex-end;
+  text-decoration: line-through;
+  opacity: 0;
+
+  &.visible {
+    opacity: 1;
+  }
 }
 
 .price-display-price {
+  @include no-margin-padding;
   font-size: 3rem;
 
   span {
@@ -49,14 +114,6 @@ export default {
 
   &.annual {
     color: #cb544c;
-  }
-
-  &.mobile {
-    margin: $margin-mobile 0 0 0;
-  }
-
-  &.desktop {
-    margin: 30px 0 0 0;
   }
 }
 

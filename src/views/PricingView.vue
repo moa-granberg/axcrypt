@@ -15,21 +15,11 @@
     />
 
     <section :class="`pricing-product-main-wrapper ${$mq}`">
-      <pricing-product :product="free" price="0" :currency="currency" />
+      <pricing-product :product="free" />
 
-      <pricing-product
-        :product="premium"
-        :annualActive="annualActive"
-        :price="premiumPrice"
-        :currency="currency"
-      />
+      <pricing-product :product="premium" :annualActive="annualActive" />
 
-      <pricing-product
-        :product="business"
-        :annualActive="annualActive"
-        :price="businessPrice"
-        :currency="currency"
-      />
+      <pricing-product :product="business" :annualActive="annualActive" />
     </section>
   </main>
 </template>
@@ -37,7 +27,6 @@
 <script>
 import AnnualMonthlySwitcher from '@/components/AnnualMonthlySwitcher';
 import PricingProduct from '@/components/pricing/PricingProduct';
-import { getPricing } from '@/utils/pricing/getPricing';
 import free from '@/data/pricing/free';
 import premium from '@/data/pricing/premium';
 import business from '@/data/pricing/business';
@@ -53,7 +42,6 @@ export default {
       annualActive: true,
       premiumPrice: '',
       businessPrice: '',
-      currency: 'SEK',
       free,
       premium,
       business,
@@ -64,28 +52,14 @@ export default {
     handleClickMonthly() {
       if (this.annualActive) {
         this.annualActive = false;
-        this.setPriceData('month');
       }
     },
 
     handleClickYearly() {
       if (!this.annualActive) {
         this.annualActive = true;
-        this.setPriceData('year');
       }
     },
-
-    async setPriceData(period) {
-      const premiumPriceData = await getPricing('premium', period);
-      const businessPriceData = await getPricing('business', period);
-      this.premiumPrice = premiumPriceData.price;
-      this.businessPrice = businessPriceData.price;
-      this.currency = premiumPriceData.currency;
-    },
-  },
-
-  async created() {
-    this.setPriceData('year');
   },
 
   mounted() {

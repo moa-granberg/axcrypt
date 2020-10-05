@@ -16,9 +16,7 @@
     <div :class="`pricing-product-body ${$mq}`">
       <price-display
         :annualActive="annualActive"
-        :price="price"
-        :currency="currency"
-        :perMonthPhraseKey="perMonth"
+        :product="product.productName"
       />
 
       <a
@@ -68,8 +66,6 @@ export default {
 
   props: {
     annualActive: Boolean,
-    price: String,
-    currency: String,
     product: {
       productName: String,
       headingPhraseKey: String,
@@ -86,16 +82,6 @@ export default {
     return {
       showFeatureList: false,
     };
-  },
-
-  computed: {
-    perMonth() {
-      return this.product.productName === 'premium'
-        ? 'PerMonthLabel'
-        : this.product.productName === 'business'
-        ? 'PerMonthPerUserLabel'
-        : '';
-    },
   },
 };
 </script>
