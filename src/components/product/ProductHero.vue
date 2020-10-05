@@ -1,13 +1,13 @@
 <template>
   <section :class="`product-hero-wrapper ${$mq} ${product}`">
     <div :class="'product-hero-headings-wrapper ' + $mq">
-      <h2 :class="'product-hero-preheading heading-jumbo ' + $mq">AxCrypt</h2>
+      <h1 :class="'product-hero-preheading heading-jumbo ' + $mq">AxCrypt</h1>
       <h1 :class="`product-hero-heading ${$mq} ${product}`">
         {{ $t(headingPhraseKey) }}
       </h1>
-      <h3 :class="'product-hero-subheading heading-medium ' + $mq">
+      <h1 :class="'product-hero-subheading heading-medium ' + $mq">
         {{ $t(subheadingPhraseKey) }}
-      </h3>
+      </h1>
     </div>
 
     <product-try-it-for-free-cta
