@@ -19,7 +19,7 @@
 
       <price-display :annualActive="annualActive" :product="product" />
 
-      <a :class="['standard-button large dark-green', $mq]" :href="url">
+      <a :class="['standard-button large', $mq]" :href="url">
         {{ $t('ProductTryItForFreeButtonLabel') }}
       </a>
     </article>

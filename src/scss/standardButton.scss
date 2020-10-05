@@ -4,7 +4,7 @@
   @include button-hover;
 
   display: flex;
-  background-color: $light-green;
+  background-color: $dark-green;
   color: $white;
   text-shadow: $standard-text-shadow;
   fill: $white;
@@ -50,10 +50,6 @@
     &.desktop {
       font-size: 1.5rem;
     }
-  }
-
-  &.dark-green {
-    background-color: $dark-green;
   }
 
   &.black {

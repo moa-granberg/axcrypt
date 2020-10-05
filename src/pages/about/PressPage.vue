@@ -70,7 +70,7 @@
             </li>
           </ul>
           <a
-            :class="['standard-button small dark-green download-button', $mq]"
+            :class="['standard-button small download-button', $mq]"
             href="https://www.axcrypt.net/downloads/15808/"
           >
             {{ $t('DownloadLinkLabel') }} {{ $t('BrandingGuidelinesLabel') }}</a

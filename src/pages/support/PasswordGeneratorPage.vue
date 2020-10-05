@@ -14,7 +14,7 @@
       </p>
 
       <button
-        :class="['standard-button small dark-green', $mq]"
+        :class="['standard-button small', $mq]"
         @click="getNewPasswords"
       >
         {{ $t('PasswordGeneratorButtonLabel') }}

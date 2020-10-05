@@ -4,7 +4,7 @@
       {{ $t('BusinessBigTeamCtaHeading') }}
     </h1>
     <a
-      :class="['standard-button small green', $mq]"
+      :class="['standard-button small black', $mq]"
       href="mailto:angelique.huighe@axcrypt.net"
     >
       {{ $t('ContactUsHeading') }}

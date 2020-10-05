@@ -27,7 +27,6 @@
       :class="`home-get-started-button ${$mq}`"
       phraseKey="GetStartedLinkLabel"
       size="large"
-      color="dark-green"
       path="/information/get-started/windows"
     />
   </section>
