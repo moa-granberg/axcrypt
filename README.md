@@ -1,24 +1,5 @@
-# axcrypt
+# AxCrypt
 
-## Project setup
-```
-npm install
-```
+AxCrypt's public page built using Vue.JS, connected to Phrase and AxCrypt's .NET pricing backend.
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Live at [axcrypt.net](https://www.axcrypt.net/).
